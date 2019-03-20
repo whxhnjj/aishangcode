@@ -1,0 +1,30 @@
+<!--pages/issue/issue.wxml-->
+<view class="userinfo">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+   <span class="userinfo-nickname"><em>{{userInfo.nickName}}</em>发出的</span>
+</view>
+<view class="wrap jilu">
+    <view class='left'>
+        <span class="top">金额(元)</span>
+        <span class="bottom">{{sumreward}}</span>
+    </view>
+     <view class='right'>
+        <span class="top">数量(个)</span>
+        <span class="bottom">{{sumredivsor}}</span>
+    </view>
+</view>
+<block wx:for="{{usersend}}" >
+  <view class="list">
+        <navigator class='array' url='../../pages/theme/theme?id={{item.id}}'>
+              <view class='array_tit'>
+                  <span class="name">{{item.title}}</span>
+                  <span class="money">{{item.reward}}元</span>
+              </view>
+              <view class='array_foter'>
+                  <text class="date">{{item.dateline}}</text>
+                  <span class="ys">{{item.divisor-item.rest}}/{{item.divisor}}</span>
+              </view>
+        </navigator>
+  </view>
+</block>
+<navigator class='feedback' hover-class="none"  url='../../pages/feedback/feedback'>举报</navigator>

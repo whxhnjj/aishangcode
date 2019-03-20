@@ -1,0 +1,55 @@
+<view wx:if="{{member_rule == 0}}" class="user">
+  <view class="nav"></view>
+
+  <view class="submenu_box">
+    <!--  -->
+    <view class="submenu_msg">
+      <!--  -->
+      <view class="sub_list header">
+        <text>类型</text>
+        <text>价格</text>
+        <text>备注</text>
+      </view>
+      <!--  -->
+      <block wx:if="{{price != ''}}">
+      <view  class="sub_list" wx:for="{{price}}" wx:key="id">
+        <text>{{item.name}}</text>
+        <text>{{item.price}}</text>
+        <text>{{item.remark}}</text>
+      </view>
+      </block>
+      <view wx:else class="sub_none">暂无价格信息</view>
+
+    </view>
+    <!--  -->
+    <navigator class="base_btn" hover-class="none" url="../new_order/new_order">我要卖废纸</navigator>
+    <text class="btn_text">以上价格均为参考价，单位：元/公斤，具体请联系收纸员</text>
+
+  </view>
+</view>
+
+<view wx:if="{{member_rule != 0}}" class="employee">
+  <view class="submenu_box">
+  <!--  -->
+  <view class="submenu_msg">
+    <!--  -->
+    <view class="sub_list header">
+      <text>类型</text>
+      <text>价格</text>
+      <text>备注</text>
+    </view>
+    <!--  -->
+    <block wx:if="{{price != ''}}">
+    <view  class="sub_list" wx:for="{{price}}" wx:key="id">
+        <text>{{item.name}}</text>
+      <text>{{item.price}}</text>
+      <text>{{item.remark}}</text>
+    </view>
+    </block>
+    <view wx:else class="sub_none">暂无价格信息</view>
+
+  </view>
+
+</view>
+
+</view>

@@ -1,0 +1,128 @@
+.submenu_box{
+  top:30rpx;
+  font-size: 30rpx;
+}
+
+/*列表*/
+.sub_list>text{
+  width: 190rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.sub_list .right_box{
+  width: 400rpx;
+  height: 60rpx;
+  text-align: right;
+  line-height: 60rpx;
+  color: #999;
+}
+
+
+/* 选择 */
+.submenu_msg .check{
+  padding: 40rpx 0;
+}
+checkbox-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items: center;
+  width:370rpx;
+  color:#999;
+}
+
+.checkbox{
+  width: 180rpx;
+  margin: 10rpx 0;
+}
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+   width: 40rpx; 
+   height: 40rpx;
+   border: none;
+   background: #e6e6e6;
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border-color: none;
+   background: #02cc7a;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx;
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx;
+   color:#fff; 
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+
+
+
+/* 上传 */
+.submenu_msg .upload_box{
+  border-bottom: none;
+  padding-bottom: 30rpx;
+}
+.upload{
+  position: relative;
+  width: 300rpx;
+  padding-top: 120rpx;
+  text-align: right;
+}
+.upload .upload_btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.upload text{
+  display: block;
+  margin-top: 20rpx;
+  color: #999;
+}
+
+.pic_box{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  margin:0 auto;
+  padding: 5rpx 0 40rpx;
+  width:590rpx;
+  border-bottom:1rpx solid rgb(230,230,230);
+}
+.pic_box>view{
+  position: relative;
+  margin-bottom:10rpx;
+  width:193rpx;
+  height:193rpx;
+}
+.pic_box image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width:193rpx;
+  height:193rpx;
+}
+.delete_btn{
+  position: absolute;
+  top: -6rpx;
+  right: -5rpx;
+  z-index: 100;
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.pic_box .itemempty {
+  height: 0px;
+  width: 193rpx;
+}
+

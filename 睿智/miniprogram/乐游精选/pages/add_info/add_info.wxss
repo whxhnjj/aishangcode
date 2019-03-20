@@ -1,0 +1,29 @@
+.input_box{
+  width: 690rpx;
+  margin: 50rpx auto 50rpx;
+  padding: 40rpx 50rpx 30rpx;
+  background: #fff;
+  border-radius: 6rpx;
+}
+
+.input_box input{
+  width: 100%;
+  border-bottom: 1rpx solid #e6e6e6;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.input_box text{
+  display: block;
+  color: #999;
+  font-size: 26rpx;
+  line-height: 2.8;
+}
+
+button{
+  width: 690rpx;
+  height: 100rpx;
+  background: #fc8b00;
+  color: #fff;
+  font-weight: 600;
+  line-height: 100rpx;
+}

@@ -1,0 +1,26 @@
+<view class="header">
+  <text>当前可用积分</text>
+  <text>{{total_integral}}</text>
+  <view>
+    <view hover-class="none" bindtap="goIndex">积分兑换</view>
+    <navigator hover-class="none" url="../illustration/illustration?type=1">积分说明</navigator>
+  </view>
+</view>
+
+<view class="line"></view>
+
+<!-- 列表 -->
+<view class="integral_box">
+
+  <view class="integral_list" wx:for="{{integral}}" wx:key="id">
+    <view class="left_box">
+      <!-- <text wx:if="{{item.order_info}}">{{item.order_info.goods_name}}</text> -->
+      <text>{{item.desc}}</text>
+      <text>{{item.update_time}}</text>
+    </view>
+    <text wx:if="{{item.type == 0}}" class="right_box">+{{item.amount}}</text>
+    <text wx:if="{{item.type == 1}}" class="right_box selected">-{{item.amount}}</text>
+  </view>
+
+  <view class="page_text">{{page_text}}</view>
+</view>

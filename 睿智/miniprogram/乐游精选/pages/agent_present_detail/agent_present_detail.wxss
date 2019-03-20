@@ -1,0 +1,30 @@
+.detail_box{
+  margin-top: 50rpx;
+  width: 100%;
+  padding: 50rpx 80rpx;
+  background: #fff;
+}
+.detail_box>image{
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto 20rpx;
+}
+.detail_title{
+  display: block;
+  margin-bottom: 30rpx;
+  padding-bottom: 50rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+  font-size: 30rpx;
+  text-align: center;
+}
+.detail_list{
+  display: flex;
+  padding-top: 40rpx;
+  font-size: 26rpx;
+}
+.detail_list>text:first-child{
+  width: 110rpx;
+  margin-right: 50rpx;
+  color: #999;
+}

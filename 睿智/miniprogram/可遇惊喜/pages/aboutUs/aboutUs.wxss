@@ -1,0 +1,59 @@
+page{
+  padding-bottom: 70rpx;
+}
+
+/* logo */
+.logo{
+  padding: 100rpx 0;
+  text-align: center;
+}
+.logo image{
+  display: block;
+  width: 160rpx;
+  height: 160rpx;
+  margin: 0 auto 30rpx;
+}
+.logo text{
+  font-size: 30rpx;
+}
+
+/* 内容 */
+.content{
+  margin-bottom: 50rpx;
+  padding: 0 30rpx 50rpx;
+  background: #fff;
+}
+.content .wxParse-p>view{
+  display: block;
+  padding-top: 50rpx;
+  line-height: 1.8;
+  text-align: justify;
+  text-indent: 2em;
+}
+.content .wxParse-p>image{
+  padding-top: 50rpx;
+  width: 100%!important;
+}
+
+/* 联系客服 */
+.contacts{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50rpx 30rpx;
+  background: #fff;
+}
+.contacts>image{
+  width: 40rpx;
+  height: 38rpx;
+}
+.contacts>view text:first-child{
+  display: block;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+}
+.contacts>view text:nth-of-type(2){
+  display: block;
+  font-size: 26rpx;
+  color: #999;
+}

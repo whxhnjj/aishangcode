@@ -1,0 +1,27 @@
+.sub{
+  width: 690rpx;
+  height: 100%;
+  /* background: rgba(55,108,209,0.8); */
+  overflow: hidden;
+  display: block;
+  font-size: 34rpx;
+}
+.textarea{
+  width:640rpx;
+  height:350rpx;
+  line-height: 40rpx;
+  font-size: 34rpx;
+  margin: 25rpx;
+  padding: 0rpx;
+  border: 0rpx;
+  color: #fff;
+}
+.button{
+  margin-top: 50rpx;
+  width: 690rpx;
+  height:100rpx;
+  background: rgba(55,108,209,0.8);
+  color: #fff;
+  line-height: 100rpx;
+}
+

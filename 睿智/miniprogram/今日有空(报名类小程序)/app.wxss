@@ -1,0 +1,42 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.wrap{
+  width: 700rpx;
+  margin:0 25rpx;
+  overflow: hidden;
+}
+
+/* 占位 */
+.temp {
+  width: 100%;
+  height: 100rpx;
+}
+/*详情*/
+.xiangqing{
+  padding: 25rpx;
+  margin: 25rpx 0;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: #ECECEC;
+
+}
+/*灰色颜色占位符*/
+.gray{
+  background: #F0EFF4;
+  height: 50rpx;
+  width: 100%;
+}
+/*白色颜色占位符*/
+.black{
+  background: #FFF;
+  height: 50rpx;
+  width: 100%;
+}

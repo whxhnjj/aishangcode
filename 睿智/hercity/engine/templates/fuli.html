@@ -1,0 +1,42 @@
+{include file="inc_header.html" current="list" title="{$title} - 倾城网"}
+
+<!--update-->
+<div class="wrap list_photo">
+
+<div class="breadcrumb">{$location}</div>
+
+<ul>
+<ul class="coupons">
+{foreach from="$items" item="item"}
+	<li class="tbitem" rel="{$item.coupon_click_url|base64_encode}">
+		<div class="img">
+			<img src="/pic/{$item.pict_url|cat:'_300x300q90.jpg'|base64_encode}.jpg">
+		</div>
+		<h4>{$item.title|utf8ToGbk}</h4>
+		<span class="l">券后价：{$item.zk_final_price-$item.coupon_amount}</span><span class="r">销量：{$item.volume}</span>
+		<p>领取优惠券[{$item.coupon_amount}]</p>
+	</li>
+
+{/foreach}
+</ul>
+</ul>
+
+
+<!--pages-->
+{$pages}
+
+<div class="ad_980">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 倾城新版大通栏 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-4842793887790356"
+     data-ad-slot="7902926175"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+</div>
+
+{include file="inc_footer.html" current="list" template="list_photo"}

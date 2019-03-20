@@ -1,0 +1,36 @@
+.exam{
+  width: 100%;
+}
+
+.exam_list{
+  position: relative;
+  height: 120rpx;
+  width:100%;
+  margin-bottom: 20rpx;
+  border-radius: 15rpx;
+  line-height: 120rpx;
+  background: rgba(56,108,209,0.4);
+}
+
+.exam_title{
+  display: inline-block;
+  width: 570rpx;
+  overflow: hidden;
+  white-space:nowrap; 
+  text-overflow:ellipsis; 
+  padding-left: 30rpx;
+  font-size: 30rpx;
+}
+.user_icon{
+  position: absolute;
+  right: 45rpx;
+  top:40rpx;
+  width: 26rpx;
+  height: 40rpx;
+}
+
+.bottom{
+  text-align: center;
+  font-size: 26rpx;
+  padding: 75rpx 0 10rpx;
+}

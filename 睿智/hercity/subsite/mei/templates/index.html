@@ -1,0 +1,112 @@
+{include file="inc_header.html" current="home"}
+
+<div class="today_top main">
+<h2 class="tit"><span><a href="list-hot-1.html">今日榜首 TOP20</a></span><a href="list-hot-1.html" class="more">查看完整榜单>></a></h2>
+<ul>
+{foreach from=$persons_top key=key item=item}
+<li><a href="/{$item.ename}/"><img src="https://www.hercity.com{$item.thumb2}" alt="{$item.name}图片" /></a>
+<div class="box">
+<div class="info">
+<strong class="name">{$key+1}.<a href="/{$item.ename}/">{$item.name}</a></strong><span class="hot">{$item.baidu_index+$item.fans}</span><em>{foreach from=$item.tags key=key1 item=item1}{if $key1<3}<a href="/tags-{$item1|urlencode}-1.html" target="_blank">{$item1}</a> {/if}{/foreach}</em>
+</div>
+</div>
+</li>
+{/foreach}
+</ul>
+</div>
+
+<div class="adbox main">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4842793887790356";
+/* 美人榜首页 */
+google_ad_slot = "5443212978";
+google_ad_width = 970;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</div>
+
+<div class="i_bang main">
+<div class="bang_box">
+<div class="bang yule">
+<h3><a href="/tags-%D1%DD%D4%B1-1.html">娱乐圈美女榜</a></h3>
+<table>
+{foreach from=$persons_01 key=key item=item}
+<tr><td class="num">{$key+1}</td><td class="name"><span><a href="/{$item.ename}/">{$item.name}</a></span></td><td class="hot">{$item.baidu_index+$item.fans}</td></tr>
+{/foreach}
+<tr><td colspan="3" class="all"><a href="/tags-%D1%DD%D4%B1-1.html">查看完整榜单>></a></td></tr>
+</table>
+</div>
+<div class="bang wangluo">
+<h3><a href="/tags-%CD%F8%C2%E7%C3%C0%C5%AE-1.html">网络美女榜</a></h3>
+<table>
+{foreach from=$persons_02 key=key item=item}
+<tr><td class="num">{$key+1}</td><td class="name"><span><a href="/{$item.ename}/">{$item.name}</a></span></td><td class="hot">{$item.baidu_index+$item.fans}</td></tr>
+{/foreach}
+<tr><td colspan="3" class="all"><a href="/tags-%CD%F8%C2%E7%C3%C0%C5%AE-1.html">查看完整榜单>></a></td></tr>
+</table>
+</div>
+<div class="bang titan">
+<h3><a href="/tags-%CC%E5%CC%B3%C3%C0%C5%AE-1.html">体坛美女榜</a></h3>
+<table>
+{foreach from=$persons_03 key=key item=item}
+<tr><td class="num">{$key+1}</td><td class="name"><span><a href="/{$item.ename}/">{$item.name}</a></span></td><td class="hot">{$item.baidu_index+$item.fans}</td></tr>
+{/foreach}
+<tr><td colspan="3" class="all"><a href="/tags-%CC%E5%CC%B3%C3%C0%C5%AE-1.html">查看完整榜单>></a></td></tr>
+</table>
+</div>
+<div class="bang xiaohua">
+<h3><a href="/tags-%D0%A3%BB%A8-1.html">中国校花榜</a></h3>
+<table>
+{foreach from=$persons_04 key=key item=item}
+<tr><td class="num">{$key+1}</td><td class="name"><span><a href="/{$item.ename}/">{$item.name}</a></span></td><td class="hot">{$item.baidu_index+$item.fans}</td></tr>
+{/foreach}
+<tr><td colspan="3" class="all"><a href="/tags-%D0%A3%BB%A8-1.html">查看完整榜单>></a></td></tr>
+</table>
+</div>
+<div class="bang gudai">
+<h3><a href="/tags-%C3%FB%BC%CB-1.html">古代名妓榜</a></h3>
+<table>
+{foreach from=$persons_05 key=key item=item}
+<tr><td class="num">{$key+1}</td><td class="name"><span><a href="/{$item.ename}/">{$item.name}</a></span></td><td class="hot">{$item.baidu_index+$item.fans}</td></tr>
+{/foreach}
+<tr><td colspan="3" class="all"><a href="/tags-%C3%FB%BC%CB-1.html">查看完整榜单>></a></td></tr>
+</table>
+</div>
+<div class="bang minguo">
+<h3><a href="/tags-%C3%F1%B9%FA%C3%C0%C5%AE-1.html">民国美女榜</a></h3>
+<table>
+{foreach from=$persons_06 key=key item=item}
+<tr><td class="num">{$key+1}</td><td class="name"><span><a href="/{$item.ename}/">{$item.name}</a></span></td><td class="hot">{$item.baidu_index+$item.fans}</td></tr>
+{/foreach}
+<tr><td colspan="3" class="all"><a href="/tags-%C3%F1%B9%FA%C3%C0%C5%AE-1.html">查看完整榜单>></a></td></tr>
+</table>
+</div>
+</div>
+</div>
+
+<div class="new_top main">
+<h2 class="tit"><span><a href="list-new-1.html">最新上榜 NEW</a></span><a href="list-new-1.html" class="more">查看完整榜单>></a></h2>
+<ul>
+{foreach from=$persons_new key=key item=item}
+<li><a href="/{$item.ename}/"><img src="https://www.hercity.com{$item.thumb1}" alt="{$item.name}图片" /></a>
+<div class="info">
+<strong class="name"><a href="/{$item.ename}/">{$item.name}</a></strong><span class="hot">{$item.baidu_index+$item.fans}</span><em>{foreach from=$item.tags key=key1 item=item1}{if $key1<3}<a href="/tags-{$item1|urlencode}-1.html" target="_blank">{$item1}</a> {/if}{/foreach}</em>
+</div>
+</li>
+{/foreach}
+</ul>
+</div>
+
+<div class="links main">
+友情链接：
+{foreach from=$links item=link}
+<a href="{$link.href}" target="_blank">{$link.title}</a>  
+{/foreach}
+</div>
+
+{include file="inc_footer.html" current="home"}

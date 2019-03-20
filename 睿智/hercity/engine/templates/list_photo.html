@@ -1,0 +1,41 @@
+{include file="inc_header.html" current="list" title="{$title} - 倾城网"}
+
+<!--update-->
+<div class="wrap list_photo">
+
+<div class="breadcrumb">{$location}</div>
+<div class="menu"><a href="/s/photo/"{if $kind_folder == 'photo'} class="current"{/if}>全部</a><a href="/s/photo/qipao/"{if $kind_folder == 'photo/qipao'} class="current"{/if}>旗袍摄影</a><a href="/s/photo/stills/"{if $kind_folder == 'photo/stills'} class="current"{/if}>华服剧照</a><a href="/s/photo/chinesestyle/"{if $kind_folder == 'photo/chinesestyle'} class="current"{/if}>中国风</a><a href="/s/photo/oldphoto/"{if $kind_folder == 'photo/oldphoto'} class="current"{/if}>老照片</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/s/photo/top/new.html"{if $kind_folder == 'id'} class="current"{/if}>最新</a><a href="/s/photo/top/hits.html"{if $kind_folder == 'hits'} class="current"{/if}>热门点击</a><a href="/s/photo/top/comments.html"{if $kind_folder == 'comments'} class="current"{/if}>评论最多</a></div>
+
+<div><a href="https://list.tmall.com/search_product.htm?q=%c6%ec%c5%db" isconvert="1" ><img src="/assets/images/tmall_qipao.jpg" /></a></div>
+
+
+{if $list|is_null}
+<div class="nolist">该栏目下暂无内容。</div>		
+{else}
+<ul>
+{foreach from=$list key=key item=post}
+<li><a href="{$post.href}"><img src="{$post.thumb1}" alt="{$post.title}" /></a><strong><a href="{$post.href}">{$post.title}</a></strong><span class="hits">人气：{$post.hits}</span><span class="comments">评论：{$post.comments}</span></li>
+{/foreach}
+</ul>
+{/if}
+
+
+<!--pages-->
+{$pages}
+
+
+<div class="ad_980">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 倾城新版大通栏 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-4842793887790356"
+     data-ad-slot="7902926175"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+</div>
+
+{include file="inc_footer.html" current="list" template="list_photo"}

@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="exam">
+  <!--获取全部试卷  -->
+     <navigator class="exam_list" wx:for="{{exams}}" wx:key="key" url="../exam/exam?exam_id={{item.id}}">
+      <text class="exam_title">{{item.title}}</text>
+      <!-- <text class="exam_state" wx:if="{{item.isvalid == 1}}">进行中</text>
+      <text class="exam_state" wx:if="{{item.isvalid == -1}}">未开始</text>
+      <text class="exam_state" wx:if="{{item.isvalid == -2}}">已结束</text> -->
+      <image class="user_icon" src="../images/icon_more.png"></image> 
+    </navigator> 
+
+    <!-- <view class="exam_list" wx:for="{{exams}}" wx:key="key" data-id="{{item.id}}" bindtap="getexam">
+      <text class="exam_title">{{item.title}}</text>
+      <image class="user_icon" src="../images/icon_more.png"></image>
+    </view> -->
+  
+  </view>
+  <view class="bottom">{{footer}}</view>
+</view>  

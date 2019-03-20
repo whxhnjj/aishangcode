@@ -1,0 +1,59 @@
+{
+  "pages":[ 
+    "pages/index/index", 
+    "pages/detail/detail",
+    "pages/theme/theme",
+    "pages/signup/signup",
+    "pages/list/list",
+    "pages/gift/gift",
+    "pages/reward/reward",
+    "pages/about/about",
+    "pages/feedback/feedback",
+    "pages/success/success",
+    "pages/search/search",
+    "pages/my/my",
+    "pages/route/route",
+    "pages/poster/poster"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#11D4C6",
+    "navigationBarTitleText": "花火盒",
+    "navigationBarTextStyle":"#FFF"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#11D4C6",
+    "list": [
+      {
+        "pagePath": "pages/theme/theme",
+        "iconPath":"pages/images/icon1.png",
+        "selectedIconPath":"pages/images/icon2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/reward/reward",
+        "iconPath": "pages/images/icon3.png",
+        "selectedIconPath": "pages/images/icon4.png",
+        "text": "奖项"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "pages/images/icon5.png",
+        "selectedIconPath": "pages/images/icon6.png",
+        "text": "榜单"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "pages/images/icon7.png",
+        "selectedIconPath": "pages/images/icon8.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "downloadFile": 20000
+  }
+
+}

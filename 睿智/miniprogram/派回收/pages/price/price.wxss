@@ -1,0 +1,35 @@
+.nav{
+  height: 420rpx;
+}
+
+.submenu_box{
+  top: 30rpx;
+}
+
+.sub_list text:first-child{
+  width: 120rpx;
+}
+.sub_list text:nth-of-type(2){
+  width: 100rpx;
+}
+.submenu_msg .header text{
+  font-size: 30rpx;
+  color: #00b453;
+  font-weight: 600;
+}
+.sub_list text:last-child{
+  width: 270rpx;
+}
+.sub_none{
+  width:590rpx;
+  margin:0 auto;
+  color: #999;
+  text-align: center;
+  line-height: 550rpx;
+}
+/* 收纸员页面 */
+
+.employee .submenu_box{
+  top: 50rpx;
+}
+

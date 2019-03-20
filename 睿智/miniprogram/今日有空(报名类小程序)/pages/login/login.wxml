@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="gray"></view>
+<view class="wrap">
+  <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+      <navigator class="point" url='../../pages/detailed/detailed'>1280</navigator> 
+  </view>
+   <block wx:for="{{imgalist}}" wx:for-item="image" >  
+        <image class="erweima" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>  
+    </block> 
+</view>
+<view class="gray"></view>
+<view class='wrap'>
+  <navigator class='list list1' url="../order/order">
+      <span></span>
+      <p>我的订单</p>
+  </navigator>
+  <navigator class='list list2' url="../contacts/contacts">
+      <span></span>
+      <p>我的人脉</p>
+  </navigator>
+  <view class='list list3' bindtap="Scancodeimg">
+    <span></span>
+    <p>扫一扫</p>
+  </view>
+</view>
+<view class="gray"></view>
+<view class='wrap'>
+      <navigator class='list list4' url="../about/about">
+        <span></span>
+        <p>关于我们</p>
+      </navigator>
+</view>

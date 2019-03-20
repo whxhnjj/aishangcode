@@ -1,0 +1,21 @@
+<text class="tit">请选择举报原因</text>
+  <form class="sub" bindsubmit="formSubmit">
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}">
+    <span class="name">{{item.value}}</span>
+    <radio class="cheke" value="{{item.value}}" checked="{{item.checked}}" />
+  </label>
+</radio-group>
+<textarea name="desc" class="textarea" placeholder="请输入详细描述" ></textarea>
+<text class="tit">请填写你个人信息，方便我们联系你</text>
+<view class="info">
+    <view class="tj">
+      <span class="num_name">手机号</span><input name="phone" class="ber" type="number" placeholder="选填" maxlength='11'></input>
+    </view>
+    <view class="tj">
+      <span class="num_name">微信号</span><input name="wechat" class="ber" type="text" placeholder="选填"></input>
+    </view>
+    <button class="button" type="primary" form-type="submit">提交</button>
+</view>
+</form>
+<view class="mg"></view>

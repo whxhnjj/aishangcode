@@ -1,0 +1,49 @@
+/* 分類 */
+.navbar_box{
+  width: 100%;
+  padding-top: 20rpx;
+  background: #fff;
+}
+.navbar{
+  display: flex;
+  white-space: nowrap; 
+  width: 700rpx;
+  margin: 0 auto;
+}
+.item{
+  display: inline-block;
+  margin-right: 80rpx;
+}
+.navbar .item:last-child{
+  margin-right: 0;
+}
+.item_box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item_box view{
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+}
+.item_box text{
+  width: 50rpx;
+  height: 6rpx;
+  background: #fff;
+}
+
+.navbar .selected view{
+  color: #e4393c;
+  font-weight: 600;
+}
+.navbar .selected text{
+  background: #e4393c;
+}
+
+/* 列表 */
+.load_more{ background: #fff; }
+
+.pro_list_kuang{
+  padding-top: 20rpx;
+  background: #fff;
+}

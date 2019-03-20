@@ -1,0 +1,23 @@
+<view class="search_title">搜索{{name}}的结果</view>
+
+<view class="pro_list_kuang">
+<block wx:for="{{goods}}" wx:item="item" wx:key="id">
+  <view class="public_pro_list">
+    <navigator url="/pages/pro/pro?goods_id={{item.id}}">
+      <image src="{{hostName}}{{item.goods_pic}}" mode="aspectFill"></image>
+      <block wx:if="{{item.max_price == item.min_price}}">
+        <text class="pro_list_price"><text>¥</text>{{item.min_price/100}}</text>
+      </block>
+      <block wx:else>
+        <view class="pro_list_price">
+          <text>¥</text>{{item.min_price/100}} - <text>¥</text>{{item.max_price/100}}
+        </view>
+      </block>
+      <text class="pro_list_title">{{item.name}}</text>
+    </navigator>
+  </view>
+</block>
+</view>
+
+
+<view class='load_more'>{{load_more}}</view>

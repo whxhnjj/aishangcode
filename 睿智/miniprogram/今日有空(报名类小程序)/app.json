@@ -1,0 +1,43 @@
+{
+"pages":[
+    "pages/index/index",
+    "pages/seller1/seller1",   
+    "pages/login/login",
+    "pages/evaluate/evaluate",
+    "pages/detailed/detailed",
+    "pages/contacts/contacts",
+    "pages/about/about",
+    "pages/order/order",
+    "pages/make/make",
+    "pages/rule/rule",
+    "pages/content/content",
+    "pages/detail/detail",
+    "pages/list/list",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#13D4C8",
+    "navigationBarTitleText": "今日有空",
+    "navigationBarTextStyle":"#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#13D4C8",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/icon2.png",
+        "pagePath": "pages/index/index",
+        "text": "商品",
+        "iconPath": "pages/images/icon1.png"
+      },
+      {
+        "selectedIconPath": "pages/images/icon4.png",
+        "pagePath": "pages/login/login",
+        "text": "我的",
+        "iconPath": "pages/images/icon3.png"
+      }
+    ]
+  }
+}

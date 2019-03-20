@@ -1,0 +1,6 @@
+view{
+  font-size: 30rpx;
+  color: #666;
+  text-align: center;
+  line-height:700rpx;
+}

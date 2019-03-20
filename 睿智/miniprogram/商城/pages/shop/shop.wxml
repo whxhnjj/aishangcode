@@ -1,0 +1,38 @@
+<!--  -->
+<view class="shop_top">
+  <image class="shop_logo" src="{{hostName}}{{shop.logo}}"></image>
+  <text>{{shop.name}}</text>
+</view>
+
+<!--  -->
+<view class="shop_kuang">
+  <view class="shop_header">店铺信息</view>
+
+  <view class="shop_content">
+    <text>{{shop.desc}}</text>
+  </view>
+
+</view>
+<!--  -->
+<view class="shop_kuang" wx:if="{{shop.custom_tel || shop.sale_tel || shop.address}}">
+  <view class="shop_header">联系方式</view>
+
+  <view  class="shop_lists">
+
+    <view wx:if="{{shop.address}}" class="shop_list">
+      <view class="fl"><image src="../images/address.png"></image>店铺地址：</view><text class="fl" bindtap="openAddress" data-latlng="{{shop.latlng}}" data-name="{{shop.name}}" data-address="{{shop.address}}">{{shop.address}}</text>
+      <text class="clearfix"></text>
+    </view>
+
+    <view wx:if="{{shop.custom_tel}}" class="shop_list">
+      <view class="fl"><image src="../images/phone.png"></image>客服电话：</view><text class="fl" bindtap='customCall'>{{shop.custom_tel}}</text>
+      <text class="clearfix"></text>
+    </view>
+
+    <view wx:if="{{shop.sale_tel}}" class="shop_list">
+      <view class="fl"><image src="../images/phone.png"></image>售后电话：</view><text bindtap='saleCall'>{{shop.sale_tel}}</text>
+      <text class="clearfix"></text>
+    </view>
+
+  </view>
+</view>

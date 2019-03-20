@@ -1,0 +1,54 @@
+<!--pages/make/make.wxml-->
+<view class='blak'>
+     <view class='sp1'>倾约茶会：一盏清茗待知己！</view>
+            <view class="img" wx:for="{{imgalist}}" wx:for-item="image" >  
+         <image src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>  
+      </view>  
+     <view class='sp2'>￥94</view>
+</view>
+<view class='gray'></view>
+<view class='blak2'>
+    <span class="font">选择日期：</span>
+    <view class='row'>
+     <block wx:for="{{catalogs}}">
+        <view data-select="{{item.select}}" class="{{item.select == catalogSelect ? 'active':''}}  row-wrap" bindtap="chooseCatalog">
+         {{item.catalogName}}
+        </view>
+      </block>
+    </view>
+</view>
+<view class='gray'></view>
+
+ <view class='blak4'>
+      <span class="font">数量：</span>
+       <view class='jia'  bindtap="bindMinus">-</view>
+       <input class='value' bindchange="bindManual" type='number' value='{{num}}' confirm-type="done"></input>
+      <view class='jian normal' bindtap="bindPlus">+</view>
+ </view>
+<view class='gray'></view>
+ <view class='blak5'>
+      <span class="font">支付方式：</span>
+       <view class='row'>
+          <block wx:for="{{payment}}">
+              <view data-select="{{item.select}}" class="{{item.select == paymentSelect ? 'active':''}}  row-wrap" bindtap="paymentCatalog">
+          <view wx:if="{{item.point>0}}" class='point'>{{item.point}}</view>
+          <view wx:if="{{item.point>0 && item.cash>0}}">+</view>
+          <view wx:if="{{item.cash>0}}" class='cash'>{{item.cash}}</view></view>
+
+          </block>
+        </view>
+ </view>
+<view class='gray'></view>
+<view class='blak3'>
+  <view class='contact'>
+        <span  class="font">手机号码：</span>
+        <input type='number' value="{{userInput}}" bindinput="bindKeyInput"   placeholder="请输入手机号码" placeholder-style=" font-size: 30rpx"></input>
+        <view class='clea' bindtap="clearInput"></view>   
+  </view>
+</view>
+
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+   <button class="submit" formType="submit" bindtap="bindtitl">微信支付</button>
+</view>
+

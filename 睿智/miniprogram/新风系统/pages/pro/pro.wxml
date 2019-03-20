@@ -1,0 +1,179 @@
+<block wx:if="{{goods.id}}">
+<swiper class="pro_img" indicator-dots interval="5000" duration="300" circular >
+  <swiper-item class="pro_img_list" wx:if="{{goods.goods_video}}">
+    <view class='video_ceng'>
+      <image src="{{hostName}}{{goods.goods_pic[0]}}" hidden="{{xiaoshi}}" class="video_bg"></image>
+      <view class='video_btn'><image src="../images/play.png" hidden="{{xiaoshi}}" bindtap="bindPlay"></image></view>
+      <video src="{{hostName}}{{goods.goods_video}}" objectFit="cover" bindtouchmove="mdc_move" controls id="mdcVideo"
+      hidden="{{mdc_show}}">
+      </video>
+    </view>
+  </swiper-item>
+
+  <block wx:for="{{goods.goods_pic}}" wx:item="item" wx:key="index">
+    <swiper-item class="pro_img_list">
+      <image src="{{hostName}}{{item}}" data-src="{{item}}" bindtap="previewImage" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 标题 -->
+<view class="pro_msg">
+  <view class="container">
+    <view class="pro_msg_header clearfix">
+      <block wx:if="{{goods_price_min == goods_price_max}}">
+        <text class="pro_price fl"><text>¥</text>{{goods_price_min/100}}</text>
+      </block>
+      <block wx:else>
+        <text class="pro_price fl"><text>¥</text>{{goods_price_min/100}} - <text>¥</text>{{goods_price_max/100}}</text>
+      </block>
+      <button class="share_pro fr" open-type="share" ></button>
+    </view>
+
+    <text wx:if="{{goods.sale_desc}}" class="pro_desc">{{goods.sale_desc}}</text>
+    <text class="pro_title"><text wx:if="{{goods.is_limit}}">限购</text><text wx:if="{{goods.is_post == 0}}">包邮</text><text wx:if="{{goods.is_recommend}}">推荐</text><text wx:if="{{goods.is_promotion}}">促销</text>{{goods.name}}</text>
+  </view>
+</view>
+<!--优惠劵  -->
+ <!-- <view class="coupon">
+  <view class="container">
+   
+    <view class="coupon_box1">
+      <text class="coupon_title">领券</text>
+      <view style='display:{{coupon_state == 0 ? "inline-block" : "none"}}'>
+        <text class="coupon_style">满999减200</text>
+        <text class="coupon_style">满699减100</text>
+        <text class="coupon_style">满299减50</text>
+      </view>
+      <image class="coupon_img fr" src='{{coupon_state == 0 ? "../images/down.png" : "../images/up.png"}}' bindtap="couponShow"></image>
+    </view>
+
+    <view class="coupon_box2" style='display:{{coupon_state == 0 ? "none" : "flex"}}'>
+      <view class="coupon_kuang">
+        <text class="coupon_kuang_msg1">200</text>
+        <text class="coupon_kuang_msg2">满999可用</text>
+        <text class="coupon_kuang_msg3">领　取</text>
+      </view>
+      <view class="coupon_kuang">
+        <text class="coupon_kuang_msg1">200</text>
+        <text class="coupon_kuang_msg2">满999可用</text>
+        <text class="coupon_kuang_msg3">领　取</text>
+      </view>
+      <view class="coupon_kuang">
+        <text class="coupon_kuang_msg1">200</text>
+        <text class="coupon_kuang_msg2">满999可用</text>
+        <text class="coupon_kuang_msg3">领　取</text>
+      </view>
+    </view>
+  </view>
+</view>  -->
+<!--商品规格  -->
+<view class="pro_sku" bindtap="goToBuy">
+  <view class="container">
+    <text>选择 : </text>
+    <block wx:for="{{spec_key}}" wx:key="key">
+      <text>{{item}}</text>  
+    </block>
+  </view>
+</view>
+<!--售后标志  -->
+<view class="pop_tab_kuang">
+  <view class="container">
+    <view class="pop_tab">
+      <image src="../images/proright.png"></image>店铺发货&售后
+    </view>
+    <!--  -->
+    <view class="pop_tab">
+      <image src="../images/proright.png"></image>正品保障
+    </view>
+    <!--  -->
+    <view class="pop_tab">
+      <image src="../images/proright.png"></image>7天无理由退货
+    </view>
+  </view>
+</view>
+<!--评价  -->
+<view class="pro_assess">
+</view>
+<!--商品详情  -->
+<view class="pro_detail">
+    <import src="../../extend/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+  </view>
+  <include src="../include/include"/>
+</view>
+
+<!--底部导航  -->
+<text wx:if="{{isIphoneX}}" class="iponex_kuang"></text>
+<view class="navbar {{isIphoneX?'iponex':''}}">
+  <view class="fl navbar_list" bindtap="gotoIndex">
+    <image src="../images/shop.png"></image>
+    <text>首页</text>
+  </view>
+  <button class="fl navbar_list kefu" open-type="contact" send-message-title="{{goods.name}}" show-message-card>
+    <image src="../images/custom.png"></image>
+    <text>客服</text>
+  </button>
+  <button class="fr button" bindtap="goToBuy">立即购买</button>
+  <button class="fr button" bindtap="addCar">加入购物车</button>
+
+</view>
+<text wx:if="{{isIphoneX}}" class="iponex_bottom"></text>
+<!--购物车-->
+<view class="car" bindtap="goCart" style='bottom:{{isIphoneX?200:132}}rpx'>
+  <image src="../images/car.png"></image>
+  <view wx:if="{{cart_count>0}}"><text>{{cart_count}}</text></view>
+</view>
+
+
+<!--弹出层  -->
+<view class="prosku_pop_bg" style='display:{{pop_state == 0 ? "none" : "block" }}' catchtouchmove="true" bindtap="closePop">
+  <view class="pro_sku_pop" style="bottom:{{pop_sku_bottom}}rpx;" catchtap='inbtn'>
+    <!--  -->
+    <view class="prp_pop_msg">
+      <image class="prp_pop_img fl" src="{{hostName}}{{goods.goods_pic[0]}}"></image>
+      <view class="prp_pop_title fl">
+        <text>{{goods.name}}</text>
+        <view><text class="text">￥</text>{{sku.price?sku.price/100:goods_price_max/100}}</view>
+      </view>
+      <image class="prp_pop_close fr" src="../images/close.png" bindtap="closePop"></image>
+      <text class="clearfix"></text>
+    </view>
+    <!--  -->
+    <view class="pro_pop_sku">
+      <block wx:for="{{specs}}" wx:for-index="id" wx:for-item="item" wx:key="name">
+        <view class="pop_sku_list">
+          <text data-isSelect="{{item.isSelect}}">{{item.name}}：</text>
+          <block wx:for="{{item.child}}" wx:for-index="k" wx:for-item="v" wx:key="value">
+            <view class="pop_sku_btn {{v.isSelect ? 'selected' : ''}}" bindtap="clickTab" data-index="{{id}}" data-key="{{k}}">{{v.value}}</view>
+          </block>
+        </view>
+      </block>
+    </view>
+    <!--  -->
+    <view class="pro_pop_count">
+      <view class="fl pop_count_left">
+        <text class="">购买数量：</text>
+        <text>剩余{{sku.store_count?sku.store_count:0}}件</text>
+      </view>
+      <view class="fr pop_count_right">
+        <text class="{{pronum == 1 ? 'selected' : ''}}" bindtap="bindMinus">-</text>
+        <text>{{pronum}}</text>
+        <text class="{{pronum == 100 ? 'selected' : ''}}" bindtap="bindPlus">+</text>
+      </view>
+      <text class="clearfix"></text>
+    </view>
+    <!--  -->
+    <view class="pro_pop_buy">
+      <button wx:if="{{add_car}}" bindtap="addCarPop">确定</button>
+      <button wx:if="{{go_buy}}" bindtap="goToBuyPop">下一步</button>
+    </view>
+  </view>
+  <text wx:if="{{isIphoneX}}" class="iponex_bottom"></text>
+</view>
+</block>
+
+<block wx:else="{{}}">
+  <text class="pro_error">{{pro_error}}</text>
+</block>

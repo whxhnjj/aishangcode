@@ -1,0 +1,82 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.97",
+	"appid": "wx882566fe3970312b",
+	"projectname": "2",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "team",
+					"pathName": "pages/index/index",
+					"query": "scene=t-1",
+					"scene": "1012"
+				},
+				{
+					"id": 1,
+					"name": "qrcode",
+					"pathName": "pages/index/index",
+					"query": "scene=q-1",
+					"scene": "1012"
+				},
+				{
+					"id": -1,
+					"name": "logs",
+					"pathName": "pages/logs/logs",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "agent_index",
+					"pathName": "pages/agent_index/agent_index",
+					"query": "",
+					"scene": "1012"
+				},
+				{
+					"id": 4,
+					"name": "detail_qrcode",
+					"pathName": "pages/goods_detail/goods_detail",
+					"query": "scene=p-1-1",
+					"scene": "1012"
+				},
+				{
+					"id": 5,
+					"name": "detail_qrcode",
+					"pathName": "pages/goods_detail/goods_detail",
+					"query": "scene=s-1-11",
+					"scene": "1008"
+				}
+			]
+		}
+	}
+}

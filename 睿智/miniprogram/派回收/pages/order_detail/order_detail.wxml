@@ -1,0 +1,164 @@
+<block wx:if="{{order}}">
+<view class="header">
+
+  <text wx:if="{{order.status == 0 || order.status == 1}}" class="state_msg">待派单，系统正在匹配，请耐心等待。</text>
+  <text wx:if="{{order.status == 2}}" class="state_msg">已派单，待接单，请联系收纸员。</text>
+  <text wx:if="{{order.status == 3 || order.status == 6}}" class="state_msg">已接单，预计2小时内上门取件，请先打包好物件。</text>
+  <text wx:if="{{order.status == 4}}" class="state_msg">收纸员已申请取消。</text>
+  <text wx:if="{{order.status == 5}}" class="state_msg">已取消。</text>
+  <text wx:if="{{order.status == 7}}" class="state_msg">已完成，记得评价收纸员。</text>
+  <text wx:if="{{order.status == 8}}" class="state_msg">订单已经完成。</text>
+
+  <text wx:if="{{order.status == 0 || order.status == 1 ||order.status == 2}}" class="state_time">{{order.order_time}}</text>
+  <text wx:if="{{order.status == 4}}" class="state_time">{{order.abort_time}}</text>
+  <text wx:if="{{order.status == 5}}" class="state_time">{{order.abort_ok_time}}</text>
+  <text wx:if="{{order.status == 3 || order.status == 6}}" class="state_time">{{order.receive_time}}</text>
+  <text wx:if="{{order.status == 7}}" class="state_time">{{order.confirm_time}}</text>
+  <text wx:if="{{order.status == 8}}" class="state_time">{{order.comment_time}}</text>
+
+  <view class="order_state {{(order.status == 0 || order.status == 1 || order.status == 2)?'order_wait':''}} {{(order.status == 3 || order.status == 6)?'order_accept':''}} {{(order.status == 7 || order.status == 8 )? 'order_success':''}}">
+    <view class="order_draw">
+      <view class="wait"></view>
+      <text></text>
+      <view class="accept"></view>
+      <text></text>
+      <view class="success"></view>
+    </view>
+    <view class="order_text">
+      <text class="wait">待接单</text>
+      <text class="accept">已接单</text>
+      <text class="success">已完成</text>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{order.status != 0 && order.status != 1}}" class="order_box">
+  <view class="collector">
+    <text>收纸员</text>
+    <text>{{order.service_info.realname}}</text>
+  </view>
+
+  <view class="collector">
+    <text>{{order.service_info.contacts}}</text>
+    <image src="/images/icon_phone.png" bindtap="callCollector" data-contact="{{order.service_info.contacts}}"></image>
+  </view>
+
+</view>
+
+<!--  -->
+<view class="order_box">
+  <view class="order_header">
+    <image wx:if="{{order.status == 0 || order.status == 1 || order.status == 2}}" src="/images/edit.png" bindtap="showPop"></image>
+    <text><block wx:for="{{order.materials_detail}}" wx:key="key">{{item.name}} </block></text>
+  </view>
+  
+  <view class="order_img_box">
+    <block wx:for="{{order.materials_picurl}}" wx:key="key">
+      <image src="{{hostName}}{{item}}" data-index='index' bindtap="previewImg"></image>
+    </block>
+    <view class="itemempty"></view>
+  </view>
+</view>
+
+<!--  -->
+<view wx:if="{{order.status == 6 || order.status == 7 || order.status == 8}}" class="order_box">
+  <view class="order_spec {{order.is_free == 1?'no_bottom':''}}">
+
+    <view class="spec_row" wx:for="{{order.materials_detail}}" wx:key="id" wx:for-index="idx">
+      <text>{{item.name}}</text>
+      <view class="spec_box">
+        <input type="digit" disabled value="{{order.materials_count[idx]}}" name="{{item.id}}"/>
+        <text>公斤</text>
+      </view>
+    </view> 
+     
+  </view>
+
+  <view wx:if="{{order.is_free != 1}}" class="order_price">
+    <text>总金额</text>
+    <view class="spec_box">
+      <input type="digit" disabled value="{{order.order_amount}}" name="price"/>
+      <text>元</text>
+    </view>
+  </view>
+
+</view>
+
+<!--  -->
+<view class="order_box order_address">
+  <text>{{order.realname}}</text>
+  <text>{{order.contacts}}</text>
+  <text>陕西省西安市{{order.area}}{{order.address}}</text>
+</view>
+
+<!--  -->
+<view class="order_box">
+  <view class="order_time">
+    <text>订单编号</text>
+    <text>{{order.order_sn}}</text>
+  </view>
+
+  <view class="order_time">
+    <text>预约时间</text>
+    <text>{{order.suitable_time}}</text>
+  </view>
+
+  <view class="order_time">
+    <text>下单时间</text>
+    <text>{{order.order_time}}</text>
+  </view>
+
+</view>
+
+<view wx:if="{{order.status == 8}}" class="order_box">
+  <view>顾客评价</view>
+  <view class="evaluate_box {{order.comment_content?'':'evaluate_no'}}">
+    <image wx:if="{{order.customer_info.avatarurl == ''}}" src="{{hostName}}static/images/member.png"></image>
+    <image wx:else src="{{order.customer_info.avatarurl}}"></image>
+    <view class="user_msg">
+      <text>{{order.realname}}</text>
+      <text>{{order.comment_time}}</text>
+    </view>
+    <view class="star star_5">
+      <view class="selected"></view>
+      <view class="{{order.star == 1.5? 'middle':''}} {{order.star > 1.5? 'selected':''}}"></view>
+      <view class="{{order.star == 2.5? 'middle':''}} {{order.star > 2.5? 'selected':''}}"></view>
+      <view class="{{order.star == 3.5? 'middle':''}} {{order.star > 3.5? 'selected':''}}"></view>
+      <view class="{{order.star == 4.5? 'middle':''}} {{order.star > 4.5? 'selected':''}}"></view>
+    </view>
+  </view>
+  <text wx:if="{{order.comment_content}}" class="evaluate_cont">{{order.comment_content}}</text>
+</view>
+
+
+<view class="order_btn">
+  <button wx:if="{{order.status == 0 || order.status == 1 || order.status == 2}}" class="base_btn" hover-class="none" bindtap="removeOrder">取消订单</button>
+  <button wx:if="{{order.status == 2 || order.status == 3}}" class="base_btn" hover-class="none" data-contact="{{order.service_info.contacts}}" bindtap="callCollector">联系收纸员</button>
+  <button wx:if="{{order.status == 6}}" class="base_btn" hover-class="none" bindtap="userConfirm">确认收款</button>
+  <button wx:if="{{order.status == 7}}" class="base_btn" hover-class="none" bindtap="userComment">去评价</button>
+  
+  <text wx:if="{{order.status == 0 || order.status == 1}}" class="btn_text">订单未接单时，可以取消订单</text>
+  <text wx:if="{{order.status == 2 || order.status == 3}}" class="btn_text">如有疑问，请联系收纸员确认</text>
+  <text wx:if="{{order.status == 6}}" class="btn_text">请核对清楚金额与重量再点确认收款</text>
+  <text wx:if="{{order.status == 7}}" class="btn_text">评价收纸员</text>
+  <button wx:if="{{order.status == 5 || order.status == 7 || order.status == 8}}" class="base_btn btn_normal" hover-class="none" bindtap="deleteOrder">删除订单</button>
+</view>
+
+</block>
+
+<text wx:if="{{order.length == 0}}" class="no_order">订单不存在或已删除</text>
+
+
+
+<view wx:if="{{mengShow}}" class="pop_bg" bindtap="outbtn">
+  <view class="pop_box" catchtap="inbtn">
+    <text class="pop_titile">废品类型选择</text>
+    <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{waste_type}}" wx:key="id" wx:for-index="index" wx:for-item="item">
+          <checkbox value="{{item.id}}" checked="{{item.checked}}" />{{item.name}}
+        </label>
+    </checkbox-group>
+    <view class="pop_btn" bindtap="updataPop">确认</view>
+    <image class="pop_close" src="/images/close.png" bindtap="outbtn"></image>
+  </view>
+</view>

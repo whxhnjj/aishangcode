@@ -1,0 +1,35 @@
+<!--income.wxml-->
+<view class="box">
+    <view class="section">  
+      <picker mode="date" value="{{date}}"  start="1995-01" end="2100-12" bindchange="bindDateChange">  
+       <view class="picker">  
+       <i>日期：</i><b>{{date}}</b>  
+       </view>  
+      </picker>  
+    </view>  
+
+    <view class="section">  
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">  
+        <view class="picker">  
+        <i> 类别：</i><b>{{array[index]}}</b>
+        </view>  
+      </picker>  
+    </view> 
+   <view class="section">
+           <i>金额：</i><input type="digit" placeholder ="请输入金额" />
+     </view>
+
+       <view class="section">  
+           <i>对方：</i><input type="text" placeholder-style placeholder ="对方"/>
+     </view>
+
+       <view class="section">
+           <i>支付：</i><input type="text" placeholder ="支付方式" />
+     </view>
+
+       <view class="section">
+           <i>备注：</i><textarea maxlength="50" type="text"   placeholder ="请输入要备注的信息"/>
+        </view>
+</view>
+
+<button  class="shouru" bindtap="submit">记录支出</button>

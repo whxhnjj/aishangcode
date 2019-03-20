@@ -1,0 +1,15 @@
+<view class="content">
+  <view class="content_title">使用说明</view>
+
+  <!-- <view class="content_cont">
+    <import src="../../extend/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:instructions .nodes}}" />
+    </view>{{instructions}}
+  </view> -->
+
+  <text class="content_cont">{{instructions}}</text>
+
+  <button class="content_msg" hover-class="none" open-type="contact">注：若有更多问题，请咨询客服</button>
+
+</view>

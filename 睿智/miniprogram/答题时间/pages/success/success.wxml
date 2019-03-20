@@ -1,0 +1,7 @@
+<view class="wrap">
+    <icon class="icon" type="success" size="120"  color="#3755aa"/>
+    <span class="tit">提交成功</span>
+    <view class="tex" wx:if="{{state == 0}}">感谢你的反馈，我们坚决反对色情、暴力、欺诈等违规信息，我们会认真处理你的举报，维护绿色、健康的网络环境。</view>
+    <view class="tex" wx:if="{{state == 1}}">感谢你的反馈，我们会核实你提供的错误题目信息，做出相应更改。</view>
+    <button  bindtap="submit" hover-class="none">确定</button>
+</view>

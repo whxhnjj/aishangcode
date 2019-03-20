@@ -1,0 +1,41 @@
+<view class="taber">
+  <view class="tab">
+    <navigator open-type="redirect" class="view icon1" url="/pages/index/index">推荐</navigator> 
+    <view class="view icon2" bindtap="calphone">在线客服</view> 
+    <navigator class="view icon3" url="/pages/order/order">我的订单</navigator> 
+    <navigator class="view icon4" url="/pages/about/about">关于NASA</navigator> 
+  </view>
+</view>
+
+<view class="banner">
+  <image mode="aspectFill" src="/pages/images/banner.jpg"></image>
+</view>
+<view class="main01">NASA婚纱摄影定制工艺</view>
+
+<view class="wrap face">
+  <image mode="scaleToFill" src="/pages/images/title.png"></image>
+</view>
+  <scroll-view class="scroll" scroll-x>
+      <navigator url="/pages/detail/detail">
+      <image mode="aspectFill" src='/pages/images/banner.jpg'></image>
+      </navigator>
+      <navigator url="/pages/detail/detail">
+      <image mode="aspectFill" src='/pages/images/banner.jpg'></image>
+      </navigator>
+      <navigator url="/pages/detail/detail">
+      <image mode="aspectFill" src='/pages/images/banner.jpg'></image>
+      </navigator>
+      <navigator url="/pages/detail/detail">
+      <image mode="aspectFill" src='/pages/images/banner.jpg'></image>
+      </navigator>
+  </scroll-view>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+<swiper class="notices_swiper" wx:if="{{notices.length >= 1}}" autoplay="true" interval="3000" circular="true" vertical="true">
+  <block wx:for="{{notices}}" wx:key="key">
+    <swiper-item bindtap="noticeOpen" data-index="{{index}}">
+      <span class="title">{{item.title}}</span>
+      <span class="dateline">{{item.dateline}}</span>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="notice_bg" hidden="{{noticehide}}">
+  <view class="notice">
+      <span class="title">{{notice.title}}</span>
+      <span class="date">{{notice.dateline}}</span>
+      <text class="content">{{notice.content}}</text>
+      <button bindtap="noticeClose">我知道了</button>
+  </view>
+</view>
+
+<view class="showmost" wx:if="{{actor.status==0}}">正在审核中……</view>
+
+<!--底部tab部分-->
+<view class="tabs">
+  <navigator class="tabs_left" url="../theme/theme" open-type="switchTab">回首页</navigator>
+  <view class="tabs_center" bindtap="toGift" style="{{style_img}}">支持</view>
+  <view class="tabs_right" bindtap="toSignup">报名</view>
+</view>
+
+<!--内容部分-->
+<view class="title_content">
+  <view class="title_name">
+    <image class="userinfo_avatar" src="{{actor.avatarurl}}" background-size="cover"></image>
+      <view class="title_xi">
+        <span class="userinfo_name">NO.{{actor.order_number}}</span>
+        <span class="serial">{{actor.name}}</span>
+      </view>
+      <view class="show_View" bindtap="depict">
+         <text>点这里->喊朋友助力</text>
+         <image src="/pages/images/fenxiang.png" background-size="cover" mode="scaleToFill"></image>
+      </view>
+   
+   
+
+  </view>
+</view>
+<!--弹出选项卡分享-->
+<view class="codeshow" hidden="{{nullHouse}}">
+    <button bindtap="cancel" open-type='share'>分享给朋友</button>
+    <navigator bindtap="cancel" url="/pages/poster/poster?actor_id={{actor_id}}">生成海报 分享到朋友圈</navigator>
+    <button bindtap="cancel">取消</button>
+</view>
+<!--弹出选项卡--结束-->
+
+<view class="box1">
+  <view  class="piaoshu">
+      <span class="sp_tp">票数</span>
+      <span class="sp_bt">{{actor.votes}}</span>
+  </view>
+  <view class="liwu">
+      <span class="sp_tp">礼物</span>
+      <span class="sp_bt">{{actor.gifts}}</span>
+  </view>
+  <view class="renqi">
+      <span class="sp_tp">人气</span>
+      <span class="sp_bt">{{actor.visitors}}</span>
+  </view>
+</view>
+
+<view class="photo photo{{rownum}}">
+  <image bindlongpress="longpress" wx:for="{{photos}}" wx:key="key" src="{{domain}}/{{item}}" data-path="{{item}}" data-src="{{domain}}/{{item}}"  class="slide-image" mode="aspectFill" bindtap="previewImage"/>
+</view>
+
+<view class="font">
+    <view class="hide{{showView?'show':''}}">
+      <block wx:for="{{actor.content}}" wx:key="key">
+        <text class="text">{{item}}</text>
+      </block>
+    </view>
+    <view wx:if="{{actor.content[actor.content.length - 1].length > 60}}">
+      <view  class="hide{{showView?'show1':''}}" bindtap="onChangeShowState">{{showView?'':''}}</view>
+      <view class="hide{{showView?'':'show2'}}" bindtap="onChangeShowState">{{showView?'':''}}</view>
+    </view>
+</view>
+
+<view class="ebebeb"></view>
+<view class="box2">
+    <span class="giftname">礼物列表</span>
+    <view class="giftlist"  wx:for="{{gifts}}" wx:key="key">
+       <image class="giftlist_avatar" src="{{item.avatarurl}}" background-size="cover"></image>
+       <span class="nickName">{{item.nickname}}</span><span class="date">{{item.dateline}}</span>
+       <span class="nickgift">送TA一个<b>{{item.gift_name}}</b></span>
+    </view>
+    <view class="more" bindtap="getMore">{{more}}</view>
+</view>
+<view class="banner_box" wx:if="{{theme.banner}}">
+  <image mode="widthFix" src="{{domain}}/{{theme.banner}}"></image>
+</view>
+<navigator class="report" url="../feedback/feedback">举报</navigator>
+
+<view class="mg"></view>

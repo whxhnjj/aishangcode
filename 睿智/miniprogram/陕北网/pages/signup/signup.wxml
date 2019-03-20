@@ -1,0 +1,25 @@
+<view class='photo'>
+      <view wx:for="{{photos}}" data-index="{{index}}" bindlongpress="deleteImg" wx:key="key" wx:for-item="image">
+        <image src="{{image}}" data-src="{{image}}" bindtap="previewImage" mode="aspectFill"></image>
+      </view>
+  <view class="tap" bindtap="chooseImage" wx:if="{{photos.length<9}}">{{theme.placeholder_pic ? theme.placeholder_pic:'添加照片'}}</view> 
+</view>
+
+<view class="box">
+  <form bindsubmit="formSubmit" report-submit>
+    <view class="list">
+      <span class="name"></span>
+      <input type="text" placeholder="{{theme.placeholder_name ? theme.placeholder_name:'请输入姓名'}}" maxlength="12" name='name' placeholder-style="font-size:34rpx;"></input>
+    </view>
+    <view class="list">
+      <span  class="phone"></span>
+      <input type="number" placeholder="{{theme.placeholder_phone ? theme.placeholder_phone:'请输入手机号'}}" maxlength="11" name='phone' placeholder-style="font-size:34rpx; color: #858585;" ></input>
+    </view>
+    <view class="list">
+    <textarea placeholder="{{theme.placeholder_content ? theme.placeholder_content:'想写点什么……'}}" name='content' maxlength="1000" placeholder-style="font-size:34rpx; color: #858585;" >
+    </textarea>
+    </view>
+    <button class="submit" form-type="submit" >提交</button>
+    <button class="contact" hover-class="none" type="primary" open-type="contact">报名有问题？联系客服</button>
+  </form>
+</view>

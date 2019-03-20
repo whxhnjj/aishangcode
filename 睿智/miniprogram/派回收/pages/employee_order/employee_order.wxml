@@ -1,0 +1,250 @@
+<view class="nav">
+  <view class="nav_item {{state == 0? 'selected' :''}}" data-state="0" bindtap="changeOrderList">
+    全部订单
+    <!-- formid -->
+    <form bindsubmit="formidSubmit" report-submit="{{true}}">
+      <button class="form_btn" hover-class="none" formType="submit">
+        <view data-state="0">
+          <form bindsubmit="formidSubmit" report-submit="{{true}}">
+            <button class="form_btn" hover-class="none" formType="submit">
+              <view data-state="0">
+                <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                  <button class="form_btn" hover-class="none" formType="submit">
+                    <view data-state="0">
+                      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                        <button class="form_btn" hover-class="none" formType="submit">
+                          <view data-state="0">
+                            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                              <button class="form_btn" hover-class="none" formType="submit">
+                                <view data-state="0"></view>
+                              </button>
+                            </form>
+                          </view>
+                        </button>
+                      </form>
+                    </view>
+                  </button>
+                </form>
+              </view>
+            </button>
+          </form>
+        </view>
+      </button>
+    </form>
+    <!-- formid -->
+  </view>
+  <view class="nav_item {{state == 1? 'selected' :''}}" data-state="1" bindtap="changeOrderList">
+    新任务
+    <!-- formid -->
+    <form bindsubmit="formidSubmit" report-submit="{{true}}">
+      <button class="form_btn" hover-class="none" formType="submit">
+        <view class="list2" data-state="1">
+          <form bindsubmit="formidSubmit" report-submit="{{true}}">
+            <button class="form_btn" hover-class="none" formType="submit">
+              <view data-state="1">
+                <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                  <button class="form_btn" hover-class="none" formType="submit">
+                    <view data-state="1">
+                      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                        <button class="form_btn" hover-class="none" formType="submit">
+                          <view data-state="1">
+                            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                              <button class="form_btn" hover-class="none" formType="submit">
+                                <view data-state="1"></view>
+                              </button>
+                            </form>
+                          </view>
+                        </button>
+                      </form>
+                    </view>
+                  </button>
+                </form>
+              </view>
+            </button>
+          </form>
+        </view>
+      </button>
+    </form>
+    <!-- formid -->
+  </view>
+  <view class="nav_item {{state == 2? 'selected' :''}}" data-state="2" bindtap="changeOrderList">
+    待上门
+    <!-- formid -->
+    <form bindsubmit="formidSubmit" report-submit="{{true}}">
+      <button class="form_btn" hover-class="none" formType="submit">
+        <view class="list3" data-state="2">
+          <form bindsubmit="formidSubmit" report-submit="{{true}}">
+            <button class="form_btn" hover-class="none" formType="submit">
+              <view data-state="2">
+                <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                  <button class="form_btn" hover-class="none" formType="submit">
+                    <view data-state="2">
+                      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                        <button class="form_btn" hover-class="none" formType="submit">
+                          <view data-state="2">
+                            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                              <button class="form_btn" hover-class="none" formType="submit">
+                                <view data-state="2"></view>
+                              </button>
+                            </form>
+                          </view>
+                        </button>
+                      </form>
+                    </view>
+                  </button>
+                </form>
+              </view>
+            </button>
+          </form>
+        </view>
+      </button>
+    </form>
+    <!-- formid -->
+  </view>
+  <view class="nav_item {{state == 3? 'selected' :''}}" data-state="3" bindtap="changeOrderList">
+    已取消
+    <!-- formid -->
+    <form bindsubmit="formidSubmit" report-submit="{{true}}">
+      <button class="form_btn" hover-class="none" formType="submit">
+        <view class="list4" data-state="3">
+          <form bindsubmit="formidSubmit" report-submit="{{true}}">
+            <button class="form_btn" hover-class="none" formType="submit">
+              <view data-state="3">
+                <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                  <button class="form_btn" hover-class="none" formType="submit">
+                    <view data-state="3">
+                      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                        <button class="form_btn" hover-class="none" formType="submit">
+                          <view data-state="3">
+                            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                              <button class="form_btn" hover-class="none" formType="submit">
+                                <view data-state="3"></view>
+                              </button>
+                            </form>
+                          </view>
+                        </button>
+                      </form>
+                    </view>
+                  </button>
+                </form>
+              </view>
+            </button>
+          </form>
+        </view>
+      </button>
+    </form>
+    <!-- formid -->
+  </view>
+  <view class="nav_item {{state == 4? 'selected' :''}}" data-state="4" bindtap="changeOrderList">
+    已完成
+    <!-- formid -->
+    <form bindsubmit="formidSubmit" report-submit="{{true}}">
+      <button class="form_btn" hover-class="none" formType="submit">
+        <view class="list5" data-state="4">
+          <form bindsubmit="formidSubmit" report-submit="{{true}}">
+            <button class="form_btn" hover-class="none" formType="submit">
+              <view data-state="4">
+                <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                  <button class="form_btn" hover-class="none" formType="submit">
+                    <view data-state="4">
+                      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                        <button class="form_btn" hover-class="none" formType="submit">
+                          <view data-state="4">
+                            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                              <button class="form_btn" hover-class="none" formType="submit">
+                                <view data-state="4"></view>
+                              </button>
+                            </form>
+                          </view>
+                        </button>
+                      </form>
+                    </view>
+                  </button>
+                </form>
+              </view>
+            </button>
+          </form>
+        </view>
+      </button>
+    </form>
+    <!-- formid -->
+  </view>
+</view>
+
+<view class="task_box">
+
+  <block wx:for="{{order}}" wx:key="id">
+    <view class="task_list">
+      <view class="task_header" data-latlng="{{item.latlng}}" data-area="{{item.area}}" data-address="{{item.address}}" bindtap="openMap">
+        <view class="task_header_left" data-latlng="{{item.latlng}}" data-area="{{item.area}}" data-address="{{item.address}}">
+          <image wx:if="{{item.is_free == 1}}" src="/images/integral_icon.png" data-latlng="{{item.latlng}}" data-area="{{item.area}}" data-address="{{item.address}}"></image>
+          <image src="/images/icon_task.png" data-latlng="{{item.latlng}}" data-area="{{item.area}}" data-address="{{item.address}}"></image>
+          <text data-latlng="{{item.latlng}}" data-area="{{item.area}}" data-address="{{item.address}}">派单距离</text>
+          <text data-latlng="{{item.latlng}}" data-area="{{item.area}}" data-address="{{item.address}}">{{(item.distance)}}</text>
+        </view>
+        <text wx:if="{{item.status == 1}}" catchtap="inMap">已拒接</text>
+        <text wx:if="{{item.status == 2}}" catchtap="inMap">待接单</text>
+        <text wx:if="{{item.status == 3}}" catchtap="inMap">待上门</text>
+        <text wx:if="{{item.status == 4}}" catchtap="inMap">待取消</text>
+        <text wx:if="{{item.status == 5}}" catchtap="inMap">已取消</text>
+        <text wx:if="{{item.status == 6}}" catchtap="inMap">待确认</text>
+        <text wx:if="{{item.status == 7}}" catchtap="inMap">待评价</text>
+        <text wx:if="{{item.status == 8}}" catchtap="inMap">已完成</text>
+      </view>
+
+      <navigator class="task_cont" hover-class="none" url="../employee_order_detail/employee_order_detail?id={{item.id}}">
+        <view class="task_msg">
+          <view class="task_msg_box">
+            <text>{{item.suitable_time}}</text>
+            <text>上门时间</text>
+          </view>
+
+          <view class="task_msg_box">
+            <text>{{item.area}}{{item.address}}</text>
+            <text>上门地址</text>
+          </view>
+
+        </view>
+        <image src="/images/icon_arrow.png"></image>
+      </navigator>
+
+      <view class="task_btn">
+        <button wx:if="{{item.status == 2}}" hover-class="none" class="middle_btn" data-id="{{item.id}}" bindtap="orderTaking">接单</button>
+        <button wx:if="{{item.status == 2}}" hover-class="none" class="middle_btn btn_normal" data-id="{{item.id}}" bindtap="refuseOrder">拒收</button>
+        <button wx:if="{{item.status == 3}}" hover-class="none" class="middle_btn" data-contact="{{item.contacts}}" bindtap="contactsCustomer">联系顾客</button>
+        <button wx:if="{{item.status == 3}}" hover-class="none" class="middle_btn btn_normal" data-id="{{item.id}}" bindtap="removeOrder">取消</button>
+      </view>
+    </view>
+  </block>
+
+  <text class="page_text">{{order_text}}</text>
+
+</view>
+
+<!-- 弹出层 -->
+<view wx:if="{{refuse_state}}" class="pop_bg">
+  <view class="pop_box">
+    <form bindsubmit="refuseSubmit" bindreset="refuseReset" report-submit="{{true}}">
+      <textarea placeholder="请填入拒绝原因" name="reason" auto-focus></textarea>
+      <input class="hide" name="id" value="{{pop_id}}"></input>
+      <view class="btn_box">
+        <button hover-class="none" class="btn_normal" formType="reset">取消</button>
+        <button hover-class="none" formType="submit">确认</button>
+      </view>
+    </form>
+  </view>
+</view>
+
+<!-- 取消弹出 -->
+<view wx:if="{{remove_state}}" class="pop_bg">
+  <view class="pop_box">
+    <form bindsubmit="removeSubmit" bindreset="removeReset" report-submit="{{true}}">
+      <textarea placeholder="请填入取消原因" name="abort_reason" auto-focus></textarea>
+      <input class="hide" name="id" value="{{pop_id}}"></input>
+      <view class="btn_box">
+        <button hover-class="none" class="btn_normal" formType="reset">取消</button>
+        <button hover-class="none" formType="submit">确认</button>
+      </view>
+    </form>
+  </view>
+</view>

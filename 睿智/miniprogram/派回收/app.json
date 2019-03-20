@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/dispatch/dispatch",
+    "pages/index/index",
+    "pages/price/price",
+    "pages/user/user",
+    "pages/new_order/new_order",
+    "pages/integral/integral",
+    "pages/order_list/order_list",
+    "pages/order_detail/order_detail",
+    "pages/evaluate/evaluate",
+    "pages/personal_info/personal_info",
+    "pages/register/register",
+    "pages/employee_order/employee_order",
+    "pages/employee_order_detail/employee_order_detail",
+    "pages/income/income",
+    "pages/use_explain/use_explain",
+    "pages/webview/webview",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00b453",
+    "navigationBarTitleText": "派回收",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#00b453",
+    "borderStyle": "#dadada",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "/images/tabbar/index_sel.png",
+        "iconPath": "/images/tabbar/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/price_sel.png",
+        "iconPath": "/images/tabbar/price.png",
+        "pagePath": "pages/price/price",
+        "text": "价格"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/user_sel.png",
+        "iconPath": "/images/tabbar/user.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": false
+}

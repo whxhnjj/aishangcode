@@ -1,0 +1,96 @@
+.wrap{
+  width:650rpx;
+  margin:0 50rpx;
+  height: 100%;
+  overflow: hidden;
+}
+.content{
+  height: 100%;
+  overflow: hidden;
+  color: #666666;
+  font-size: 30rpx;
+  line-height:45rpx;
+  margin: 30rpx 0 35rpx 0;
+  display: block;
+  padding-bottom:35rpx;
+  border-bottom: 3rpx solid #ccc;
+}
+.banner{
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+}
+.banner image{
+  width: 750rpx;
+  height: 375rpx;
+}
+.box_view{
+  height: 100%;
+  overflow: hidden;
+  margin-bottom:35rpx;
+  padding-bottom:35rpx;
+  border-bottom: 3rpx solid #ccc;
+}
+.box_view image{
+  width:100%;
+  margin: 15rpx 0;
+}
+span.tit{
+  color: #888888;
+  display: block;
+  padding:25rpx 0 10rpx 0;
+  font-size: 34rpx;
+  border-top:3rpx solid #ccc; 
+  font-weight:600;
+}
+.box_view span.ranking{
+ color: #f00;
+ font-size:34rpx;
+}
+.box_view span.num{
+ color:#888888;
+  font-size: 36rpx;
+}
+.box_view p{
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  line-height: 40rpx;
+  font-size:30rpx;
+  padding-top:10rpx;
+  color: #353535;
+}
+.footer{
+  color: #888888;
+  height: 100%;
+  margin-top: 10rpx;
+}
+.footer span{
+  font-size:30rpx;
+  line-height:45rpx;
+  display: block;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+/*广告位*/
+.banner_box{
+  width:650rpx;
+  height: 100%;
+  overflow: hidden;
+  margin:30rpx 50rpx 10rpx;
+}
+.banner_box image{
+  width:650rpx;
+}
+.report{
+  font-size: 28rpx;
+  color: #f76260;
+  text-align: center;
+  width:80rpx;
+  display:block;
+  float: right;
+  padding: 0 30rpx 30rpx 0;}

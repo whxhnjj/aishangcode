@@ -1,0 +1,93 @@
+<!--弹出层部分-->
+<view class="popup"  hidden="{{nullHouse}}">
+<span class="close" bindtap="colse"></span>
+ <view class="showtost">
+    </view>
+    <view class="box_most">
+        <span class="box_span">投票成功,你还可以送礼物给你喜欢的明星</span>
+        <image class='box_text' src="/pages/images/banner_toupiao.jpg"></image> 
+        <button bindtap="vote2">去送礼物</button>
+    </view>
+</view>
+<!--底部tab部分-->
+
+<view class="tabs">
+  <view class="tabs_left" bindtap="Home">回首页</view>
+  <view class="tabs_center" bindtap="vote" >投票</view>
+  <view class="tabs_right" bindtap="giving">送礼物</view>
+</view>
+
+<!--内容部分-->
+<view class="title">
+  <view class="title_name">
+    <image class="userinfo_avatar" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <view class="title_xi">
+        <span class="userinfo_name">3号</span>
+        <span class="serial">王杰</span>
+      </view>
+    <image class="erweima" src="/pages/images/erweima.png" background-size="cover" mode="scaleToFill"></image>
+     
+  </view>
+</view>
+
+<view class="box1">
+  <view class="box1_left">
+      <b></b>
+      <span class="sp_tp">票数</span>
+      <span class="sp_bt">258</span>
+  </view>
+  <view class="box1_center">
+      <b></b>
+      <span class="sp_tp">礼物</span>
+      <span class="sp_bt">9999</span>
+  </view>
+  <view class="box1_right">
+      <b></b>
+      <span class="sp_tp">人气</span>
+      <span class="sp_bt">52265</span>
+  </view>
+</view>
+
+<view class="banner">
+  <image src="../images/banner1.jpg" class="slide-image" mode="aspectFill"/>
+</view>
+
+<view class="box2">
+    <span class="giftname">礼物列表</span>
+    <view class="giftlist">
+       <image class="giftlist_avatar" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+       <span class="nickName">{{userInfo.nickName}}</span><span class="date">2018.01.05 12:45:36</span>
+       <span class="nickgift">送她一份兰博基尼</span>
+    </view>
+    <view class="giftlist">
+       <image class="giftlist_avatar" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+       <span class="nickName">{{userInfo.nickName}}</span><span class="date">2018.01.05 12:45:36</span>
+       <span class="nickgift">送她一份兰博基尼</span>
+    </view>
+    <view class="giftlist">
+       <image class="giftlist_avatar" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+       <span class="nickName">{{userInfo.nickName}}</span><span class="date">2018.01.05 12:45:36</span>
+       <span class="nickgift">送她一份兰博基尼</span>
+    </view>
+    <view class="more">更多</view>
+</view>
+<view class="box3">
+  <span class="latestvote">最新投票</span>
+  <view class="wai">
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+      <image class="portrait" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+  </view>
+</view>
+<view class="mg"></view>

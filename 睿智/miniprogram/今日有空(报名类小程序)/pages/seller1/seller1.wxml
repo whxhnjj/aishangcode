@@ -1,0 +1,60 @@
+<!--pages/seller1/seller1.wxml-->
+<view class='userinfo'>
+      <image class="userinfo_avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+ <view class="userinfo_nickname">{{userInfo.nickName}}</view>
+</view>
+<view  class='query'>
+  <input class='number' type='number' value='' placeholder='输入你想要查询的编号'></input>
+  <button class='btn' form-type='submit'>查询</button>
+</view>
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">全部</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.type}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.type}}</view>
+    </view>
+  </block>
+</view>
+
+<view class="order">
+    <view class='title'>
+    订单详情
+    </view>
+    <view class='list'>
+        <span class="left">订单号：</span>
+        <span class="right">201712121110</span>
+    </view>
+       <view class='list'>
+        <span class="left">购买手机号：</span>
+        <span class="right">18829225381</span>
+    </view>
+      <view class='list'>
+        <span class="left">付款时间：</span>
+        <span class="right">2017-12-7 17:42</span>
+    </view>
+      <view class='list'>
+        <span class="left">数量：</span>
+        <span class="right">2</span>
+    </view>
+      <view class='list'>
+        <span class="left">总价：</span>
+        <span class="right">￥98</span>
+    </view>
+     <view class='list'>
+        <span class="left">实付：</span>
+        <span class="right">￥40</span>
+    </view>
+</view>
+<button class='submit' form-type='submit'>提交</button>
+<view class='saoyisao' bindtap="Scancodeimg">扫一扫</view> 
+<view class='black'></view> 

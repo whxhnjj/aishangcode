@@ -1,0 +1,101 @@
+<!--头部  -->
+<view class="order_tab">
+  <text class="order {{nav_state[0]?'selected':''}}" data-state="0" bindtap="getOrder">全部</text>
+  <text class="order {{nav_state[1]?'selected':''}}" data-state="1" bindtap="getOrder">待付款</text>
+  <text class="order {{nav_state[2]?'selected':''}}" data-state="2" bindtap="getOrder">待发货</text>
+  <text class="order {{nav_state[3]?'selected':''}}" data-state="3" bindtap="getOrder">待收货</text>
+  <!-- <text class="order">待评价</text> -->
+  <text class="order {{nav_state[5]?'selected':''}}" data-state="5" bindtap="getOrder">退换/售后</text>
+</view>
+<view class="top"></view>
+
+<!-- 列表 -->
+<view class="order_kuang">
+  <block wx:for="{{order}}" wx:key="key">
+    <view class="order_list">
+      <!--  -->
+      <view class="order_list_header">
+        <view class="order_list_fl">
+          <text class="fl">店铺：{{item.shop_name}}</text>
+          <block wx:if="{{item.status == 0}}">
+            <text class="fr order_list_fr">请在{{item.abort_time}}内支付</text>
+          </block>
+          <block wx:elif="{{item.status == 1}}">
+            <text class="fr order_list_fr">订单已关闭</text>
+          </block>
+          <block wx:elif="{{item.status == 2}}">
+            <text class="fr order_list_fr">待发货</text>
+          </block>
+          <block wx:elif="{{item.status == 3}}">
+            <text class="fr order_list_fr">已取消（待退款）</text>
+          </block>
+          <block wx:elif="{{item.status == 4}}">
+            <text class="fr order_list_fr">已取消（已退款）</text>
+          </block>
+          <block wx:elif="{{item.status == 5}}">
+            <text class="fr order_list_fr">已发货（待收货）</text>
+          </block>
+          <block wx:elif="{{item.status == 6}}">
+            <text class="fr order_list_fr">已收货（订单完成）</text>
+          </block>
+          <block wx:elif="{{item.status == 7}}">
+            <text class="fr order_list_fr">已评价</text>
+          </block>
+          <block wx:elif="{{item.status == 8}}">
+            <text class="fr order_list_fr">部分退货（待退款）</text>
+          </block>
+          <block wx:elif="{{item.status == 9}}">
+            <text class="fr order_list_fr">部分退货（已退款）</text>
+          </block>
+          <block wx:elif="{{item.status == 10}}">
+            <text class="fr order_list_fr">全部退货（待退款）</text>
+          </block>
+          <block wx:elif="{{item.status == 11}}">
+            <text class="fr order_list_fr">全部退货（已退款）</text>
+          </block>
+          <text class="clearfix"></text>
+        </view>
+        
+        <view>
+          <text class="order_bh fl">订单编号：{{item.trade_sn}}</text>
+          <button class="order_clone fl" bindtap="copyTradeSn" data-trade_sn="{{item.trade_sn}}">复制</button>
+          <text class="clearfix"></text>
+        </view>
+      </view>
+      <!--  -->
+      <block wx:for="{{item.order}}" wx:key="k" wx:for-item="v">
+        <navigator class="pro_list" url="../trade_detail/trade_detail?id={{item.id}}">
+          <image src="{{hostName}}{{v.main_pic}}" class="fl" mode="aspectFill"></image>
+          <view class="pro_list_box1 fl">
+            <text class="pro_title">{{v.goods_name}}</text>
+            <text class="pro_sku">{{v.spec_value}}</text>
+          </view>
+          <view class="pro_list_box2 fr">
+            <text class="pro_price">￥{{v.goods_price/100}}</text>
+            <text class="pro_count">x{{v.buy_count}}</text>
+          </view>
+          <text class="clearfix"></text>
+        </navigator>
+      </block>
+      <!--  -->
+      <view class="order_price">
+        <text>￥{{item.order_amount/100}}</text>
+      </view>
+      <!--  -->
+      <view class="order_chose">
+        <button wx:if="{{item.status == 0}}" data-id="{{item.id}}" bindtap='cancelOrder'>取消订单</button>
+        <button wx:if="{{item.status == 0}}" class="selected" data-id="{{item.id}}" bindtap="gotoBuyOrder">确认付款</button>
+        <button wx:if="{{item.status == 2}}" data-id="{{item.id}}" bindtap="refundApply">申请退款</button>
+        <button wx:if="{{item.status == 1 || item.status == 4 || item.status == 6 || item.status == 7 || item.status == 9 ||item.status == 11}}" data-id="{{item.id}}" bindtap='deleteOrder'>删除订单</button>
+        <button wx:if="{{item.status == 5}}" data-id="{{item.id}}" bindtap="takeDelivery">确认收货</button>
+        <button wx:if="{{(item.status == 6 || item.status == 7) && item.can_refund ==1}}" data-id="{{item.id}}" bindtap="returnGoods">申请退货</button>
+        <!-- <button wx:if="{{item.status == 6}}" data-id="{{item.id}}" bindtap="">去评价</button>
+    <button wx:if="{{item.status == 5}}" data-id="{{item.id}}" bindtap="">查看物流</button> -->
+        <text class="clearfix"></text>
+      </view>
+    </view>
+  </block>
+</view>
+
+
+<view class="load_more">{{load_more}}</view>

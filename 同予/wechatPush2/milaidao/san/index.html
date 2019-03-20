@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=1080,minimum-scale=0.1,maximum-scale=2,user-scalable=yes" />
+    <title>米来到</title>
+    <style>
+        *{padding: 0;margin: 0;}
+        html{color:#000;
+            background:#ffd62c;
+            font-size:12px;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+        }
+        body{
+            width: 1080px;
+            height: 100%;
+            background: #ffd62c;
+            margin: 0 auto;
+            position: relative;
+        }
+        .box{
+            width: 1080px;
+            height: 100%;
+        }
+        .box-bg-img{
+            width: 1080px;
+            height: 100%;
+        }
+        .img{
+            width:390px;
+            height: 390px;
+            display: block;
+            position: absolute;
+            top: 1180px;
+            left: 340px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img class="box-bg-img" src="../../static/image/cord-bg.jpg" />
+</div>
+<script src="../../static/js/jquery-3.3.1.min.js"></script>
+<script>
+    var html = document.getElementsByTagName('html')[0];
+    var w = document.documentElement.clientWidth || document.body.clientWidth;
+    html.style.fontSize = w/7.50+"px";
+    var strurl = window.location.href
+    var index = strurl.lastIndexOf("\=");
+    var channel = strurl.substring(index + 1, strurl.length);
+
+    var strlast = strurl.indexOf("\=");
+    var indexofurl = strurl.substring(strlast + 1, strlast.length);
+    var appkey = indexofurl.split("&")[0];
+    $.ajax({
+        url: 'https://lm.tongyufintech.com/api/v1/wechat/qrcode',
+        type: 'POST',
+        dataType: 'json',
+        data:{
+            channel: channel,
+            appkey: appkey
+        },
+        success:function (data) {
+            var res = data.data
+            console.log(res)
+            if (data.code == 200){
+                var str = '<img class="img" src="'+res+'" />'
+                $("body").append(str)
+            }else {
+                window.location.href = "404.html"
+            }
+        }
+    })
+</script>
+</body>
+</html>

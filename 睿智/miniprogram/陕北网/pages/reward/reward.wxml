@@ -1,0 +1,25 @@
+<!--pages/prize/prize.wxml-->
+<view class="banner" wx:if="{{theme.photo}}">
+  <image src="{{domain}}/{{theme.photo}}" mode="aspectFill"></image>
+</view>
+<view class='wrap'>
+  <text class="content">{{theme.content}}</text>
+
+  <view class='box_view'  wx:for="{{rewards}}" wx:key="id">
+    <span class="ranking">{{item.name}}</span>
+    <span class="num">({{item.num}}名)</span>
+    <p>{{item.content}}</p>
+    <image wx:if="{{item.photo}}" src="{{domain}}/{{item.photo}}" mode="widthFix"></image>
+  </view>
+
+  <view class="footer {{is_loaded ? 'show':'hide'}}">
+    <span>开始时间：{{theme.start_time}}</span>
+    <span>截止时间：{{theme.deadline}}</span>
+    <span>颁奖时间：{{theme.reward_time}}</span>
+    <span>投票规则：{{theme.rule}}</span> 
+  </view>
+</view>
+<view class="banner_box" wx:if="{{theme.banner}}">
+  <image mode="widthFix" src="{{domain}}/{{theme.banner}}"></image>
+</view>
+<navigator class="report" url="../feedback/feedback">举报</navigator>

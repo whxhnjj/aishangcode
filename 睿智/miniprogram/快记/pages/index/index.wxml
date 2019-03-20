@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container">
+<view class="header">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+  <view class="profit">
+        <view class="h3">2015.5.25开始利润</view>
+        <view class="num">145258<i>.00</i></view>
+        <view class="payments">
+            <view class="balance">
+            <p>收</p><view class="number">5355289<i>.00</i></view>
+            </view>
+            <view class="balance">
+            <p>支</p><view class="number">5355289<i>.00</i></view></view>
+        </view>
+        <view class="classification">
+          <navigator class="detailed" url="../summary/summary">分类汇总</navigator>
+          <navigator class="detailed" url="../date/date">查看明细</navigator>
+        </view>
+  </view>
+</view>
+  <view class="wrap list">
+      <ul>
+          <li>
+            <view class="day">一周内</view>
+            <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+          </li>
+           <li>
+            <view class="day">本月</view>
+            <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+          </li>
+           <li>
+            <view class="day">近30天</view>
+            <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+          </li>
+           <li>
+            <view class="day">本年度</view>
+            <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+          </li>
+           <li>
+            <view class="day">去年</view>
+            <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+          </li>
+      </ul>
+    </view>
+      <navigator url="../income/income" class="shouru">记录收入</navigator>
+      <navigator url="../expenditure/expenditure" class="zhichu">记录支出</navigator>
+</view>

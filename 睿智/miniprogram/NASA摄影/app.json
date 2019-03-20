@@ -1,0 +1,17 @@
+{
+  "pages":[
+        "pages/index/index",
+    "pages/logoin/logoin",
+    "pages/detail/detail",
+
+    "pages/phone/phone",
+    "pages/order/order",
+    "pages/about/about"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "NASA摄影",
+    "navigationBarTextStyle":"white"
+  }
+}

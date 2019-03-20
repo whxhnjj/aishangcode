@@ -1,0 +1,50 @@
+<view class="navbar_box">
+  <scroll-view scroll-x="true" scroll-with-animation="true" class="navbar" scroll-left="{{scroll_left}}">
+    <view class="item item_{{index}}" wx:for="{{categories}}" wx:key="id" data-id="{{item.id}}" data-index="{{index}}" bindtap="updataGoodsList">
+      <view class="item_box {{item.selected?'selected':''}}" >
+        <view>{{item.name}}</view>
+        <text></text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="category_box">
+  <block wx:for="{{goods}}" wx:key="id">
+    <navigator class="category_list" hover-class="none" url="../goods_detail/goods_detail?id={{item.id}}">
+
+      <view wx:if="{{item.store_count <= 0 || item.class_state == 3}}" class="no"></view>
+
+      <text wx:if="{{item.back_cash > 0}}">返¥{{item.back_cash}}</text>
+
+      <view wx:if="{{item.store_count <= 0 || item.class_state == 3}}" class="no_store_count">
+        <image src="/images/cate_soldout.png"/>
+        <text>已售罄</text>
+      </view>
+
+      <view wx:if="{{item.class_state == 1}}" class="new_goods">新品</view>
+      <!-- <text wx:else class="line_through">门市价：¥{{item.market_price}}</text> -->
+
+      <view class="img_box">
+        <image src="{{hostName}}{{item.main_pic}}" mode="aspectFill"/>
+      </view>
+
+      <view class="category_cont">
+      
+        <view>{{item.name}}</view>
+        <!-- <text>{{item.sale_desc}}</text> -->
+        <view class="category_msg">
+          <view class="left_box">
+            <text>¥</text>
+            <text>{{item.price}}</text>
+          </view>
+          <view class="right_box">已售 {{item.sale_count + item.sale_ext_count}}</view>
+        </view>
+      </view>
+
+    </navigator>
+  </block>
+
+  <view class="page_text">{{page_text}}</view>
+
+</view>

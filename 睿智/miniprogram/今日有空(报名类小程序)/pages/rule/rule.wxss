@@ -1,0 +1,22 @@
+/* pages/rule/rule.wxss */
+view{
+ width:680rpx;
+ height: 100%;
+ overflow: hidden;
+ margin:35rpx;
+ padding-bottom: 100rpx;
+}
+text{
+  height: 100%;
+  display: block;
+  color: #575D63;
+  font-size: 30rpx;
+}
+b{
+  display:block;
+  line-height: 50rpx;
+  margin: 25rpx 0 10rpx 0;
+  color: #556364;
+  font-weight:bold;
+  font-size: 36rpx;
+}

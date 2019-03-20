@@ -1,0 +1,33 @@
+{include file="inc_header.html" current="comment_list" title="评论：{$post.title}"}
+
+<div class="content commentbox">
+	<h1>评论：{$post.title}</h1>
+
+	<div class="comment">
+		<form name="form_comment_new" id="form_comment_new" method="post" action="/comment_new.php">
+		<input type="hidden" name="post_id" id="post_id" value="{$post.id}" />
+		<textarea name="content" id="content" placeholder="想说点什么" required="required"></textarea>
+		</form>
+		<a class="submit" id="submit" href="javascript:void(0);">发表评论</a>
+		<a class="back" href="{$post.url}">返回文章</a>
+	</div>
+</div>
+
+<div class="commentslist">
+<ul>
+{foreach from=$comments.comments item=item}
+<li><div class="headimg"><img src="{if $item.wechat_headimgurl != ''}{$item.wechat_headimgurl}{else}{$item.avater}{/if}" /></div><div class="text"><div class="nickname">{$item.name}</div><div class="content">{$item.content}</div><div class="dateline">{$item.dateline|date_format:'%Y-%m-%d'}</div></div></li>
+{/foreach}
+</ul>
+</div>
+
+<div class="pages">
+{if $page > 1}
+<a href="/s/comment/{$post.id}-{$page-1}.html" class="prev">&lt;上一页</a>
+{/if}
+{if $page < $comments.pagecount}
+<a href="/s/comment/{$post.id}-{$page+1}.html" class="next">下一页&gt;</a>
+{/if}
+</div>
+
+{include file="inc_footer.html" current="comment_list"}

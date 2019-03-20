@@ -1,0 +1,53 @@
+<!-- 搜索 -->
+<form bindsubmit="searchSubmit">
+<view class="search">
+  <input name="name" placeholder="请输入要搜索的商品" />
+  <button class="search_btn" formType="submit">搜索</button>
+  <image src="../images/icon_search.png" />
+</view>
+</form>
+
+<!--轮播图  -->
+<block wx:if="{{swiper[0].pic_url}}">
+  <swiper class="shop_banner" indicator-dots="true" autoplay="true" interval="5000" duration="300">
+    <block wx:for="{{swiper}}" wx:for-index="index" wx:key="key">
+      <swiper-item>
+        <navigator wx:if="{{item.type ==2}}" url="../group/group?group_id={{item.group_id}}">
+          <image src="{{hostName}}{{item.pic_url}}" mode="widthFix" data-id="{{item.goods_id}}"></image>
+        </navigator>
+
+        <navigator wx:else url="../pro/pro?goods_id={{item.goods_id}}">
+          <image src="{{hostName}}{{item.pic_url}}" mode="widthFix" data-id="{{item.goods_id}}"></image>
+        </navigator>
+
+      </swiper-item>
+    </block>
+  </swiper>
+</block>
+
+<!-- 分类 -->
+<view class="navbar_box">
+  <scroll-view scroll-x="true" scroll-with-animation="true" class="navbar" scroll-left="{{scroll_left}}">
+    <view class="item item_{{index}}" wx:for="{{categories}}" wx:key="key" data-id="{{item.id}}" data-index="{{index}}" bindtap="updataGoodsList">
+      <view class="item_box {{item.selected?'selected':''}}" >
+        <view>{{item.name}}</view>
+        <text></text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- 列表 -->
+<view class="category_box">
+  <block wx:for="{{goods}}" wx:key="id">
+    <navigator class="category_list" hover-class="none" url="../pro/pro?goods_id={{item.id}}">
+      <image src="{{hostName}}{{item.goods_pic}}" mode="aspectFill"/>
+      <view class="title">{{item.name}}</view>
+      <view class="price">
+        <text>¥</text>
+        <text>{{item.min_price/100}}</text>
+      </view>
+    </navigator>
+  </block>
+</view>
+<view class="page_text">{{page_text}}</view>

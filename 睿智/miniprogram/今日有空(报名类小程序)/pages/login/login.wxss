@@ -1,0 +1,88 @@
+/**index.wxss**/
+.denglu{
+  width: 400rpx;
+  height: 128rpx;
+  margin: 20rpx;
+   float: left;
+   line-height: 128rpx;
+   color: #FFF;
+   background: #13D4C8;
+   font-size: 38rpx;
+}
+/**index.wxss**/
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx 0;
+  border-radius: 50%;
+  border: 1px solid #AAA;
+  float: left;
+}
+
+.userinfo-nickname {
+  float: left;
+  color: #aaa;
+  width:400rpx;
+  display: block;
+  height: 64rpx;
+  line-height:80rpx;
+  margin: 20rpx 20rpx 0 20rpx;
+}
+.point{
+  float: left;
+   display: block;
+  width:364rpx;
+  padding-left:36rpx;
+  height: 64rpx;
+  line-height:64rpx;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/image/img/point3.png') no-repeat left center;
+  background-size: 32rpx;
+  margin: 0 20rpx 20rpx 20rpx ;
+  font-size: 26rpx;
+  color: #13D4C8;
+}
+
+
+.erweima{
+  display: block;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx 0;
+}
+.list{
+  padding: 25rpx  64rpx 25rpx 0;
+  border-bottom: 3rpx solid #F0EFF4;
+  color: #666;
+  height:64rpx;
+  line-height:64rpx;
+  background:url(http://t.nongjia365.com.cn/guanli/assets/image/img/yousanjiao.png) no-repeat right center;
+  background-size: 64rpx;
+}
+
+.list1 span{
+  background:#13D4C8 url(http://t.nongjia365.com.cn/guanli/assets/image/img/dingdan.png) no-repeat center center;
+}
+.list p{
+  width:470rpx;
+  height:64rpx;
+  display: block;
+  margin-left: 30rpx;
+  float: left;
+}
+.list2 span{
+  background:#13D4C8  url(http://t.nongjia365.com.cn/guanli/assets/image/img/renmai.png) no-repeat center center;
+}
+.list3 span{
+  background:#13D4C8 url(http://t.nongjia365.com.cn/guanli/assets/image/img/saoyisao.png) no-repeat center center;
+}
+.list4 span{
+  background:#13D4C8 url(http://t.nongjia365.com.cn/guanli/assets/image/img/guanyu.png) no-repeat center center;
+}
+.list span{
+  width:64rpx;
+  height:64rpx;
+  display: block;
+  float: left;
+  border-radius: 50%;
+  background-size: 48rpx;
+}

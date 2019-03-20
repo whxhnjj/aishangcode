@@ -1,0 +1,6 @@
+<view class="container">
+   <form class="sub" bindsubmit="formSubmit">
+    <textarea name="desc" class="textarea" placeholder="请输入错误的题目信息" placeholder-style="color:#97bbf9"></textarea>
+    <button class="button" form-type="submit" >提交</button>
+   </form>
+</view>

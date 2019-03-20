@@ -1,0 +1,309 @@
+.tabs{
+    width: 720rpx;
+    height: 100rpx;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0 15rpx;
+    border-top: 1rpx solid #AAA;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #F7F7FA;
+    z-index: 9999999999;
+}
+.tabs view{
+  width: 240rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 150rpx;
+  font-size:26rpx;
+  color: #888;
+}
+.tabs view.tabs_left{
+  background: url(http://www.hsbggb.com/wangjie/tabs_left.png) no-repeat center 10rpx;
+  background-size:46rpx;
+}
+.tabs view.tabs_center{
+   position: relative;
+   width: 150rpx;
+   height:150rpx;
+   top: -60rpx;
+   left:0;
+   border-radius: 50%;
+   color: #FFF;
+   line-height:225rpx;
+  background:#11D4C6 url(http://www.hsbggb.com/wangjie/tabs_center.png) no-repeat center 10rpx;
+  background-size:81rpx;
+}
+.tabs view.tabs_right{
+  background: url(http://www.hsbggb.com/wangjie/tabs_right.png) no-repeat center 10rpx;
+  background-size:46rpx;
+}
+
+.title{
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 25rpx;
+  background: #EBEBEB;
+}
+.title .title_name{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  background: #FFF;
+  padding:25rpx;
+}
+.title .title_name .userinfo_avatar{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  border: 1rpx solid #888;
+  float: left;
+  margin-right: 20rpx;
+  overflow: hidden;
+}
+.title .title_name .title_xi{
+  width: 410rpx;
+  height: 130rpx;
+  float: left;
+}
+.title .title_name .userinfo_name{
+   width: 410rpx;
+  height: 65rpx;
+  display: block;
+  font-size: 32rpx;
+  line-height: 65rpx;
+  color: #353535;
+  overflow: hidden;
+}
+.title .title_name .serial{
+  width: 410rpx;
+  height: 65rpx;
+  display: block;
+  color: #888888;
+  overflow: hidden;
+  font-size: 36rpx;
+}
+.title .title_name .erweima{
+  width: 60rpx;
+  height:60rpx;
+  float: right;
+  display: block;
+  overflow: hidden;
+  margin:35rpx 15rpx 35rpx 0;
+}
+.box1{
+    width: 700rpx;
+    height: 100%;
+    overflow: hidden;
+    margin: 25rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box1 view{
+  width:220rpx;
+  height:80rpx;
+  padding:15rpx 0;
+  border-right:1rpx solid #888888; 
+  text-align: left;
+}
+.box1 view b{
+  width: 50rpx;
+  height: 80rpx;
+  float: left;
+}
+.box1 view b{
+  width:80rpx;
+  height: 80rpx;
+  float: left;
+  display: block;
+}
+.box1 view span.sp_tp{
+  width:140rpx;
+  height:40rpx;
+  float: left;
+  display: block;
+  font-size:30rpx;
+  color: #353535;
+  line-height: 40rpx;
+}
+.box1 view span.sp_bt{
+    width:140rpx;
+    height: 40rpx;
+    float: left;
+    display: block;
+    font-size: 28rpx;
+    color: #888888;
+    line-height: 40rpx;
+}
+.box1 view.box1_left b{
+   background: url(http://www.hsbggb.com/wangjie/toupiaoshu.png) no-repeat center center;
+  background-size:46rpx;
+}
+.box1 view.box1_center b{
+   background: url(http://www.hsbggb.com/wangjie/liwu.png) no-repeat center center;
+  background-size:46rpx;
+}
+.box1 view.box1_right{
+  border-right:0; 
+}
+.box1 view.box1_right b{
+   background: url(http://www.hsbggb.com/wangjie/renqi.png) no-repeat center center;
+  background-size:46rpx;
+}
+.banner{
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+}
+.banner image{
+  width: 750rpx;
+}
+.box2{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  margin:25rpx;
+}
+.box2 .giftname{
+  color: #888888;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #888888;
+  display: inline-block;
+}
+.box2 .giftlist{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  margin-top: 25rpx;
+  padding:25rpx 0;
+  border-bottom: 1rpx dashed #888888;
+}
+.box2 .giftlist .giftlist_avatar{
+  width: 78rpx;
+  height: 78rpx;
+  border-radius:50%;
+  border:1rpx solid #888888;
+  float: left;
+  margin-right: 25rpx;
+}
+.box2 .giftlist .nickName{
+  width:325rpx;
+  height: 40rpx;
+  font-size:30rpx;
+  line-height: 40rpx;
+  display: block;
+  color: #444;
+  float: left;
+  text-align: left;
+}
+.box2 .giftlist .date{
+  width:250rpx;
+  height: 40rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  display: block;
+  color: #999999;
+  float: right;
+}
+.box2 .giftlist .nickgift{
+  width:575rpx;
+  height: 40rpx;
+  font-size:26rpx;
+  line-height: 40rpx;
+  display: block;
+  color: #999999;
+  float: left;
+}
+.box2 .more{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 25rpx;
+  color: #888888;
+  background: url(http://www.hsbggb.com/wangjie/gengduo.png) no-repeat center center;
+}
+.box3{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  margin:25rpx;
+}
+.box3 .latestvote{
+  color: #888888;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #888888;
+  display: inline-block;
+}
+.box3 .wai{
+    width: 720rpx;
+    height: 100%;
+    overflow: hidden;
+    margin: 25rpx 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.box3 .wai .portrait{
+  width: 78rpx;
+  height: 78rpx;
+  border: 1rpx solid #888888;
+  border-radius: 50%;
+  margin-bottom: 25rpx;
+  margin-right:21rpx;
+}
+/*弹出层*/
+.showtost{
+  width:100%;
+  height:100%;
+  background: #000;
+  position: fixed;
+  opacity: 0.5;
+  z-index: 99999;
+}
+.box_most{
+  width: 600rpx;
+  height:830rpx;
+  margin:90rpx 50rpx;
+  padding: 25rpx;
+  z-index:999999;
+  position: fixed;
+  background: linear-gradient(#db4d41,#dd5847,#e6644e,#eb6e4e, #f47c59);
+  border-radius: 35rpx;
+}
+.box_most .box_span{
+    color: #ffe5b1;
+    text-align: center;
+    font-size: 34rpx;
+    display: block;
+    font-weight: 500;
+    width: 600rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+}
+.box_most .box_text{
+  width: 600rpx;
+  height:600rpx;
+  margin-top: 25rpx;
+  display: block;
+}
+.box_most button{
+  background: #fee2b0;
+  color: #e13939;
+  margin-top:25rpx;
+}
+.close{
+  width: 60rpx;
+  height: 60rpx;
+  background: url(http://www.hsbggb.com/wangjie/colse.png) no-repeat center center;
+  background-size:48rpx;
+  position: fixed;
+  right: 25rpx;
+  top: 25rpx;
+  z-index: 99999999;
+}

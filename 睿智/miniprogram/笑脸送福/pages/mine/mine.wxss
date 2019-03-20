@@ -1,0 +1,73 @@
+/**index.wxss**/
+.userinfo{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  margin: 20rpx 25rpx;
+}
+.userinfo-avatar {
+  width: 100rpx;
+  height:100rpx;
+  border-radius: 50%;
+  border: 1px solid #AAA;
+  float: left;
+}
+.userinfo-nickname {
+  float: left;
+  color: #aaa;
+  width:300rpx;
+  display: block;
+  height:100rpx;
+  line-height:100rpx;
+  margin:0 20rpx;
+}
+.point{
+  float: right;
+  display: block;
+  width:180rpx;
+  padding-left:36rpx;
+  height:100rpx;
+  line-height:100rpx;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/img/ye.png') no-repeat left center;
+  background-size: 32rpx;
+  font-size: 26rpx;
+  color: #DB5943;
+}
+
+.list{
+  padding: 25rpx  64rpx 25rpx 0;
+  border-bottom: 3rpx solid #F0EFF4;
+  color: #666;
+  height:64rpx;
+  line-height:64rpx;
+  background:url(http://t.nongjia365.com.cn/guanli/assets/img/yousanjiao.png) no-repeat right center;
+  background-size: 64rpx;
+}
+
+.list1 span{
+background:#DB5943 url(http://t.nongjia365.com.cn/guanli/assets/image/img/dingdan.png) no-repeat center center;
+}
+.list p{
+width:470rpx;
+height:64rpx;
+display: block;
+margin-left: 30rpx;
+float: left;
+}
+.list2 span{
+background:#DB5943  url(http://t.nongjia365.com.cn/guanli/assets/image/img/renmai.png) no-repeat center center;
+}
+.list3 span{
+background:#DB5943 url(http://t.nongjia365.com.cn/guanli/assets/img/tixian.png) no-repeat center center;
+}
+.list4 span{
+background:#DB5943 url('http://t.nongjia365.com.cn/guanli/assets/img/what.png') no-repeat center center;
+}
+.list span{
+  width:64rpx;
+  height:64rpx;
+  display: block;
+  float: left;
+  border-radius: 50%;
+  background-size: 48rpx;
+}

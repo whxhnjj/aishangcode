@@ -1,0 +1,66 @@
+<view class="header">
+
+  <view class="header_msg">
+    <image src="{{avatarurl}}"></image>
+    <view class="header_name">
+      <button class="user_name" hover-class="none" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">{{nickname}}</button>
+      <navigator class="more_info" hover-class="none" url="../information/information">{{member.realname&&member.mobile?'修改资料':'请完善资料，体验更多服务'}}</navigator>
+    </view>
+  </view>
+
+  <image src="/images/icon_qrcode.png" bindtap="goToQrcode"></image>
+  
+</view>
+
+<!-- 内容 -->
+<view class="content_box">
+
+  <navigator class="content_list" hover-class="none" url="../order_list/order_list?state=0">
+    <view class='left_box'>
+      <image src="/images/icon_order.png"></image>
+      <text>订单</text>
+    </view>
+
+    <view class="right_box">
+      <text>查看全部订单</text>
+      <image src="/images/icon_more.png"></image>
+    </view>
+  </navigator>
+
+  <navigator class="content_list" hover-class="none" url="../integral/integral">
+    <view class='left_box'>
+      <image src="/images/icon_integral.png"></image>
+      <text>积分</text>
+    </view>
+  </navigator>
+
+</view>
+
+<view class="content_box">
+
+  <navigator class="content_list" hover-class="none" url="../aboutUs/aboutUs">
+    <view class='left_box'>
+      <image src="/images/icon_aboutus.png"></image>
+      <text>关于我们</text>
+    </view>
+  </navigator>
+
+  <navigator class="content_list" hover-class="none" url="../illustration/illustration?type=2">
+    <view class='left_box'>
+      <image src="/images/icon_promotion.png"></image>
+      <text>推广中心</text>
+    </view>
+  </navigator>
+
+</view>
+
+<view class="content_box">
+
+  <navigator class="content_list" hover-class="none" url="../complain/complain">
+    <view class='left_box'>
+      <image src="/images/icon_complaint.png"></image>
+      <text>投诉建议</text>
+    </view>
+  </navigator>
+
+</view>

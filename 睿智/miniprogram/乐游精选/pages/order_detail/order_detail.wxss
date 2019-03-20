@@ -1,0 +1,222 @@
+page{
+  padding-bottom: 160rpx;
+}
+
+/* 头部 */
+.header_box{
+  padding: 60rpx 30rpx;
+  background: #fff;
+}
+.header_box>text{
+  display: block;
+  margin-top: -30rpx;
+  color: #ff5000;
+  line-height: 3;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+}
+.header image{
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+.header .right_box{
+  width: 530rpx;
+}
+.header .right_box .header_title{
+  display: block;
+  margin-bottom: 5rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.header .right_box .header_des{
+  display: block;
+  margin-bottom:10rpx;
+  font-size: 26rpx;
+  color: #808080;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.header .price text:first-child{
+  font-size: 30rpx;
+  color:#ff5000;
+}
+.header .price text:nth-of-type(2){
+  margin: 0 20rpx 0 6rpx;
+  font-size: 44rpx;
+  color:#ff5000;
+}
+.header .price text:nth-of-type(3){
+  font-size: 26rpx;
+  color: #b3b3b3;
+  text-decoration:line-through;
+}
+
+/* 内容 */
+.content_box{
+  width: 100%;
+  margin-top: 50rpx;
+  padding: 50rpx 30rpx;
+  background: #fff;
+}
+
+.content_header{
+  font-size: 30rpx;
+}
+.content_list{
+  display: flex;
+  margin-top: 50rpx;
+  font-size: 26rpx;
+}
+.content_list>text:first-child{
+  width: 120rpx;
+  margin-right: 30rpx;
+  color: #999;
+}
+.content_list>text:last-child{
+  width: 540rpx;
+}
+.content_list>view .wxParse-p{
+  display: block;
+  width: 540rpx;
+  margin-bottom: 20rpx;
+}
+.content_list>view .wxParse-p:last-child{
+  margin-bottom: 0;
+}
+.wxParse-p view{
+  word-break:break-all;
+}
+
+
+/* 地址 */
+.address_box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50rpx;
+  padding: 50rpx 30rpx;
+  background: #fff;
+}
+.address_box>image{
+  width: 40rpx;
+  height: 38rpx;
+}
+.address_box .left_box{
+  width: 600rpx;
+}
+.address_box .left_box>text:first-child{
+  display: block;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+}
+.address_box .left_box .address>image{
+  vertical-align: -6%;
+  width: 24rpx;
+  height: 29rpx;
+  margin-right: 8rpx;
+}
+
+.address_box  .address>text{
+  color: #999;
+}
+
+
+/* 底部 */
+.bottom .left_box navigator{
+  width: 50%;
+  margin: 0 auto;
+  padding: 0 0 0 90rpx;
+  background: #fff url(https://leyou.site.webimage.cn/static/xcx/goods_icon_complaint.png) no-repeat 40rpx center;
+  background-size: 37rpx 40rpx;
+  text-align: left;
+  line-height: 110rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.bottom .bg_fff{
+  background: #fff;
+  color: #333;
+  font-weight: normal;
+}
+
+
+/* 兑换码 */
+.code{
+ margin-top: 30rpx;
+}
+.code_box{
+  height: 80rpx;
+  overflow: hidden;
+}
+.code text{
+  display: block;
+  margin-bottom: 15px;
+  font-size: 55rpx;
+}
+.code text:last-child{
+  margin-bottom: 0;
+}
+.code .code_num {
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+.code>image{
+  margin: 25rpx 0 0 25rpx;
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.qrcode {
+  display: flex;
+  justify-content: space-around;
+}
+.qrcode image{
+  width: 400rpx;
+  height: 400rpx;
+}
+.qrcode text{
+  writing-mode:vertical-rl;
+  font-size: 34rpx;
+  text-align: center;
+}
+
+.code_success{
+  color: #999;
+  text-decoration: line-through;
+}
+
+/* 物流 */
+.logistics{
+  padding: 30rpx 0;
+  margin-bottom: 20rpx;
+  background: #fc8b00;
+  color: #fff;
+}
+.logistics view{
+  display: block;
+  line-height: 2;
+  font-size: 30rpx;
+  word-break:break-all;
+}
+.logistics .copy_btn{
+  display: inline-block;
+  padding:0 10rpx;
+  font-size:24rpx;
+  line-height:40rpx;
+  background:#fff;
+  border-radius:2rpx;
+  color: #333;
+  text-align: center;
+  border:1rpx solid #dadada;
+}

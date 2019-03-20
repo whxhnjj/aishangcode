@@ -1,0 +1,104 @@
+.nav{
+  position: fixed;
+  top: 0;
+  height: 160rpx;
+}
+.nav .nav_item{
+  width: 30%;
+}
+
+/* 订单列表 */
+.order_box{
+  padding-top: 150rpx;
+  padding-bottom: 100rpx;
+}
+.order_list{
+  margin: 50rpx auto 0;
+  width: 690rpx;
+  padding: 0 50rpx 50rpx;
+  background: #fff;
+  border-top: 20rpx solid #000;
+  border-radius: 15rpx;
+}
+.order_l{
+  width: 480rpx;
+}
+.order_l .order_line{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: top;
+  padding-top: 45rpx;
+  font-size: 26rpx;
+}
+.order_line>view{
+  width: 10rpx;
+  height: 10rpx;
+  margin: 15rpx 20rpx 0 0;
+  border-radius: 50%;
+  background: #000;
+}
+.order_line>text:nth-of-type(1){
+  margin-right: 30rpx;
+}
+.order_line>text:nth-of-type(2){
+  width: 280rpx;
+  color: #999;
+}
+
+.order_r{
+  width: 100rpx;
+  text-align: center;
+}
+.order_r>text{
+  display: block;
+  padding: 40rpx 0 45rpx;
+  font-size: 30rpx;
+}
+.order_r .donation{
+  width: 100rpx;
+}
+.donation image{
+  display: block;
+  width: 50rpx;
+  height: 80rpx;
+  margin: 0 auto 5rpx;
+}
+.donation text{
+  display: block;
+  font-size: 24rpx;
+  color: #02cc7a;
+}
+
+
+/* 状态样式 */
+.state_wait{border-color: #ff9800;}
+.state_wait .order_line>view{ background:#ff9800;}
+.state_wait .order_r>text {color: #ff9800}
+
+.state_ready{border-color: #33a7ff;}
+.state_ready .order_line>view{ background:#33a7ff;}
+.state_ready .order_r>text {color: #33a7ff}
+
+.state_success{border-color: #02cc7a;}
+.state_success .order_line>view{ background:#02cc7a;}
+.state_success .order_r>text {color: #02cc7a}
+
+/* formid */
+.form_btn  view{
+  top:30rpx;
+  left: 30rpx;
+  width: 200rpx;
+  height: 130rpx;
+  border-radius: 0;
+}
+
+.form_btn .list2,.form_btn .list2 view{
+  left: 50%;
+  margin-left: -100rpx;
+}
+
+.form_btn .list3,.form_btn .list3 view{
+  right: 30rpx;
+  left: auto;
+}

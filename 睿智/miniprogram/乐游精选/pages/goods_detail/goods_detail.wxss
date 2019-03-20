@@ -1,0 +1,372 @@
+page{
+  padding-bottom: 160rpx;
+}
+/* 头部 */
+.header{
+  padding-bottom: 50rpx;
+  background: #fff;
+}
+.header swiper{
+  width: 100%;
+  height: 420rpx;
+}
+.header swiper image{
+  width: 100%;
+  height: 420rpx;
+}
+.header .goods_title{
+  display: block;
+  padding: 30rpx 30rpx 20rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.header .goods_des{
+  display: block;
+  padding: 0 30rpx 40rpx;
+  color: #808080;
+}
+.header .goods_msg{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 30rpx;
+}
+.goods_msg .left_box{
+  display: flex;
+  align-items: baseline;
+}
+.goods_msg .left_box text:first-child{
+  margin-right: 5rpx;
+  font-size: 30rpx;
+  color: #ff5000;
+}
+.goods_msg .left_box text:nth-of-type(2){
+  margin-right: 15rpx;
+  font-size: 48rpx;
+  color: #ff5000;
+}
+.goods_msg .left_box text:nth-of-type(3){
+  font-size: 26rpx;
+  color: #b3b3b3;
+  text-decoration:line-through;
+}
+
+.goods_msg .right_box{
+  display: flex;
+  align-items:flex-end; 
+}
+.goods_msg .right_box>text{
+  margin: 0 45rpx 8rpx 0;
+  padding: 2rpx 10rpx;
+  background-color: #ff5000;
+  border-radius: 5rpx;
+  font-size: 25rpx;
+  color:#fff ;
+
+}
+.goods_msg .right_box>view>text:first-child{
+  display: block;
+  margin-bottom: 10rpx;
+  font-size: 26rpx;
+  color: #b3b3b3;
+}
+.goods_msg .right_box>view>text:nth-of-type(2){
+  display: block;
+  font-size: 26rpx;
+  color:#ff5000;
+}
+.goods_msg .right_box>view>text:nth-of-type(2):before{
+  content: '库存 ';
+  color: #b3b3b3;
+}
+
+/* 通用样式 */
+.content_box{
+  position: relative;
+  width: 750rpx;
+  margin-top: 50rpx;
+  padding: 50rpx 30rpx;
+  background: #fff;
+}
+.content_title{
+  display: block;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.content_list{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+.content_list>text{
+  width: 15rpx;
+  height: 8rpx;
+  margin-top: 17rpx;
+  border-radius: 5rpx;
+  background: #ff5000;
+}
+.content_list>view{
+  width: 650rpx;
+  text-align: justify;
+  color: #666;
+}
+.color_ff5000{
+  color: #ff5000;
+}
+
+.content_kuang{
+  padding-top: 80rpx;
+}
+.content_kuang .content_title{ 
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 55rpx;
+  width: 170rpx;
+  height: 50rpx;
+  margin-left: -85rpx;
+  background: #ff5000;
+  color: #fff;
+  font-size: 34rpx;
+  border-radius: 9rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+.content_kuang .content_cont{
+  padding: 40rpx 30rpx 30rpx;
+  border: 1rpx solid #ff5000;
+}
+
+/* 商家介绍 */
+.shop_box{
+  display: flex;
+  margin-top: 30rpx;
+}
+.shop_box>image{
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 20rpx;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+.shop_box .shop_msg{
+  width: 490rpx;
+}
+.shop_msg>text:first-child{
+  display: block;
+  margin-top: -5rpx;
+  margin-bottom: 45rpx;
+  font-weight: 600;
+  font-size: 34rpx;
+  text-align: justify;
+}
+
+.shop_msg .shop_line{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.shop_msg .shop_line text{
+  font-size: 26rpx;
+  color: #666;
+}
+.shop_msg .shop_line>image{
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.share{
+  position: fixed;
+  top: 880rpx;
+  right: 0;
+  z-index: 990;
+  width: 150rpx;
+  height: 60rpx;
+  padding: 0;
+  border-radius: 30rpx 0 0 30rpx;
+  background-color: rgba(61, 175, 9,1);
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+/* 商品详情 */
+.goods_box{
+  margin-top: 50rpx;
+  width: 750rpx;
+  padding: 50rpx 0;
+  background: #fff;
+}
+.goods_box .title{
+  display: block;
+  padding: 0 30rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.goods_box .goods_msg{
+  margin-top: 30rpx;
+  padding: 0 30rpx;
+}
+
+
+/* 底部 */
+.bottom .left_box navigator,.bottom .left_box button{
+  width: 50%;
+  margin: 0;
+  padding: 0 0 0 90rpx;
+  background: #fff url(https://leyou.site.webimage.cn/static/xcx/goods_icon_complaint.png) no-repeat 40rpx center;
+  background-size: 37rpx 40rpx;
+  text-align: left;
+  line-height: 110rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+.bottom .left_box button{
+  background-image: url(https://leyou.site.webimage.cn/static/xcx/goods_icon_customerservice.png);
+  background-size: 40rpx 38rpx;
+}
+
+
+/* 引入文本样式 */
+.wxParse-p{
+  /* margin-top: 20rpx; */
+  padding: 0;
+  text-align: justify;
+}
+.wxParse-p image{
+  display: block;
+  max-width: 690rpx!important;
+  margin: 0 auto;
+}
+.wxParse-p .wxParse-inline{
+  display: inline;
+  padding:0;
+  word-wrap: break-word;
+}
+.wxParse-hr{
+  width: 690rpx;
+  height: 1rpx;
+  margin: 0 auto;
+  background: #eee;
+}
+.wxParse-strong{
+  font-weight: 800;
+}
+.wxParse-p text{ display: block; height: 20rpx!important; }
+
+/* 弹出层 */
+.pop_box{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 750rpx;
+  padding: 60rpx 0;
+  background: #f8f8f8;
+  border-radius:5rpx;
+}
+.iphone_box{
+  padding-bottom: 128rpx;
+}
+.pop_box image{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60rpx;
+  height: 60rpx;
+}
+.pop_box button{
+  width:350rpx;
+  height:100rpx;
+  margin: 0 auto 40rpx;
+  border-radius:9rpx;
+  background:#fc8b00;
+  color:#fff;
+  text-align:center;
+  line-height:100rpx;
+  font-size:32rpx;
+  font-weight:600;
+}
+.pop_box button:last-child{
+  margin-bottom: 0;
+}
+@keyframes slideup{
+    0%{height: 0;}
+    100%{height:360rpx;}
+}
+@keyframes slidedown{
+    0%{height: 360rpx;}
+    100%{height:0;}
+}
+.slidedown {
+    animation: slidedown 0.5s linear ;
+}
+.slideup {
+    animation: slideup 0.5s linear ;
+}
+ /* 详情弹出视频样式 */
+.video_ceng{
+  position: relative;
+  width: 690rpx;
+  height: 400rpx;
+  margin: 30rpx auto;
+}
+.video_ceng .video_btn_box{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.2);
+}
+.video_ceng .video_btn_box .video_btn{
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  top: 150rpx;
+  left: 50%;
+  z-index: 20;
+  margin-left: -50rpx;
+}
+
+
+.video_ceng .video_bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.video_box{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.video_box video{
+  position: absolute;
+  top: 300rpx;
+  left: 50%;
+  margin-left: -345rpx;
+  width: 690rpx;
+  height: 520rpx;
+}
+
+.video_box .video_back{
+  position: absolute;
+  top: 315rpx;
+  right: 35rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+

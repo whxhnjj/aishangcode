@@ -1,0 +1,99 @@
+/**app.wxss**/
+page{
+  background: #FFFFFF;
+}
+.ebebeb{
+  width: 750rpx;
+  height: 25rpx;
+  background: #ebebeb;
+}
+.mg{
+  width: 750rpx;
+  height: 120rpx;
+  overflow: hidden;
+}
+.notices_swiper{
+  width: 750rpx;
+  height: 80rpx;
+  background:#FFF9BF url(https://huahuohe.com/static/xcx/tongzhi.png) no-repeat 20rpx center;
+  background-size: 42rpx;
+  padding: 0;
+}
+.notices_swiper swiper-item{
+  width: 680rpx;
+  padding-left:70rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size:30rpx;
+  color: #F00;
+}
+.notices_swiper span.title{
+  display: block;
+  width:590rpx;
+  float: left;
+}
+.notices_swiper span.dateline{
+  display: block;
+  width:90rpx;
+  float:left;
+  font-size:24rpx;
+  color: #000;
+}
+.notice_bg{
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0,0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+}
+.notice{
+  width:600rpx;
+  height:800rpx;
+  background:#FFF9BF;
+  position: relative;
+  top:100rpx;
+  left:25rpx;
+  z-index: 99999;
+  border-radius: 25rpx;
+  padding:50rpx;
+}
+.notice .title{
+  display: block;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #000;
+  text-align: center;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+.notice .date{
+  display: block;
+  height:30rpx;
+  line-height:30rpx;
+  color: #000;
+  text-align: center;
+  font-size: 26rpx;
+  margin-bottom:30rpx;
+}
+.notice .content{
+  display: block;
+  line-height:50rpx;
+  color: #000;
+  overflow-y: auto;
+  height:550rpx;
+  font-size:30rpx;
+}
+.notice button{
+  width: 600rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #11D4C6;
+  font-size: 32rpx;
+  color: #FFF;
+  position: absolute;
+  bottom:50rpx;
+  right:50rpx;
+}

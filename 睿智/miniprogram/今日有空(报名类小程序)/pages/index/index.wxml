@@ -1,0 +1,113 @@
+<import src="../../components/good/good.wxml"/>
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" circular="true" duration="300" indicator-active-color="#13D4C8">    
+  <block wx:for="{{movies}}" wx:for-index="index">    
+    <swiper-item>    
+      <image src="{{item.url}}" class="slide-image" mode="aspectFill"/> 
+    </swiper-item>    
+  </block>
+</swiper>
+
+ <view class='funcs'>
+    <view class='func' wx:for="{{functions}}" wx:for-item='item' wx:key='item.id' bindtap='fucClick' data-id="{{item.id}}">
+      <image src="{{item.url}}" mode="aspectFill"></image>
+      <view class='name'>{{item.name}}</view>
+    </view>
+  </view>
+
+<view class='wrap'>
+ <ul class="ul">
+  <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/01.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>万科松花湖滑雪场</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/02.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>华清爱琴海国际温泉酒店套票</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/03.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>倾友茶会：从来佳茗似佳人</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/04.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>天目温泉戏水乐园</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+    <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/01.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>万科松花湖滑雪场</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/02.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>华清爱琴海国际温泉酒店套票</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/03.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>倾友茶会：从来佳茗似佳人</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/04.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>天目温泉戏水乐园</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+    </ul>
+    </view>
+    
+    <view class='maylike'>
+      <view class='title'>猜你喜欢</view>
+      <view class='goods'>
+
+          <block  wx:for="{{goods}}" wx:for-item='good' wx:key='*this' >
+            <template is="good" data="{{good:good}}"/>
+          </block>
+    
+      </view>
+    </view>
+
+    <view class="temp"></view>

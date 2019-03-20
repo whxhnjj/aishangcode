@@ -1,0 +1,79 @@
+page{
+  padding-bottom: 90rpx;
+}
+/***********头部***************/
+.header{
+  width: 100%;
+  height: 373rpx;
+  padding-top: 30rpx;
+  background: #00b453;
+  color: #fff;
+  text-align: center;
+}
+.header>image{
+  display: block;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto 15rpx;
+  border-radius: 50%;
+  border: 5rpx solid #fff;
+}
+.header view{
+  width: 540rpx;
+  margin: 30rpx auto;
+  padding: 10rpx;
+  border: 1rpx dashed #fff;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+}
+
+/**********点星***********/
+.star_box{
+  width: 100%;
+  margin-top: 40rpx;
+  padding: 50rpx 40rpx;
+  background: #fff;
+}
+.star_line{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  justify-content: space-between; 
+  margin-bottom: 45rpx;
+}
+.star_box .star_line:last-child{
+   margin-bottom: 0;
+}
+.star_line text:first-child{
+  width: 120rpx;
+  margin-right: 90rpx;
+}
+.star_line text:last-child{
+  width: 85rpx;
+  color: #02cc7a;
+  text-align: right;
+}
+.star_choose{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  justify-content: space-between; 
+  width: 330rpx;
+  height: 28rpx;
+  margin-top: 7rpx;
+  background: url(https://paihuishou.site.webimage.cn/static/xcx/star.png) no-repeat top right;
+  background-size: 705rpx 28rpx;
+}
+.star_choose view{
+  width: 30rpx;
+  height: 28rpx;
+}
+
+/*******表单**********/
+textarea{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 40rpx 0 60rpx;
+  padding: 50rpx 40rpx;
+  background: #fff;
+}

@@ -1,0 +1,15 @@
+/**app.wxss**/
+page{
+  background: #4d83e3;
+  font-family: PingFangSC-Regular, sans-serif,"微软雅黑";
+  color: #fff;
+} 
+.container {
+    height: 100%;
+    padding:30rpx 30rpx 50rpx; 
+} 
+.left{ float:left; }
+.right{ float:right; }
+button::after{
+border: none;
+}

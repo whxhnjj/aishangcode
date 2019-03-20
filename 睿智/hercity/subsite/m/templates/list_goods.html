@@ -1,0 +1,53 @@
+{include file="inc_header.html" current="list_goods" title="{$list.kind.name}({$page})"}
+
+<div class="content list">
+<h1>{$list.kind.name}</h1>
+
+<ul class="goods">
+{foreach from=$list.posts key=key item=item}
+<li rel="{$item.linkto}">
+<div class="img"><img src="{$item.thumb1}" alt="{$item.title}" /></div>
+<div class="tit">{$item.title}</div>
+{if $isMicroMessenger}
+<div class="tkl">复制本段文字，打开[手机淘宝]直接下单！{$item.brief}</div>
+<button class="btn" data-clipboard-text="{$item.brief}">点击这里快捷复制</button>
+{/if}
+</li>
+{/foreach}
+</ul>
+
+<div class="pages">
+{if $page > 1}
+<a href="/s/list/{$kind_id}/{$page-1}.html" class="prev">&lt;上一页</a>
+{/if}
+{if $page < $list.pagecount}
+<a href="/s/list/{$kind_id}/{$page+1}.html" class="next">下一页&gt;</a>
+{/if}
+</div>
+
+</div>
+
+
+
+
+
+    <!-- 2. Include library -->
+	<script type="text/javascript" src="/assets/js/clipboard.min.js"></script>
+
+    <!-- 3. Instantiate clipboard -->
+    <script>
+    var clipboard = new Clipboard('.btn');
+
+    clipboard.on('success', function(e) {
+		alert('复制成功，现在可以去淘宝APP啦。');
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+		alert('您的手机不支持快捷复制，请手动复制以上文字。');
+        console.log(e);
+    });
+    </script>
+
+
+{include file="inc_footer.html" current="list_goods"}

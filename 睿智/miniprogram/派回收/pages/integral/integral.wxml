@@ -1,0 +1,39 @@
+<view class="nav">
+  <view class="integral_box">
+    <view class="integral_msg">
+      <text>当前积分</text>
+      <text>{{member.integral?member.integral:0}}</text>
+      <text hover-class="none" class="more_score" bindtap="gotoIndex">赚积分</text>
+    </view>
+    <text class="dashed_circle"></text>
+  </view>
+
+  <text>公益捐赠积分翻倍哦</text>
+
+</view>
+
+<view class="submenu_box">
+  <view class="submenu_msg">
+
+    <block wx:for="{{integral}}" wx:key="id">
+      <navigator class="sub_list {{item.order_info.is_free == 1?'state_donation':''}}" hover-class="none" url='../order_detail/order_detail?id={{item.order_id}}'>
+        <view class="sub_l">
+          <view>
+            <image wx:if="{{item.order_info.is_free == 1}}" src="/images/integral_icon.png"></image>
+            <block wx:for="{{item.order_info.materials_detail}}" wx:key="id" wx:for-item="name">{{name.name}} </block>
+          </view>
+          <text>{{item.update_time}}</text>
+        </view>
+        <text class="sub_r">+{{item.integral}}</text>
+      </navigator>
+    </block>
+
+    <text class="page_text">{{page_text}}</text>
+
+  </view>
+
+  <!--  -->
+  <button class="base_btn" hover-class="none" bindtap="gotoIndex">卖废品赚积分</button>
+  <text class="btn_text">家里不用的可回收物件都可拿来赚积分哦。</text>
+
+</view>

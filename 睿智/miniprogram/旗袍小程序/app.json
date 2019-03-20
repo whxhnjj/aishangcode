@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/answer/answer",
+    "pages/rank/rank",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fbc2be",
+    "navigationBarTitleText": "旗袍小程序",
+    "navigationBarTextStyle": "black"
+  }
+}

@@ -1,0 +1,48 @@
+page{
+  padding-top: 110rpx;
+}
+.group_header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  height: 100rpx;
+  width: 100%;
+  padding: 0 25rpx;
+  background: #fff;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #dadada;
+}
+.group_header image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 30rpx;
+}
+
+.group_pop{
+  position: fixed;
+  top: 100rpx;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 40rpx 25rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #dadada;
+  transition: height 0.2s linear;
+  overflow: hidden;
+}
+.group_pop text{
+  display: inline-block;
+  width: 33.3%;
+  padding: 0 50rpx;
+  text-align: left;
+  line-height: 60rpx;
+}
+
+
+.shop_pro {
+  width: 100%;
+  margin:0 0 25rpx;
+  padding:25rpx 0;
+  background:#fff;
+}

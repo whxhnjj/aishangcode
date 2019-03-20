@@ -1,0 +1,27 @@
+<view class="content">
+  <view wx:if="{{type == 1}}" class="content_title">积分说明</view>
+  <view wx:if="{{type == 2}}" class="content_title">推广说明</view>
+
+  <view wx:if="{{type == 2}}" class="content_cont">
+    <import src="../../extend/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:promotion_desc.nodes}}" />
+    </view>
+  </view>
+
+  <view wx:if="{{type == 1}}" class="content_cont">
+    <import src="../../extend/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:integral_desc.nodes}}" />
+    </view>
+  </view>
+
+
+  <view class="content_msg">注：若有更多问题，请咨询客服</view>
+
+
+</view>
+
+<button hover-class="none" open-type="contact">在线客服</button>
+<button wx:if="{{type == 2}}"  class='btn2' hover-class="none" data-contacts='{{info.custom_tel}}' bindtap='callPhone'>拨打电话</button>
+

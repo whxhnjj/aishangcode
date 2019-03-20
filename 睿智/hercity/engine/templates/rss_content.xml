@@ -1,0 +1,31 @@
+{config_load file="site.config"}
+<?xml version="1.0" encoding="gbk"?>
+<rss version="2.0">
+	<channel>
+		<title>{$title}</title>
+		<link>{$loftcms.config.baseUrl}</link>
+		<description>{$description}</description>
+		<language>zh-cn</language>
+		<lastBuildDate>{"D, d M Y H:i:s"|gmdate:$smarty.now} GMT</lastBuildDate>
+		<webMaster>{$smarty.config.email} ({$smarty.config.webmaster})</webMaster>
+		<ttl>60</ttl>
+   		 <image>
+			<url>http://www.hercity.com/statics/images/logo_8831.gif</url>
+			<title>倾城网</title>
+			<link>http://www.hercity.com/</link>
+		</image>
+
+{foreach from=$list item=post}
+		<item>
+			<link>{$post.href}</link>
+			<title>{$post.title}</title>
+			<category>{$post.kind_name}</category>
+			<guid>{$post.href}</guid>
+			<pubDate>{"D, d M Y H:i:s"|gmdate:$post.dateline} GMT</pubDate>
+			<description><![CDATA[{$post.content}]]></description>
+			{if $post.photo != ''}<enclosure url="{$post.photo.url}" length="{$post.photo.length}" type="{$post.photo.type}" />{/if}
+		</item>
+{/foreach}
+
+	</channel>
+</rss>

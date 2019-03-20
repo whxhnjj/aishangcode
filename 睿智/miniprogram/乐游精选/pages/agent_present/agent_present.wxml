@@ -1,0 +1,103 @@
+<view class="present_index {{state == 1?'hide':''}}">
+
+  <view class="present_box">
+    <view class="header">
+      <text>到账银行卡</text>
+      <view class="header_box" bindtap="showPop">
+        <block wx:if="{{bank_checked}}">
+          <image src="/images/bank/{{bank_checked.bank_code}}.png"></image>
+          <text>{{bank_checked.bank_name}}（{{bank_checked.bank_four}}）</text>
+        </block>
+        <text wx:else>请选择银行卡</text>
+      </view>
+    </view>
+
+    <form bindsubmit="userPresent">
+      <view class="content">
+        <text class="title">提现金额</text>
+        <view class="input_box">
+          <input type="digit" value="{{apply_amount}}" name="apply_amount" />
+          <text>¥</text>
+        </view>
+
+        <view class="money">
+          <text>当前金额为{{total_money/100}}元，</text>
+          <view class="color_fc8b00" bindtap="allPresent">全部提现</view>
+        </view>
+
+        <button class="btn" hover-class="none" formType="submit">提现</button>
+        <navigator class="present_record" hover-class="none" url="../agent_present_record/agent_present_record">提现记录</navigator>
+      </view>
+    </form>
+
+
+  </view>
+
+</view>
+
+
+<view wx:if="{{mengShow}}" class="pop_bg" bindtap="outbtn">
+  <view class="pop_box {{aniStyle?'slideup':'slidedown'}}" catchtap="inbtn">
+    <text class="header">选择到账银行</text>
+    <view class="content_box">
+      <scroll-view scroll-y style="max-height: 480rpx">
+        <label class="content_list" wx:for="{{bank}}" wx:key="id" bindtap="bankChoose" id="{{index}}" bindlongpress="deleteBank">
+          <view class="left_box" id="{{index}}">
+            <image src="/images/bank/{{item.bank_code}}.png" id="{{index}}"></image>
+            <text id="{{index}}">{{item.bank_name}}（{{item.bank_four}}）</text>
+          </view>
+          <checkbox color="#ff5000" id="{{index}}" checked="{{item.checked}}" />
+        </label>
+      </scroll-view>
+
+      <label class="content_list" bindtap="openNewBank">
+        <view class="left_box">
+          <image></image>
+          <text>使用新卡提现</text>
+        </view>
+        <checkbox checked="{{new_checked}}" color="#ff5000" />
+      </label>
+
+    </view>
+  </view>
+</view>
+
+<view class="new_card {{state == 0?'hide':''}}">
+  <form bindsubmit="newBankCard" bindreset="newBankBack">
+    <view class="new_box">
+      <view class="new_list" bindtap="bankShow">
+        <text>银行</text>
+        <input name="bank_name" disabled placeholder="银行" value="{{bank_list_selected.name}}" />
+      </view>
+
+      <view class="new_list hide" bindtap="bankShow">
+        <text>编码</text>
+        <input name="bank_code" disabled value="{{bank_list_selected.value}}" />
+      </view>
+
+      <view class="new_list">
+        <text>姓名</text>
+        <input name="true_name" placeholder="姓名" value="{{true_name}}" />
+      </view>
+
+      <view class="new_list">
+        <text>卡号</text>
+        <input type="number" name="bank_no" placeholder="卡号" value="{{bank_no}}"/>
+      </view>
+    </view>
+
+    <button class="new_btn" hover-class="none" formType="submit">添加银行卡</button>
+    <button class="new_btn bg_e6" hover-class="none" formType="reset">取消</button>
+  </form>
+</view>
+
+
+<view wx:if="{{bankShow}}" class="bank_bg" bindtap="bankOut">
+  <text>以下银行可供添加</text>
+  <view class="bank_box" catchtap="inbtn">
+    <view class="bank_list" wx:for="{{bank_list}}" wx:key="{{id}}" bindtap="bankSelected" id="{{index}}">
+      <image src="/images/bank/{{item.value}}.png" id="{{index}}"></image>
+      <text id="{{index}}">{{item.name}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,47 @@
+.qrcode_box{
+  width: 690rpx;
+  margin: 50rpx auto;
+  padding-bottom: 110rpx;
+  background: #fff;
+  border-radius: 6rpx;
+  text-align: center;
+}
+.qrcode_header{
+  display: flex;
+  align-items: center;
+  padding: 50rpx 50rpx 65rpx;
+}
+.qrcode_header image{
+  width:110rpx;
+  height:110rpx;
+  margin-right:20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5rpx solid #e6e6e6;
+}
+.qrcode_header text{
+  font-size: 32rpx;
+}
+
+.qrcode{
+  display: block;
+  width: 400rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+.qrcode_box>text{
+  display: block;
+  margin-top: 80rpx;
+  color: #999;
+}
+
+/* button{
+  width: 690rpx;
+  height: 100rpx;
+  background: #fc8b00;
+  color: #fff;
+  font-weight: 600;
+  line-height: 100rpx;
+} */

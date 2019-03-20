@@ -1,0 +1,9 @@
+<block wx:for="{{helps}}" >
+  <view class="help_list {{item.show ? 'open' : ''}}">
+      <view class='tit' bindtap="showhide"  data-index="{{index}}" >{{item.title}}</view>
+      <view class="content">
+      {{item.content}}
+      </view>
+    </view>
+</block>
+ <navigator class="feedback" hover-class="none" url='../../pages/feedback/feedback' >举报</navigator>

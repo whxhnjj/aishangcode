@@ -1,0 +1,167 @@
+<block wx:if="{{error_state == 1}}">
+  <text class="no_content">{{error_msg}}</text>
+</block>
+
+<block wx:else>
+  <view class="header">
+
+    <swiper indicator-dots autoplay circular interval="5000" duration="200">
+
+      <!-- <swiper-item wx:if="{{goods.goods_video}}" class="video">
+        <view class='video_ceng'>
+          <image class="video_bg" src="{{hostName}}{{goods.goods_pic[0]}}" hidden="{{!video_state}}" mode="aspectFill" />
+          <image class="video_btn" src="/images/play.png" hidden="{{!video_state}}" bindtap="bindPlay" />
+          <video src="{{hostName}}{{goods.goods_video}}" bindfullscreenchange="fullsPlay" bindended="backPlay" objectFit="cover" controls id="mdcVideo" hidden="{{video_state}}">
+          </video>
+          <cover-image class="video_back" src="/images/back.png" hidden="{{video_state}}" bindtap="backPlay" />
+        </view>
+      </swiper-item> -->
+
+      <block wx:for="{{goods.goods_pic}}" wx:key="key">
+        <swiper-item>
+          <image src="{{hostName}}{{item}}" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="goods_title">{{goods.name}}</view>
+    <text class="goods_des">{{goods.sale_desc}}</text>
+    <view class="goods_msg">
+
+      <view class="left_box">
+        <text>¥</text>
+        <text>{{goods.price}}</text>
+        <text>门市价：¥{{goods.market_price}}</text>
+      </view>
+
+      <view class="right_box">
+        <text wx:if="{{goods.back_cash > 0}}">返¥{{goods.back_cash}}</text>
+        <view>
+          <text>{{goods.goods_type == 1?'已售':'已报'}} {{goods.sale_count + goods.sale_ext_count}}</text>
+          <text>{{goods.store_count}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 商家介绍 -->
+  <view wx:if="{{goods.merchant_info.name}}" class="content_box">
+    <!-- <text class="content_title">商家介绍</text> -->
+    <view class="shop_box">
+      <image src="{{hostName}}{{goods.merchant_info.photo}}"></image>
+      <view class="shop_msg">
+        <text>{{goods.merchant_info.name}}</text>
+        <view class="shop_line">
+          <text data-contacts="{{goods.merchant_info.contacts}}" bindtap="callPhone">{{goods.merchant_info.contacts}}</text>
+          <image src="/images/goods_icon_phone.png" data-contacts="{{goods.merchant_info.contacts}}" bindtap="callPhone"></image>
+        </view>
+
+        <view class="shop_line">
+          <text data-latlng="{{goods.merchant_info.latlng}}" data-name="{{goods.merchant_info.name}}" data-address="{{goods.merchant_info.address}}" bindtap="openMap">{{goods.merchant_info.address}}</text>
+          <image src="/images/goods_icon_address.png" data-latlng="{{goods.merchant_info.latlng}}" data-name="{{goods.merchant_info.name}}" data-address="{{goods.merchant_info.address}}" bindtap="openMap"></image>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 商品详情 -->
+  <view class="goods_box">
+    <!-- <text class="title">商品详情</text> -->
+
+    <view wx:if="{{goods.goods_video}}" class='video_ceng'>
+      <image class="video_bg" src="{{hostName}}{{goods.goods_pic[0]}}" mode="aspectFill" />
+      <image class="video_btn" src="/images/play.png" catchtouchstart="videoShow" />
+    </view>
+
+    <view wx:if="{{video_state}}" class="video_box" catchtouchstart="videoHide">
+      <view bindtap="inbtn">
+        <video id="video" src="{{hostName}}{{goods.goods_video}}" loop autoplay controls></video>
+        <cover-image class="video_back" src="/images/back.png" bindtap="videoHide" />
+      </view>
+    </view>
+
+    <!-- <video  wx:if="{{goods.goods_video}}" class="goods_video" src="{{hostName}}{{goods.goods_video}}" loop autoplay controls  objectFit="cover"></video> -->
+
+
+    <view class="goods_msg">
+      <import src="../../extend/wxParse/wxParse.wxml" />
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 日期 -->
+  <view class="content_box">
+    <text class="content_title">日期</text>
+    <view class="content_cont">
+
+      <view class="content_list">
+        <text></text>
+        <view>营业时间：{{goods.merchant_info.opening}}</view>
+      </view>
+      <view class="content_list" wx:if="{{goods.validity}}">
+        <text></text>
+        <view>使用期限：{{goods.validity}}</view>
+      </view>
+
+    </view>
+  </view>
+
+  <!-- 使用规则 -->
+  <view class="content_box" wx:if="{{goods.usage_rule}}">
+    <text class="content_title">使用规则</text>
+    <view class="content_cont">
+      <import src="../../extend/wxParse/wxParse.wxml" />
+      <view class="wxParse wx_detail">
+        <template is="wxParse" data="{{wxParseData:usage_rule.nodes}}" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 特别声明 -->
+  <view class="content_box" wx:if="{{goods.statements}}">
+    <text class="content_title">特别声明</text>
+    <view class="content_cont wx_detail">
+      <import src="../../extend/wxParse/wxParse.wxml" />
+      <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:statements.nodes}}" />
+      </view>
+    </view>
+  </view>
+
+
+
+
+  <!-- 底部 -->
+  <view wx:if="{{isIphone}}" class="iphone_kuang"></view>
+  <view class="bottom {{isIphone?'iphone':''}}">
+    <view class="left_box">
+      <navigator hover-class="none" url="../complain/complain">投诉</navigator>
+      <button open-type="contact">客服</button>
+    </view>
+    <view class="btn {{btn_state?'selected':''}}" bindtap="buyGoods">{{goods.goods_type == 1?'立即抢购':'立即报名'}}</view>
+  </view>
+  <view wx:if="{{isIphone}}" class="iphone_bottom"></view>
+
+</block>
+
+<!-- 分享 -->
+<view wx:if="{{error_state != 1}}" class="share" hover-class="none" bindtap="showPop">分享</view>
+
+<!-- 回首页 -->
+<view wx:if="{{index_btn}}" class="index_btn" bindtap="backIndex">
+  <image src="/images/back_index.png"></image>
+  <text>首页</text>
+</view>
+
+<!-- 弹出层 -->
+
+<view wx:if="{{mengShow}}" class="pop_box {{aniStyle?'slideup':'slidedown'}}">
+  <image src="/images/close.png" bindtap="outbtn"></image>
+  <button open-type="share" type="share" hover-class="none">分享给好友或群</button>
+  <button hover-class="none" bindtap="shareGoods">生成海报分享</button>
+</view>

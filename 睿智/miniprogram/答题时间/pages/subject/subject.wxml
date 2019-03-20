@@ -1,0 +1,147 @@
+<!--subject.wxml-->
+<view class="container">
+
+<!--加载页面  -->
+<view style="display:{{load_display}}">
+  <!--加载  -->
+  <view class="load">
+   <view class="load_cir_big">
+    <image class="planet" src="../images/planet.png" background-size="cover"></image>
+    <image class="planet_two" src="../images/planet.png" background-size="cover"></image>
+    <image class="planet_three" src="../images/planet.png" background-size="cover"></image>
+   </view>
+   <view class="load_cir_small">
+    <image src="../images/time.png" background-size="cover"  class="circle" mode="widthFix"></image>
+    <image src="../images/time.png" background-size="cover"  class="circle_two" mode="widthFix"></image>
+   </view>
+   <image  class="load_user_img" src="{{user.avatarUrl}}" background-size="cover"></image>  
+  </view>
+  <!--加载信息  -->
+  <view class="load_info">
+    <text class="load_infoname">{{user.nickName}}</text>
+    <text class="load_infodel">做好准备，我们一起勇闯天涯</text>
+  </view>
+  <!--倒计时  -->
+  <view class="countdown {{font_state}}">{{font_num}}</view>
+
+</view>
+
+<!--答题页面  -->
+<view style="display:{{answer_display}}">
+  <view class="sub_header">
+    <view class="user_info ">
+      <image  class="userinfo_img" src="{{user.avatarUrl}}" background-size="cover"></image>
+      <view class="user_bg"></view>
+      <!-- <text class="userinfo_name">{{user.nickName}}</text> -->
+    </view>
+    <!--线条进度  -->
+    <view class="user_line">
+      <view class="line_progress" style="width:{{pagenum/pagecount*100}}%"></view>
+    </view>
+    <!--圆形进度  -->
+    <view class="subject">
+     <view class="sub_num"><text>{{pagenum}}</text>/{{pagecount}}</view>
+      <view class="progress_box" wx:if="{{exam.timer != 0}}">
+      <canvas class="progress_bg" canvas-id="canvasProgressbg"></canvas>
+      <canvas class="sub_time"  canvas-id="canvasProgress">{{time}}</canvas>
+     </view> 
+     <view class="progress_box" wx:if="{{exam.timer==0}}">
+      <view class="notime_bg">
+        <image src="../images/time.png" background-size="cover" class="notime_circle"></image>
+      </view> 
+     </view>
+
+    </view>
+  </view>
+   <!--题目  -->
+  <view class="subtitle">
+    <view class="sub_title">{{subject_title}} <text class="images_see" wx:if="{{subject_photo!=''}}"  bindtap="showImage">查看图片</text></view>  
+  </view>
+  
+  <view class="submenu">
+    <view class="left progress">
+      <text class="sub_score">{{score}}</text>
+      <view class="score">
+        <view class="score_bg">
+        <view class="score_box">
+        <view class="score_progress" style="height:{{score>100?100:score}}%"></view>
+        </view>
+        </view>   
+      </view>
+    </view>
+    <view class="left sub_list">
+    <block wx:for="{{options}}"  wx:key="key" >
+      <view class="{{(_state == 1 && item.is_right == 1 ) ?'answer_right': ''}} {{(_state==1 && (_index == index && item.is_right==0 || _index == -1) ) ? 'answer_wrong':''}} {{item.viewstyle}}" bindtap="onSelected" data-isright="{{item.is_right}}" data-index="{{index}}"  data-id="{{item.id}}">{{item.answer}}</view>
+    </block>
+
+    </view>
+  </view>
+</view>
+
+
+<!-- 结果页面 -->
+<view style="display:{{result_display}}">
+  <!-- 头部用户信息  -->
+  <view class="result_header">
+    <image class="result_page_bg" src="../images/resultpage_bg.png"></image>
+    <view class="result_bg">
+      <image class="result_img" src="{{user.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <text class="result_username">{{user.nickName}}</text>
+  </view>
+  <!--答题信息  -->
+  <view class="result_answer">
+    <!--  -->
+    <view class="result_list">
+      <image  src="../images/icon_problem.png"></image>
+      <view>题目</view>
+      <text>{{pagecount}}</text>
+    </view>
+    <!--  -->
+    <view class="result_list">
+      <image  src="../images/icon_fraction.png"></image>
+      <view>分数</view>
+      <text>{{score}}</text>
+    </view>
+    <!--  -->
+    <view class="result_list">
+      <image  src="../images/icon_time.png"></image>
+      <view>用时</view>
+      <text>{{total_time}}s</text>
+    </view>
+    <!--  -->
+    <view class="result_list">
+      <image  src="../images/icon_correctrate.png"></image>
+      <view>正确率</view>
+      <text>{{accuracy}}%</text>
+    </view>
+     <image wx:if="{{success_data.is_max == 1 && score > 0}}" src="../images/max_score.png" background-size="cover" mode="widthFix" class="max_score"></image>
+  </view>
+
+
+  <!--底部  -->
+  <view class="result_chose">
+    <view bindtap="restart" wx:if="{{own_times<times}}">再答一次</view>
+    <button hover-class="none"  open-type="contact" session-from="wxapp" wx-if="{{exam.url}}">去学习 (试卷号：{{exam_id}}）</button>
+    <navigator url="{{exam.is_total_rank?'../totalrank/totalrank':'../rank/rank'}}?exam_id={{exam_id}}">查看排行榜</navigator>
+  </view>
+  <view class="feedback">
+    <navigator url="../feedback/feedback?url=subject&exam_id={{exam_id}}">举报</navigator>
+    <navigator url="../report/report?url=subject&exam_id={{exam_id}}">错题报告</navigator>
+  </view>
+
+  <view class="share">
+    <button hover-class="none" open-type="share">分享到群</button>
+    <button hover-class="none" bindtap="shareMoments">生成图片炫战绩</button> 
+  </view>
+
+</view>
+
+<!--无试卷  -->
+<view style="display:{{error_display}}" class="error_msg">
+  该试卷暂无试题
+</view>
+
+
+
+</view>

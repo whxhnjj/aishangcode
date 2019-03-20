@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=1080,minimum-scale=0.1,maximum-scale=2,user-scalable=yes" />
+    <title>米来到</title>
+    <link rel="stylesheet" href="../../static/css/reset.css" />
+    <script type="text/javascript" src="../../static/js/fingerprint2.min.js"></script>
+    <style>
+        html,body{
+            width: 1080px;
+            margin: 0 auto;
+            /*display: none;*/
+        }
+        .header{
+            width: 1080px;
+            height: 1000px;
+        }
+        .header img{
+            width: 1080px;
+            height: 100%;
+        }
+        .form{
+            height: 591px;
+            width: 846px;
+            padding: 0 40px;
+            margin:-158px auto;
+            background: #FFFFFF;
+            position: relative;
+            box-shadow:0px 8px 35px 0px rgba(148,148,148,0.29);
+            border-radius:33px;
+            z-index: 9;
+        }
+        .tit{
+            width: 100%;
+            height: 96px;
+            position: absolute;
+            top: -44px;
+        }
+        .tit img{
+            width: 652px;
+            display: block;
+            margin: 0 auto;
+        }
+        .iphone{
+            width: 700px;
+            height: 78px;
+            background:rgba(247,243,255,1) url("../../static/image/iphon-icon.png") no-repeat 50px center;
+            color: #999999;
+            border-radius: 10px;
+            font-size: 45px;
+            padding:30px 30px 30px 130px;
+            margin: 158px auto 75px;
+        }
+        .button{
+            width: 860px;
+            height: 120px;
+            margin: 0 auto;
+            background: url("../../static/image/button.png") no-repeat center center;
+        }
+        .die{
+            width: 100%;
+            height: 103px;
+            top: 100px;
+            position: relative;
+        }
+        .content{
+            width: 1080px;
+            height: 926px;
+            margin-top: 180px;
+        }
+        .content img{
+            width: 100%;
+        }
+        .cotry{
+            margin: 217px 0 104px 0;
+            text-align: center;
+            color: #666666;
+            font-size: 29px;
+        }
+        .toast{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top:0;
+            left: 0;
+            background: rgba(0,0,0,0.2);
+            z-index: 99;
+            display: none;
+        }
+        .model{
+            width: 916px;
+            height: 381px;
+            padding: 60px 40px 30px 40px;
+            background: #FFF;
+            border-radius: 36px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -498px;
+            margin-top: -228px;
+        }
+        .title{
+            height: 50px;
+            text-align: center;
+            font-size:45px;
+            color: #333333;margin-bottom: 65px;
+
+        }
+        .cord{
+            color: #999999;
+            font-size: 45px;
+            width: 450px;
+            height: 110px;
+            border:2px solid rgba(0,0,0,1);
+            border-radius: 10px;
+            padding-left: 126px;
+            background: url("../../static/image/info.png") no-repeat 30px center;
+            float: left;
+        }
+        .code-btn{
+            width: 245px;
+            height: 113px;
+            background: #5A49BA;
+            border-radius:10px;
+            float: right;
+            color: #FFF;
+            font-size:45px;
+            text-align: center;
+            line-height: 113px;
+        }
+        .submit{
+            width: 353px;
+            height: 92px;
+            background: #5A49BA;
+            border-radius:10px;
+            display: block;
+            float: left;
+            color: #FFFFFF;
+            font-size: 45px;
+            margin: 48px 281px 0 281px;
+            text-align: center;
+            line-height: 92px;
+        }
+        .show-toast{
+            width: 500px;
+            padding: .25rem;
+            background: #000000;
+            color: #FFFFFF;
+            font-size: 45px;
+            position: absolute;
+            left: 50%;
+            text-align: center;
+            line-height: 50px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            border-radius: 15px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <img src="../../static/image/header-banner.png" alt="米来到"/>
+</div>
+<div class="form">
+    <div class="tit"><img src="../../static/image/tut.png" /></div>
+    <input class="iphone" type="number" value="" placeholder="请输入你的手机号">
+    <div class="button"></div>
+</div>
+<div class="die">
+    <img src="../../static/image/radios.png" />
+</div>
+<div class="content">
+    <img src="../../static/image/content.png" />
+</div>
+<div class="cotry">Copyright  @2018-2019  北京同予科技有限公司  版权所有</div>
+<div class="toast">
+    <div class="model">
+        <div class="title">领取福利</div>
+        <input class="cord" type="number" value="" placeholder="请输入短信验证码" />
+        <div class="code-btn">获取</div>
+        <div class="submit" id="submit">前往领取</div>
+    </div>
+</div>
+<script src="../../static/js/jquery-3.3.1.min.js"></script>
+<script>
+    var mobile_only = '';
+    new Fingerprint2().get(function(result, components){
+        mobile_only = result;
+        console.log(result); //a hash, representing your device fingerprint
+        console.log(components); // an array of FP components
+    });
+    var strurl = window.location.href
+    var index = strurl.lastIndexOf("\=");
+    var channel = strurl.substring(index + 1, strurl.length);
+
+    var strlast = strurl.indexOf("\=");
+    var indexofurl = strurl.substring(strlast + 1, strlast.length);
+    var appkey = indexofurl.split("&")[0];
+    $.ajax({
+        url: 'http://test.daichao.tongyufintech.com/api/v1/channel',
+        type: 'POST',
+        dataType: 'json',
+        data:{
+            channel: channel,
+            appkey: appkey
+        },
+        success:function (data) {
+            if (data.code == 200){
+                $("body").show()
+                $("html").show()
+            }else {
+                window.location.href = "404.html"
+            }
+        },
+        error:function (data) {
+            show_toast("网络错误")
+        }
+    })
+$(document).ready(function() {
+    $(".button").on("click",function () {
+        var iphone = $(".iphone").val()
+        if (iphone == ''){
+            show_toast("手机号不能为空")
+            return
+        }
+        $(".toast").show()
+    })
+    $(".code-btn").on("click",function () {
+        var iphone = $(".iphone").val()
+        var strurl = window.location.href
+        var index = strurl.indexOf("\=");
+        var indexofurl = strurl .substring(index + 1, strurl .length);
+        var appkey = indexofurl.split("&")[0];
+        var parameter = strurl.lastIndexOf("?");
+        var urlparameter = strurl.substring(parameter+1,strurl.length);
+        var token = ''
+        $.ajax({
+            url: 'http://test.daichao.tongyufintech.com/api/v1/user/reg_send',
+            type: 'POST',
+            dataType: 'json',
+            data:{
+                phone: iphone,
+                appkey: appkey
+            },
+            success:function (data) {
+                show_toast(data.msg)
+                if (data.code == 402) {
+                    setTimeout(function () {
+                     window.location.href = 'cord.html'+'?' + urlparameter + '&' + token
+                    },1000);
+                    return;
+                }
+                temi()
+            },
+            error:function (data) {
+                show_toast("网络错误")
+            }
+        })
+    })
+    $("#submit").click(function () {
+        var strurl = window.location.href
+        var index = strurl.lastIndexOf("\=");
+        var channel = strurl.substring(index + 1, strurl.length);
+
+        var strlast = strurl.indexOf("\=");
+        var indexofurl = strurl.substring(strlast + 1, strlast.length);
+        var appkey = indexofurl.split("&")[0];
+        var iphone = $(".iphone").val()
+        var cord = $(".cord").val()
+        var parameter = strurl.lastIndexOf("?");
+        var urlparameter = strurl.substring(parameter+1,strurl.length);
+        if (cord == '' ) {
+            show_toast("验证码不能为空！")
+            return;
+        }
+        $.ajax({
+            url: 'http://test.daichao.tongyufintech.com/api/v1/user/register_wechat',
+            type: 'POST',
+            dataType: 'json',
+            data:{
+                phone: iphone,
+                code: cord,
+                appkey: appkey,
+                channel: channel,
+                from:2,
+                mobile_only: mobile_only
+            },
+            success:function (data) {
+                console.log(data)
+                var token = data.data.token
+                if (data.code == 200){
+                    show_toast("领取成功");
+                    setTimeout(function () {
+                       window.location.href = 'cord.html'+'?' + urlparameter + '&' + token
+                    },1000);
+                }else {
+                    show_toast(data.msg)
+                }
+            },
+            error:function () {
+                show_toast("网络错误")
+            }
+        })
+    })
+})
+function show_toast(text,time){
+    var str ='<div class="show-toast">'+text+'</div>';
+    $('body').append(str);
+    if(!time){time=2000;}
+    setTimeout(function(){
+        $(".show-toast").fadeOut(500);
+        $(".show-toast").remove();
+    },time);
+}
+var countdown = 60;
+function temi() {
+    if (countdown == 0) {
+        $(".code-btn").attr('disabled',false);
+        $(".code-btn").css( "background","#5A49BA")
+        $(".code-btn").html("获取");
+        countdown = 60;
+        return;
+    } else {
+        $(".code-btn").attr('disabled',true);
+        $(".code-btn").css("background","#AAAAAA")
+        $(".code-btn").html("重发(" + countdown + ")s");
+        countdown--;
+    }
+    setTimeout(function() {
+        temi()
+    },1000)
+}
+</script>
+</body>
+</html>

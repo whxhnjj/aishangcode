@@ -1,0 +1,84 @@
+.point_tit{
+  width: 750rpx;
+}
+.point_tit span{
+  text-align: center;
+  font-size: 30rpx;
+  color:#9DA0A4;
+  display: block;
+  width: 100%;
+  padding-top: 50rpx;
+}
+.point_tit p{
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size:50rpx;
+   padding-bottom:20rpx; 
+  color:#13D4C8;
+}
+.gray_h{
+  height:80rpx;
+  width:700rpx;
+  padding: 0 25rpx;
+  margin: 25rpx 0;
+  background:#F0EFF4 ;
+  color: #8C9093;
+  font-size: 34rpx;
+  
+}
+.gray_h span{
+ width:500rpx;
+ height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  display: block;
+}
+.gray_h navigator{
+ width:200rpx;
+ height: 80rpx;
+  display: block;
+  float: left;
+ background:url('http://t.nongjia365.com.cn/guanli/assets/image/img/guize.png') no-repeat right center;
+  background-size:54rpx;
+
+}
+
+.list{
+  width: 700rpx;
+  padding: 15rpx 0;
+  border-bottom: 1rpx solid #DEDEDE;
+}
+.list .tit{
+ width: 700rpx;
+ height: 100%;
+ overflow: hidden;
+ padding-bottom:10rpx;
+ color: #5E6366;
+}
+.list .tit span{
+  width: 400rpx;
+  display: block;
+  line-height: 40rpx;
+  font-size: 34rpx; 
+  float: left; 
+  height: 40rpx;
+  text-align: left;
+}
+.list .tit p{
+  width:300rpx;
+  display: block;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 34rpx; 
+  float: left;
+  text-align: right; 
+}
+.list .date{
+  clear: both;
+  width: 700rpx;
+  color:#A6ACAC;
+  height: 40rpx;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}

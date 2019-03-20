@@ -1,0 +1,72 @@
+<!--summary.wxml-->
+ <view class="section">  
+      <picker mode="date" value="{{date}}" fields="month" start="1995-01" end="2100-12" bindchange="bindDateChange">  
+       <view class="picker">  
+            <b>{{date}}</b><i></i>
+        </view>  
+      </picker>  
+    </view>  
+<view class="wrap summary">
+    <ul>
+          <li>
+            <view class="day">摄影</view>
+            <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+             <view class="plus">-23522</view>
+          </li>
+           <li>
+            <view class="day">网络</view>
+              <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+             <view class="plus">-23522</view>
+          </li>
+           <li>
+            <view class="day">游戏</view>
+              <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+             <view class="plus">-23522</view>
+          </li>
+           <li>
+            <view class="day">金融</view>
+              <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+             <view class="plus">-23522</view>
+          </li>
+           <li>
+            <view class="day">搞怪</view>
+             <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+             <view class="plus">-23522</view>
+          </li>
+           <li>
+            <view class="day">摄影</view>
+            <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+             <view class="plus">-23522</view>
+          </li>
+           <li>
+            <view class="day">网络</view>
+            <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+             <view class="plus">-23522</view>
+          </li>
+           <li>
+            <view class="day">游戏</view>
+             <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+             <view class="plus">-23522</view>
+          </li>
+           <li>
+            <view class="day">金融</view>
+             <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+             <view class="plus">-23522</view>
+          </li>
+           <li>
+            <view class="day">搞怪</view>
+             <view class="plus">+36500</view>
+            <view class="reduce">-23522</view>
+             <view class="plus">-23522</view>
+          </li>
+      </ul>
+</view>

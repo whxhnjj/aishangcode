@@ -1,0 +1,15 @@
+<!--pages/list/list.wxml-->
+<view class="wrap">
+  <navigator class="list" url="../detail/detail?actor_id={{item.id}}" wx:for="{{actors}}" wx:key="key">
+    <image class="userinfo_avatar" src="{{domain}}/{{item.thumb}}" background-size="cover"></image>
+    <view class="ownbao">
+      <span class="own_num">NO.{{item.order_number}}</span>
+      <span class="own_name">{{item.name}}</span>
+    </view>
+    <span class="own_number">{{item.votes}}<i>票</i></span>
+     <view class="giving"></view>
+  </navigator>
+</view>
+
+
+<view  class="nomore" wx:if="{{actors.length == 0}}">没有找到匹配的结果</view>

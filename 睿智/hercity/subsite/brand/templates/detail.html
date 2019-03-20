@@ -1,0 +1,83 @@
+{include file="inc_header.html" current="detail" title="{$brand.title} - 中国旗袍品牌排行榜"}
+
+
+<!--update-->
+<div class="wrap detail detail_brand">
+<div class="breadcrumb"><a href="/">中国旗袍品牌排行榜</a> &gt; {$brand.name}{if $brand.ename != ''}({$brand.ename}){/if}<a href="https://www.hercity.com/s/static/brand.html" class="brand_help">如何让我的品牌出现在这里？</a></div>
+
+<div class="brandheader">
+<a class="brand_logo" href=""><img src="https://www.hercity.com{$brand.logo}" alt="{$brand.name}" /></a>
+<h1><!--<span class="erweima" title="点击扫描二维码 手机上阅读本内容"></span>--><span class="title">{$brand.name}</span>{if $brand.is_auth}<a class="v" href="/s/static/brand.html"></a><span class="v_text">{$brand.auth_info}</span>{/if}</h1> 
+<!--<div class="erweimabox"><img src="" /><br />扫描二维码<br />将本内容分享给手机朋友<br /><a class="close" href="javascript:void(0);">关闭</a></div>-->
+<div class="brand_tags">{foreach from=$brand.tags key=key item=tag}<a href="/list-{$tag|urlencode}-0-0-1.html">{$tag}</a>{/foreach}</div>
+
+<table cellspacing="0" style="">
+<tr><td style="width:70px;">线下加盟</td><td style="width:450px;">{if $brand.is_allow_join=='1'}<span class="green">诚邀加盟</span>{else}<span class="orange">不接受加盟</span>{/if}</td>
+<td style="width:70px;">网上代理</td><td>{if $brand.is_allow_agent=='1'}<span class="green">诚邀网代</span>{else}<span class="orange">不接受网代</span>{/if}</td></tr>
+<tr>
+<td>总部所在</td><td>{$brand.location}</td>
+<td>官方网站</td><td><a href="{$brand.website}" target="_blank">{$brand.website}</a></td>
+</tr>
+<tr>
+<td>详细地址</td><td>{$brand.address}</td>
+<td>官方网店</td><td><a isconvert="1" href="{$brand.webshop}" target="_blank">{$brand.webshop}</a></td>
+</tr>
+<tr>
+<td>联系电话</td><td><span class="red bold">{$brand.tel}</span>{if $brand.tel != ''} (联系时告诉我是从【倾城网】看到的){/if}</td>
+<td>官方微博</td><td><a href="{$brand.weibo}" target="_blank">{$brand.weibo}</a></td>
+</tr>
+<tr>
+<td>电子邮箱</td><td>{$brand.email}</td>
+<td>微信帐号</td><td>{$brand.weixin}</td>
+</tr>
+</table>
+</div>
+
+
+<div class="brandbody">
+	<div class="left">
+		<h4><span>{$brand.name}品牌介绍</span></h4>
+		<div class="brand_intro">
+		{$brand.profile}
+		</div>
+	</div>
+	<div class="right_a">
+		<div class="right_box">
+		{if $brand.pic != '/data/upfiles/thumb/'}<img class="brand_pic" src="https://www.hercity.com{$brand.pic}" alt="{$brand.name}" />{/if}
+
+		<h5><a href="">品牌店铺</a><span>SHOP</span></h5>
+		{if $brand_shops == ''}<div class="meiyou">未找到该品牌相关店铺</div>{/if}
+		<ul class="imagetext">
+		{foreach from=$brand_shops item=post}
+		<li><div><a class="pic" href="https://www.hercity.com{$post.href}"><img src="https://www.hercity.com{$post.thumb1}" alt="{$post.title}" /></a></div><a class="tit" href="https://www.hercity.com{$post.href}">{$post.title}</a>
+		<p>{$post.brief}…</p>
+		</li>
+		{/foreach}
+		</ul>
+		
+		<h5><a href="">品牌动态</a><span>NEWS</span></h5>
+		{if $brand_news == ''}<div class="meiyou">未找到该品牌相关动态</div>{/if}
+		<ul class="imagetext">
+		{foreach from=$brand_news item=post}
+		<li><div><a class="pic" href="https://www.hercity.com{$post.href}"><img src="https://www.hercity.com{$post.thumb1}" alt="{$post.title}" /></a></div><a class="tit" href="https://www.hercity.com{$post.href}">{$post.title}</a>
+		<p>{$post.brief}…</p>
+		</li>
+		{/foreach}
+		</ul>
+
+		<h5><a href="">品牌图集</a><span>PHOTOS</span></h5>
+		{if $brand_photo == ''}<div class="meiyou">未找到该品牌相关图片</div>{/if}
+		<ul class="imagegrid">
+		{foreach from=$brand_photo item=post}
+		<li><a href="https://www.hercity.com{$post.href}"><img src="https://www.hercity.com{$post.thumb1}" alt="{$post.title}" /></a></li>
+		{/foreach}
+		</ul>
+
+		</div>
+	</div>
+</div>
+
+</div>
+
+
+{include file="inc_footer.html" current="detail" template="detail_brand"}

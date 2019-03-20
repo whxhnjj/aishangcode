@@ -1,0 +1,55 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wx78ffc643214868d8",
+	"projectname": "%E9%99%95%E5%8C%97%E6%B0%91%E6%AD%8C%E5%A4%A7%E8%B5%9B",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "1035: 公众号自定义菜单",
+					"pathName": "pages/gift/gift",
+					"query": "from=mp",
+					"scene": "1035",
+					"referrerInfo": {
+						"appId": "wx78ffc643214868d8"
+					}
+				},
+				{
+					"id": 1,
+					"name": "测试",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": "1001"
+				}
+			]
+		}
+	}
+}

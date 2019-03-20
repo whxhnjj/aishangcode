@@ -1,0 +1,32 @@
+<view class="wrap">
+      <view class="commodity">
+            <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/datu.jpg'></image>
+            <span>倾约茶会：一盏清茗待知己！倾约茶会：一盏清茗待知己！</span>
+            <b>分类：大杯奶茶紫色一套</b>
+          <view class='mark'>
+                <p>打分:</p>
+                <view class='xing'>
+                    <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/xing1.png'></image>
+                     <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/xing1.png'></image>
+                      <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/xing1.png'></image>
+                       <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/xing1.png'></image>
+                        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/xing1.png'></image>
+                </view>
+          </view>
+      </view>
+      <textarea placeholder='说出宝贝的有点和美中不足的地方吧！' placeholder-style='font-size:30rpx;'>
+      </textarea>
+
+      <view class='photo'>
+    
+
+        <block wx:for="{{imageList}}" wx:for-item="image">
+            <view class="img">
+              <image  src="{{image}}" data-src="{{image}}" bindtap="previewImage">
+              </image>
+            </view>
+        </block>
+            <view class="tap" bindtap="chooseImage">添加照片</view> 
+      </view>
+   <view class='fb'>发布</view>
+</view>

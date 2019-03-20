@@ -1,0 +1,19 @@
+<view class="header"></view>
+<view class="record_box">
+  <block wx:for="{{record}}" wx:key="id">
+    <navigator class="record_list" hover-class="none" url="../agent_present_detail/agent_present_detail?id={{item.id}}">
+      <view class="left_box">
+        <image src="/images/record_icon.png"></image>
+        <view>
+          <text>收益提现到{{item.bank_info.bank_name}}（{{item.bank_info.bank_four}}）</text>
+          <text>{{item.apply_time}}</text>
+        </view>
+      </view>
+      <view class="right_box">{{item.apply_amount}}</view>
+    </navigator>
+  </block>
+
+  <!--  -->
+  <view class="page_text">{{page_text}}</view>
+
+</view>

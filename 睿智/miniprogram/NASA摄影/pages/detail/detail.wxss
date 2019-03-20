@@ -1,0 +1,167 @@
+page{
+  margin-bottom: 120rpx;
+}
+.nav{display: none;}
+.show{display: block;}
+.hide{display: none;}
+.taber{
+      width: 750rpx;
+      height: 120rpx;
+      background: #fcfcfc;
+      position: fixed;
+      border-top: 3rpx solid #d5d5d6;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+}
+.taber view{
+  float: left;
+  height: 120px;
+  font-size: 30rpx;
+  line-height: 120rpx;
+  color: #FFF;
+  text-align: center;
+  }
+.taber view:nth-of-type(1){
+  width: 375rpx;
+  line-height: 160rpx;
+  color: #000;
+  background: url(http://www.hsbggb.com/NASA/phone.png) no-repeat center 10rpx;
+  background-size:48rpx;
+}
+.taber view:nth-of-type(2){
+  width:187.5rpx;
+  background: #166b64;
+
+}
+.taber view:nth-of-type(3){
+  width:187.5rpx;
+  background:#022c27;
+}
+
+
+.swiper {
+  height:600rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.title{
+  margin: 25rpx 0;
+}
+.title span{
+  display: block;
+}
+.title span:nth-of-type(1){
+  color: #282828;
+  font-size: 32rpx;
+  line-height:40rpx;
+}
+.title span:nth-of-type(2){
+  color: #4d4d4d;
+  font-size: 24rpx;
+    line-height:35rpx;
+}
+.title span:nth-of-type(3){
+  color: #f90;
+  font-size:32rpx;
+  line-height:60rpx;
+}
+.main{
+  margin: 25rpx 0;
+}
+.main .sge{
+  font-size: 34rpx;
+  font-weight: bold;
+  border-bottom: 3rpx solid #dddddd;
+  line-height: 34rpx;
+  padding-bottom: 25rpx;
+}
+.main .list{
+  margin: 25rpx 0;
+  height:90rpx;
+  width: 700rpx;
+  padding-bottom: 25rpx;
+  border-bottom: 3rpx solid #dddddd;
+}
+.list:nth-of-type(2){
+  background:url("http://www.hsbggb.com/NASA/icon1.png") no-repeat right center;
+  background-size: 48rpx;
+}
+.list:nth-of-type(3){
+  background:url("http://www.hsbggb.com/NASA/icon2.png") no-repeat right center;
+  background-size: 48rpx;
+}
+.list:nth-of-type(4){
+  background:url("http://www.hsbggb.com/NASA/icon1.png") no-repeat right center;
+  background-size: 48rpx;
+}
+.list:nth-of-type(5){
+  background:url("http://www.hsbggb.com/NASA/icon2.png") no-repeat right center;
+  background-size: 48rpx;
+}
+.list:nth-of-type(6){
+  background:url("http://www.hsbggb.com/NASA/icon1.png") no-repeat right center;
+  background-size: 48rpx;
+}
+.main>.list>span{
+  display: block;
+}
+.main>.list>span:nth-of-type(1){
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height:45rpx;
+}
+.main>.list>span:nth-of-type(2){
+  font-size: 32rpx;
+  line-height:45rpx;
+}
+.bao{
+  width:100%;
+  height:100%;
+  position: fixed;
+  background: #000;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+}
+.inputphone{
+  width: 700rpx;
+  height:330rpx;
+  background: #FFF;
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0 25rpx;
+  animation:myfirst 0.3s linear;
+}
+.inputphone span{
+  display: block;
+  text-align: center;
+  line-height:40rpx;
+  padding: 10rpx 0;
+  font-size: 32rpx;
+}
+.inputphone input{
+  width:634rpx;
+  height:90rpx;
+  border: 3rpx solid #DEDEDE;
+  margin:20rpx 0;
+  padding:0 30rpx;
+}
+.inputphone button{
+  width: 700rpx;
+  height: 90rpx;
+  background: #166B63;
+  color: #FFF;
+  line-height: 90rpx;
+}
+
+ @keyframes myfirst{
+    0%{height: 0;}
+    100%{height:340rpx;}
+}

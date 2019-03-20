@@ -1,0 +1,73 @@
+<swiper wx:if="{{movies.length > 1}}" class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="500" circular="true" indicator-active-color="#11D4C6">
+  <block wx:for="{{movies}}" wx:for-index="index">    
+    <swiper-item>    
+      <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+    </swiper-item>    
+  </block>    
+</swiper>
+<swiper wx:if="{{movies.length == 1}}" class="swiper">
+  <block wx:for="{{movies}}" wx:for-index="index">    
+    <swiper-item>    
+      <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>
+    </swiper-item>    
+  </block>    
+</swiper>
+
+<view class="box1">
+  <view class="box1_left">
+      <b></b>
+      <span class="sp_tp">已报名</span>
+      <span class="sp_bt">258</span>
+  </view>
+  <view class="box1_center">
+      <b></b>
+      <span class="sp_tp">总票数</span>
+      <span class="sp_bt">9999</span>
+  </view>
+  <view class="box1_right">
+      <b></b>
+      <span class="sp_tp">访问量</span>
+      <span class="sp_bt">52265</span>
+  </view>
+</view>
+
+<view class="box2">
+  <span>活动结束倒计时</span>
+  <span class="time">
+    {{countDownDay}}<i>天</i>{{countDownHour}}<i>时</i>{{countDownMinute}}<i>分</i>{{countDownSecond}}<i>秒</i>
+  </span>
+</view>
+
+<view class="box3">
+  <input class='inpt' type='text' placeholder='请输入搜索的名字或者编号' placeholder-style='font-size:32rpx;e'></input>
+  <span class="search"></span>
+</view>
+<view class="box4">
+        <view class="box_view"  bindtap='taburl'>
+            <image src='../images/box4_list.jpg' mode="aspectFill"></image>
+            <span class="intit">258票</span>
+            <span class="font"></span>
+            <span class="name">1号·赵丽颖</span>
+        </view>
+         <view class="box_view"  bindtap='taburl'>
+            <image src='../images/box4_list.jpg' mode="aspectFill"></image>
+            <span class="intit">258票</span>
+            <span class="font"></span>
+            <span class="name">1号·赵丽颖</span>
+        </view>
+         <view class="box_view"  bindtap='taburl'>
+            <image src='../images/box4_list.jpg' mode="aspectFill"></image>
+            <span class="intit">258票</span>
+            <span class="font"></span>
+            <span class="name">1号·赵丽颖</span>
+        </view>
+         <view class="box_view"  bindtap='taburl'>
+            <image src='../images/box4_list.jpg' mode="aspectFill"></image>
+            <span class="intit">258票</span>
+            <span class="font"></span>
+            <span class="name">1号·赵丽颖</span>
+        </view>
+</view>
+<view class="box_5">
+查看更多
+</view>

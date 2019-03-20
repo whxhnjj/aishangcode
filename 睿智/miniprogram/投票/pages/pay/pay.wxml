@@ -1,0 +1,22 @@
+<view class="title_wrap">
+  <view class="title_name" bindtap="payUrl">
+    <image class="userinfo_avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <span class="gift">2号 · {{userInfo.nickName}}</span>
+    <span class="song">给她送一份礼物吧！</span>
+  </view>
+</view>
+<view class="box">
+    <block wx:for="{{catalogs}}" wx:for-item="item">
+      <view data-select="{{item.select}}" class="{{item.select == catalogSelect ? 'active':''}} box_view" bindtap="chooseCatalog">
+        <image src="{{item.imgurl}}" mode="scaleToFill"></image>
+        <span class="name">{{item.catalogName}}</span>
+        <span class="num">{{item.num}}</span>
+        <view class="nest"></view>
+      </view>
+    </block>
+</view>
+<view class="tabs">
+    <span class="tabs_left">￥5元</span>
+    <span class="tabs_right">微信支付</span>
+</view>
+<view class="mg"></view>

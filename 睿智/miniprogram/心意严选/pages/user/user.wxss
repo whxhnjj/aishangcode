@@ -1,0 +1,102 @@
+/* pages/user/user.wxss */
+
+/*头部*/
+.user_header{
+  padding: 40rpx 0 40rpx;
+  margin-bottom: 20rpx;
+  border-top: 1rpx solid #dadada;
+  background: #fff;
+}
+.user_header .user_photo{
+  width: 140rpx;
+  height: 140rpx;
+  margin: 0 auto 8rpx;
+  padding: 10rpx;
+  border-radius: 50%;
+  background: #f0f0f0; 
+  /* box-shadow:5rpx 5rpx 10rpx #dadada;  */
+}
+.user_photo image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.user_header .user_name{
+  display: block;
+  width: 300rpx;
+  text-align: center;
+  font-size: 30rpx;
+  background: #fff;
+  margin: 0 auto;
+}
+
+/*user order*/
+.user_order{
+  margin-bottom: 20rpx;
+}
+.user_order_header{
+  display: block;
+  height: 100rpx;
+  width: 100%;
+  padding: 0 25rpx;
+  border-bottom: 1rpx solid #dadada;
+  background: #fff;
+  line-height: 100rpx;
+}
+.user_order_header text:first-child{
+  font-size: 30rpx;
+  color: #000;
+}
+.user_order_header text:last-child{
+  color: #686868;
+}
+.user_order_header image{
+  width: 40rpx;
+  height: 30rpx;
+  margin: 35rpx 0 0 10rpx;
+}
+
+.order{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+  padding: 40rpx 25rpx;
+  background: #fff;
+}
+.order .order_list{
+  position: relative;
+  z-index: 100;
+  width: 130rpx;
+  text-align: center;
+}
+.order_list>view{
+  position: absolute;
+  z-index: 110;
+  right: 25rpx;
+  top: -15rpx;
+  width: 35rpx;
+  height: 35rpx;
+  background: #e4393c;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 33rpx;
+}
+.order_list>view text{
+    font-size: 24rpx;
+}
+
+.order_list image{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 auto 5rpx;
+}
+.order_list text{
+  display: block;
+}
+  
+.user_list{
+  margin-bottom: 20rpx;
+  border-bottom: none;
+}

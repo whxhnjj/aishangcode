@@ -1,0 +1,232 @@
+.card_img_box{
+  width: 750rpx;
+  max-height: 750rpx;
+  margin-bottom: 287rpx;
+  overflow: hidden;
+}
+.card_img{
+  width: 750rpx;
+}
+
+/*名片信息*/
+.card_msg{
+  position: absolute;
+  top: 640rpx;
+  left: 50%;
+  margin-left: -345rpx;
+  z-index: 100;
+  width: 690rpx;
+  background: #fff;
+  box-shadow: #ccc 2rpx 2rpx 30rpx 5rpx;
+}
+.card_msg_box{
+  padding: 80rpx 100rpx;
+}
+.card_msg_box .card_name{
+  display: block;
+  margin-bottom: 25rpx;
+  font-size: 36rpx;
+}
+.card_msg_box .card_job{
+  display: block;
+  margin-bottom: 35rpx;
+  font-size: 32rpx;
+  color: rgb(102, 102, 102);
+}
+.card_tel{
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.card_tel image{
+  display: inline-block;
+  margin-right: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.card_address{
+  width: 100%;
+  height: 35rpx;
+  line-height: 35rpx;
+  font-size: 28rpx;
+  overflow: hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.card_address image{
+  display: inline-block;
+  margin-right: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.card_log_box{
+  position: absolute;
+  top: 70rpx;
+  right: 70rpx;
+  width: 150rpx;
+}
+.card_logo{
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.card_logo_name{
+  display: block;
+  margin-top: 7rpx;
+  width: 100%;
+  text-align: center;
+  font-size:30rpx;
+}
+
+/*名片详细信息 */
+.card_msg_detail{
+  width: 100%;
+}
+.card_msg_detail .detail_line{
+  display: block;
+  width: 1rpx;
+  height: 60rpx;
+  margin: 0 auto;
+  border-left: 4rpx dotted rgb(36,193,169);
+}
+.card_msg_detail .detail_img{
+  display: block;
+  width: 35rpx;
+  height: 19rpx;
+  margin: 0 auto 30rpx;
+}
+.card_msg_detail .detail_text{
+  display: block;
+  width: 600rpx;
+  margin: 0 auto 60rpx;
+  text-align: center;
+  color: rgb(153, 153, 153);
+  font-size: 28rpx;
+}
+
+.detail_box{
+  padding: 100rpx 68rpx;
+  background: #f5f5f5;
+}
+.detail_box_list{
+  height: 60rpx;
+  margin-bottom: 45rpx;
+}
+.detail_box_list text:first-child{
+  display: inline-block;
+  margin-right: 40rpx;
+  color: rgb(153, 153, 153);
+  font-size: 28rpx;
+  vertical-align: top;
+}
+.detail_box_list text:nth-child(2){
+  display: inline-block;
+  width: 340rpx;
+  margin-right: 78rpx;
+  font-size: 28rpx;
+  line-height: 38rpx;
+}
+.detail_box_list text:last-child{
+  display: inline-block;
+  width: 100rpx;
+  height: 58rpx;
+  margin-top: -10rpx;
+  border: 1rpx solid rgb(36,193,169);
+  color: rgb(36,193,169);
+  line-height: 58rpx;
+  text-align: center;
+  font-size: 28rpx;
+  vertical-align: top;
+}
+
+/*按钮*/
+.card_btn{
+  display:flex;
+  flex-direction: row;
+  flex-wrap:nowrap;
+  justify-content:space-between;
+  margin: 80rpx 30rpx;
+  width: 690rpx;
+  height: 90rpx;
+}
+.card_btn button{
+  display: inline-block;
+  width: 330rpx;
+  height: 90rpx;
+  margin: 0;
+  border-radius: 0;
+  line-height: 90rpx;
+  font-size: 32rpx;
+}
+.card_btn button:first-child{
+  background: #fff;
+  border: 1rpx solid rgb(51, 51, 51);
+}
+.card_btn button:last-child{
+  background: rgb(36,193,169);
+  color: #fff;
+  border: 1rpx solid rgb(36,193,169);
+}
+
+/*点赞*/
+.card_num{
+  margin: 0 30rpx 80rpx;
+  width: 690rpx;
+}
+.card_num .card_num_box1{
+  width: 550rpx;
+}
+.card_num_box1 .card_num_img{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+.card_num_img image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.card_num_box1 text{
+  color: rgb(153, 153, 153);
+}
+
+.card_num_box2{
+  width: 140rpx;
+  text-align: center;
+}
+.card_num_box2 image{
+  display: block;
+  margin: 20rpx 0 50rpx 55rpx;
+  width: 41rpx;
+  height: 40rpx;
+}
+.card_num_box2 text:before{
+  content: '靠谱';
+  color: rgb(153, 153, 153);
+}
+
+
+
+/*个人简介*/
+.card_abstract{
+  margin-bottom: 80rpx;
+}
+.card_abstract .card_abstract_cont{
+  text-align: left;
+  line-height: 1.8;
+  color: rgb(51, 51, 51);
+}
+
+/*照片*/
+.card_photo image{
+  display: block;
+  margin-bottom: 10rpx;
+  width: 750rpx;
+}
+.card_photo image:last-child{
+  margin-bottom: 0;
+}

@@ -1,0 +1,11 @@
+<view class="qrcode_box">
+  <view class="qrcode_header">
+    <image wx:if="{{member.avatarurl}}" src="{{member.avatarurl}}"></image>
+    <image wx:else src="{{hostName}}static/images/member.png"></image>
+    <text>{{member.realname?member.realname:member.nickname}}</text>
+  </view>
+  <image  class="qrcode" src="{{hostName}}{{qrcode}}" data-src="{{hostName}}{{qrcode}}" bindtap="shareQrcode"></image>
+  <text>点击二维码转发给朋友</text>
+</view>
+
+<!-- <button hover-class="none">点击二维码转发</button> -->

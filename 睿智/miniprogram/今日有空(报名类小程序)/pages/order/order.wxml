@@ -1,0 +1,45 @@
+<view class="tab">
+  <view class="item-tab" bindtap="tabFun">
+      <view class="{{tabArr.curHdIndex=='0'? 'active' : ''}}" id="tab-hd01" data-id="0">全部 </view>
+      <view class="{{tabArr.curHdIndex=='1'? 'active' : ''}}" id="tab-hd02" data-id="1">待使用</view>
+      <view class="{{tabArr.curHdIndex=='2'? 'active' : ''}}" id="tab-hd03" data-id="2">待评价</view>
+      <view class="{{tabArr.curHdIndex=='3'? 'active' : ''}}" id="tab-hd04" data-id="3">已完成</view>
+  </view>
+  <view class="botom-item">
+      <view class="right-item {{tabArr.curBdIndex=='0'? 'active' : ''}}">
+                <view class="list">
+                <view class="data">
+                     <span>香溪茶艺</span>
+                   <b><navigator url='../evaluate/evaluate'>待评价 </navigator></b>
+                </view>
+                <navigator url='../../pages/content/content'>
+                <view class="bao">
+                      <view class="img">
+                        <image        src='http://t.nongjia365.com.cn/guanli/assets/image/wx1.png'></image>
+                      </view>
+                    <view class="left">
+                    <span>我是一个商品的名字
+                    我是一2个商品的名字</span>
+                    <p>分类：两个琥珀宫</p>
+                    </view>
+                </view>
+                </navigator>
+                <view class='mn'>
+             共3件商品，实付￥8888.00，积分300
+                </view> 
+              
+          </view>
+
+      </view>
+      <view class="right-item {{tabArr.curBdIndex=='1'? 'active' : ''}}">
+            <view class='text'>呀！都使用完了，快去购买吧！</view>
+      </view>
+      <view class="right-item {{tabArr.curBdIndex=='2'? 'active' : ''}}">
+      
+      </view>
+      <view class="right-item {{tabArr.curBdIndex=='3'? 'active' : ''}}">
+      
+      </view>
+      
+      </view>
+</view>

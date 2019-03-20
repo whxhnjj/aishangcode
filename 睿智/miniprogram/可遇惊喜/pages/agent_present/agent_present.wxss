@@ -1,0 +1,242 @@
+/**********首页***********/
+.present_box{
+  width: 690rpx;
+  margin: 50rpx auto;
+  border-radius: 6rpx;
+}
+.present_box .header{
+  display: flex;
+  align-items: center;
+  padding: 50rpx;
+  background: #fafafa;
+  font-size: 30rpx;
+}
+.present_box .header>text:first-child{
+  margin-right: 50rpx;
+}
+.present_box .header_box{
+  display: flex;
+  align-items: center;
+}
+.present_box .header_box>image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.present_box .content{
+  padding: 50rpx;
+  background: #fff;
+}
+.present_box .content .title{
+  display: block;
+  margin-bottom: 50rpx;
+  font-size: 30rpx;
+}
+.present_box .content .input_box{
+  position: relative;
+  width: 100%;
+  padding-bottom: 15rpx;
+  margin-bottom: 15rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.present_box .input_box>input{
+  width: 100%;
+  padding-left: 25rpx;
+  font-size: 58rpx;
+  font-weight: 600;
+}
+.present_box .input_box>text{
+  position: absolute;
+  z-index: 2;
+  font-size: 26rpx;
+  left: 0;
+  bottom: 13rpx;
+}
+.present_box .money{
+  display: flex;
+  margin-bottom: 50rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.present_box .btn{
+  width: 100%;
+  height: 100rpx;
+  background-color:#ff5070;
+  border-radius: 6rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #fff;
+  
+}
+.present_box .present_record{
+  width: 150rpx;
+  margin: 20rpx auto 0;
+  color:#ff5070;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+
+/***********弹出层***********/
+.pop_bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.pop_box{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 110;
+  width: 100%;
+  padding: 0 30rpx;
+  background: #fff;
+}
+
+@keyframes slidedown {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+@keyframes slideup {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.slidedown {
+    animation: slidedown 0.5s linear ;
+}
+.slideup {
+    animation: slideup 0.5s linear ;
+}
+
+.pop_box .header{
+  display: block;
+  padding: 50rpx 0 30rpx;
+  font-size: 36rpx;
+}
+.pop_box .content_box .content_list{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50rpx 0;
+  border-top: 1rpx solid #e6e6e6;
+  font-size: 30rpx;
+  color:#666;
+}
+.pop_box .content_box .content_list:first-child{
+  border-top: none;
+}
+.pop_box .left_box{
+  display: flex;
+  align-items: center;
+}
+.pop_box .left_box>image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+
+
+/*********添加银行卡***********/
+.new_card{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background: #f5f5f5;
+}
+.new_box{
+  width: 690rpx;
+  margin: 50rpx auto;
+  background: #fff;
+  border-radius: 6px;
+}
+.new_box .new_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 50rpx;
+  padding: 40rpx 0;
+  border-top: 1rpx solid #e6e6e6;
+  font-size: 30rpx;
+}
+.new_box .new_list:first-child{
+  border-top:none;
+}
+.new_box .new_list input{
+  text-align: right;
+}
+
+.new_btn{
+  position: relative;
+  width: 690rpx;
+  height: 100rpx;
+  margin: 0 auto;
+  background-color:#ff5070;
+  border-radius: 6rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #fff;
+}
+.bg_e6{
+  margin-top: 30rpx;
+  background-color: #e6e6e6;
+}
+
+
+/******银行列表选项******/
+.bank_bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+}
+.bank_bg>text{
+  display: block;
+  padding: 50rpx 0 30rpx 30rpx;
+  font-size: 26rpx;
+  color: #999;
+  background-color: #f5f5f5;
+}
+.bank_box .bank_list{
+  display: flex;
+  align-items: center;
+  margin: 0 30rpx;
+  padding: 30rpx 0;
+  border-top: 1rpx solid #e6e6e6;
+  font-size: 30rpx;
+}
+.bank_box .bank_list:first-child{
+  border-top: none;
+}
+.bank_box .bank_list>image{
+  width: 60rpx;
+  height: 60rpx;margin-right: 20rpx;
+}
+
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}

@@ -1,0 +1,41 @@
+.success{
+  padding: 80rpx 0 50rpx;
+  width: 750rpx;
+  text-align: center;
+  background: #fff;
+}
+.success_text{
+  display: inline-block;
+  margin-left: 10rpx;
+  vertical-align: 20%;
+  font-size: 30rpx;
+}
+.success_price{
+  display: block;
+  margin-top: 25rpx;
+  color: #ff0000;
+  font-size: 34rpx;
+}
+.success_price text{
+  font-size: 26rpx;
+}
+.success_list{
+  height: 80rpx;
+  padding: 0 25rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #dadada;
+  background: #fff;
+  font-size: 26rpx;
+}
+
+.success_btn{
+  display: block;
+  height: 80rpx;
+  width: 690rpx;
+  margin: 60rpx auto;
+  line-height: 80rpx;
+  text-align: center;
+  background: #fff;
+  border: 1rpx solid #dadada;
+  border-radius: 5rpx;
+}

@@ -1,0 +1,53 @@
+<!--pages/contacts/contacts.wxml-->
+<view class='wrap'>
+      <view class='list'>
+          <view class='img'>
+              <image src='http://ookzqad11.bkt.clouddn.com/avatar.png'></image>
+          </view>
+          <view class='name'>
+              <span>王杰</span>
+              <span class="address">陕西省.西安市</span>
+          </view>
+          <view class='date'>2017.11.22 23:00:59</view>
+      </view>
+       <view class='list'>
+          <view class='img'>
+              <image src='http://ookzqad11.bkt.clouddn.com/avatar.png'></image>
+          </view>
+          <view class='name'>
+              <span>王杰</span>
+              <span class="address">陕西省.西安市</span>
+          </view>
+          <view class='date'>2017.11.22 23:00:59</view>
+      </view>
+       <view class='list'>
+          <view class='img'>
+              <image src='http://ookzqad11.bkt.clouddn.com/avatar.png'></image>
+          </view>
+          <view class='name'>
+              <span>王杰</span>
+              <span class="address">陕西省.西安市</span>
+          </view>
+          <view class='date'>2017.11.22 23:00:59</view>
+      </view>
+       <view class='list'>
+          <view class='img'>
+              <image src='http://ookzqad11.bkt.clouddn.com/avatar.png'></image>
+          </view>
+          <view class='name'>
+              <span>王杰</span>
+              <span class="address">陕西省.西安市</span>
+          </view>
+          <view class='date'>2017.11.22 23:00:59</view>
+      </view>
+       <view class='list'>
+          <view class='img'>
+              <image src='http://ookzqad11.bkt.clouddn.com/avatar.png'></image>
+          </view>
+          <view class='name'>
+              <span>王杰</span>
+              <span class="address">陕西省.西安市</span>
+          </view>
+          <view class='date'>2017.11.22 23:00:59</view>
+      </view>
+</view>

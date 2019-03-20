@@ -1,0 +1,89 @@
+<!--pages/list/list.wxml-->
+<view class='wrap'>
+    <view class='search'>
+      <icon type="search" color="#4c4c4c" size="18"></icon>
+      <input type="text" maxlength="100" placeholder="搜索" placeholder-style="color:#999999" />
+    </view>
+  <ul class="ul">
+  <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/01.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>万科松花湖滑雪场</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/02.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>华清爱琴海国际温泉酒店套票</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/03.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>倾友茶会：从来佳茗似佳人</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/04.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>天目温泉戏水乐园</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+    <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/01.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>万科松花湖滑雪场</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/02.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>华清爱琴海国际温泉酒店套票</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/03.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>倾友茶会：从来佳茗似佳人</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+     <navigator url="../detail/detail">
+    <li>
+      <view class='img'>
+        <image src='http://t.nongjia365.com.cn/guanli/assets/image/img/04.jpg'></image>
+        <p>距离报名结束还剩10:21分</p>
+      </view>
+      <span>天目温泉戏水乐园</span>
+      <em>1500.00元</em>
+    </li>
+    </navigator>
+    </ul>
+</view>

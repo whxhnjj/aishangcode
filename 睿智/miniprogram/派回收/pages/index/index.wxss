@@ -1,0 +1,277 @@
+/********用户页面*********/
+.user{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+}
+.logo{
+  box-sizing:content-box;
+  width: 70rpx;
+  height: 70rpx;
+  margin: 60rpx auto 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #dddddc;
+  border: 10rpx solid #dddddc;
+}
+.logo>image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.banner{
+  position: relative;
+  margin-bottom: 140rpx;
+}
+.banner swiper{
+  width: 100%;
+  height: 400rpx;
+}
+.banner swiper image{
+  width: 100%;
+  height: 400rpx;
+}
+
+.banner .logo_msg{
+  position: absolute;
+  bottom: 30rpx;
+  left: 50%;
+  z-index: 100;
+  width: 600rpx;
+  margin-left: -300rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+.bottom{
+  /* position: absolute;
+  bottom: 100rpx;
+  left: 0; */
+  width: 100%;
+  padding-bottom: 100rpx;
+}
+.bottom .btn{
+  width: 450rpx;
+  height: 110rpx;
+  margin: 0 auto 30rpx;
+  background: #009049;
+  border-radius: 4rpx;
+  text-align: center;
+  line-height: 110rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #fff;
+}
+.bottom .text{
+  display: block;
+  width: 200rpx;
+  margin: 40rpx auto 0;
+  text-align: center;
+  font-size: 24rpx;
+  color: #009049;
+}
+
+/********收纸员页面********/
+.employee{
+  padding-bottom: 100rpx;
+  background: #f0f0f0;
+}
+.nav{
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 160rpx;
+}
+.order_box{
+  padding-top: 160rpx;
+}
+/*任务列表*/
+.task_list{
+  margin-top: 50rpx;
+  width: 100%;
+  padding: 0 30rpx 55rpx;
+  background: #fff;
+}
+.task_header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 90rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.task_header image:first-child{
+  width: 22rpx;
+  height: 30rpx;
+}
+.task_header image:nth-of-type(2){
+  width: 22rpx;
+  height: 32rpx;
+}
+.task_header text:nth-of-type(1){
+  margin-left: 15rpx;
+}
+.task_header text:nth-of-type(2){
+  width: 140rpx;
+  margin: 0 245rpx 0 15rpx;
+}
+.task_header text:nth-of-type(3){
+  margin-right: 15rpx;
+  font-size: 26rpx;
+  color: #02cc7a;
+}
+
+.task_cont{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.task_cont>image{
+  width: 17rpx;
+  height: 28rpx;
+}
+.task_msg_box{
+  margin-top: 40rpx;
+}
+.task_msg_box text:nth-of-type(1){
+  display: block;
+  font-size: 32rpx;
+}
+.task_msg_box text:nth-of-type(1):before{
+  display: inline-block;
+  content: '';
+  width: 8rpx;
+  height: 8rpx;
+  margin-right: 15rpx;
+  border-radius: 50%;
+  background: #02cc7a;
+  vertical-align: 12%;
+  overflow: hidden;
+}
+.task_msg_box text:nth-of-type(2){
+  display: block;
+  margin-left: 20rpx;
+  color: #999;
+}
+
+.task_btn{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 50rpx;
+}
+.task_btn .base_btn{
+  width: 690rpx;
+}
+.middle_btn{
+  width: 320rpx;
+  height:100rpx;
+  border-radius:50rpx;
+  text-align:center;
+  line-height:100rpx;
+  font-size:36rpx;
+  font-weight:600;
+  background:#00b453;
+  color:#fff;
+}
+.task_btn .btn_normal{
+  color: #666;
+  background:#e6e6e6;
+}
+
+/* 弹出层 */
+.pop_bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.pop_box{
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  margin-left: -30%;
+  z-index: 110;
+  width: 60%;
+  padding: 40rpx 30rpx 50rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.pop_box textarea{
+  background: #f8f8f8;
+  width: 100%;
+  height: 200rpx;
+  padding: 25rpx;
+  margin-bottom: 40rpx;
+}
+.btn_box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.btn_box button{
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  width: 175rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  font-size: 30rpx;
+  border-radius: 45rpx;
+  background: #02cc7a;
+  color: #fff;
+}
+.btn_box .btn_normal{
+  color: #666;
+  background:#e6e6e6;
+}
+
+
+/* formid */
+.form_btn>view{
+  top: 710rpx;
+  left: 50%;
+  margin-left: -225rpx;
+  width:450rpx;
+  height:110rpx;
+  border-radius:4rpx;
+}
+
+.form_btn .index,.form_btn .index view{
+  top: 850rpx;
+  bottom: 0;
+}
+
+.form_btn .nav1,.form_btn .nav1 view{
+  top:30rpx;
+  left: 50%;
+  margin-left: -300rpx;
+  width: 300rpx;
+  height: 130rpx;
+  border-radius: 0;
+}
+
+.form_btn .nav2,.form_btn .nav2 view{
+  top:30rpx;
+  left: 50%;
+  margin-left: 0;
+  width: 300rpx;
+  height: 130rpx;
+  border-radius: 0;
+}

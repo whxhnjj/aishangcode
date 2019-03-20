@@ -1,0 +1,81 @@
+		<!--评论模块-->
+		<a id="comments"></a>
+		<div class="comments_post">
+		<h5>发表评论</h5>
+		<form id="c_form">
+		<div class="c_textarea">
+		<textarea id="c_content"></textarea>
+		<div id="c_info"><span></span></div>
+		</div>
+		<div class="c_button">
+		<label>昵称：<input type="text" id="c_uname" value="倾城网友"></label>
+		<a href="javascript:void(0);" class="submit">发表评论</a>
+		</div>
+		<input type="hidden" id="c_post_id" value="{$post.id}" />
+		<input type="hidden" id="c_uid" value="" />
+		</form>
+		</div>
+
+
+		<div class="comments_list">
+		<h5>网友热评</h5>
+		<div class="comments_item_box">
+		{foreach from=$list_comments item=comment}
+		<div id="comments_{$comment.id}" class="comment_item">
+
+		<div class="c_avatar">
+		{if $comment.wechat_headimgurl != ''}
+		<img src="{$comment.wechat_headimgurl}" />		
+		{else}
+		<img src="/assets/images/avatar.png" />
+		{/if}
+		</div>
+		<div class="c_info">
+		<span class="c_no"><em>{$comment.no}</em> 楼</span>
+		<span class="c_username">{$comment.name}</span>.
+		<span class="c_area">{$comment.city}</span>
+		</div>
+		<div class="c_txt">{$comment.content}</div>
+		<div class="c_others">
+		<span class="c_operate"><a class="c_support" rel="{$comment.id}" href="javascript:void(0);">支持(<em>{$comment.point}</em>)</a></span>
+		<span class="c_datetime">{$comment.dateline|date_format:"%Y/%m/%d %H:%M:%S"}</span>
+		</div>
+		</div>
+		{/foreach}
+		</div>
+		<!--comments_item_box end-->
+
+				
+		{if $current=="comments"}
+		{$pages}
+		{else}
+		<div class="c_view">
+		<a href="/comments/{$post.id}-1.html">查看所有<em class="comments">{$post.comments}</em>条评论</a>
+		</div>
+		{/if}
+				
+		
+
+		</div>
+		<!--comments_list end-->
+		
+		
+		<!--以下是评论列表的模板代码 供js读取-->
+		<div id="comment_template">
+		<div id="comments_[$cid]" class="comment_item">
+		<div class="c_avatar">
+		<a href="https://www.hercity.com/" target="_blank"><img src="/assets/images/avatar.png" /></a>
+		</div>
+		<div class="c_info">
+		<span class="c_no"><em>0</em> 楼</span>
+		<span class="c_username">[$name]</span>.
+		</div>
+		<div class="c_txt">[$content]</div>
+		<div class="c_others">
+		<span class="c_operate"><a class="c_support" rel="[$cid]" href="javascript:void(0);">支持(<em>0</em>)</a></span>
+		<span class="c_datetime">[$date]</span>
+		</div>
+		</div>
+		</div>
+		<!--以上是评论列表的模板代码 供js读取-->
+		

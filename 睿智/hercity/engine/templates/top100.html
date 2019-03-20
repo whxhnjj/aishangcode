@@ -1,0 +1,59 @@
+{include file="inc_header.html" current="list" title="{$title} - 倾城网"}
+
+
+<!--update-->
+<div class="wrap list">
+	<div class="left">
+		<div class="breadcrumb">{$location}</div>
+
+			<table class="table_list" cellpadding="0" cellspacing="0">
+			<tr>
+			<th width="40">排序</th>
+			<th>标题</th>
+			<th width="80">发表时间</th>
+			<th width="80">人气指数</th>
+			<th width="60">评论数</th>
+			</tr>
+			{foreach from=$list key=key item=post}
+			<tr>
+			<td>{$key+1}</td>
+			<td><a href="{$post.href}" target="_blank">{$post.title}</a></td>
+			<td>{$post.dateline|date_format:"%m-%d"}</td>
+			<td>{$post.hits}</td>
+			<td>{$post.comments}</td>
+			</tr>
+			{/foreach}
+			</table>
+
+	</div>
+	<div class="right_a">
+		<div id="abox_c01" class="abox_box" ></div>
+		<div class="hc_box">
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-4842793887790356";
+			/* 300x250, 创建于 07-11-6 */
+			google_ad_slot = "1847728237";
+			google_ad_width = 300;
+			google_ad_height = 250;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		</div>
+		<div class="right_box">
+		<h5><a href="">热门推荐</a><span>HOT</span></h5>
+			<ul class="imagetext">
+			{foreach from=$list_hot item=post}
+			<li><div><a class="pic" href="{$post.href}"><img src="{$post.thumb1}" alt="{$post.title}" /></a></div><a class="tit" href="{$post.href}">{$post.subhead1}</a>
+			<p>{$post.brief}…</p>
+			</li>
+			{/foreach}
+			</ul>
+		</div>
+		<div id="abox_c02" class="abox_box" ></div>
+	</div>
+</div>
+
+
+{include file="inc_footer.html" current="list" template="list"}

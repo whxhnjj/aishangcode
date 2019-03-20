@@ -1,0 +1,47 @@
+.employee .submenu_box{
+  top:50rpx;
+}
+
+.nav{
+  height: 520rpx;
+}
+.submenu_box{
+  top:30rpx;
+}
+.submenu_msg{
+  min-height:670rpx;
+}
+
+/*列表*/
+.sub_list text{
+  width: 190rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.sub_list .right_box{
+  width: 400rpx;
+  height: 60rpx;
+  text-align: right;
+  line-height: 60rpx;
+  color: #999;
+}
+
+/* 上传 */
+.upload{
+  position: relative;
+  min-height:120rpx;
+}
+.upload .upload_btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+.upload image{
+  width: 120rpx;
+  height: 160rpx;
+}
+
+.btn_hide{
+  opacity: 0;
+}

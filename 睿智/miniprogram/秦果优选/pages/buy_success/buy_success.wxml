@@ -1,0 +1,18 @@
+
+<view class="success">
+  <icon  type="success" size="20" class="success_icon"></icon>
+  <text class="success_text">订单支付成功</text>
+  <text class="success_price"><text>¥ </text>{{price/100}}</text>
+</view>
+
+
+  <view class="success_list">
+    <text class="fl">支付方式</text>
+    <text class="fr">微信支付</text>
+    <text class="clearfix"></text>
+  </view>
+  <!-- <view class="success_list">微信公众号搜索关注“微店”第一时间了解订单物流</view> -->
+
+  <navigator class="success_btn" url="../trade_detail/trade_detail?id={{id}}">查看订单详情</navigator>
+
+  <include src="../include/include"/>

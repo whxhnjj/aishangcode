@@ -1,0 +1,79 @@
+<!-- <image class="banner" src="https://hongguanqipao.com/upfiles/20181027/437362275abb92226f0641a815d0f26d.png" mode="aspectFill"/>
+
+<view class="content">
+  <text class="content_des">为了进一步弘扬和繁荣中华优秀传统文化，充分发挥和传承国家非物质文化遗产，展现陕北民歌时代精神新风貌和艺术魅力，培养陕北民歌新人，为陕北民歌发展注入新的活力，持续推动陕北民歌的传承创新和发展，经研究决定，现举办首届马保信原创歌曲大赛，现将有关事项通知如下：</text>
+
+  <text class="title">一、比赛宗旨</text>
+  <text>认真贯彻落实习近平总书记在文艺工作座谈会上的重要讲话精神，坚定文化自信、增强文化自觉，坚持以人民为中心，推动群众性文化工作深入开展，弘扬优秀本土文化，支持本土原创，促进陕北民歌的传承发展创新，为实现全面小康和绥德文化追赶超越贡献力量。</text>
+
+  <text class="title">二、举办单位</text>
+  <view class="cont_box">
+   <text>主办：</text>
+   <view class="right_box">
+    <text>绥德县总工会</text>
+    <text>绥德县文体广电局</text>
+   </view>
+  </view>
+  <view class="cont_box">
+   <text>承办：</text>
+   <view class="right_box">
+    <text>绥德县文化馆</text>
+    <text>榆林市陕北民歌传承与创新研究会</text>
+   </view>
+  </view>
+
+  <text class="title">三、参赛要求及赛制</text>
+  <text class="title_second">（一）参赛范围：</text>
+  <text>热爱陕北民歌、并具有一定演唱水平的业余和专业歌手，均可报名参赛。<text style="color:#ff0000;">比赛分少年组（年龄15周岁以下）</text>和 <text style="color:#ff0000;">成人组（年龄16周岁以上）</text>，少年组由监护人陪同报名及比赛。参赛者年龄、职业、性别、演唱形式（独唱、对唱、多人组合等）不限。</text>
+  <text class="title_second">（二）曲目要求：</text>
+  <text>1、<text style="color:#ff0000;">参赛歌曲必须从推荐曲目中选择（详见附件：马保信原创歌曲推荐曲目）。</text></text>
+  <text>2、<text style="color:#ff0000;">原创歌曲《天下名州》为决赛谢幕合唱曲目，要求所有参赛选手熟练演唱。</text></text>
+  <text>3、演唱歌曲歌词和伴奏，<text style="color:#ff0000;">本页面提供马保信原创歌曲所有歌词和伴奏打包下载，请自行下载。</text></text>
+  <text class="title_second">（三）赛制：比赛分初赛、半决赛、决赛。</text>
+
+  <text class="title">四、比赛评奖</text>
+  <text>现场比赛设一等奖1名，奖励现金2000元以及奖品、奖牌；二等奖2名，奖励现金1000元以及奖品、奖牌；三等奖3名，奖励现金500元以及奖品、奖牌；优秀奖14名，奖励奖品、奖牌。</text>
+
+  <text class="title">五、报名时间及地点</text>
+  <text><text style="font-weight:600;">网络报名：</text><text style="color:#ff0000;">搜索shanbeiweixin，添加微信公众号“陕北网”，</text>在公众号菜单<text style="color:#ff0000;">点击“民歌大赛”进入报名。</text></text>
+  <text><text style="font-weight:600;">报名时间：</text>2018年10月1日2018年12月1日</text>
+  <text><text style="font-weight:600;">初赛时间：</text>2018年12月6日</text>
+  <text><text style="font-weight:600;">初赛地点：</text>绥德县文化馆</text>
+  <text><text style="font-weight:600;">半决赛、决赛时间：</text>2018年12月7日</text>
+  <text><text style="font-weight:600;">决赛地点：</text>绥德县剧院</text>
+
+  <text class="title">六、评比标准及方法</text>
+  <text>各种形式的演唱应具有熟练的演唱方法，能够完整表现歌曲的内容及情感，准确体现歌曲的风格和特点，具有较高的艺术表现能力。</text>
+
+
+  <text class="title">七、报名电话及联系人</text>
+  <text>联系人：马保信</text>
+  <text bindtap='callPhone' data-phone='18992288966'>电话：18992288966（微信同号）</text>
+  <text>邮箱：563687160@qq.com</text>
+
+
+  <view class="video_box">
+    <text>附件：</text>
+    <view>马保信原创歌曲推荐曲目，<text>请<text style="color:#ff0000;">点击进入查看</text></text></view>
+    <view>打包下载全部原唱、伴奏及歌谱，<text bindtap="downFile">请<text style="color:#ff0000;">点击这里下载</text></text></view>
+    <video></video>
+    <view class="video_text" src="" controls>决赛谢幕合唱曲目曲目：《天下名州》视频</view>
+  </view>
+
+
+  <image class="music_img" src="../images/music_1.png" mode="widthFix"/>
+  <image class="music_img" src="../images/music_2.png" mode="widthFix"/>
+  <text class="music_text">决赛谢幕合唱曲目曲目：《天下名州》歌谱，其他歌曲歌谱和伴奏在附件中均提供下载链接，可自行下载。</text>
+  
+
+  
+
+
+
+
+
+
+</view> -->
+
+
+<web-view src="{{theme.content}}"></web-view>

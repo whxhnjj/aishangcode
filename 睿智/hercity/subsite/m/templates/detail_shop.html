@@ -1,0 +1,22 @@
+{include file="inc_header.html" current="detail" title="{$post.title}"}
+
+<div class="content">
+<h1>{$post.title}</h1>
+<h5><span>{$post.dateline|date_format:'Y-m-d'}</span> {if $isMicroMessenger}<a href="http://mp.weixin.qq.com/s?__biz=MjM5MDk1NDg2MA==&mid=208700379&idx=1&sn=8be3cabafcc32fc9725d444f62c505be#rd">倾城网</a>{/if} {if $post.author != ''}<span>{$post.author}</span>{/if} <span>查阅{$post.hits}</span></h5>
+
+{if $post.linkto != ''}
+<p class="linkto"><a href="{$post.linkto}" isconvert="1">去看看>></a></p>
+{/if}
+
+
+{$post.content}
+
+
+
+<a href="javascript:void(0);" class="point">{$post.point}</a>
+</div>
+
+<input type="hidden" id="c_post_id" value="{$post.id}" />
+{include file="inc_comment.html"}
+{include file="inc_contact.html"}
+{include file="inc_footer.html" current="detail"}

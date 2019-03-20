@@ -1,0 +1,27 @@
+p{
+  display:block;
+  margin-bottom:40rpx;
+}
+.wrap{
+  width: 650rpx;
+  margin: 50rpx;
+  height: 100%;
+  overflow: hidden;
+  font-size: 34rpx;
+  line-height: 60rpx;
+  color: #353535;
+}
+image.logo{
+  width: 750rpx;
+}
+.contact{
+  width: 650rpx;
+  height: 100rpx;
+  margin: 25rpx 50rpx;
+  line-height: 100rpx;
+}
+.backhome{
+  margin-top:40rpx;
+  font-size:30rpx;
+  text-align:center;
+}

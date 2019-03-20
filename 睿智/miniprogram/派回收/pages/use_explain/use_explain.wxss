@@ -1,0 +1,38 @@
+.content{
+  margin-top: 50rpx;
+  padding: 50rpx 30rpx;
+  background: #fff;
+}
+.content_title{
+  position: relative;
+  width: 260rpx;
+  margin: 0 auto 50rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  text-align: center;
+}
+.content_title:before,.content_title:after{
+  content: '';
+  position: absolute; 
+  top: 20rpx; 
+  right: 0;
+  width: 40rpx;
+  border-bottom: 1rpx dashed #333;  
+}
+.content_title:before { right: auto; left: 0rpx;}
+
+.content_cont{
+  display: block;
+  padding-bottom: 20rpx;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.content_msg{
+  display: inline-block;
+  font-size: 26rpx;
+  color:#009049;
+  background: #fff;
+  padding: 0;
+  text-align: left;
+}

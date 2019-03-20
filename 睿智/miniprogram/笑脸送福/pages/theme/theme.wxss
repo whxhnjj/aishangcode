@@ -1,0 +1,248 @@
+/* pages/collar/collar.wxss */
+/*全局背景*/
+page{
+background-color:#F1F1F1;
+}
+.container {
+padding:0;
+}
+/*背景颜色*/
+.head_bg{
+width: 100%;
+background: #d85940;
+}
+.head{
+width:700rpx;
+padding:25rpx;
+}
+.userinfo{
+width: 700rpx;
+height:120rpx;
+}
+.userinfo_avatar{
+width: 120rpx;
+height: 120rpx;
+border-radius: 50%;
+float: left;
+}
+.userinfo_nickname{
+float: left;
+width:410rpx;
+height: 40rpx;
+margin:0 15rpx;
+font-size:30rpx;
+color: #ffe2b1;
+line-height: 40rpx;
+display: block;
+}
+/*怎么玩*/
+.howtoplay{
+float: left;
+display: block;
+width:130rpx;
+height: 40rpx;
+font-size:26rpx;
+color: #FFF;
+text-align: right;
+line-height: 40rpx;
+}
+.password{
+float: left;
+width:555rpx;
+margin-left: 15rpx;
+height:80rpx;
+line-height:80rpx;
+font-size:50rpx;
+color: #ffe2b1;
+}
+/*相机*/
+.photo1{
+margin:40rpx auto;
+width: 200rpx;
+padding:30rpx;
+height: 200rpx;
+background:url('http://t.nongjia365.com.cn/guanli/assets/img/photo3.png') no-repeat center center;
+background-size:260rpx;
+text-align: center;
+line-height:330rpx;
+font-size: 30rpx;
+color:#DC9F51;
+}
+.photo2{
+margin:40rpx auto;
+width: 200rpx;
+padding:30rpx;
+height:50rpx;
+background:#DC9F51;
+text-align: center;
+line-height:50rpx;
+font-size: 30rpx;
+border-radius:25rpx; 
+color:#FFF;
+}
+.photo3{
+margin:40rpx auto;
+width: 200rpx;
+padding:30rpx;
+height:50rpx;
+background:#DC9F51;
+text-align: center;
+line-height:50rpx;
+font-size: 30rpx;
+border-radius:25rpx; 
+color:#FFF;
+}
+/*跳转提现发转发页面*/
+.category{
+width:700rpx;
+background:#D85940;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+font-size:32rpx;
+justify-content:space-between;
+color: #FFF;
+margin-top: 50rpx;
+}
+.category navigator.tixian{
+width:150rpx;
+background: url('http://t.nongjia365.com.cn/guanli/assets/img/icon_tixian.png') no-repeat left center;
+background-size:36rpx;
+}
+.category navigator.fa{
+width:200rpx;
+background: url('http://t.nongjia365.com.cn/guanli/assets/img/icon_fa.png') no-repeat left center;
+background-size:36rpx;
+}
+.category navigator.zhuanfa{
+width:100rpx;
+background:url('http://t.nongjia365.com.cn/guanli/assets/img/icon_zhuanfa.png') no-repeat left center;
+text-align: right;
+background-size:36rpx;
+}
+.category navigator{
+height: 60rpx;
+line-height: 60rpx;
+padding-left:50rpx;
+
+}
+.amount{
+padding: 15rpx 0;
+height: 50rpx;
+line-height: 50rpx;
+}
+.amount span,.amount navigator{
+font-size: 28rpx;
+color: #858585;
+display: block;
+float: left;
+}
+.money{
+width:640rpx;
+float: left;
+}
+.peport{
+width: 60rpx;
+float: right;
+color: #535D76;
+}
+/*领取人信息*/
+.claim{
+width:680rpx;
+margin:0 25rpx 25rpx 25rpx;
+background: #FFF;
+padding: 20rpx 0 20rpx 20rpx;
+height: 100%;
+overflow: hidden;
+}
+.claim .img{
+width:200rpx;
+height: 200rpx;
+float: left;
+}
+.claim .img image{
+width:200rpx;
+height: 200rpx;
+display: block;
+}
+
+.center{
+width: 440rpx;
+height: 200rpx;
+overflow: hidden;
+float: right;
+}
+.center .zf_most{
+width: 440rpx;
+height: 90rpx;
+}
+.zf_most_left{
+width:195rpx;
+height: 90rpx;
+float: left;
+display: block;
+}
+.setup{
+width:40rpx;
+height: 90rpx;
+background: url('http://t.nongjia365.com.cn/guanli/assets/img/setting.png') no-repeat center top;
+display:block;
+float: right;
+background-size:30rpx;
+}
+.zf_most_left .name_left{
+display: block;
+width: 195rpx;
+height: 30rpx;
+text-align: left;
+font-size: 28rpx;
+color: #b2b2b2;
+line-height: 30rpx;
+}
+.zf_most_left .num_left{
+display: block;
+width: 195rpx;
+height:60rpx;
+text-align: left;
+font-size:48rpx;
+color: #222222;
+line-height:60rpx;
+}
+.zf_most_left .num_left em{
+font-size: 30rpx;
+color: #b2b2b2;
+}
+.age{
+font-size:26rpx;
+padding:8rpx 15rpx;
+display: inline-block;
+margin:15rpx 0;
+line-height: 26rpx;
+background: #f49b8a;
+color: #FFF;
+border-radius:25rpx;
+}
+.user_info{
+width: 420rpx;
+margin: 4rpx 0;
+}
+.user_info_img{
+width:35rpx;
+height:35rpx;
+border-radius: 50%;
+border: 1rpx solid #AAA;
+float: left;
+}
+.user_info_name{
+padding:0 8rpx;
+font-size: 24rpx;
+float: left;
+line-height:35rpx;
+color: #696969;
+}
+.date{
+font-size: 24rpx;
+float: right;
+line-height:35rpx;
+color: #696969;
+}

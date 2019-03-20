@@ -1,0 +1,4 @@
+12.3 
+首页、详情页面 wxml销量加 sale_ext_count
+首页倒计时判断条件增加 store_count == 0
+详情页面按钮样式判断条件增加 store_count == 0

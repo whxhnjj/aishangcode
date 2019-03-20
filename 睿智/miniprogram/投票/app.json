@@ -1,0 +1,57 @@
+{
+  "pages":[ 
+      "pages/index/index",
+      "pages/signup/signup",
+      "pages/list/list",
+      "pages/pay/pay",
+      "pages/detail/detail",
+      "pages/prize/prize",
+      "pages/about/about"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#11D4C6",
+    "navigationBarTitleText": "投票",
+    "navigationBarTextStyle":"#FFF"
+  },
+  "tabBar": {
+      "color": "#999",
+      "selectedColor": "#11D4C6",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"pages/images/icon1.png",
+        "selectedIconPath":"pages/images/icon2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/prize/prize",
+        "iconPath": "pages/images/icon3.png",
+        "selectedIconPath": "pages/images/icon4.png",
+        "text": "奖品"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "iconPath": "pages/images/icon5.png",
+        "selectedIconPath": "pages/images/icon6.png",
+        "text": "榜单"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "pages/images/icon7.png",
+        "selectedIconPath": "pages/images/icon8.png",
+        "text": "关于"
+      },
+      {
+        "pagePath": "pages/signup/signup",
+        "iconPath": "pages/images/icon9.png",
+        "selectedIconPath": "pages/images/icon10.png",
+        "text": "报名"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

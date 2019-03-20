@@ -1,0 +1,31 @@
+<!-- 分类 -->
+<view class="navbar_box">
+  <scroll-view scroll-x="true" scroll-with-animation="true" class="navbar" scroll-left="{{scroll_left}}">
+    <view class="item item_{{index}}" wx:for="{{categories}}" wx:key="key" data-id="{{item.id}}" data-index="{{index}}" bindtap="updataGoodsList">
+      <view class="item_box {{item.selected?'selected':''}}" >
+        <view>{{item.name}}</view>
+        <text></text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
+<!-- 列表 -->
+<view class="pro_list_kuang">
+  <block wx:for="{{goods}}" wx:key="id">
+    <navigator class="public_pro_list" hover-class="none" url="../pro/pro?goods_id={{item.id}}">
+      <image src="{{hostName}}{{item.goods_pic}}" mode="aspectFill"/>
+      <block wx:if="{{item.max_price == item.min_price}}">
+        <text class="pro_list_price"><text>¥</text>{{item.min_price/100}}</text>
+      </block>
+      <block wx:else>
+        <view class="pro_list_price">
+          <text>¥</text>{{item.min_price/100}} - <text>¥</text>{{item.max_price/100}}
+        </view>
+      </block>
+      <text class="pro_list_title">{{item.name}}</text>
+    </navigator>
+  </block>
+</view>
+<view class="load_more">{{page_text}}</view>

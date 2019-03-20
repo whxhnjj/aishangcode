@@ -1,0 +1,9 @@
+<view class='box'>
+ <image mode='widthFix' bindtap='previewImage' src='{{imgalist}}'></image>
+</view>
+<view class='box2'>
+  <button class="btn1" open-type="share">转发到好友或群聊</button>
+  <button class="btn2" bindtap='previewImage' >生成朋友圈分享图</button>
+  <navigator class="fh" open-type='navigateBack'>返回</navigator>
+</view>
+<navigator class='feedback' hover-class="none"  url='../../pages/feedback/feedback'>举报</navigator>

@@ -1,0 +1,152 @@
+
+<view wx:if="{{page_state}}" class="employee">
+  <view class="submenu_box">
+    <form bindsubmit="serviceSubmit" report-submit="{{true}}">
+      <!--  -->
+      <view class="submenu_msg">
+        <view class="sub_list">
+          <text>姓名</text>
+          <input type="text" class="right_box" name="service_name" placeholder="请输入姓名" />
+        </view>
+
+        <view class="sub_list">
+          <text>电话</text>
+          <input class="right_box" type="number" name="service_contact" maxlength='11' placeholder="请输入联系方式" />
+        </view>
+
+        <view class="sub_list">
+          <text>区域</text>
+          <input class="right_box" name="area" value="{{area}}" disabled bindtap="chooseLocation" placeholder="点击选择区域" />
+        </view>
+
+        <view class="sub_list hide">
+          <text>坐标</text>
+          <input class="right_box" name="latlng" value="{{latlng}}" disabled bindtap="chooseLocation" placeholder="点击选择坐标" />
+        </view>
+
+        <view class="sub_list">
+          <text>详细地址</text>
+          <input class="right_box" name="service_address" value="{{address}}" placeholder="请输入详细地址"/>
+        </view>
+      </view>
+
+      <!--  -->
+      <button class="base_btn" hover-class="none" formType="submit">注册</button>
+      <text class="btn_text">成为收纸员前需要注册信息，请核对好信息</text>
+    </form>
+  </view>
+</view>
+
+<view wx:else class="user">
+  <view class="nav">
+    <view class="nav_item {{nav_state == 0? 'selected':''}}" bindtap="navChange">个人用户</view>
+    <view class="nav_item {{nav_state == 1? 'selected':''}}" bindtap="navChange">企业用户</view>
+  </view>
+
+
+  <view class="submenu_box {{nav_state == 0? '':'hide'}}">
+    <form bindsubmit="personalSubmit" report-submit="{{true}}">
+      <!--  -->
+      <view class="submenu_msg">
+        <view class="sub_list">
+          <text>姓名</text>
+          <input type="text" class="right_box" name="personal_name" placeholder="请输入姓名"/>
+        </view>
+
+        <view class="sub_list">
+          <text>单位名称</text>
+          <input class="right_box" name="unitname" placeholder="请输入单位名称"/>
+        </view>
+
+        <view class="sub_list">
+          <text>电话</text>
+          <input class="right_box" type="number" name="personal_contact" maxlength='11' placeholder="请输入联系方式"/>
+        </view>
+
+        <view class="sub_list">
+          <text>区域</text>
+          <input class="right_box" name="area" value="{{area}}" disabled bindtap="chooseLocation" placeholder="点击选择区域" />
+        </view>
+
+        <view class="sub_list hide">
+          <text>坐标</text>
+          <input class="right_box" name="latlng" value="{{latlng}}" disabled bindtap="chooseLocation" placeholder="点击选择坐标" />
+        </view>
+
+        <view class="sub_list">
+          <text>详细地址</text>
+          <input class="right_box" value="{{address}}" name="personal_address" placeholder="请输入详细地址"/>
+        </view>
+      </view>
+
+      <!--  -->
+      <button class="base_btn" hover-class="none" formType="submit">注册</button>
+      <text class="btn_text">首次使用需注册，请核对好信息</text>
+    </form>
+  </view>
+
+  <view class="submenu_box {{nav_state == 1? '':'hide'}}">
+    <form bindsubmit="companySubmit" report-submit="{{true}}">
+      <view class="submenu_msg">
+        <view class="sub_list">
+          <text>公司全称</text>
+          <input class="right_box" name="company_name" placeholder="请输入公司名称"/>
+        </view>
+
+        <view class="sub_list">
+          <text>电话</text>
+          <input class="right_box" type="number" name="company_contacts" placeholder="请输入联系方式"/>
+        </view>
+
+        <view class="sub_list">
+          <text>区域</text>
+          <input class="right_box" name="area" value="{{area}}" disabled bindtap="chooseLocation" placeholder="点击选择区域" />
+        </view>
+
+        <view class="sub_list hide">
+          <text>坐标</text>
+          <input class="right_box" name="latlng" value="{{latlng}}" disabled bindtap="chooseLocation" placeholder="点击选择坐标" />
+        </view>
+
+        <view class="sub_list">
+          <text>详细地址</text>
+          <input class="right_box" name="company_address" value="{{address}}" placeholder="请输入详细地址"/>
+        </view>
+
+        <view class="sub_list">
+          <text>开户银行</text>
+          <input class="right_box" name="bank_name" placeholder="请输入开户银行"/>
+        </view>
+
+        <view class="sub_list">
+          <text>开户名称</text>
+          <input class="right_box" name="bank_account" placeholder="请输入开户名称"/>
+        </view>
+
+        <view class="sub_list">
+          <text>银行账号</text>
+          <input class="right_box" name="bank_card" placeholder="请输入银行账号"/>
+        </view>
+
+        <view class="sub_list">
+          <text>营业执照编号</text>
+          <input class="right_box" name="licence_number" placeholder="请输入营业执照编号"/>
+        </view>
+
+        <view class="sub_list sub_padding">
+          <text>上传营业执照</text>
+          <view class="upload">
+            <view class="upload_btn {{licence_pic?'btn_hide':''}}" bindtap="uploadLicence"></view>
+            <image wx:if="{{licence_pic!=''}}" src="{{hostName}}{{licence_pic}}" bindtap="uploadLicence"></image>
+          </view>
+
+        </view>
+
+      </view>
+
+      <!--  -->
+      <button class="base_btn" hover-class="none" formType="submit">注册</button>
+      <text class="btn_text">首次使用需注册，请核对好信息</text>
+    </form>
+  </view>
+</view>

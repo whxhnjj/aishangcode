@@ -1,0 +1,19 @@
+<view class="logo">
+  <image src="{{hostName}}{{info.logo}}"></image>
+  <text>{{info.title}}</text>
+</view>
+
+<view class="content">
+  <import src="../../extend/wxParse/wxParse.wxml" />
+  <view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:about.nodes}}" />
+  </view>
+</view>
+
+<view class="contacts">
+  <view>
+    <text>客服电话：{{info.custom_tel}}</text>
+    <text>09:00 - 18:00</text>
+  </view>
+  <image src="/images/icon_phone_about.png" data-contacts="{{info.custom_tel}}" bindtap="callPhone"></image>
+</view>

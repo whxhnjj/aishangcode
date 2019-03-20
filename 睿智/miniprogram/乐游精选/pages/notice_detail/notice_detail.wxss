@@ -1,0 +1,38 @@
+page{
+  background: #fff;
+}
+.notice_title{
+  display: block;
+  margin: 50rpx 40rpx 30rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.notice_time{
+  display: block;
+  padding: 0 40rpx 80rpx;
+  font-size: 26rpx;
+  color: rgb(153,153,153);
+}
+.notice_content{
+  padding-bottom: 60rpx;
+}
+
+/* 引入文本样式 */
+.wxParse-p{
+  padding: 0;
+  margin-bottom: 30rpx;
+}
+.wxParse .wxParse-p:last-child{
+  margin-bottom: 0;
+}
+.wxParse-p>view{
+  display: block;
+  padding: 0 40rpx;
+  color: #666;
+  text-align: justify;
+}
+.wxParse-p>image{
+  display: block;
+  width: 100%!important;
+}

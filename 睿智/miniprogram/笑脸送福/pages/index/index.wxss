@@ -1,0 +1,248 @@
+.alert{
+  width:750rpx;
+  background:#FFF800;
+  color: #000;
+  font-size: 30rpx;
+  padding: 10rpx 0;
+  text-align: center;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+page{
+  background-color:#F1F1F1;
+}
+.box{
+  width:600rpx;
+  padding:50rpx;
+  background: #FFF;
+  position: absolute;
+  top:120rpx;
+  left:25rpx;
+  border-radius:20rpx;
+  text-align: center;
+}
+.box .img{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  background: #FFF;
+  position: absolute;
+  left:275rpx;
+  top: -60rpx;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 11rpx;
+  border-radius: 50%;
+  border: 1rpx solid #D85940;
+}
+.list{
+  width: 600rpx;
+  height:80rpx;
+  font-size: 32rpx;
+  background: #F1F1F1;
+  margin-top:80rpx;
+}
+.list input.text{
+  width:515rpx;
+  height:80rpx;
+  text-align: left;
+  padding-left: 25rpx;
+  float: left;
+}
+.xsj{
+  width:50rpx;
+  height: 80rpx;
+  display: block;
+  float: right;
+  background:url('http://t.nongjia365.com.cn/guanli/assets/img/jiantou.png') no-repeat center center;
+  background-size:32rpx;
+}
+
+.jine{
+  width:570rpx;
+  height: 80rpx;
+  background: #F1F1F1;
+  margin-top:35rpx;
+  padding: 0 15rpx;
+  text-align: left;
+}
+.jine span.zong{
+  display: block;
+  float: left;
+  width: 150rpx;
+    height: 80rpx;
+  line-height:80rpx;
+  font-size: 30rpx;
+}
+.jine input.digit{
+  float: left;
+  width:370rpx;
+ height: 80rpx;
+ text-align: right;
+}
+.jine span.yuan{
+  display: block;
+  float: right;
+  width:50rpx;
+    height: 80rpx;
+    text-align: right;
+  line-height:80rpx;
+    font-size: 30rpx;
+}
+
+.geshu{
+  width:570rpx;
+  height: 80rpx;
+  background: #F1F1F1;
+  margin-top:35rpx;
+  padding: 0 15rpx;
+  text-align: left;
+}
+.geshu span.zong{
+  display: block;
+  float: left;
+  width: 150rpx;
+    height: 80rpx;
+  line-height:80rpx;
+  font-size: 30rpx;
+}
+.geshu input.digit{
+  float: left;
+  width:370rpx;
+ height: 80rpx;
+ text-align: right;
+}
+.geshu span.yuan{
+  display: block;
+  float: right;
+  width:50rpx;
+  height: 80rpx;
+  text-align: right;
+  line-height:80rpx;
+  font-size: 30rpx;
+}
+
+span.prompt{
+  width:100%;
+  height: 40rpx;
+  color: #AAA;
+  margin-top: 30rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  text-align: center;
+  display: block;
+}
+.bt{
+  margin-top:30rpx;
+  background:#EA5F39;
+  color: #FFF;
+}
+.feedback{
+  color:#5a5d86;
+  display: inline-block;
+  line-height: 40rpx;
+  font-size:26rpx;
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.tabs{
+  width: 750rpx;
+  height:90rpx;
+  background: #FFF;
+  position: fixed;
+  padding-top: 20rpx;
+  right: 0;
+  bottom: 0;
+  color: #666;
+  font-size:25rpx;
+}
+.tabs .tabs_left{
+  width:250rpx;
+  height: 90rpx;
+  float: left;
+  text-align: center;
+  line-height: 120rpx;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/img/tab1.png') no-repeat center top;
+  background-size:40rpx;
+}
+.tabs .tabs_center{
+  width:250rpx;
+  height: 90rpx;
+  float: left;
+  text-align: center;
+  line-height: 120rpx;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/img/tab2.png') no-repeat center top;
+  background-size:40rpx;
+}
+.tabs .tabs_right{
+  width:250rpx;
+  height: 90rpx;
+  float: right;
+  text-align: center;
+  line-height: 120rpx;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/img/tab3.png') no-repeat center top;
+  background-size:36rpx;
+}
+
+
+.choice{
+  width:570rpx;
+  padding:0 15rpx;
+  margin: 25rpx 0;
+  text-align: left;
+}
+.choice .choose{
+  font-size: 28rpx;
+  color: #AAA;
+  line-height: 50rpx;
+}
+.choice .switch{
+  float: right;
+}
+.showtost{
+  width:100%;
+  height:100%;
+  background: #000;
+  position: fixed;
+  opacity: 0.5;
+  z-index: 99999;
+}
+.box_most{
+  width: 600rpx;
+  height:400rpx;
+  margin:300rpx 50rpx;
+  padding: 25rpx;
+  z-index:999999;
+  position: fixed;
+  background: linear-gradient(#db4d41,#dd5847,#e6644e,#eb6e4e, #f47c59);
+  border-radius: 35rpx;
+}
+.box_most .box_span{
+    color: #ffe5b1;
+    text-align: center;
+    font-size: 34rpx;
+    display: block;
+    font-weight: 500;
+    width: 600rpx;
+    height:50rpx;
+}
+.box_most .box_text{
+  color: #ffe5b1;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  width: 600rpx;
+  height:220rpx;
+  margin-top: 25rpx;
+  display: block;
+}
+.box_most button{
+  background: #fee2b0;
+  color: #e13939;
+}

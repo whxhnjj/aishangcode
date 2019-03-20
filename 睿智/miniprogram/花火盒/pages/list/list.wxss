@@ -1,0 +1,178 @@
+.banner{
+  width: 750rpx;
+  height: 375rpx;
+  background: #EBEBEB;
+  overflow: hidden;
+  position: relative;
+}
+.banner image.image{
+  width: 750rpx;
+  position: absolute;
+  left: 0;
+  top:0;
+  z-index: 1;
+}
+.banner image.tit_img{
+  width:50rpx;
+  height:50rpx;
+  border: 1rpx;
+  border-radius: 50%;
+  position: absolute;
+  left:230rpx;
+  top:25rpx;
+  z-index: 9999;
+}
+.banner .title{
+  width:300rpx;
+  height:50rpx;
+  position: absolute;
+  left:300rpx;
+  top:25rpx;
+  z-index: 99;
+  color: #FFF;
+  font-size:25rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+}
+.banner .wenhao{
+  position: absolute;
+  right:25rpx;
+  bottom:25rpx;
+  z-index: 99;
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  background:url(https://huahuohe.com/static/xcx/wenhao.png) no-repeat center center;
+  background-size: 48rpx;
+}
+
+.wrap{
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+}
+.own{
+  width:700rpx;
+  height: 100%;
+  padding: 25rpx;
+  overflow: hidden;
+}
+.own .number{
+  display: block;
+  width:75rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 50rpx;
+  color: #f00;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+}
+.own .userinfo_avatar{
+  width:98rpx;
+  height:98rpx;
+  border-radius: 50%;
+  float: left;
+}
+.own span.own_number{
+  width:240rpx;
+  float: left;
+  height: 100rpx;
+  line-height: 100rpx;
+  color:#1AAD19;
+  display: block;
+  font-size:50rpx;
+  font-weight:600;
+  overflow: hidden;
+  text-align: right;
+}
+.own .giving{
+    width: 60rpx;
+    height: 100rpx;
+    float: right;
+    background:url(https://huahuohe.com/static/xcx/jiantouright.png) no-repeat right center;
+    background-size: 48rpx;
+}
+.list{
+  width: 700rpx;
+  height:100%;
+  overflow: hidden;
+  border-bottom:3rpx solid #EBEBEB;
+  padding:25rpx;
+}
+.list .number{
+  display: block;
+  width:75rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  color: #353535;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+}
+.list .userinfo_avatar{
+  width:98rpx;
+  height:98rpx;
+  border:1rpx solid #EBEBEB;
+  border-radius: 50%;
+  float: left;
+}
+.list_nul{
+  width: 200rpx;
+  height: 100rpx;
+  float: left;
+  overflow: hidden;
+  margin-left: 25rpx;
+}
+span.serial{
+  width: 200rpx;
+  height: 50rpx;
+  line-height:70rpx;
+  font-size:24rpx;
+  color: #858585;
+  display: block;
+  overflow: hidden;
+}
+span.own_name{
+  width: 200rpx;
+  float: left;
+  height: 50rpx;
+  font-size:28rpx;
+  color: #353535;
+  display: block;
+  overflow: hidden;
+}
+.list span.own_number{
+  width:240rpx;
+  float: left;
+  height: 100rpx;
+  line-height: 100rpx;
+  color:#F7941D;
+  display: block;
+  font-size:50rpx;
+  font-weight:600;
+    overflow: hidden;
+    text-align: right;
+}
+.list .giving{
+    width:60rpx;
+    height: 100rpx;
+    float: right;
+    background:url(https://huahuohe.com/static/xcx/jiantouright.png) no-repeat right center;
+    background-size: 48rpx;
+}
+.footer{
+  text-align: center;
+  width: 750rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  overflow: hidden;
+  color: #999999;
+  font-size: 30rpx;  
+  padding: 50rpx 0;
+}
+.own_number i{
+  font-size: 24rpx;
+  color: #858585;
+}

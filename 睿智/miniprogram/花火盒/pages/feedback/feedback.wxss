@@ -1,0 +1,78 @@
+.tit{
+  padding:15rpx 0 15rpx 25rpx;
+  width: 725rpx;
+  font-size: 34rpx;
+  color: #8E8E8E;
+  background: #F2F2F2;
+  display: inline-block;
+}
+.radio-group{
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+  background: #FFF;
+}
+.radio{
+  width: 700rpx;
+  padding:25rpx;
+  font-size: 34rpx;
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  border-bottom: 1rpx solid #D9D9D9;
+}
+.radio .name{
+  text-align: left;
+  float: left;
+}
+.radio .cheke{
+  float: right;
+}
+
+.info{
+  width: 750rpx;
+  height: 100%;
+  background: #FFF;
+  overflow: hidden;
+}
+.sub{
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  font-size: 34rpx;
+}
+.sub .tj {
+  width: 700rpx;
+  padding:25rpx;
+  height: 100%;
+  overflow: hidden;
+  border-bottom: 1rpx solid #D9D9D9;
+}
+.sub .tj .num_name{
+  width: 150rpx;
+  float: left;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.sub .tj .ber{
+  width:550rpx;
+  height: 50rpx;
+  float: right;
+  line-height: 50rpx;
+}
+.button{
+  margin-top: 50rpx;
+  width: 700rpx;
+  height:100rpx;
+  line-height: 100rpx;
+}
+.textarea{
+  width:700rpx;
+  height:150rpx;
+  line-height: 40rpx;
+  font-size: 34rpx;
+  margin: 25rpx;
+  padding: 0rpx;
+  border: 0rpx;
+}

@@ -1,0 +1,119 @@
+page{
+  padding-bottom: 120rpx;
+  background-color: #ffefda;
+}
+/* 头部 */
+.rank_header{
+  position: relative;
+  width: 691rpx;
+  height: 120rpx;
+  margin: 30rpx auto;
+}
+.rank_header .rank_bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 691rpx;
+  height: 120rpx;
+}
+.rank_header .rank_header_box{
+  position: relative;
+  z-index: 2;
+  width: 691rpx;
+  height: 120rpx;
+  padding: 10rpx;
+}
+.rank_header_avatar{
+  display: inline-block;
+  margin-right:20rpx;
+  padding: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background: #ffbbbb;
+  border-radius: 50%;
+}
+.rank_header_avatar image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.rank_header_name{
+  display: inline-block;
+  font-weight: 600;
+}
+.rank_header_name view{
+  width: 285rpx;
+  margin-right: 30rpx;
+  font-size: 34rpx;
+  color: #7f5d91;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rank_header_name text{
+  color: #ffbbbb;
+  font-size: 24rpx;
+}
+.rank_header_score{
+  display: inline-block;
+  font-size: 52rpx;
+  color: #8dc035;
+  font-weight: 600;
+  vertical-align: 25%;
+}
+.rank_header_score text{
+  font-size: 36rpx;
+}
+
+/*排行榜列表*/
+.rank_lists .rank_list:last-child{
+  border-bottom: none;
+}
+.rank_list{
+  height: 160rpx;
+  width: 100%;
+  padding: 30rpx 0 30rpx 35rpx;
+  border-bottom: 1rpx solid #d2c5b8;
+  font-weight: 600;
+}
+.rank_list .rank_num{
+  display: inline-block;
+  width: 70rpx;
+  margin-right: 20rpx;
+  line-height: 100rpx;
+  font-size: 38rpx;
+  color: #7c5a8f;
+  vertical-align: 26%;
+  text-align: center;
+}
+.rank_list .rank_name{
+  display: inline-block;
+  width: 220rpx;
+  margin-right: 20rpx;
+  font-size: 34rpx;
+  color: #7f5d91;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: 40%;
+}
+.rank_list .rank_score{
+  display: inline-block;
+  width: 160rpx;
+  margin-right: 50rpx;
+  font-size: 52rpx;
+  color: #fea500;
+  font-weight: 600;
+  vertical-align: 25%;
+}
+.rank_score text{
+  font-size: 36rpx;
+}
+.rank_list .rank_icon{
+  display: inline-block;
+  width: 21rpx;
+  height: 37rpx;
+  vertical-align: 50%;
+}

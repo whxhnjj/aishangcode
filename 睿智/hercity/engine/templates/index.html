@@ -1,0 +1,337 @@
+{include file="inc_header.html" current="index" title="旗袍文化传媒_旗袍品牌热榜_旗袍行业平台 - 倾城网"}
+
+
+<div class="wrap hoter">
+<a href="http://www.hercity.com/tag/?q=%C6%EC%C5%DB%B1%CF%D2%B5%D5%D5">旗袍毕业照</a><a href="/tag/?q=%D5%C5%C2%FC%D3%F1">张曼玉</a><a href="/tag/?q=%B3%C2%CA%FD">陈数</a><a href="/s/201307/26313.html">旗袍发型</a><a href="http://gou.hercity.com">网购</a><a href="http://mei.hercity.com">美人榜</a><a href="http://hufu.hercity.com" >护肤品排行</a> <strong>TOP100:</strong><a href="/s/top/new.html">最新</a><a href="/s/top/hits.html">人气</a><a href="/s/top/comments.html">热评</a><a href="/tags/">Tags</a>
+<a href="https://list.tmall.com/search_product.htm?q=%c6%ec%c5%db" isconvert="1" class="hot">天猫十大旗袍品牌</a> <a href="https://list.tmall.com/search_product.htm?q=%C3%F7%D0%C7%CD%AC%BF%EE+%C6%EC%C5%DB" isconvert="1" class="hot">明星同款</a> <a href="http://nvred.taobao.com" isconvert="1">红馆旗袍</a> <a href="https://yihongyan.tmall.com"  isconvert="1">逸红颜旗袍</a> <a href="https://xiyue.tmall.com/" isconvert="1">玺玥旗袍</a>
+</div>
+
+
+<!--cover-->
+<div class="wrap cover">
+	<div id="slide">
+	<ul>
+	{foreach from=$cover key=key item=item}
+	<li{if $key==0} class="default"{/if}><a href="{$item.href}"><img src="{$item.thumb2}" alt="{$item.title}" /></a></li>
+	{/foreach}
+	</ul>
+	</div>
+	<div class="right">
+	<ul class="brands">
+	{foreach from=$brands key=key item=item}
+	<li><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></li>
+	{/foreach}
+	</ul>
+	</div>
+</div>
+
+
+<!--update-->
+<div class="wrap update">
+	<div class="left_a news">
+	<h3><a href="/s/news/">前沿</a><a class="more" href="/s/news/">More+</a></h3>
+	<ul>
+		{foreach from=$news item=item}
+		<li>
+			{if $item.thumb1!="/upfiles/thumb/"}
+			<a class="pic" href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a>
+			{/if}
+			<a class="cat" href="{$loftcms.config.basePath}{$loftcms.config.htmlListPath}{$item.kind.folder}">[{$item.kind.name}]</a>
+			<a class="tit" href="{$item.href}">{$item.subhead1}</a>
+			<p>{$item.brief}…</p>
+			<span>{$item.dateline|date_format:"%Y-%m-%d"}</span>
+		</li>
+		{/foreach}
+	</ul>
+	</div>
+	<div class="left_c">
+	<h5><a rel="external nofollow" href="http://buluo.qq.com/p/barindex.html?bid=336368">部落</a></h5>
+	{foreach from=$news_club_focus item=item}
+	<div class="pic1"><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></div>
+	{/foreach}
+	<ul>
+	{foreach from=$news_club item=item}
+	<li><a href="{$item.href}">{$item.subhead1}</a></li>
+	{/foreach}
+	</ul>
+	<a class="more" rel="external nofollow" href="http://buluo.qq.com/p/barindex.html?bid=336368">More+</a>
+	<h5 class="margintop30"><a href="/s/news/market/">推荐</a></h5>
+	{foreach from=$news_market_focus item=item}
+	<div class="pic1"><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></div>
+	{/foreach}
+	<ul>
+	{foreach from=$news_market item=item}
+	<li><a href="{$item.href}">{$item.subhead1}</a></li>
+	{/foreach}
+	</ul>
+	<a class="more" href="/s/news/market/">More+</a>
+	</div>
+	<div class="right club">
+		<h3><a href="/s/topic/">专题</a></h3>
+		{foreach from=$topic key=key item=item}
+		{if $key == 0}
+		<div class="focus">
+		<a href="{$item.href}"><img src="{$item.thumb2}" alt="{$item.title}" /></a>
+		<a href="{$item.href}">{$item.subhead1}</a>		
+		</div>
+		{/if}
+		{/foreach}
+		<ul>
+		{foreach from=$topic key=key item=item}
+		{if $key > 0}
+		<li><div><a class="pic" href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></div><a class="tit" href="{$item.href}">{$item.subhead1}</a>
+		<p>{$item.brief}</p>
+		</li>
+		{/if}
+		{/foreach}
+		</ul>
+	</div>
+</div>
+
+
+<!--photo-->
+<div class="wrap photo">
+	<h4><a href="/s/photo/">影像</a></h4>
+	<ul>
+	{foreach from=$photos key=key item=item}
+	<li class="{if $key==0 || $key==3 || $key==5 || $key==8}p2{/if}{if $key==1 || $key==2 || $key==9 || $key==11}p1{/if}{if $key==4 || $key==7}p3{/if}{if $key==6}p4{/if}{if $key==10}p5{/if}{if $key==12}p6{/if}"><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></li>
+	{/foreach}
+	</ul>
+</div>
+
+<!--show-->
+<div class="wrap show">
+	<h4><a href="/s/show/">发布会</a></h4>
+
+	<div class="left_a">
+		{foreach from=$show_focus key=key item=item}
+		<div class="face">
+			<a href="{$item.href}"><img src="{$item.thumb2}" alt="{$item.title}" /></a>
+			<div class="tit">
+			<a href="{$item.href}">{$item.title}</a>
+			<p>{$item.brief}</p>
+			</div>
+		</div>
+		{/foreach}
+		<div id="abox_a31" class="abox_box ad_400_50"></div>
+		<h5><a href="">新款</a><span>NEW STYLE</span><a class="more" href="">More+</a></h5>
+		<ul>
+		{foreach from=$show_newstyle key=key item=item}
+		<li><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a><a href="{$item.href}">{$item.title}</a></li>
+		{/foreach}
+		</ul>
+	</div>
+	<div class="left_b">
+	<div id="abox_a32" class="abox_box"></div>
+	<div id="abox_a33" class="abox_box"></div>
+	</div>
+	<div class="right_a">
+
+		<h5><a href="/s/show/">回顾</a><span>HISTORY</span><a class="more" href="/s/show/">More+</a></h5>
+			<ul class="imagetext">
+			{foreach from=$show key=key item=item}
+			<li><div><a class="pic" href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></div><a class="tit" href="{$item.href}">{$item.subhead1}</a>
+			<p>{$item.brief}</p>
+			</li>
+			{/foreach}
+			</ul>
+			
+			<ul class="textlist">
+			{foreach from=$tbk key=key item=item}
+			<li><a href="{$item.href}">{$item.subhead1}</a></li>
+			{/foreach}
+			</ul>
+	</div>
+
+</div>
+
+<!--people-->
+<div class="wrap people">
+	<h4><a href="/s/people/">人物</a></h4>
+
+	<div class="left_a">
+		<h5><a href="/s/people/lady/">名媛</a><span>GREAT LADY</span><a class="more" href="/s/people/lady/">More+</a></h5>
+		{foreach from=$people_lady_focus key=key item=item}
+		<div class="face">
+			<a href="{$item.href}"><img src="{$item.thumb2}" alt="{$item.title}" /></a>
+			<div class="tit">
+			<a href="{$item.href}">{$item.title}</a>
+			<p>{$item.brief}</p>
+			</div>
+		</div>
+		{/foreach}
+		<div id="abox_a41" class="abox_box ad_400_50"></div>
+		<ul>
+		{foreach from=$people_lady key=key item=item}
+		<li><a href="{$item.href}"><img src="{$item.thumb2}" alt="{$item.title}" /></a><a href="{$item.href}">{$item.subhead1}</a></li>
+		{/foreach}
+		</ul>
+	</div>
+	<div class="left_c">
+		<h5><a href="/s/people/professional/">业内</a></h5>
+		{foreach from=$people_professional_focus item=item}
+		<div class="pic1"><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></div>
+		{/foreach}
+		<ul>
+		{foreach from=$people_professional item=item}
+		<li><a href="{$item.href}">{$item.subhead1}</a></li>
+		{/foreach}
+		</ul>
+		<a class="more" href="/s/people/professional/">More+</a>
+		<h5 class="margintop30"><a href="/s/people/tell/">讲述</a></h5>
+		{foreach from=$people_tell_focus item=item}
+		<div class="pic1"><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></div>
+		{/foreach}
+		<ul>
+		{foreach from=$people_tell item=item}
+		<li><a href="{$item.href}">{$item.subhead1}</a></li>
+		{/foreach}
+		</ul>
+		<a class="more" href="/s/people/tell/">More+</a>
+	</div>
+	<div class="right">
+		<h5><a href="/s/people/master/">达人</a><span>MASTER</span><a class="more" href="/s/people/master/">More+</a></h5>
+		<ul>
+			{foreach from=$people_master item=item}
+			<li><a class="pic" href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a><a class="tit" href="{$item.href}">{$item.subhead2}</a></li>
+			{/foreach}
+		</ul>
+	</div>
+</div>
+
+<!--appre-->
+<div class="wrap appre">
+	<h4><a href="/s/appr/">品鉴</a></h4>
+
+	<div class="left_a">
+		{foreach from=$appr_focus key=key item=item}
+		<div class="face">
+			<a href="{$item.href}"><img src="{$item.thumb2}" alt="{$item.title}" /></a>
+			<div class="tit">
+			<a href="{$item.href}">{$item.title}</a>
+			<p>{$item.brief}</p>
+			</div>
+		</div>
+		{/foreach}
+		<div id="abox_a51" class="abox_box ad_400_50"></div>
+	</div>
+	<div class="left_b">
+	<div id="abox_a52" class="abox_box"></div>
+	</div>
+	<div class="right_a">
+
+		<h5><a href="/s/appr/">制作/选购/穿搭/保养</a><a class="more" href="/s/appr/">More+</a></h5>
+			<ul class="imagetext">
+			{foreach from=$appr key=key item=item}
+			<li><div><a class="pic" href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></div><a class="tit" href="{$item.href}">{$item.subhead1}</a>
+			<p>{$item.brief}</p>
+			</li>
+			{/foreach}
+			</ul>
+	</div>
+</div>
+
+
+
+<!--library-->
+<div class="wrap library">
+	<h4><a href="/s/lib/">资料馆</a></h4>
+
+	<div class="left_a">
+		<h5><a href="/s/lib/video/">旗袍视频</a><span>VIDEO</span><a class="more" href="/s/lib/video/">More+</a></h5>
+		{foreach from=$lib_video key=key item=item}
+		<div class="face">
+			<a href="{$item.href}"><img src="{$item.thumb2}" alt="{$item.title}" /></a>
+			<div class="tit">
+			<a href="{$item.href}">{$item.title}</a>
+			<p>{$item.brief}</p>
+			</div>
+		</div>
+		{/foreach}
+		<h5><a href="/s/lib/hd/">高清图片</a><span>HD PICTURE</span><a class="more" href="/s/lib/hd/">More+</a></h5>
+		<ul>
+		{foreach from=$lib_hd key=key item=item}
+		<li><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a><a href="{$item.href}">{$item.subhead1}</a></li>
+		{/foreach}
+		</ul>
+	</div>
+	<div class="left_c">
+		<h5><a href="/s/lib/music/">音乐</a></h5>
+		{foreach from=$lib_music_focus item=item}
+		<div class="pic1"><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></div>
+		{/foreach}
+		<ul>
+		{foreach from=$lib_music item=item}
+		<li><a href="{$item.href}">{$item.subhead1}</a></li>
+		{/foreach}
+		</ul>
+		<a class="more" href="/s/lib/music/">More+</a>
+
+		<h5 class="margintop30"><a href="/s/lib/book/">书刊</a></h5>
+		<div class="pic2">
+		{foreach from=$lib_book_focus item=item}
+		<a href="{$item.href}"><img src="{$item.thumb2}" alt="{$item.title}" /></a>
+		{/foreach}
+		</div>
+		<ul>
+		{foreach from=$lib_book item=item}
+		<li><a href="{$item.href}">{$item.subhead1}</a></li>
+		{/foreach}
+		</ul>
+		<a class="more" href="/s/lib/book/">More+</a>
+	</div>
+	<div class="right">
+		<div id="abox_a61" class="abox_box"></div>
+		<div class="library_note">资料馆为旗袍业内人士与旗袍爱好者提供最全面的资源，包括书刊、视频、适合旗袍活动的音乐、高清图片等。供大家免费获取。<br />——倾城网编辑部</div>
+	</div>
+</div>
+
+
+
+<!--shop-->
+<div class="wrap organ">
+	<h4><a href="/s/shop/">旗袍店铺</a></h4>
+
+	<div class="left_a">
+		{foreach from=$org_focus key=key item=item}
+		<div class="face">
+			<a href="{$item.href}"><img src="{$item.thumb2}" alt="{$item.title}" /></a>
+			<div class="tit">
+			<a href="{$item.href}">{$item.title}</a>
+			<p>{$item.brief}</p>
+			</div>
+		</div>
+		{/foreach}
+		<div id="abox_a71" class="abox_box ad_400_50"></div>
+	</div>
+	<div class="left_b">
+	<ul>
+	{foreach from=$org key=key item=item}
+	<li><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></li>
+	{/foreach}
+	</ul>
+	</div>
+	<div class="right_a">
+
+		<h5><a href="/s/news/salon/">沙龙活动</a><span>SALON</span><a class="more" href="/s/news/salon/">More+</a></h5>
+			<ul class="imagetext">
+			{foreach from=$salon key=key item=item}
+			<li><div><a class="pic" href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a></div><a class="tit" href="{$item.href}">{$item.subhead1}</a>
+			<p>{$item.brief}</p>
+			</li>
+			{/foreach}
+			</ul>
+	</div>
+
+</div>
+
+
+<!--links-->
+<div class="wrap links">
+合作伙伴<br />
+{foreach from=$links_coop item=link}
+<a href="{$link.href}" target="_blank">{$link.title}</a>
+{/foreach}
+</div>
+
+{include file="inc_footer.html" current="index" template="index"}

@@ -1,0 +1,29 @@
+<!--pages/content/content.wxml-->
+<view class='blak'>
+     <view class='sp1'>倾约茶会：一盏清茗待知己！</view>
+            <view class="img" wx:for="{{imgalist}}" wx:for-item="image" >  
+         <image src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>  
+      </view>  
+     <view class='sp2'>￥94</view>
+</view>
+<view class='gray'></view>
+<navigator  class='blak5' url='../evaluate/evaluate'>去评价</navigator>
+<view class='gray'></view>
+<view class='blak2'>
+    <p>劵码有效期至2017-12-12 24:00:00</p>
+  <span>密码：</span><b>21213231213213</b><em>已使用</em>
+</view>
+<view class='gray'></view>
+<view class='blak3'>
+    <p>劵码使用地址</p>
+    <span>陕西省西安市雁塔区南三环I都会</span>
+</view>
+<view class='gray'></view>
+<view class='blak4'>
+    <p>订单详情</p>
+    <span>订单号：2017111224001</span>
+    <span>购买手机号：18829225381</span>
+    <span>消费时间：2017-10-21 12:12</span>
+    <span>数量：3</span>
+    <span>付款：￥119</span>
+</view>

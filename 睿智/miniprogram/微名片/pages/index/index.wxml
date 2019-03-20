@@ -1,0 +1,131 @@
+<view class="card_img_box"><image class="card_img" src="https://webimage.cn/pc/assets/images/card/00.jpg" mode='widthFix'></image></view>
+
+<!--信息 -->
+<view class="card_msg">
+
+  <view class="card_msg_box">
+    <text class="card_name">李宝斌</text>
+    <text class="card_job">CEO</text>
+    <view class="card_tel" bindtap="callNum" data-msg="13309218552">
+      <image src="/images/hime_icon_phone.png"></image>
+      13309218552
+    </view>
+    <view class="card_address" bindtap="openMap" data-latlng="34.23597,108.90423">
+      <image src="/images/hime_icon_address.png"></image>
+      西安市高新区高新一路创业大厦10层
+    </view>
+  </view>
+
+  <view class="card_log_box">
+    <image class="card_logo" src="/images/logo_wi.png"></image>
+    <text class="card_logo_name">微智创想</text>
+  </view>
+
+</view>
+
+<!--详细信息  -->
+<view class="card_msg_detail">
+  <text class="detail_line"></text>
+  <image class="detail_img" bindtap="cardDetailState" src="/images/{{card_state?'home_icon_collapse.png':'home_icon_dropdown.png'}}"></image>
+  <text class="detail_text" bindtap="cardDetailState">{{card_state_text}}全部名片信息</text>
+
+  <view class="detail_box" wx:if="{{card_state}}">
+
+    <view class='detail_box_list'>
+      <text>电话</text>
+      <text>13309218552</text>
+      <text bindtap="callNum" data-msg="13309218552">拨打</text>
+    </view>
+
+    <view class='detail_box_list'>
+      <text>微信</text>
+      <text>libaobin</text>
+      <text bindtap="copy" data-msg="libaobin">复制</text>
+    </view>
+
+    <view class='detail_box_list'>
+      <text>邮箱</text>
+      <text>muzili@hercity.com</text>
+      <text bindtap="copy" data-msg="muzili@hercity.com">复制</text>
+    </view>
+
+    <view class='detail_box_list'>
+      <text>公司</text>
+      <text>西安微智创想信息科技有限公司</text>
+      <text bindtap="copy" data-msg="西安微智创想信息科技有限公司">复制</text>
+    </view>
+
+    <view class='detail_box_list'>
+      <text>地址</text>
+      <text>西安市高新区高新一路创业大厦10层</text>
+      <text bindtap="openMap" data-latlng="34.23597,108.90423">地图</text>
+    </view>
+
+  </view>
+
+</view>
+
+<!--分享 存入  -->
+<view class="card_btn">
+  <button open-type="share">分享名片</button>
+  <button bindtap="addPhoneContact">存入通讯录</button>
+</view>
+
+<!--点赞-->
+<!-- <view class="card_num">
+
+  <view class="card_num_box1 fl">
+    <view class="card_num_img">
+      <image src="/images/1.jpg"></image>
+      <image src="/images/1.jpg"></image>
+      <image src="/images/1.jpg"></image>
+      <image src="/images/1.jpg"></image>
+      <image src="/images/1.jpg"></image>
+      <image src="/images/1.jpg"></image>
+    </view>
+    <text>6258人浏览</text>
+  </view>
+
+  <view class="card_num_box2 fr">
+    <image src="/images/home_icon_like_normal.png"></image>
+    <text>986</text>
+  </view>
+
+  <text class="clearfix"></text>
+
+</view> -->
+
+<!--个人简介-->
+<view class="card_abstract container">
+
+  <view class="card_title">
+    <text>我的个人简介</text>
+    <text class="card_title_line"></text>
+  </view>
+
+  <text class="card_abstract_cont">李宝斌，网名木子李，知名WEB架构设计师。倾城网创始人。环球网特聘讲师。</text>
+
+</view>
+
+<view class="all_bottom"></view>
+
+<!--照片  -->
+<view class="card_photo">
+
+  <view class="card_title">
+    <text>我的照片</text>
+    <text class="card_title_line"></text>
+  </view>
+  <image src="https://webimage.cn/pc/assets/images/card/01.jpg" mode="widthFix"></image>
+  <image src="https://webimage.cn/pc/assets/images/card/02.jpg" mode="widthFix"></image>
+  <image src="https://webimage.cn/pc/assets/images/card/03.jpg" mode="widthFix"></image>
+  <image src="https://webimage.cn/pc/assets/images/card/04.jpg" mode="widthFix"></image>
+  <image src="https://webimage.cn/pc/assets/images/card/05.jpg" mode="widthFix"></image>
+  <image src="https://webimage.cn/pc/assets/images/card/06.jpg" mode="widthFix"></image>
+  <image src="https://webimage.cn/pc/assets/images/card/07.jpg" mode="widthFix"></image>
+  <image src="https://webimage.cn/pc/assets/images/card/08.jpg" mode="widthFix"></image>
+  
+
+</view>
+
+<text wx:if="{{isIphoneX}}" class="iponex_kuang"></text>

@@ -1,0 +1,101 @@
+<!--地址  -->
+<view class="buy_address">
+  <view class="container">
+      <block wx:if="{{!address.id}}">
+        <view bindtap="selectedAddress">
+        <image src="../images/add_address.png" class="address_image fl"></image>
+        <text class="adderss_title fl">新增收货地址</text>
+        <image src="../images/right.png" class="address_add fr"></image>
+        <text class="clearfix"></text>
+        </view>
+      </block>
+      <block wx:else>
+        <image class="address_on fl" src="../images/check.png"></image>
+        <view class="address_msg fl">
+          <view class="address_msg_box1">
+            <text class="name fl">{{address.user_name}}</text>
+            <text class="phone fr">{{address.tel_number}}</text>
+            <text class="clearfix"></text>
+          </view>
+          <view class='address'>
+            <text>默认</text>{{address.province_name}}{{address.city_name}}{{address.county_name}}{{address.detail_info}}</view>
+        </view>
+        <view class="address_line fl"></view>
+        <image class="address_edit fr" src="../images/edit.png" bindtap="selectedAddress"></image>
+        <text class="clearfix"></text>
+
+      </block>
+  </view>
+</view>
+<!--商品信息-->
+<view class="pro_msg">
+  <!--  -->
+  <view class="shop_name">
+    <image src="../images/shop.png"></image>
+    {{shop}}
+  </view>
+  <!--  -->
+  <block wx:for="{{goods}}" wx:key="key">
+  <view class="pro_list">
+    <image src="{{hostName}}{{item.main_pic}}" class="fl" mode="aspectFill"></image>
+    <view class="pro_list_box1 fl">
+      <text class="pro_title">{{item.goods_name}}</text>
+      <text class="pro_sku">{{item.spec_value}}</text>
+    </view>
+    <view class="pro_list_box2 fr">
+      <text class="pro_price">￥{{item.price/100}}</text>
+      <text class="pro_count">x{{item.count}}</text>
+    </view>
+    <text class="clearfix"></text>
+  </view>
+  </block> 
+  
+ 
+
+  <!--  -->
+  <view class="pro_tab">
+    <text class="fl">配送方式：</text>
+     <picker bindchange="bindPickerChange" value="{{deliver}}" range="{{kd_array}}" class="fr">
+      <view class="picker">
+        已选（{{kd_array[deliver]}}）
+      </view>
+    </picker>
+    <text class="clearfix"></text>
+  </view>
+  <block wx:if="{{deliver==1}}">
+  <view class="pro_tab">
+    <text class="fl">运费：</text>
+    <block wx:if="{{post_price > 0}}">
+      <text class="fr">{{post_price/100}}元</text>
+    </block>
+    <block wx:else>
+      <text class="fr">包邮</text>
+    </block>
+    <text class="clearfix"></text>
+  </view>
+  </block>
+  <view class="pro_tab">
+    <text class="fl">优惠：</text>
+    <image src="../images/right.png" class="coupon fr"></image>
+    <text class="fr">暂无可用</text>
+    <text class="clearfix"></text>
+  </view>
+  <view class="pro_tab">
+    <text class="fl">合计：</text>
+    <text class="fr pro_tab_price">￥{{all_price/100}}</text>
+    <text class="clearfix"></text>
+  </view>
+  <view class="pro_tab">
+    <text class="fl">备注：</text>
+    <input type="text" class="fr pro_tab_input" name="remark" placeholder="请输入备注信息" bindinput="getRemark"/>
+    <text class="clearfix"></text>
+  </view>
+</view>
+
+<!--底部  -->
+<text class="{{isIphoneX?'iponex_kuang':''}}"></text>
+<view class="buy_bottom {{isIphoneX?'iponex':''}}">
+  <button class="fr {{address.id  ? '' : 'selected'}}" bindtap="submitOrder" disabled="{{btn_state}}">提交订单</button>
+  <text class="fr">￥{{all_price/100}}</text>
+</view>
+<text class="{{isIphoneX?'iponex_bottom':''}}"></text>

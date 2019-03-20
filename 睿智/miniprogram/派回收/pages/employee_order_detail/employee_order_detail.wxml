@@ -1,0 +1,125 @@
+<view class="order_box">
+  <view class="order_list">
+    <text>预约客户</text>
+    <text>{{order.realname}}</text>
+  </view>
+
+  <view class="order_list">
+    <text>{{order.contacts}}</text>
+    <image src="/images/icon_phone.png" data-contact="{{order.contacts}}" bindtap="callPhone"></image>
+  </view>
+
+  <view class="order_list">
+    <text>{{order.area}}{{order.address}}</text>
+    <image src="/images/icon_id.png" data-latlng="{{order.latlng}}"  data-area="{{order.area}}"  data-address="{{order.address}}" bindtap="openMap"></image>
+  </view>
+</view>
+<!--  -->
+<view class="order_box">
+  <view class="order_list">
+    <text>预约时间</text>
+    <text>{{order.suitable_time}}</text>
+  </view>
+
+  <view class="order_list">
+    <text>下单时间</text>
+    <text>{{order.order_time}}</text>
+  </view>
+
+  <view class="order_list">
+    <text>派单时间</text>
+    <text>{{order.dispatch_time}}</text>
+  </view>
+
+  <view class="order_list">
+    <text>派单距离</text>
+    <text>{{order.distance}}</text>
+  </view>
+
+</view>
+<!--  -->
+<view class="order_box">
+  <view class="order_header">
+    <text>订单编号</text>
+    <text>{{order.order_sn}}</text>
+  </view>
+  <text class="order_title"><block wx:for="{{order.materials_detail}}" wx:key="id">{{item.name}} </block></text>
+  <view class="order_img_box">
+    <block wx:for="{{order.materials_picurl}}" wx:key="key">
+      <image src="{{hostName}}{{item}}" data-index='index' bindtap="previewImg"></image>
+    </block>
+    <view class="itemempty"></view>
+  </view>
+
+</view>
+
+<!--  -->
+<form bindsubmit="moneySubmit" report-submit="{{true}}" wx:if="{{order.status == 3 || order.status == 6 || order.status == 7 ||order.status == 8}}">
+<view class="order_box">
+  <view class="order_spec {{order.is_free == 1?'no_bottom':''}}">
+    
+    <view class="spec_row" wx:for="{{order.materials_detail}}" wx:key="id" wx:for-index="idx">
+      <text>{{item.name}}</text>
+      <view class="spec_box">
+        <input type="digit" disabled="{{order.status == 3 ? '' : 'input_false'}}" placeholder='请输入重量' value="{{order.materials_count[idx]}}" name="{{item.id}}"/>
+        <text>公斤</text>
+        <view wx:if="{{order.status == 3}}" data-id="{{item.id}}" bindtap="subtractType">-</view>
+      </view>
+    </view>  
+
+    <view wx:if="{{order.status == 3}}" class="spec_btn" bindtap="showPop">+</view>
+
+  </view>
+  <view wx:if="{{order.is_free != 1}}" class="order_price">
+    <text>总金额</text>
+    <view class="spec_box">
+      <input type="digit" disabled="{{order.status == 3?'':'input_false'}}" placeholder='请输入金额' name="price" value="{{order.order_amount == 0?'':order.order_amount}}"/>
+      <text>元</text>
+    </view>
+  </view>
+
+</view>
+
+<block wx:if="{{order.status == 3}}">
+<button class="base_btn" hover-class="none" formType="submit">提交数据</button>
+<text class="btn_text">请核对清楚金额与重量再点提交</text>
+</block>
+</form>
+
+<view wx:if="{{order.status == 8}}" class="order_box">
+  <view>顾客评价</view>
+  <view class="evaluate_box {{order.comment_content?'':'evaluate_no'}}">
+    <image wx:if="{{order.customer_info.avatarurl == ''}}" src="{{hostName}}static/images/member.png"></image>
+    <image wx:else src="{{order.customer_info.avatarurl}}"></image>
+    <view class="user_msg">
+      <text>{{order.realname}}</text>
+      <text>{{order.comment_time}}</text>
+    </view>
+    <view class="star star_5">
+      <view class="selected"></view>
+      <view class="{{order.star == 1.5? 'middle':''}} {{order.star > 1.5? 'selected':''}}"></view>
+      <view class="{{order.star == 2.5? 'middle':''}} {{order.star > 2.5? 'selected':''}}"></view>
+      <view class="{{order.star == 3.5? 'middle':''}} {{order.star > 3.5? 'selected':''}}"></view>
+      <view class="{{order.star == 4.5? 'middle':''}} {{order.star > 4.5? 'selected':''}}"></view>
+    </view>
+  </view>
+  <text wx:if="{{order.comment_content}}" class="evaluate_cont">{{order.comment_content}}</text>
+</view>
+
+<button wx:if="{{order.status == 5 || order.status == 7 || order.status == 8}}" class="base_btn btn_normal" hover-class="none" bindtap="deleteOrder">删除订单</button>
+
+
+
+
+<view wx:if="{{mengShow}}" class="pop_bg" bindtap="outbtn">
+  <view class="pop_box" catchtap="inbtn">
+    <text class="pop_titile">废品类型选择</text>
+    <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{waste_type}}" wx:key="id" wx:for-index="index" wx:for-item="item">
+          <checkbox value="{{item.id}}" checked="{{item.checked}}" />{{item.name}}
+        </label>
+    </checkbox-group>
+    <view class="pop_btn" bindtap="updataPop">确认</view>
+    <image class="pop_close" src="/images/close.png" bindtap="outbtn"></image>
+  </view>
+</view>

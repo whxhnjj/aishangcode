@@ -1,0 +1,212 @@
+<link rel="stylesheet" type="text/css" href="libraries/uploadifive/uploadifive.css" />
+<script type="text/javascript" src="libraries/uploadifive/jquery.uploadifive.min.js"></script>
+<script type="text/javascript" src="libraries/ckeditor/ckeditor.js"></script>
+
+<script type="text/javascript">
+<!--
+
+//函数，处理上传文件成功后，给ckeditor插入代码。
+function insertImage(attachment)
+{
+	//处理返回值。
+	var arr_attachment =attachment.split(",");
+	var attachment_id = arr_attachment[0];
+	var attachment_path = arr_attachment[1];
+	
+	// 将返回的图片路径插入编辑器
+	var oEditor = CKEDITOR.instances.content;
+	var value = "<p><img alt=\"\" src=\""+attachment_path +"\" id=\"img_"+attachment_id+"\" /></p>\r";
+ 
+	// Check the active editing mode.
+	if ( oEditor.mode == 'wysiwyg' )
+	{
+		// Insert the desired HTML.
+		oEditor.insertHtml( value );
+	}
+	else
+	{
+		alert( 'You must be on WYSIWYG mode!' );
+	}
+}
+
+
+$(function(){
+	
+	
+	$('body').on('click','.upload_button',function(){
+				var oEditor = CKEDITOR.instances.content;
+				if ( oEditor.mode != 'wysiwyg' )
+				{
+					alert("编辑器在代码模式下不能插图。");
+					return false;
+				}
+	});
+	
+
+	<?php $timestamp = time();?>
+	$(function() {
+		$('#file_upload').uploadifive({
+			'buttonText'       :'上传图片',
+			'buttonClass'      :'upload_button',
+			'auto'             : true,
+			'multi'            : true,
+			'fileObjName'      : 'Filedata',				
+			'fileSizeLimit'    : <?php echo $config['attachmentAllowSize']/1024;?>,
+			'fileType'         : '<?php echo implode(",",$config['attachmentAllowExt'])?>',
+			'formData'         : {
+								   'timestamp' : '<?php echo $timestamp;?>',
+								   'token'     : '<?php echo md5('hc_token_fdskfj45fdskg'.$timestamp);?>'
+								 },
+			'queueID'          : 'queue',
+			'queueSizeLimit'   : 100,
+			'simUploadLimit'   : 100,
+			'removeCompleted'  : true,
+			'uploadScript'     : 'posts_uploadifive.php',
+			'onUploadComplete' : function(file, data) { if (data!="err"){insertImage(data);}else{alert('上传文件出错。')} },
+			'onError'          : function(errorType) { alert('The error was: ' + errorType); }
+		});
+	});
+
+
+
+	//ckeditor 设置代码换行等
+	CKEDITOR.on( 'instanceReady' , function( ev ){
+	
+		var editor = ev.editor,
+			dataProcessor = editor.dataProcessor,
+			htmlFilter = dataProcessor && dataProcessor.htmlFilter;
+	 
+		dataProcessor.writer.selfClosingEnd = ' />';
+		dataProcessor.writer.lineBreakChars = '\n';
+	 
+		// Make output formatting behave similar to FCKeditor
+		var dtd = CKEDITOR.dtd;
+		for ( var e in CKEDITOR.tools.extend( {}, dtd.$nonBodyContent, dtd.$block, dtd.$listItem, dtd.$tableContent ) )
+		{
+			dataProcessor.writer.setRules( e,
+				{
+					indent : false,
+					breakBeforeOpen : true,
+					breakAfterOpen : false,
+					breakBeforeClose : false,
+					breakAfterClose : true
+				});
+		}
+    });
+	
+
+
+	//表单验证
+	$("#ok_back,#ok_continue").click( function () {
+		
+	
+		if ($("#kind_id").val() == '0')
+		{
+		$("#kind_id ~ span").html('<span class="red">请选择具体栏目！</span>');
+		$("#kind_id").focus();
+		return false;
+		}
+		
+		if ($("#template").val() == '')
+		{
+		$("#template ~ span").html('<span class="red">请选择模板！</span>');
+		$("#template").focus();
+		return false;
+		}
+		
+		if ($("#title").val().replace(/(^\s*)|(\s*$)/g,'') == '')
+		{
+		$("#title ~ span").html('<span class="red">标题不能为空！</span>');
+		$("#title").focus();
+		return false;
+		}
+		
+		if ($("#content").length == 0)
+		{
+			if ($("#linkto").val() == '')
+			{
+			$("#linkto ~ span").html('<span class="red">链接地址不能为空！</span>');
+			$("#linkto").focus();
+			return false;
+			}
+		}
+		
+		if ($("#content").length>0)
+		{
+			var oEditor = CKEDITOR.instances.content;
+			if (oEditor.getData() == '')
+			{
+			alert("内容不能为空！");
+			oEditor.focus();
+			return false;
+			}
+		}
+
+
+		return true;
+	}); 
+	
+	$("#kind_id").change( function(){
+		if ($(this).val() == '0')
+		$(this).next("span").html('<span class="msg_warn">请选择具体栏目！</span>');
+		else
+		$(this).next("span").html('<span class="msg_ok">OK</span>');
+	})
+	
+	$("#template").change( function(){
+		if ($(this).val() == '')
+		$(this).next("span").html('<span class="msg_warn">请选择模板！</span>');
+		else
+		$(this).next("span").html('<span class="msg_ok">OK</span>');
+	})
+	
+	$("#title").blur( function(){
+		if ($(this).val().replace(/(^\s*)|(\s*$)/g,'') == '')
+		$(this).next("span").html('<span class="msg_warn">标题不能为空！</span>');
+		else
+		$(this).next("span").html('<span class="msg_ok">OK</span>');
+	})
+	
+	$("#linkto").blur( function(){
+		if ($(this).val().replace(/(^\s*)|(\s*$)/g,'') == '')
+		$(this).next("span").html('<span class="msg_warn">链接地址不能为空！</span>');
+		else
+		$(this).next("span").html('<span class="msg_ok">OK</span>');
+	})
+	
+	
+	//自动提取关键词
+	$("#get_keywords").click(function () {
+		$.post("ajax/posts_get_keywords.php", {title:$("#title").val(),keyword:$("#keyword").val()},function(data){
+		//alert(data);
+		if (data=="" || data==$("#keyword").val())
+		{
+		var keyword_message = $("#keyword_msg").html();
+		$("#keyword_msg").html('<span class="msg_warn">未取得匹配关键词。</span>');
+		setTimeout(function(){$('#keyword_msg').html(keyword_message);},2000);
+		}
+		else
+		$("#keyword").val(data);
+		});
+	});
+	
+	//摘要长度限制
+	var brief_len = $("#brief_msg span").text(); //读取指定的总长度
+	var current_brief_len = getBytesLength($("#brief").val()); //读取当前摘要框中的字符长度
+	$("#brief_msg span").text(brief_len-current_brief_len); //重置显示的剩余字符长度
+	
+	$("#brief").keyup(function () {
+		len = brief_len-getBytesLength($(this).val());
+		if (len<0)
+		{
+		$(this).val(subStringByBytes($(this).val(),brief_len));
+		len = 0;
+		}
+		$(this).next("div").children("span").text(len);
+	});
+	
+	
+});
+
+//-->
+</script>

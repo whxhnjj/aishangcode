@@ -1,0 +1,5 @@
+<image src="/images/home.jpg" class="home_bg"></image>
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" disabled="{{disabled}}" class="home_link" hover-class="none">
+  <image src="/images/home_btn_startanswer.png" class="home_btn" ></image>
+  <text class="home_text">开始答题</text>
+</button>

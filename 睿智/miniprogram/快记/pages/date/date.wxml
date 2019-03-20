@@ -1,0 +1,89 @@
+<!--date.wxml-->
+ <view class="section">  
+      <picker mode="date" value="{{date}}"   fields="month" start="1995-01" end="2100-12" bindchange="bindDateChange">  
+       <view class="picker">  
+            <b>{{date}}</b><i></i>
+        </view>
+      </picker>
+    </view>  
+<view class="wrap record">
+      <ul>
+         <li>
+         <navigator url="../details/details">
+            <view class="details">
+                <i>2017.05.15(支付宝)</i>
+                <b>长庆泾渭苑网站改版预付款</b>
+            </view>
+            <view class="money on">
+                   +36500
+            </view>
+            </navigator>
+         </li>
+         <li>
+         <navigator url="../details/details">
+            <view class="details">
+                <i>2017.05.15(支付宝)</i>
+                <b>长庆泾渭苑网站改版预付款</b>
+            </view>
+            <view class="money">
+                   +36500
+            </view>
+            </navigator>
+         </li>
+          <li>
+         <navigator url="../details/details">
+            <view class="details">
+                <i>2017.05.15(支付宝)</i>
+                <b>长庆泾渭苑网站改版预付款</b>
+            </view>
+            <view class="money on">
+                   +36500
+            </view>
+            </navigator>
+         </li>
+          <li>
+         <navigator url="../details/details">
+            <view class="details">
+                <i>2017.05.15(支付宝)</i>
+                <b>长庆泾渭苑网站改版预付款</b>
+            </view>
+            <view class="money">
+                   +36500
+            </view>
+            </navigator>
+         </li>
+          <li>
+         <navigator url="../details/details">
+            <view class="details">
+                <i>2017.05.15(支付宝)</i>
+                <b>长庆泾渭苑网站改版预付款</b>
+            </view>
+            <view class="money on">
+                   +36500
+            </view>
+            </navigator>
+         </li>
+          <li>
+         <navigator url="../details/details">
+            <view class="details">
+                <i>2017.05.15(支付宝)</i>
+                <b>长庆泾渭苑网站改版预付款</b>
+            </view>
+            <view class="money">
+                   +36500
+            </view>
+            </navigator>
+         </li>
+          <li>
+         <navigator url="../details/details">
+            <view class="details">
+                <i>2017.05.15(支付宝)</i>
+                <b>长庆泾渭苑网站改版预付款</b>
+            </view>
+            <view class="money on">
+                   +36500
+            </view>
+            </navigator>
+         </li>
+      </ul>
+</view>

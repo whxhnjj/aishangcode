@@ -1,0 +1,49 @@
+{config_load file="site.config"}
+{if $title==""}{assign var="title" value="{$smarty.config.title}"}{/if}
+{if $description==""}{assign var="description" value="{$smarty.config.description}"}{/if}
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta charset="gbk" />
+<meta name="description" content="{$description}"/>
+<meta http-equiv="imagetoolbar" content="no" />
+<title>{$title}</title>
+{if $current == "home"}<base target="_blank">{/if}
+<link href="/statics/css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body{if $current == 'show'} class="body"{/if}>
+
+
+<div class="logo main">
+{if $current == "home"}<h1 class="home"><a href="https://mei.hercity.com" target="_self">美人榜-美女热度排行</a></h1>{/if}
+{if $current != "home"}<div class="home"><a href="https://mei.hercity.com" target="_self">美人榜-美女热度排行</a></div>{/if}
+</div>
+
+
+
+
+{if $current == "home" || $current == "list"}
+<div class="top_nav main">
+
+<ul class="top_nav_list">
+{foreach from=$loftcms.config.personTags key=key item=item}
+<li>
+{foreach from=$item key=key1 item=item1}
+<a href="/tags-{$item1|urlencode}-1.html">{$item1}</a>
+{/foreach}
+</li>
+{/foreach}
+</ul> 
+
+<div class="meirentianxia">
+<a href="https://www.hercity.com/s/mei/"><span>美人天下</span></a>
+<ul>
+{foreach from=$news key=key item=item}
+<li><a href="https://www.hercity.com{$item.href}">{$item.title}</a></li>
+{/foreach}
+</ul>
+</div>
+</div>
+{/if}

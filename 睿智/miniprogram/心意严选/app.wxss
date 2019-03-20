@@ -1,0 +1,125 @@
+/**app.wxss**/
+
+page {
+  box-sizing: border-box;
+  background: #f8f8f8;
+  font-size: 28rpx;
+  color: #333;
+  font-family: PingFangSC-Regular, sans-serif, "微软雅黑";
+}
+
+.container {
+  position: relative;
+  width: 700rpx;
+  margin: 0 auto;
+}
+
+.clearfix {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.bottom {
+  display: block;
+  width: 100%;
+  height: 140rpx;
+}
+
+.iponex_kuang{
+  display: block;
+  width: 100%;
+  height: 68rpx;
+}
+.iponex {
+  bottom: 68rpx !important;
+}
+.iponex_bottom{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  height: 68rpx;
+  background: #fbfbfb;
+}
+
+view, images, text, navigator {
+  box-sizing: border-box;
+}
+
+button::after {
+  border: none;
+}
+
+.load_more{
+  padding: 40rpx 0;
+  text-align: center;
+}
+
+.wzcx{
+  position: relative;
+  width: 340rpx;
+  height: 120rpx;
+  margin: 0 auto;
+  line-height: 120rpx;
+  color:#9c9c9c;
+  text-align: center;
+  font-size: 26rpx;
+}
+.wzcx:before,.wzcx:after{
+  content: '';
+  position: absolute; 
+  top: 60rpx; 
+  right: 0;
+  width: 50rpx;
+  height: 1rpx;
+  background: #9c9c9c;
+  
+}
+.wzcx:before { right: auto; left: 0rpx;}
+
+/* 商品列表 */
+.pro_list_kuang{ 
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  margin-top: 25rpx;
+  padding: 0 25rpx;
+}
+.public_pro_list{
+  margin: 0 0 30rpx;
+  width: 340rpx;
+}
+.public_pro_list image{
+  width: 340rpx;
+  height: 340rpx;
+}
+.public_pro_list .pro_list_title{
+  width: 340rpx;
+  line-height: 35rpx;
+  height: 70rpx;
+  font-size: 24rpx;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.public_pro_list .pro_list_price{
+  display: block;
+  margin: 5rpx 0 7rpx;
+  color: #e4393c;
+}
+.public_pro_list .pro_list_price text {
+  font-size: 24rpx;
+}

@@ -1,0 +1,37 @@
+<view class="group_header">
+  <text class="fl">{{group_name}}</text>
+  <image src="{{group_state == 0 ? '../images/group_close.png' : '../images/group_open.png'}}" class="fr" bindtap="toggleGroupState"></image>
+  <text class="clearfix"></text>
+</view>
+
+
+<view class="group_pop" style="display:{{group_state == 0?'none':'block'}}">
+<block wx:for="{{group}}" wx:item="item" wx:key="id">
+  <text bindtap="resetProGroup" data-id="{{item.id}}" id="{{index}}">{{item.name}}</text>
+</block>
+</view>
+
+
+
+<view class="shop_pro" style="min-height:1000rpx;">
+  <view class="pro_list_kuang">
+
+    <block wx:for="{{goods}}" wx:item="item" wx:key="id">
+    <view class="public_pro_list">
+          <navigator url="/pages/pro/pro?goods_id={{item.id}}">
+            <image src="{{hostName}}{{item.goods_pic}}" mode="aspectFill" ></image>
+            <block wx:if="{{item.max_price == item.min_price}}">
+              <text class="pro_list_price"><text>¥</text>{{item.min_price/100}}</text>
+            </block>
+            <block wx:else>
+              <text class="pro_list_price"><text>¥</text>{{item.min_price/100}} - <text>¥</text>{{item.max_price/100}}</text>
+            </block>
+            <text class="pro_list_title">{{item.name}}</text>
+          </navigator>
+        </view>
+    </block>
+
+  </view>
+</view>
+
+<view class='load_more'>{{load_more}}</view>

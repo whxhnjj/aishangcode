@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "最美音乐杰",
+    "navigationBarTextStyle":"#FFF",
+    "navigationStyle":"default"
+  }
+}

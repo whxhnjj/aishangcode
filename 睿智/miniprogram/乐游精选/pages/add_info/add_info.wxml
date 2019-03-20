@@ -1,0 +1,10 @@
+<form bindsubmit="formSubmit">
+<view class="input_box">
+  <input wx:if="{{type == 1}}" name="realname"></input>
+  <input wx:if="{{type == 2}}" name="mobile" type="number" maxlength='11'></input>
+  <text wx:if="{{type == 1}}">一个好听的名字会让更多人记住你</text>
+  <text wx:if="{{type == 2}}">请输入联系方式</text>
+</view>
+
+<button hover-class="none" formType="submit">保存</button>
+</form>

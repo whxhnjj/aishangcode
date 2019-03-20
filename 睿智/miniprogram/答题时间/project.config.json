@@ -1,0 +1,98 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wx26b138426742e582",
+	"projectname": "%E7%AD%94%E9%A2%98%E6%97%B6%E9%97%B4",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "user",
+					"pathName": "pages/rank/rank",
+					"query": "exam_id=1"
+				},
+				{
+					"id": 1,
+					"name": "subject",
+					"pathName": "pages/subject/subject",
+					"query": "exam_id=14"
+				},
+				{
+					"id": 2,
+					"name": "exam",
+					"pathName": "pages/exam/exam",
+					"query": "exam_id=14"
+				},
+				{
+					"id": 3,
+					"name": "exam_list",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "feedback",
+					"pathName": "pages/feedback/feedback",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "success",
+					"pathName": "pages/success/success",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "report",
+					"pathName": "pages/report/report",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "business",
+					"pathName": "pages/company/company",
+					"query": "exam_id=15"
+				},
+				{
+					"id": -1,
+					"name": "userinfo",
+					"pathName": "pages/userinfo/userinfo",
+					"query": "exam_id=15"
+				},
+				{
+					"id": -1,
+					"name": "business",
+					"pathName": "pages/ceshi1/ceshi1",
+					"query": ""
+				}
+			]
+		}
+	}
+}

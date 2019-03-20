@@ -1,0 +1,29 @@
+<!--details.wxml-->
+<view class="box">
+   <view class="section">
+           <i>金额：</i><p>2017-8-22收入10万元整</p>
+     </view>
+
+       <view class="section">  
+           <i>对方：</i><p>王明</p>
+     </view>
+
+       <view class="section">
+           <i>支付：</i><p>支付宝</p>
+     </view>
+      <view class="section">
+           <i>金额：</i><p>2017-8-22收入10万元整</p>
+     </view>
+
+       <view class="section">  
+           <i>对方：</i><p>王明</p>
+     </view>
+
+       <view class="section">
+           <i>支付：</i><p>支付宝</p>
+     </view>
+
+       <view class="section">
+           <i>备注：</i><b>快点发货，法网顺丰快点发货，法网顺丰快点发货，法网顺丰</b>
+        </view>
+</view>

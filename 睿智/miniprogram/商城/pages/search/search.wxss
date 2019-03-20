@@ -1,0 +1,13 @@
+.search_title{ 
+  margin: 30rpx 0;
+  font-size: 30rpx;
+  font-weight: 800; 
+  text-align: center 
+}
+
+.load_more{ background: #fff; }
+
+.pro_list_kuang{
+  padding-top: 20rpx;
+  background: #fff;
+}

@@ -1,0 +1,69 @@
+<!--user header  -->
+<view class="user_header">
+  <view class="user_photo"><image src="{{avatarurl}}"></image></view>
+  <button class="user_name" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">{{nickname}}</button>
+</view>
+
+<!--user order  -->
+<view class="user_order">
+
+  <navigator class="user_order_header" url="../trade_list/trade_list?state=0">
+    <text class="fl">我的订单</text>
+    <image src="../images/right.png" class="fr"></image>
+    <text class="fr">查看全部订单</text>
+  </navigator>
+  <!--  -->
+  <view class="order">
+    <navigator class="order_list" url="../trade_list/trade_list?state=1">
+      <image src="../images/order_fukuan.png"></image>
+      <text>待付款</text>
+      <view wx:if="{{count.wait_pay_count > 0}}"><text>{{count.wait_pay_count}}</text></view>
+    </navigator>
+    <!--  -->
+    <navigator class="order_list" url="../trade_list/trade_list?state=2">
+      <image src="../images/order_fahuo.png"></image>
+      <text>待发货</text>
+      <view wx:if="{{count.wait_send_count > 0}}"><text>{{count.wait_send_count}}</text></view>
+    </navigator>
+    <!--  -->
+    <navigator class="order_list" url="../trade_list/trade_list?state=3">
+      <image src="../images/order_shouhuo.png"></image>
+      <text>待收货</text>
+      <view wx:if="{{count.wait_receive_count > 0}}"><text>{{count.wait_receive_count}}</text></view>
+    </navigator>
+    <!-- <navigator class="order_list" url="../trade_list/trade_list?state=4">
+      <image src="../images/sale.png"></image>
+      <text>待评价</text>
+      <view wx:if="{{count.wait_commet_count > 0}}"><text>{{count.wait_commet_count}}</text></view>
+    </navigator> -->
+    <!--  -->
+    <navigator class="order_list" url="../trade_list/trade_list?state=5">
+      <image src="../images/order_question.png"></image>
+      <text>退款/售后</text>
+      <view wx:if="{{count.after_sale_count > 0}}"><text>{{count.after_sale_count}}</text></view>
+    </navigator>
+  </view>
+</view>
+
+<!-- <view class="user_order_header user_list">
+ <text class="fl">积分明细</text>
+ <image src="../images/right.png" class="fr"></image>
+</view> -->
+
+<!--反馈  -->
+<navigator class="user_order_header user_list" url="../feedback/feedback">
+ <text class="fl">反馈/举报</text>
+ <image src="../images/right.png" class="fr"></image>
+</navigator>
+<!--关于  -->
+<navigator class="user_order_header user_list" url="../shop/shop">
+ <text class="fl">关于本店</text>
+ <image src="../images/right.png" class="fr"></image>
+</navigator>
+
+<button class="user_order_header user_list" open-type="contact">
+ <text class="fl">联系客服</text>
+ <image src="../images/right.png" class="fr"></image>
+</button>
+
+<include src="../include/include"/>

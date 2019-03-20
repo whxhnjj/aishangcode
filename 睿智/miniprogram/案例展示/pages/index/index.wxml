@@ -1,0 +1,35 @@
+<swiper class="swiper-box" indicator-dots circular autoplay interval="3500" duration="500">
+    <swiper-item wx:for="{{swiper}}" wx:key="key">
+      <navigator hover-class="none" url="../case_detail/case_detail?case_id={{item.id}}">
+      <image src="{{hostName}}{{item.photo}}" class="slide-image" mode="aspectFil"/>
+      </navigator>
+    </swiper-item>
+</swiper>
+
+<view class="content">
+  <view class="content_header">
+    <view class="left_box">
+      <image src="/images/icon_line.png"/>
+      <text class="{{state == 1 ? 'color_e5001f' : ''}}" bindtap="toggleState" data-state="{{categories[0].id}}">{{categories[0].name}}</text>
+      <image src="/images/icon_left.png"/>
+    </view>
+    <image src="{{hostName}}{{logo}}"/>
+    <view class="right_box">
+      <image src="/images/icon_right.png"/>
+      <text class="{{state == 2 ? 'color_e5001f' : ''}}" bindtap="toggleState" data-state="{{categories[1].id}}">{{categories[1].name}}</text>
+      <image src="/images/icon_line.png"/>
+    </view>
+  </view>
+
+  <view class="content_cont">
+    <block wx:for="{{cases}}" wx:key="id">
+    <navigator class="content_list" url="../case_detail/case_detail?case_id={{item.id}}" hover-class="none">
+      <image src="{{hostName}}{{item.photo}}" mode="aspectFil"/>
+      <text>{{item.name}}</text>
+      <text>{{item.desc}}</text>
+    </navigator>
+    </block>
+  </view>
+  <view class="case_text">{{page_text}}</view>
+
+</view>

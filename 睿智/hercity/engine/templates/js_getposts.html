@@ -1,0 +1,57 @@
+{if $i==1}
+document.write('<div style="width:100%;height:100%; overflow:hidden;clear:both;padding:10px 0;">');
+{foreach from=$list item=post}
+document.write('<div style="width:180px;float:left;text-align:center;"><a href="http://www.hercity.com{$post.href}" target="_blank"><img src="http://www.hercity.com{$post.thumb1}" alt="{$post.title_original}" style="width:160px;" /></a><br /><a href="http://www.hercity.com{$post.href}" title="{$post.title_original}" target="_blank">{$post.subhead1}</a></div>');
+{/foreach}
+document.write('</div>');
+{/if}
+
+{if $i==2}
+document.write('<div style="height:100%; overflow:hidden;clear:both;padding:15px 0 10px 15px;border:1px solid #e5ddd6;margin-bottom:10px;">');
+{foreach from=$list item=post}
+document.write('<div style="width:185px;float:left;text-align:center;"><a href="http://www.hercity.com{$post.href}" target="_blank"><img src="http://www.hercity.com{$post.thumb2}" alt="{$post.title_original}" style="width:160px;" /></a><br /><a href="http://www.hercity.com{$post.href}" title="{$post.title_original}" target="_blank">{$post.subhead1}</a></div>');
+{/foreach}
+document.write('</div>');
+{/if}
+
+
+{if $i==3}
+{foreach from=$banners key=key item=item}
+document.write('<a isconvert="1" href="{$item.linkto}" target="_blank"><img src="http://www.hercity.com{$item.thumb1}" alt="{$item.title}" {if $key == 4} class="last"{/if} /></a>');
+{/foreach}
+{/if}
+
+
+{if $i==4}
+{foreach from=$list item=post}
+document.write('<div class="qc_top">{if $post.thumb1 != '/upfiles/thumb/'}<a href="http://www.hercity.com{$post.href}" target="_blank" class="qc_top_thumb"><img src="http://www.hercity.com{$post.thumb1}" alt="{$post.title_original}" /></a>{/if}{if $post.thumb1 == '/upfiles/thumb/' && $post.thumb2 != '/upfiles/thumb/'}<a href="http://www.hercity.com{$post.href}" target="_blank" class="qc_top_thumb"><img src="http://www.hercity.com{$post.thumb2}" alt="{$post.title_original}" /></a>{/if}<h3><a href="http://www.hercity.com{$post.href}" target="_blank" title="{$post.title_original}" >{$post.title}</a></h3><p>{$post.brief}бн</p></div>');
+{/foreach}
+{/if}
+
+
+{if $i==5}
+{foreach from=$list item=post}
+document.write('<li><a href="http://www.hercity.com{$post.href}" target="_blank" title="{$post.title_original}" >{$post.title}</a></li>');
+{/foreach}
+{/if}
+
+
+{if $i==6}
+{foreach from=$list item=post}
+document.write('<li><span>{$post.hits}</span><a href="{$post.href}" title="{$post.title_original}">{$post.title}</a></li>');
+{/foreach}
+{/if}
+
+
+{if $i==7}
+var files = '';
+var links = '';
+var texts = '';
+var comma = '';
+{foreach from=$pics key=key item=item}
+files = files+comma+'http://www.hercity.com{$item.thumb1}';
+links = links+comma+'http://www.hercity.com/linkto_{$item.id}.html';
+texts = texts+comma+'{$item.title}';
+comma = '|';
+{/foreach}
+{/if}

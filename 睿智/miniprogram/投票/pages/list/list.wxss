@@ -1,0 +1,67 @@
+.wrap{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 25rpx;
+}
+.list{
+  width:700rpx;
+  height: 100%;
+  padding: 25rpx 0;
+  overflow: hidden;
+  border-bottom:1rpx solid #999999; 
+}
+.list .number{
+  width:48rpx;
+  height:48rpx;
+  text-align: center;
+  line-height:50rpx;
+  font-size: 30rpx;
+  border: 1rpx solid #999999;
+  border-radius: 50%;
+  float: left;
+  margin:50rpx 0;
+}
+.list .userinfo_avatar{
+  width:130rpx;
+  height:130rpx;
+  border-radius: 15rpx;
+  margin:10rpx 25rpx;
+  float: left;
+}
+.userinfo{
+  width:300rpx;
+  height: 150rpx;
+  float: left;
+}
+.list .userinfo_name{
+  font-size: 28rpx;
+  color: #353535;
+  width: 300rpx;
+  height:75rpx;
+  line-height:100rpx;
+  display: block;
+  float: left;
+}
+.list .gife{
+  font-size: 28rpx;
+  color: #999999;
+  width:264rpx;
+  height:75rpx;
+  float: left;
+  padding-left:36rpx;
+  background: url(http://www.hsbggb.com/wangjie/gerenpiaoshu.png) no-repeat left 10rpx;
+  background-size:32rpx;
+}
+.giving{
+    width: 120rpx;
+    height: 60rpx;
+    background: #11D4C6;
+    float: right;
+    margin:45rpx 0;
+    border-radius:15rpx;
+    font-size: 32rpx;
+    color: #FFF;
+    text-align: center;
+    line-height: 60rpx;
+}

@@ -1,0 +1,135 @@
+.tab{
+   display: block;
+   width: 100%;
+}
+.item-tab{
+width: 750rpx;
+height: 100%;
+overflow: hidden;
+background: #F0EFF4;
+}
+
+.item-tab view{
+  width: 187.5rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  float: left;
+  font-size: 34rpx;
+}
+
+.item-tab .active{
+  color:#13D4C8;
+  border-bottom:3rpx solid #13D4C8;
+}
+
+.botom-item{
+  width: 700rpx;
+  margin: 0 25rpx;
+}
+
+.botom-item .right-item{
+  display: none;
+}
+.botom-item .right-item.active{
+display: block;
+}
+
+/*商品CSS*/
+.list{
+  width: 700rpx;
+  border-bottom:1rpx solid #DEDEDE;
+  padding:20rpx 0;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  margin-top: 25rpx;
+}
+.list .data{
+  width: 700rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  color: #252525;
+  line-height: 50rpx;
+  margin-bottom: 15rpx;
+}
+.list .data span{
+  display: block;
+  width:460rpx;
+  height: 50rpx;
+  text-align: left;
+  padding-left: 40rpx;
+  float: left;
+  color: #13D4C8;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/image/img/dianpu.png') no-repeat left center;
+  background-size: 32rpx;
+}
+.list .data b{
+  display: block;
+  width:200rpx;
+  height: 50rpx;
+  float: right;
+  color: #f00;
+  text-align: right;
+}
+.list .bao{
+  height: 100%;
+  width: 700rpx;
+  float: left;
+  border-top: 1rpx solid #eee;
+  border-bottom: 1rpx solid #eee;
+}
+.list .img{
+  width:150rpx;
+  height:180rpx;
+  float: left;
+}
+.list .img image{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 15rpx 0;
+}
+.list .left{
+  width: 500rpx;
+  height: 150rpx;
+  float: left;
+  padding:15rpx 15rpx 15rpx 20rpx;
+  overflow: hidden;
+
+ 
+}
+.list .left span{
+  width: 500rpx;
+  height:100rpx;
+  color: #353535;
+  font-size:33rpx;
+  line-height:40rpx;
+  display: block;
+}
+.list .left p{
+   display: block;
+   width: 500rpx;
+  height:40rpx;
+  font-size:28rpx;
+  color: #aaa;
+  line-height:70rpx;
+}
+.list .mn{
+  width: 700rpx;
+  height:40rpx;
+  float: left;
+  margin-top:10rpx;
+   text-align: right;
+  font-size:28rpx;
+  color:#666;
+  line-height: 40rpx;
+}
+.text{
+  width: 700rpx;
+  height:600rpx;
+  background:url('http://t.nongjia365.com.cn/guanli/assets/image/img/dingdan2.png') no-repeat center top;
+  margin-top: 150rpx;
+  text-align: center;
+  line-height: 400rpx;
+  color: #999;
+}

@@ -1,0 +1,72 @@
+<?php
+require_once("includes/config.php");
+require_once("includes/rights.php");
+require_once("includes/function.php");
+require_once("includes/conn.php");
+require_once("includes/header.php");
+?>
+
+<script type="text/javascript">
+<!--
+$(function(){
+
+//表单验证
+$("#form1").submit( function () {
+
+	if ($("#name").val() == '')
+	{
+	alert("关键词不能为空！");
+	$("#name").focus();
+	return false;
+	}
+  return true;
+}); 
+
+});
+
+//-->
+</script>
+
+<div id="path">
+loftCMS -> 关键词管理 -> 新建
+</div>
+
+<form name="form1" id="form1" action="keywords_new_action.php" method="post" >
+<input type="hidden" name="url" id="url" value="<?=$_SERVER["HTTP_REFERER"]?>" />
+
+<table cellpadding="6" cellspacing="0" class="formTable">
+<tr>
+<tr>
+<th>标签：</th>
+<td><input type="text" name="name" id="name" size="50" maxlength="50" /></td>
+</tr>
+<tr>
+<th>英文名：</th>
+<td><input type="text" name="ename" id="ename" size="50" maxlength="50" /></td>
+</tr>
+<tr>
+<th>标题：</th>
+<td><input type="text" name="title" id="title" size="80" maxlength="100" /></td>
+</tr>
+<tr>
+<th>描述：</th>
+<td><textarea name="description" id="description" /></textarea></td>
+</tr>
+<tr>
+<th>链接到：</th>
+<td><textarea name="linkto" id="linkto" /></textarea></td>
+</tr>
+<tr>
+<td colspan="2" class="buttonbox">
+<input type="submit" name="ok" id="ok_back" value="确定" accesskey="s" />
+<input type="button" name="cancel" id="cancel" value="取消" onClick="history.back(1)" />
+</td>
+</tr>
+</table>
+
+</form>
+
+
+<?php
+require_once("includes/footer.php");
+?>

@@ -1,0 +1,43 @@
+<block wx:if="{{!fail_state}}">
+  <image class="case_img" src="{{hostName}}{{cases.photo}}" mode="widthFix" />
+
+  <view class="content_box">
+    <import src="../../extend/wxParse/wxParse.wxml" />
+    <view class="wxParse">
+        <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+  </view>
+
+  <view class="bottom_text">
+    <text class="end">END</text>
+    <text>西安笃良设计原创作品</text>
+    <text>版权保护 · 侵权必究 · 转载请注明出处</text>
+  </view>
+
+  <view class="pages">
+    <view class="left_box">
+      <image src="/images/icon_prev.png" />
+      <text bindtap="toggleCase" data-id="{{sibling.prev_id}}">上一案例</text>
+      <image src="/images/icon_left.png" />
+    </view>
+    <image src="{{hostName}}{{info.logo}}" />
+    <view class="right_box">
+      <image src="/images/icon_right.png" />
+      <text bindtap="toggleCase" data-id="{{sibling.next_id}}">下一案例</text>
+      <image src="/images/icon_next.png" />
+    </view>
+  </view>
+
+  <navigator class="back_index" hover-class="none" url="../index/index">返回首页</navigator>
+
+  <image class="call_phone" src="/images/icon_phone.png" data-contacts="{{info.contacts}}" bindtap="makePhone" />
+
+  <view class="bottom">
+    <text>更好，是另一种可能！</text>
+    <text>A Better Alternative</text>
+  </view>
+</block>
+
+<block wx:else>
+  <text class="fail_text">暂无案例信息</text>
+</block>

@@ -1,0 +1,153 @@
+{include file="inc_header.html" current="detail" title="{$post.title} - 倾城网"}
+
+<!--update-->
+<div class="wrap detail">
+	<div class="breadcrumb">{$location}</div>
+	
+<h1>{$post.title}</h1><span class="erweima" title="点击扫描二维码 手机上阅读本内容"></span>
+<h6><span>{$post.dateline|date_format:'Y/m/d'}</span>{if $post.author != ''}<span>作者/{$post.author}</span>{/if}{if $post.source != ''}<span>来源/{$post.source}</span>{/if}<span>阅读人次/<em class="hits">{$post.hits}</em></span><span><a href="/comments/{$post.id}-1.html">我要评论</a>(<em class="comments">{$post.comments}</em>)</span></h6>
+<div class="erweimabox"><img src="" /><br />扫描二维码<br />将本内容分享给手机朋友<br /><a class="close" href="javascript:void(0);">关闭</a></div>
+
+<div class="photo_content">
+<p>{$post.brief|addUrl}</p>
+<div class="big_photo">
+<div id="big_pic"><img src="{$photos.0.filename}" alt="{if $photos.0.title!=""}{$photos.0.title}{else}{$post.title}{/if}" /></div>
+<a id="photo_prev" title="上一个，可以使用键盘上的向左箭头操作。" target="_self" href="javascript:void(0);">上一个</a>
+<a id="photo_next" title="下一个，可以使用键盘上的向右箭头操作。" target="_self" href="javascript:void(0);">下一个</a>
+<div id="prev"></div>
+<div id="next"></div>
+<!--上一个 下一个 end-->
+
+
+
+<div id="photoShadeDiv"></div>
+
+
+<div id="photoEnd">
+<a href="javascript:void(0);" id="endClose" title="关闭">X</a>
+<div class="photoEnd_more">
+<h6>您可能会喜欢：</h6>
+<ul>
+{foreach from=$list_photo_like item=item}
+<li><a href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title_original}" /></a><span><a href="{$item.href}">{$item.title}</a></span></li>
+{/foreach}
+</ul>
+<a href="/s/photo/" class="morePhoto">进入影像频道</a>
+</div>
+</div>
+<!--photoEnd end-->
+
+<div id="photoAd">
+<div id="photoAd_wrap">
+<div id="photoAd_bg"></div>
+<div id="photoAd_wait">广告还剩<strong></strong>秒</div>
+<a id="photoAd_close" href="javascript:void(0);">关闭</a>
+<div id="photoAd_box">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-4842793887790356";
+/* 图片播放插播 */
+google_ad_slot = "1952624515";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<!--photoAd end-->
+
+
+
+<div id="load_pic" rel="/statics/images/loading.gif" style="display:none;"></div>
+</div>
+
+
+
+<a href="javascript:void(0);" class="point">{$post.point}</a>
+
+
+<h2 class="photo_info"><span class="photo_title"></span><span class="photo_num"></span></h2>
+<div class="slide_photo" id="photo_box">
+{foreach from=$photos key=key item=photo}
+<a id="p_{$key+1}" >
+<img src="{$photo.thumb}" rel="{$photo.filename}" alt="{if $photo.title != ""}{$photo.title}{else}{$post.title}{/if}" />
+<p>{$photo.description}</p>
+</a>
+{/foreach}
+</div>
+
+{include file="detail_inc_copyright.html" title="{$post.title}"}
+
+</div>
+<!--photo_content end-->
+
+
+
+
+
+<div class="tags">
+{foreach from=$post_keyword item=key}
+<a href="/tag/?q={$key}">{$key}</a>
+{/foreach}
+</div>
+
+
+<div class="ad_980">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 倾城新版大通栏 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:970px;height:90px"
+     data-ad-client="ca-pub-4842793887790356"
+     data-ad-slot="7902926175"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div class="pageredirect">
+<span class="prev_letter">{if $prev!=""}上一篇：<a href="{$prev.0.href}">{$prev.0.title}</a>{else}已到达第一篇{/if}</span>
+<span class="next_letter">{if $next!=""}下一篇：<a href="{$next.0.href}">{$next.0.title}</a>{else}已到达最后一篇{/if}</span>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="wrap detail detail_photo_comments">
+	<div class="left">
+	<div id="abox_b05" class="abox_box" ></div>
+	{include file="detail_inc_comments.html" current="detail" template="detail_photo"}
+	</div>
+
+	<div class="right_a">
+		<div class="hc_box">
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-4842793887790356";
+			/* 300x250, 创建于 07-11-6 */
+			google_ad_slot = "1847728237";
+			google_ad_width = 300;
+			google_ad_height = 250;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		</div>
+			
+	</div>
+</div>
+
+
+
+
+
+
+
+{include file="inc_footer.html" current="detail" template="detail_photo"}

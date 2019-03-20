@@ -1,0 +1,58 @@
+<view class='alert {{alertclass}}'>{{alert}}</view>
+<view class='wrap'>
+  <view class='box'>
+    <view class="img">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <form bindsubmit="formSubmit">
+    <view class="list">
+      <input class="text" type="text" value="{{addLevelData}}" name='title'></input>
+      <span class="xsj" bindtap="addLevel"></span>
+    </view>
+
+    <view class='jine'>
+        <span class="zong">总赏金</span>
+        <input class="digit" type='digit' name="reward" id="reward" placeholder='0.00' bindinput='input' maxlength="8"></input>
+        <span class="yuan">元</span>
+    </view>
+
+     <view class='geshu'>
+        <span class="zong">个数</span>
+        <input class="digit" type='number' value='' name='divisor' id="divisor" placeholder='0' bindinput='input' maxlength="3"></input> 
+        <span class="yuan">个</span>
+    </view>
+
+    <view class="choice">
+      <span class="choose" bindtap="depict">是否允许使用相册图片?</span>
+      <switch class='switch' bindchange="switch2Change"/>
+    </view>
+
+
+    
+    <span class='prompt'>需支付￥{{service}}服务费，优先使用余额￥{{user.balance}}</span>
+
+    <button class='bt' form-type="submit" loading="{{loading}}">{{submitText}}</button>
+</form>
+        <navigator class="feedback" hover-class="none"  url='../../pages/feedback/feedback'>举报</navigator>
+  </view>
+</view>
+
+<view class='tabs'>
+    <navigator class='tabs_left' url="../../pages/withdraw/withdraw">余额提现</navigator>
+    <navigator class='tabs_center' url="../../pages/mine/mine">个人中心</navigator>
+    <navigator class='tabs_right' url="../../pages/help/help">常见问题</navigator>
+</view>
+
+
+
+
+
+<view class='box_wrap' hidden="{{nullHouse}}">
+    <view class="showtost">
+    </view>
+    <view class="box_most">
+        <span class="box_span">为什么是否选取相册?</span>
+        <text class='box_text'>在笑脸送福中判断用户是否笑而且发放奖励，保证真实有效</text>
+        <button bindtap="depict2">我知道了</button>
+    </view>
+</view>

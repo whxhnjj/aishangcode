@@ -1,0 +1,553 @@
+/**index.wxss**/
+
+/*答题子页面 ————> 加载  */
+.load{
+  position: fixed;
+  top:-22rpx; 
+  left: 0;
+  width: 750rpx;
+  height: 1088rpx;
+  background:url(http://dati.webimage.cn/static/xcx/bg_waiting.png) no-repeat 0 0;
+  background-size:750rpx 1088rpx; 
+
+}
+.load_cir_big{
+  position: fixed;
+  margin-left: 50%;
+  top:306rpx;
+  left: -207rpx;
+  width:414rpx;
+  height: 414rpx; 
+  z-index: 1000;
+  border-radius: 50%;
+  border:  1rpx solid #f0aa54;
+  animation:circle_small 10s infinite linear; 
+ 
+}
+.load_cir_small{
+  position: fixed;
+  margin-left: 50%;
+  top:377rpx;
+  left: -136.5rpx;
+  width:273rpx;
+  height: 273rpx; 
+  z-index: 1000;
+  border-radius: 50%;
+  border:  1rpx solid #f0aa54;
+  animation:circle 5s infinite linear; 
+  
+}
+.load_user_img{
+  position: fixed;
+  margin-left: 50%;
+  top:442rpx;
+  left: -70rpx;
+  width:140rpx;
+  height: 140rpx; 
+  z-index: 1000;
+  border-radius: 50%;
+}
+
+
+.load_info{
+  position: fixed;
+  bottom: 134rpx;
+  width: 500rpx;
+  margin-left: 50%;
+  left: -250rpx;
+ 
+}
+.load_infoname{
+  display: block;
+  margin-bottom: 30rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.load_infodel{
+  display: block;
+  font-size: 24rpx;
+  text-align: center;
+  color: rgb(230,230,230);
+}
+
+
+.planet{
+  position: relative;
+  top:-25rpx;
+  left: 50%; 
+  margin-left: -46rpx;
+  width: 92rpx;
+  height:46rpx;
+  z-index: 1000;
+}
+.planet_two{
+  position: absolute;
+  top:300rpx;
+  left:-2rpx;
+  width: 57rpx;
+  height:31rpx;
+  z-index: 1000;
+}
+.planet_three{
+  position: absolute;
+  top:250rpx;
+  right:-17.5rpx;
+  width: 57rpx;
+  height:31rpx;
+  z-index: 1000;
+}
+.circle{
+  width: 72rpx;
+}
+.circle_two{
+  position: absolute;
+  top:205rpx;
+  right: 10rpx;
+  width: 45rpx;
+}
+
+.pro_circle{
+  position: relative;
+  width: 160rpx;
+  height: 160rpx;
+  z-index: 1000;
+  
+}
+.pro_circle image{
+  position: absolute;
+  top:-28rpx;
+  left: 50%;
+  margin-left: -36rpx;
+  margin-top: 10rpx;
+  width: 72rpx;
+  height:72rpx;
+}
+
+@keyframes circle{
+0%{ transform:rotate(0deg); }
+100%{ transform:rotate(-360deg); }
+}
+@keyframes circle_small{
+0%{ transform:rotate(-360deg); }
+100%{ transform:rotate(0deg); }
+}
+
+.countdown{
+  position: relative;
+  z-index:1001; 
+  width: 600rpx;
+  height: 580rpx;
+  margin: 0 auto;
+  line-height: 970rpx;
+  text-align: center;
+  font-weight: bold; 
+}
+.countdown_big{
+  font-size:800rpx;
+  opacity:0.8;
+}
+.countdown_small{
+  font-size: 1rpx;
+  opacity: 0;
+  transition: all 0.9s linear;
+}
+
+
+
+/*答题子页面 ————> 答题  */
+.sub_header{
+  position: relative;
+  width:100%;
+  height: 160rpx;
+}
+/*左侧用户信息  */
+.user_info{
+  position: relative;
+  float:left;
+}
+.userinfo_img{
+  position: absolute;
+  top:10rpx;
+  left: 10rpx;
+  width: 140rpx;
+  height: 140rpx;
+  z-index: 999;
+  border-radius: 50%;
+}
+/* .userinfo_name{
+  display: block;
+  margin-left: 172rpx;
+  font-size: 36rpx;
+  margin-top:44rpx;
+} */
+/*头部通用背景色  */
+.user_bg{
+  position: absolute;
+  width: 160rpx;
+  height: 160rpx;
+  background-color: rgba(56,108,200,0.6);
+  border-radius: 50%;
+  z-index: 1;
+}
+/*头部线条  */
+.user_line{
+  position: absolute;
+  top:95rpx; 
+  left:172rpx;
+  width: 345rpx;
+  height: 5rpx;
+  background-color: rgb(255,255,255);
+}
+.line_progress{
+  height: 5rpx;
+  background: rgb(0,255,187);
+  transition: width .2s linear;
+
+}
+/*右侧题目信息  */
+.subject{
+  position: relative;
+  float:right;
+  /* width:273rpx; */
+  width: 52%;
+}
+.sub_bg{
+  right:0;
+}
+.sub_num{
+  float:left;
+  font-size: 36rpx;
+  margin-top:40rpx;
+}
+.sub_num text{
+  color: rgb(0,255,187);
+}
+
+
+.progress_box{
+  position: absolute;
+  right:-10rpx;
+  width:160rpx;
+  height: 160rpx;  
+  background-color: rgba(56,108,200,0.6);
+  border-radius: 50%;
+}
+.progress_bg{
+   position: absolute;
+   width: 135rpx;
+   height: 135rpx;
+   top:13.5rpx;
+   right:13.5rpx; 
+}
+.sub_time{
+  position: absolute;
+  top:12.5rpx;
+  right:12.5rpx; 
+  width: 135rpx;
+  height: 135rpx;
+  text-align: center;
+  line-height: 135rpx;
+  font-size: 60rpx;
+  font-weight: bold;
+}
+.notime_bg{
+   position: absolute;
+   width: 134rpx;
+   height: 134rpx;
+   border: 3px solid #f0aa54;
+   border-radius: 50%;
+   top:9rpx;
+   right:9rpx; 
+   animation:circle_small 5s infinite linear;
+}
+.notime_circle{
+  position: absolute;
+  top:-28rpx;
+  width: 72rpx;
+  height: 72rpx;
+}
+
+/*题目  */
+.subtitle{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 75rpx;
+  text-align: center;
+  word-break:break-all; 
+  
+}
+.sub_title{
+  display:inline-block;
+  font-size: 40rpx;
+  width :auto;
+  text-align:left;
+}
+.images_see{
+  display: inline-block;
+  margin-left: 20rpx;
+  padding-left: 45rpx;
+  font-size: 32rpx;
+  color: rgb(0,255,187);
+  /* text-decoration: underline; */
+  background: url(http://dati.webimage.cn/static/xcx/image_open.png) no-repeat center left;
+  background-size: 35rpx 35rpx;
+}
+
+/*题目选项  */
+.submenu{
+  position: fixed; 
+  bottom:80rpx; 
+  z-index: 999;
+  height: 610rpx; 
+}
+/*左侧进度条  */
+.progress{
+  width: 123rpx;
+  text-align: center;
+}
+.sub_score{
+  font-size: 50rpx;
+  font-weight: bold;
+  color:rgb(0,255,187);
+}
+.score{
+  position: relative; 
+  height: 540rpx; 
+  margin-top: 10rpx;
+  margin-left: 42rpx;
+}
+.score_bg{
+  position: absolute;
+  bottom:0;
+  left:0;
+  z-index: 100;
+  height: 540rpx;
+  width: 28rpx;
+  padding: 0 6rpx;
+  border-radius: 20rpx;
+  background-color: rgb(0,51,153);
+} 
+.score_box{
+  position: absolute;
+  bottom: 6rpx;
+  width: 28rpx;
+  height:528rpx;
+ 
+}
+.score_progress{
+  position: absolute;
+  z-index: 2000;
+  bottom:0rpx; 
+  left:0rpx; 
+  width: 28rpx;
+  border-radius: 20rpx;
+  background-color: rgb(21,255,204);
+  transition: all 0.9s linear;
+}
+/*右侧选项菜单  */
+.sub_list{
+  margin-top: 47rpx;
+  margin-left: 15rpx;
+}
+.sub_list view{
+  position: relative;
+  height: 80rpx;
+  padding: 20rpx 100rpx; 
+  width: 320rpx;
+  margin-bottom: 30rpx;
+  border-radius: 60rpx;
+  text-align: center;
+  background-color: rgba(55,108,209,0.8);
+  font-weight: 600; 
+
+}
+.bigview{ 
+ line-height: 80rpx; 
+ font-size: 40rpx;
+}
+.middleview{
+  line-height: 80rpx; 
+  font-size: 32rpx;
+}
+.smallview{ 
+ line-height: 40rpx; 
+ font-size: 32rpx;
+}
+
+/*正确错误样式  */
+.sub_list .answer_right{
+  background:url(http://dati.webimage.cn/static/xcx/right.png) no-repeat 30rpx center;
+  background-color: rgb(0,255,187);
+  background-size: 64rpx 64rpx;
+}
+.sub_list .answer_wrong{
+  background:url(http://dati.webimage.cn/static/xcx/wrong.png) no-repeat 30rpx center;
+  background-color: rgb(255,102,102);   
+  background-size: 64rpx 64rpx;
+}
+
+
+
+
+/*答题子页面 ————> 结果  */
+.result_header{
+  width: 100%;  
+  text-align: center;
+}
+.result_page_bg{
+  position: absolute;
+  left: 0;
+  top:60rpx;
+  z-index: 1;
+  height: 130rpx;
+  width:100%;
+}
+.result_bg{
+  position: relative;
+  margin: 0 auto;
+  padding: 10rpx;
+  width: 180rpx;
+  height: 180rpx;
+  z-index: 500;
+  background-color:rgba(56,108,200,0.6);
+  border-radius:50%;
+
+}
+.result_img{
+  position: absolute;
+  top:10rpx;
+  left: 10rpx;
+  width: 180rpx;
+  height: 180rpx;
+  z-index: 999;
+  border-radius:50%;
+}
+.result_username{
+  display: block;
+  margin-top: 20rpx;
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: bold;
+  
+}
+/*答题结果  */
+.result_answer{
+  position: relative;
+  padding: 70rpx 0 60rpx;
+  width: 100%; 
+}
+.result_list{
+  position: relative;
+  display: block;
+  width: 400rpx;
+  margin: 0 auto;
+  margin-bottom: 40rpx;
+  padding-left: 47rpx;
+
+}
+.result_answer image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 47rpx;
+  height: 47rpx;
+}
+.result_list view{
+  display: inline-block;  
+  margin-left: 20rpx;
+  width: 110rpx;
+  font-size: 35rpx;
+  line-height: 50rpx;
+  
+}
+.result_list text{
+  /* position: absolute;
+  left: 275rpx;
+  top:-3rpx;
+  z-index: 999; */
+  display: inline-block;
+  margin-left: 110rpx;
+  padding-top: 2rpx;
+  font-weight: bold;
+  font-size: 47rpx;
+  line-height: 50rpx;
+}
+.result_answer .max_score{
+  position: absolute;
+  top:124rpx;
+  left: 510rpx;
+  z-index: 1000;
+  width: 155rpx;
+}
+/* 结果页底部选择 */
+.result_chose{
+  width: 660rpx;
+  margin: 0 auto 25rpx;
+}
+.result_chose view,.result_chose navigator,.result_chose button{
+  width: 660rpx; 
+  height: 100rpx;
+  margin-bottom: 20rpx;
+  background: rgba(56,108,200,0.6);
+  border-radius: 50rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+}
+
+/*举报  */
+.feedback{
+  width: 660rpx;
+  margin: 0 auto 110rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: rgb(240,170,84);
+}
+.feedback navigator{
+  display: inline-block;
+  margin-right: 20rpx;
+  /* text-decoration: underline; */
+} 
+
+.share{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 750rpx;
+  height: 110rpx;
+  background: rgba(56,108,200,0.8);
+}
+.share button{
+  box-sizing: content-box;
+  float: left;
+  text-align: left;
+  line-height: 110rpx;
+  font-size: 30rpx;
+  padding-right: 0;
+  color: #fff;
+}
+.share button:last-child{
+  width: 285rpx;
+  padding-left: 90rpx; 
+  background: url(http://dati.webimage.cn/static/xcx/share_image.png) no-repeat 20rpx 30rpx;
+  background-size: 50rpx 50rpx;
+}
+.share button:first-child{
+  padding-left: 160rpx;
+  width: 214rpx;
+  background: url(http://dati.webimage.cn/static/xcx/share_qu.png) no-repeat 85rpx 25rpx;
+  border-right: 1rpx solid #4d83e3;
+  background-size: 60rpx 60rpx;
+}
+.share button[disabled]{
+ color: #fff;
+}
+
+/*暂无试题  */
+.error_msg{
+  width: 100%;
+  text-align: center;
+  margin-top: 50%;
+}

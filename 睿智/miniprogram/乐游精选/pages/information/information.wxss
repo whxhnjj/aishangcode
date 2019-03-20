@@ -1,0 +1,42 @@
+.content_box{
+  margin: 50rpx 0; 
+  font-size: 30rpx;
+}
+.content_box .content_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.content_box .content_list:last-child{
+  border-bottom: none;
+}
+.content_list input{
+  width: 550rpx;
+  text-align: right;
+  color: #999;
+}
+.content_box .content_list text{
+  width: 120rpx;
+}
+
+/* .qrcode{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.agent{
+  width: 16rpx;
+  height: 27rpx;
+} */
+
+button{
+  width: 690rpx;
+  height: 100rpx;
+  background: #fc8b00;
+  color: #fff;
+  font-weight: 600;
+  line-height: 100rpx;
+}

@@ -1,0 +1,187 @@
+<view wx:if="{{member_rule == 0}}" class="user">
+  <view class="header">
+    <image class="user_photo" src="{{avatarurl}}"></image>
+    <button class="user_name" hover-class="none" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">{{realname}}</button>
+  </view>
+  <!--  -->
+
+  <view class="submenu">
+    <navigator class="sub_list" hover-class="none" url="../order_list/order_list?status=0">
+      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+        <button class="base_form" hover-class="none" formType="submit">
+        </button>
+      </form>
+      <image src="/images/icon_order.png"></image>
+      <text>订单</text>
+      <text class="color_666">查看全部订单</text>
+      <image src="/images/icon_more.png"></image>
+    </navigator>
+
+    <navigator class="sub_list" hover-class="none" url="../income/income">
+      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+        <button class="base_form" hover-class="none" formType="submit">
+        </button>
+      </form>
+      <image src="/images/icon_integral.png"></image>
+      <text>我的收入</text>
+      <text class="color_666">查看全部收入</text>
+      <image src="/images/icon_more.png"></image>
+    </navigator>
+
+    <navigator class="sub_list" hover-class="none" url="../integral/integral">
+      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+        <button class="base_form" hover-class="none" formType="submit">
+        </button>
+      </form>
+      <image src="/images/icon_integral.png"></image>
+      <text>积分</text>
+      <text class="color_02cc7a">{{member.integral}}分</text>
+      <image src="/images/icon_more.png"></image>
+    </navigator>
+
+    <navigator class="sub_list" hover-class="none" url="../personal_info/personal_info">
+      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+        <button class="base_form" hover-class="none" formType="submit">
+        </button>
+      </form>
+      <image src="/images/icon_data.png"></image>
+      <text>个人资料</text>
+    </navigator>
+  </view>
+
+  <view class="submenu">
+    <button class="sub_list" hover-class="none" open-type="contact">
+      <image src="/images/icon_customer.png"></image>
+      <text>联系客服</text>
+    </button>
+  </view>
+</view>
+
+<view wx:else class="employee">
+  <view class="top">
+    <view class="top_left">
+      <image src="{{avatarurl}}" class="employee_img"></image>
+      <image wx:if="{{member_rule == 2}}" src="/images/icon_superreceiver.png"></image>
+      <button class="employee_name" hover-class="none" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">{{realname}}</button>
+    </view>
+    <view class="top_right">
+      <text>评分</text>
+      <text>{{member.point}}</text>
+    </view>
+  </view>
+
+  <!--  -->
+  <view class="state_box {{work_state == 1?'state_rest':''}} {{work_state == 2?'state_work':''}}" bindtap="workChange">
+    <view wx:if="{{work_state == 0}}" class="state">禁用中</view>
+    <view wx:if="{{work_state == 1}}" class="state">休息中</view>
+    <view wx:if="{{work_state == 2}}" class="state">上班中</view>
+    <view class="state_bg"></view>
+    <!-- formid -->
+    <form bindsubmit="formidSubmit" report-submit="{{true}}">
+      <button class="form_btn" hover-class="none" formType="submit">
+        <view>
+          <form bindsubmit="formidSubmit" report-submit="{{true}}">
+            <button class="form_btn" hover-class="none" formType="submit">
+              <view>
+                <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                  <button class="form_btn" hover-class="none" formType="submit">
+                    <view>
+                      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                        <button class="form_btn" hover-class="none" formType="submit">
+                          <view>
+                            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                              <button class="form_btn" hover-class="none" formType="submit">
+                                <view></view>
+                              </button>
+                            </form>
+                          </view>
+                        </button>
+                      </form>
+                    </view>
+                  </button>
+                </form>
+              </view>
+            </button>
+          </form>
+        </view>
+      </button>
+    </form>
+    <!-- formid -->
+  </view>
+
+  <!--  -->
+  <view class="submenu">
+    <navigator class="sub_list" url="../employee_order/employee_order?state=0">
+      <!-- formid -->
+      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+        <button class="form_btn" hover-class="none" formType="submit">
+          <view class='sub1'>
+            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+              <button class="form_btn" hover-class="none" formType="submit">
+                <view>
+                  <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                    <button class="form_btn" hover-class="none" formType="submit">
+                      <view>
+                        <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                          <button class="form_btn" hover-class="none" formType="submit">
+                            <view>
+                              <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                                <button class="form_btn" hover-class="none" formType="submit">
+                                  <view></view>
+                                </button>
+                              </form>
+                            </view>
+                          </button>
+                        </form>
+                      </view>
+                    </button>
+                  </form>
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+      <!-- formid -->
+      <image src="/images/icon_order.png"></image>
+      <text>订单</text>
+      <text class="color_666">查看全部订单</text>
+      <image src="/images/icon_more.png"></image>
+    </navigator>
+    <navigator class="sub_list" url="../personal_info/personal_info">
+      <!-- formid -->
+      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+        <button class="form_btn" hover-class="none" formType="submit">
+          <view class='sub2'>
+            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+              <button class="form_btn" hover-class="none" formType="submit">
+                <view>
+                  <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                    <button class="form_btn" hover-class="none" formType="submit">
+                      <view>
+                        <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                          <button class="form_btn" hover-class="none" formType="submit">
+                            <view>
+                              <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                                <button class="form_btn" hover-class="none" formType="submit">
+                                  <view></view>
+                                </button>
+                              </form>
+                            </view>
+                          </button>
+                        </form>
+                      </view>
+                    </button>
+                  </form>
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+      <!-- formid -->
+      <image src="/images/icon_data.png"></image>
+      <text>个人资料</text>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+
+<!-- 标题 -->
+<view class="news_title">这些高颜值甜品，让你爱到无法停止。这些高颜值甜品</view>
+<view class="news_box">
+  <text class="news_com fl">网易公司</text>
+  <text class="news_time fl">07-16</text>
+  <text class="clearfix"></text>
+</view>
+
+<!-- 图文 -->
+<image class="news_img" src="/images/1.jpg" mode="widthFix"></image>
+<text class="news_text">的点点滴滴sssssssssssssssssssssssssssssssssssssssssssss多大多军卡扩军大海凯文哈蒙德是你们就看到，的点点滴滴多多多多多多多多多的点点滴滴多多多多多多多</text>
+<image class="news_img" src="/images/1.jpg" mode="widthFix"></image>
+<text class="news_text">的点点滴滴sssssssssssssssssssssssssssssssssssssssssssss多大多军卡扩军大海凯文哈蒙德是你们就看到，的点点滴滴多多多多多多多多多的点点滴滴多多多多多多多</text>
+
+<!-- 底部 -->
+<view class="bottom"></view>

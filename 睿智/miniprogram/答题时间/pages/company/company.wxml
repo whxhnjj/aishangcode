@@ -1,0 +1,65 @@
+<!--pages/company/company.wxml-->
+<view class="com_header">
+  <view class="header_bg">
+    <image class="com_img" src="{{domain}}{{org.logo}}" background-size="cover" mode="widthFix" mode="widthFix"></image>
+  </view>
+  <text class="com_name">{{org.name}}</text>
+  <text class="com_detil">{{org.description}}</text>
+  <!-- <button class="com_join" hover-class="none">加入</button> -->
+</view>
+<!-- 分割线 -->
+<view class="com_line">
+  <!-- <text bindtap="examStateNow" class="{{com_exam_now ? 'com_line_selected' : ''}}">进行中</text>
+  <text bindtap="examStateEnd" class="{{com_exam_end ? 'com_line_selected' : ''}}">已结束</text> -->
+</view>
+<!-- 试卷列表 -->
+
+<block wx:for="{{exams}}" wx:key="key">
+    <view class="com_exam">
+      <navigator url="../exam/exam?exam_id={{item.id}}">
+        <block wx:if="{{item.photo == ''}}">
+          <view class="exam_notimg">
+            <text class="exam_title"><text wx:if="{{item.isvalid == 1}}" class="exam_state">(进行中)</text><text wx:if="{{item.isvalid == 0}}" class="exam_state exam_end">(已结束)</text>{{item.title}}</text>
+            <text class="exam_num">{{item.num}}人已答</text>
+          </view>
+          <text class='clear'></text>
+        </block>
+        <!--  -->
+        <block wx:else>
+          <view class="exam_main">
+            <text class="exam_title"><text wx:if="{{item.isvalid == 1}}" class="exam_state">(进行中)</text><text wx:if="{{item.isvalid == 0}}" class="exam_state exam_end">(已结束)</text>{{item.title}}</text>
+            <text class="exam_num">{{item.num}}人已答</text>
+          </view>
+          <image class="exam_img" src="{{domain}}{{item.photo}}" mode="aspectFill"></image>
+          <text class='clear'></text>
+        </block>
+      </navigator>
+    </view>
+</block>
+
+
+  <!-- <block wx:if="{{item.isvalid == 0 && com_exam_end}}">
+    <view class="com_exam">
+      <navigator url="../exam/exam?exam_id={{item.id}}">
+        <block wx:if="{{item.photo == ''}}">
+          <view class="exam_notimg">
+            <text class="exam_title">{{item.title}}</text>
+            <text class="exam_num">{{item.num}}人已答</text>
+          </view>
+          <text class='clear'></text>
+        </block>
+        <block wx:else>
+          <view class="exam_main">
+            <text class="exam_title">{{item.title}}</text>
+            <text class="exam_num">{{item.num}}人已答</text>
+          </view>
+          <image class="exam_img" src="{{domain}}{{item.photo}}" mode="aspectFill"></image>
+          <text class='clear'></text>
+        </block>
+      </navigator>
+    </view>
+  </block> -->
+
+
+<!--底部  -->
+<view class="bottom">{{footer}}</view>

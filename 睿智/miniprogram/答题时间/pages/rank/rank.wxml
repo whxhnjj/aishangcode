@@ -1,0 +1,36 @@
+<!-- user.wxml -->
+<view class="container">
+ <!--用户信息  -->
+ <view  class="user_msg" wx:if="{{records_own}}">
+  <view class="user_bg">                                                                                          
+     <image  class="user_img" src="{{records_own.avatarurl}}" ></image>
+  </view>
+  <text class="user_name">{{records_own.nickname}}</text>
+  <text class="user_rank">第{{records_own.rank+1}}名</text>
+  <text class="user_score">{{records_own.score}}<text>.{{records_own.small_score}}</text></text>
+   
+  <!-- <image class="user_icon"src="../images/icon_more.png"></image> -->
+ </view>
+ <!--排行榜  -->
+ <view class="rank">
+ <!--  -->
+  <view class="rank_list"  wx:for="{{records}}" wx:key="key" data-index="{{index}}">
+    <text class="rank_num">{{index+1}}</text> 
+    <view class="rank_user_photo">
+      <view class="rank_bg">
+      <image  class="user_img" src="{{item.avatarurl}}" background-size="cover"></image>
+      </view>
+    </view>
+    <text class="rank_name">{{item.nickname}}</text>
+    <text class="user_score rank_score ">{{item.score}}<text>.{{item.small_score}}</text></text>
+    
+    <!-- <image class="user_icon rank_icon" src="../images/icon_more.png"></image> -->
+  </view>
+
+ </view>
+ <view class="bottom">{{footer}}</view>
+ 
+
+</view>
+
+<navigator class="back" url="../exam/exam?exam_id={{exam_id}}">返回</navigator>

@@ -1,0 +1,6 @@
+<view class="wrap">
+    <icon class='icon' type="success" size="120"/>
+    <span class='tit'>提交成功</span>
+    <view class='tex'>感谢你的反馈，我们坚决反对色情、暴力、欺诈等违规信息，我们会认真处理你的举报，维护绿色、健康的网络环境。</view>
+    <button type='primary' bindtap='submit'>确定</button>
+</view>

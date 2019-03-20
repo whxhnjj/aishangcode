@@ -1,0 +1,9 @@
+<image class="logo" src="/pages/images/logo.png" mode="widthFix" ></image>
+<view class='wrap'>
+<p>花火盒，致力于打造一款简单易用的在线投票活动小程序。花火盒支持灵活的创建投票活动，投票规则等。支持对参与者进行初审、支持送礼物等互动玩法。可以接受网友报名，也可以用于内部投票评选。</p>
+<p>花火盒平台所展示的活动由企业发布者提供。内容的准确性同发布者全权负责，本平台对此不承担任何责任。</p>
+<p>如果您有需要举办各种各样的投票活动，欢迎与我们联系。可以通过接入花火盒来组织活动；也可以为您定制您的投票活动小程序。请点击下方“联系客服”留下您的联系方式。</p>
+</view>
+<button class="contact" type="primary" open-type="contact">联系客服</button>
+<navigator class="backhome" url="/pages/index/index">返回花火盒首页</navigator>
+<view class="mg"></view>

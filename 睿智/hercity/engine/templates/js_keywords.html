@@ -1,0 +1,5 @@
+{if $i==0}
+{foreach from=$list_keywords item=keyword}
+document.write('<a href="/tag/?q={$keyword.name}" target="_blank" >{$keyword.name}</a>&nbsp;');
+{/foreach}
+{/if}

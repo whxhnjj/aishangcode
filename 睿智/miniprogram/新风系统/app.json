@@ -1,0 +1,54 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/cart/cart",
+    "pages/user/user",
+    "pages/group/group",
+    "pages/pro/pro",
+    "pages/buy/buy",
+    "pages/buy_success/buy_success",
+    "pages/trade_detail/trade_detail",
+    "pages/trade_list/trade_list",
+    "pages/shop/shop",
+    "pages/feedback/feedback",
+    "pages/include/include",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "新风系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#e4393c",
+    "borderStyle": "#dadada",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "pages/images/navbar/shop2.png",
+        "iconPath": "pages/images/navbar/shop.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/images/navbar/car2.png",
+        "iconPath": "pages/images/navbar/car.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "pages/images/navbar/user2.png",
+        "iconPath": "pages/images/navbar/user.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "uploadFile": 10000
+  },
+  "debug": false
+}

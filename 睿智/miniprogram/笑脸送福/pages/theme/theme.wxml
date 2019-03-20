@@ -1,0 +1,58 @@
+<view class='head_bg'>
+  <view class='head'>
+      <view class="userinfo">
+        <image class="userinfo_avatar" src="{{theme.theme.headimgurl}}" background-size="cover"></image>
+          <span class="userinfo_nickname">{{theme.theme.nickname}}悬赏：</span>
+          <navigator class="howtoplay" url='../../pages/help/help'>怎么玩？</navigator>
+          <span class="password">{{theme.theme.title}}</span>   
+      </view>
+    <view wx:if="{{theme.actor == null && theme.theme.rest > 0 }}" class="photo1" bindtap="chooseImage">选择照片</view>
+    <view wx:if="{{theme.actor == null && theme.theme.rest == 0 }}"class="photo2" >不好意思，红包被抢完了！</view>
+    <view wx:if="{{theme.actor != null }}" class="photo3"> 已领到{{theme.actor.reward}}元 </view>
+
+      <view class="category">
+          <navigator class="tixian" url='../../pages/withdraw/withdraw'>去提现</navigator>
+          <navigator class="fa" url='../../pages/index/index'>我也发一个</navigator>
+          <navigator class="zhuanfa" url='../../pages/share/share'>去转发</navigator>  
+      </view>
+  </view>
+</view>
+  <!--领取-->
+  <view class="wrap amount">
+      <span class="money">共{{theme.theme.reward}}元，领取{{theme.theme.divisor-theme.theme.rest}}/{{theme.theme.divisor}}个</span>
+      <navigator class="peport" url='../../pages/feedback/feedback'>举报</navigator>
+  </view>
+
+<!--领取人信息-->
+<block wx:for="{{theme.actors}}" >
+<view class='claim'>
+  <!--领取人头像-->
+  <view class='img'>
+    <block wx:for="{{imgalist}}">  
+      <image class="erweima" src="{{item.content}}" bindtap="previewImage" mode="aspectFill">
+      </image>  
+    </block> 
+  </view>
+  <view class='center'>
+    <view class="zf_most">
+      <view class='zf_most_left'>
+      <span class="name_left">欢喜值</span>
+      <span class="num_left">{{item.point}}<em>分</em></span>
+      </view>
+      <view class='zf_most_left'>
+      <span class="name_left">奖励</span>
+      <span class="num_left">{{item.reward}}<em>元</em></span>
+      </view>
+      <span class="setup" bindtap="actionSheetTap"></span>
+    </view> 
+    <text class='age'>照片年龄：{{item.remark}}</text>
+    <view class='user_info'>
+      <image class="user_info_img" src="{{item.headimgurl}}" background-size="cover"></image>
+      <text class='user_info_name'>{{item.nickname}}</text>
+      <text class="date">{{item.dateline}}</text>
+    </view>
+  </view>
+</view>
+</block>
+<navigator class='feedback' hover-class="none"  url='../../pages/feedback/feedback'>举报</navigator>
+

@@ -1,0 +1,59 @@
+/* banner */
+.pro_banner{
+  width: 750rpx;
+  height: 750rpx;
+}
+.pro_list image{
+  width: 750rpx;
+  height: 750rpx;
+}
+
+/* 产品名称 */
+.pro_header{
+  padding: 40rpx 0 80rpx;
+  text-align: center;
+}
+.pro_header text{
+  display: block;
+}
+.pro_header .pro_name{
+  font-size: 34rpx;
+  margin-bottom: 30rpx;
+}
+.pro_header .pro_name_des{
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+  color: rgb(102.,102,102);
+}
+.pro_header .pro_price{
+  font-size: 34rpx;
+  color: #e4393c;
+}
+
+/* 详情 */
+.pro_detail{
+  margin-bottom: 108rpx;
+}
+.pro_detail image{
+  display: block;
+  width: 750rpx;
+  margin-bottom: 10rpx;
+}
+.pro_detail image:last-child{
+  margin-bottom: 0;
+}
+
+/* 底部按钮 */
+.buy{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  width: 750rpx;
+  height: 108rpx;
+  line-height: 108rpx;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  background: #24c1a9;
+}

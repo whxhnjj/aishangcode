@@ -1,0 +1,222 @@
+/* pages/make/make.wxss */
+.font{
+  font-size: 32rpx;
+  color: #333;
+}
+.gray{
+  height:30rpx!important;
+}
+.blak{
+  width: 700rpx;
+  margin:0 25rpx;
+  padding: 25rpx 0;
+  height: 100%;
+  overflow: hidden;
+}
+.blak .sp1{
+  width: 550rpx;
+  font-size: 40rpx;
+  display: block;
+  line-height:50rpx;
+  height: 100%;
+  float: left;
+}
+.blak .sp2{
+  width: 550rpx;
+    font-size: 32rpx;
+  display: block;
+  line-height: 50rpx;
+  padding-top: 10rpx;
+  height: 100%;
+  color: #F00;
+  float: left;
+}
+.blak .img{
+  width: 130rpx;
+  height: 130rpx;
+  float: right;
+}
+.blak image{
+  width: 130rpx;
+  height: 130rpx;
+}
+
+.blak2{
+  width: 700rpx;
+  margin: 25rpx 25rpx 0 25rpx;
+  padding: 10rpx 0;
+}
+.blak2 span{
+  width: 200rpx;
+  display: block;
+  float: left;
+}
+.blak2 .row{
+    width: 500rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+       font-size: 32rpx;
+    justify-content:flex-start;
+}
+.blak2 .row .row-wrap{
+    text-align: center;
+    margin:0 20rpx 20rpx 0;
+    border: 3rpx solid #AAA;
+    font-size: 28rpx;
+    padding: 10rpx;
+}
+.blak2 .row .row-wrap.active{
+  background:#13D4C8;
+  color: #FFF;
+  border:2rpx solid #01847C;
+}
+.blak3{
+   width: 700rpx;
+  margin: 25rpx  25rpx 150rpx  25rpx;
+  padding: 25rpx 0;
+  position: relative;
+}
+.blak3 .contact{
+  width: 700rpx;
+  float: left;
+}
+.blak3 .contact span{
+  width:200rpx;
+  line-height: 50rpx;
+  display: block;
+  float: left;
+}
+.blak3 .contact input{
+  width:420rpx;
+  display: block;
+  float:left;
+  line-height: 50rpx;
+
+}
+.blak3 .clea{
+  width: 64rpx;
+  height: 64rpx;
+  float: right;
+  background:url('http://t.nongjia365.com.cn/guanli/assets/image/img/qingchu.png') no-repeat center center;
+  background-size:42rpx;
+}
+
+
+.detail-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: left;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100rpx;
+}
+.submit {
+  background-color: #13D4C8; 
+}
+.image_detail {
+  width: 100%;
+}
+button {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size:40rpx;
+  border-radius: 0rpx;
+  width:100%;
+  height: 100%;
+  line-height: 100rpx;
+}
+
+/*商品数量加减*/
+.blak4{
+   width: 700rpx;
+  margin: 25rpx;
+  padding:15rpx 0;
+  height:80rpx;
+}
+.blak4 span{
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+}
+.blak4 .jia,.jian{
+  width: 80rpx;
+  height:80rpx;
+  border: 1rpx solid #AAA;
+  float: left;
+  font-size:18px;
+  text-align: center;
+  line-height: 80rpx;
+  color: #444;
+}
+.blak4 .value{
+  width: 100rpx;
+  height:80rpx;
+  border-top:1rpx solid #AAA; 
+  border-bottom:1rpx solid #AAA; 
+  float: left;
+  font-size:18px;
+  text-align: center;
+   line-height: 80rpx;
+}
+/*支付方式*/
+.blak5{
+  width: 700rpx;
+ margin: 25rpx 25rpx 0 25rpx;
+  padding: 10rpx 0;
+}
+.blak5 span{
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+}
+.blak5 .row{
+    width: 500rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+}
+.blak5 .row .row-wrap{
+    text-align: center;
+    margin:0 20rpx 20rpx 0;
+    border:3rpx solid #AAA;
+    font-size: 32rpx;
+    padding: 10rpx;
+}
+.blak5 .row .row-wrap.active{
+  background:#13D4C8;
+  color: #FFF;
+  border:3rpx solid #01847C;
+}
+.blak5 .row .row-wrap view{
+  display: inline-block;
+  padding: 0 5rpx;
+}
+.blak5 .row .row-wrap .point{
+  padding-left:40rpx;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/image/img/point2.png') no-repeat left center;
+  background-size: 32rpx;
+}
+.blak5 .row .row-wrap.active .point{
+  background: url('http://t.nongjia365.com.cn/guanli/assets/image/img/point1.png') no-repeat left center;
+  background-size: 32rpx;
+}
+.blak5 .row .row-wrap .cash{
+   padding-left:35rpx;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/image/img/cash2.png') no-repeat left center;
+  background-size: 32rpx;
+}
+.blak5 .row .row-wrap.active .cash{
+  background: url('http://t.nongjia365.com.cn/guanli/assets/image/img/cash1.png') no-repeat left center;
+  background-size: 32rpx;
+}

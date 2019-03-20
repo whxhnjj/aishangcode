@@ -1,0 +1,35 @@
+<!--pages/list/list.wxml-->
+<view class="banner" wx:if="{{actors[0].thumb}}">
+    <image class="image" src="{{domain}}/{{actors[0].thumb}}" mode="aspectFill"></image>
+    <image class="tit_img" src="{{actors[0].avatarurl}}" mode="scaleToFill"></image>
+    <span class="title">{{actors[0].name}}占领了封面</span>
+    <span class="wenhao" bindtap="shomode"></span>
+</view>
+<view class="wrap">
+    <navigator class="own" url="/pages/detail/detail?actor_id={{actor.id}}" wx:if = "{{actor}}">
+    <view class="number">{{actor.rank}}</view>
+      <image mode="aspectFill" class="userinfo_avatar" src="{{domain}}/{{actor.thumb}}"></image>
+         <view class="list_nul">
+           <span class="serial">NO.{{actor.order_number}}</span>
+           <span class="own_name">{{actor.name}}</span>
+        </view>
+       <span class="own_number">{{actor.votes}}<i>票</i></span>
+         <view class="giving"></view>
+    </navigator>
+    <view class="ebebeb"></view>
+
+  <navigator class="list" url="/pages/detail/detail?actor_id={{item.id}}" wx:for="{{actors}}" wx:key="id" >
+    <view class="number">{{index+1}}</view>
+    <image class="userinfo_avatar" src="{{domain}}/{{item.thumb}}" mode="aspectFill"></image>
+    <view class="list_nul">
+      <span class="serial">NO.{{item.order_number}}</span>
+      <span class="own_name">{{item.name}}</span>
+    </view>
+    <span class="own_number">{{item.votes}}<i>票</i></span>
+     <view class="giving"></view>
+  </navigator>
+</view>
+
+<view class="footer">
+{{footer}}
+</view>

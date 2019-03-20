@@ -1,0 +1,97 @@
+if ($http_host ~* "^hercity.com"){
+	set $rule_0 1$rule_0;
+}
+if ($rule_0 = "1"){
+	rewrite ^/(.*)$ http://www.hercity.com/$1 permanent;
+}
+	rewrite ^/(index.html)?$ /s/index.html;
+	rewrite ^/engine/show.php$ /engine/detail.php;
+	rewrite ^/([a-z]+)_([0-9]+).html$ /engine/mini/$1.php?id=$2;
+	rewrite ^/tag/(.*)$ /engine/search.php$1;
+	rewrite ^/tags(/?)$ /engine/tags.php;
+	rewrite ^/tags/([0-9]+).html$ /engine/tags.php?page=$1;
+	rewrite ^/comments/([0-9]+)-([0-9]+).html$ /engine/comments.php?post_id=$1&page=$2;
+if ($http_referer !~* "^$"){
+	set $rule_8 1$rule_8;
+}
+if ($http_referer !~* "hercity.com"){
+	set $rule_8 2$rule_8;
+}
+if ($http_referer !~* "m.hercity.com"){
+	set $rule_8 3$rule_8;
+}
+if ($http_referer !~* "hercity.a-ze.com"){
+	set $rule_8 4$rule_8;
+}
+if ($http_referer !~* "goujiemei.com"){
+	set $rule_8 5$rule_8;
+}
+if ($http_referer !~* "myqipao.com"){
+	set $rule_8 6$rule_8;
+}
+if ($http_referer !~* "baidu.com"){
+	set $rule_8 7$rule_8;
+}
+if ($http_referer !~* "google.com"){
+	set $rule_8 8$rule_8;
+}
+if ($http_referer !~* "so.com"){
+	set $rule_8 9$rule_8;
+}
+if ($http_referer !~* "sou.com"){
+	set $rule_8 10$rule_8;
+}
+if ($http_referer !~* "360.cn"){
+	set $rule_8 11$rule_8;
+}
+if ($http_referer !~* "qq.com"){
+	set $rule_8 12$rule_8;
+}
+if ($http_referer !~* "pengyou.com"){
+	set $rule_8 13$rule_8;
+}
+if ($http_referer !~* "sina.com.cn"){
+	set $rule_8 14$rule_8;
+}
+if ($http_referer !~* "sina.com"){
+	set $rule_8 15$rule_8;
+}
+if ($http_referer !~* "weibo.com"){
+	set $rule_8 16$rule_8;
+}
+if ($http_referer !~* "renren.com"){
+	set $rule_8 17$rule_8;
+}
+if ($http_referer !~* "bing.com"){
+	set $rule_8 18$rule_8;
+}
+if ($http_referer !~* "yahoo.com"){
+	set $rule_8 19$rule_8;
+}
+if ($http_referer !~* "admin5.com"){
+	set $rule_8 20$rule_8;
+}
+if ($http_referer !~* "chinaz.com"){
+	set $rule_8 21$rule_8;
+}
+if ($http_referer !~* "infor100.com"){
+	set $rule_8 22$rule_8;
+}
+if ($http_referer !~* "comsenz.com"){
+	set $rule_8 23$rule_8;
+}
+if ($http_referer !~* "muzili.cn"){
+	set $rule_8 24$rule_8;
+}
+if ($http_referer !~* "xdnice.com"){
+	set $rule_8 25$rule_8;
+}
+if ($http_referer !~* "weste.net"){
+	set $rule_8 26$rule_8;
+}
+if ($http_referer !~* "ceeh.com.cn"){
+	set $rule_8 27$rule_8;
+}
+if ($rule_8 = "272625242322212019181716151413121110987654321"){
+	rewrite /.*.(swf|rar|zip|flv|wmv|mp3|mpg)$ http://www.hercity.com/assets/images/block.gif;
+}

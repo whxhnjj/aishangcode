@@ -1,0 +1,223 @@
+/*************用户页面****************/
+.user{
+  padding-bottom: 50rpx;
+}
+/* 头部 */
+.header{
+  width: 100%;
+  height: 400rpx;
+  padding-top: 55rpx;
+  background: #00b453 url(https://paihuishou.site.webimage.cn/static/xcx/user_bg.png) no-repeat center 225rpx;
+  background-size: 750rpx 132rpx;
+  text-align: center;
+}
+.header .user_photo{
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto 15rpx;
+  border: 5rpx solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.header .user_name{
+  width: 300rpx;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  background: #00b453;
+  font-size: 32rpx;
+  font-weight:600;
+}
+
+
+/* 列表 */
+.submenu{
+  margin-top: 40rpx;
+  background: #fff;
+}
+.submenu .sub_list{
+  position: relative;
+  height: 130rpx;
+  margin: 0 30rpx;
+  line-height: 130rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid rgb(230,230,230);
+}
+.submenu .sub_list:last-child{
+  border-bottom: none;
+}
+.sub_list image{
+  display: inline-block;
+  vertical-align: -5%;
+}
+.sub_list image:nth-of-type(1){
+  margin-right: 20rpx;
+  width: 35rpx;
+  height: 35rpx;
+}
+.sub_list image:last-child{
+  width: 19rpx;
+  height: 35rpx;
+}
+
+.sub_list text{
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.sub_list text:nth-of-type(1){
+  color: #333;
+  width: 395rpx;
+}
+.sub_list text:nth-of-type(2){
+  width: 180rpx;
+  text-align: right;
+}
+
+.color_666{
+  color:#666;
+}
+
+button{
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/**********收纸员页面***********/
+/* 头部 */
+.top{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 290rpx;
+  padding: 50rpx 30rpx 130rpx;
+  margin-bottom: 190rpx;
+  background: #00b453;
+  color: #fff;
+}
+.top_left,.top_right{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.top_left .employee_img{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+  border: 5rpx solid #fff;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.top_left image{
+  width: 38rpx;
+  height: 28rpx;
+  margin-top: 8rpx;
+  margin-right: 10rpx;
+}
+.top_left .employee_name{
+  background: #00b453;
+  color: #fff;
+  font-size: 32rpx;
+}
+.top_right text:nth-of-type(1){
+  margin: 5rpx 10rpx 0 0;
+  padding: 0 15rpx;
+  border: 2rpx solid #fff;
+  border-radius: 35rpx;
+}
+.top_right text:nth-of-type(2){
+  font-weight: 600;
+  font-size: 54rpx;
+}
+/* 状态 */
+.state_box{
+  position: fixed;
+  top: 170rpx;
+  left: 50%;
+  z-index: 100;
+  margin-left: -135rpx;
+  width: 270rpx;
+  height: 270rpx;
+  border-radius: 50%;
+  background: #f0f0f0;
+  /* background: red; */
+}
+.state_bg{
+  position: absolute;
+  top:15rpx;
+  left: 50%;
+  margin-left: -125rpx;
+  width: 250rpx;
+  height: 250rpx;
+  border-radius: 50%;
+  border: 1rpx dashed #cccccc;
+}
+.state{
+  position: absolute;
+  top:40rpx;
+  left: 50%;
+  margin-left: -100rpx;
+  width: 200rpx;
+  height: 200rpx;
+  background: #cccccc;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow:0 0 0 15rpx rgba(204,204,204,0.5);
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+.state_work .state_bg{
+  border: 1rpx dashed #02cc7a;
+}
+.state_work .state{
+  background: #02cc7a;
+  box-shadow:0 0 0 15rpx rgba(2,204,122,0.5);
+}
+.state_rest .state_bg{
+  border: 1rpx dashed #33a7ff;
+}
+.state_rest .state{
+  background: #33a7ff;
+  box-shadow:0 0 0 15rpx rgba(51,167,255,0.5);
+}
+
+/* formid */
+/* .form_btn .list,.form_btn .list view{
+  top:440rpx;
+  left: 0;
+  width: 750rpx;
+  height: 130rpx;
+  border-radius: 0;
+}
+.form_btn .list2,.form_btn .list2 view{
+  top:570rpx;
+}
+.form_btn .list3,.form_btn .list3 view{
+  top:700rpx;
+} */
+
+
+
+.form_btn .sub1,.form_btn .sub1 view{
+  top:480rpx;
+  left: 0;
+  width: 750rpx;
+  height: 130rpx;
+  border-radius: 0;
+}
+
+.form_btn .sub2,.form_btn .sub2 view{
+  top:610rpx;
+  left: 0;
+  width: 750rpx;
+  height: 130rpx;
+  border-radius: 0;
+}

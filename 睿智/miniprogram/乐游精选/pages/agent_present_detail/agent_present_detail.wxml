@@ -1,0 +1,46 @@
+<view class="detail_box">
+  <image src="/images/present_icon.png"></image>
+  <text class="detail_title">收益提现到账-{{details.bank_info.bank_name}}（{{details.bank_info.bank_four}}）</text>
+
+  <view class="detail_list">
+    <text>提现单号</text>
+    <text>{{details.withdraw_sn}}</text>
+  </view>
+  <view class="detail_list">
+    <text>当前状态</text>
+    <text wx:if="{{details.status == 0}}">提现处理中</text>
+    <text wx:if="{{details.status == 1}}">提现已到账</text>
+  </view>
+  <view class="detail_list">
+    <text>提现金额</text>
+    <text>¥ {{details.apply_amount}}</text>
+  </view>
+  <view class="detail_list">
+    <text>手 续 费</text>
+    <text>¥ {{details.procedures}}</text>
+  </view>
+  <view class="detail_list">
+    <text>实际到账</text>
+    <text>¥ {{details.amount}}</text>
+  </view>
+  <view class="detail_list">
+    <text>申请时间</text>
+    <text>{{details.apply_time}}</text>
+  </view>
+  <view wx:if="{{details.status == 1}}" class="detail_list">
+    <text>到账时间</text>
+    <text>{{details.handle_time}}</text>
+  </view>
+  <view class="detail_list">
+    <text>提现账户</text>
+    <text>{{details.bank_info.true_name}}</text>
+  </view>
+  <view class="detail_list">
+    <text>提现银行</text>
+    <text>{{details.bank_info.bank_name}}</text>
+  </view>
+  <view class="detail_list">
+    <text>提现卡号</text>
+    <text>{{details.bank_info.bank_no}}</text>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+<!--头部  -->
+  <view class="exam_header">
+    <text class="exam_title">{{exam.title}}</text>
+    <view class="exam_msg">
+      <navigator class="exam_source" url="../company/company?user_id={{exam.user_id}}">{{exam.user.name}}</navigator>
+      <block wx:if="{{exam.times>0}}">
+        <text>总共还剩{{remain_times}}次答题机会</text>
+      </block>
+      <block wx:if="{{exam.times<0}}">
+        <text>今日还剩{{remain_times}}次答题机会</text>
+      </block>
+    </view>
+  </view>
+
+<view class="container">
+<!--  题目内容-->
+  <view class="exam_detil">
+    <text>{{exam.content}}</text>
+    <image wx:if="{{exam.photo!=''}}" src="{{domain}}{{exam.photo}}" background-size="cover" mode="widthFix"></image>   
+  </view>
+
+<!--答题  -->
+  <button id="answer_sub"  open-type="getUserInfo" bindgetuserinfo="getUserInfo" hover-class="none"  disabled="{{disabled}}">开始答题</button>
+  <navigator class="answer_sub" wx:if="{{own.times}}" url="{{exam.is_total_rank?'../totalrank/totalrank':'../rank/rank'}}?exam_id={{exam_id}}">查看排行榜</navigator>
+<!--题型描述  -->
+  <text class="exam_type" wx:if="{{exam.timer == 0}}">注意：本试卷为不计时模式。答对得分，答错不得分。</text>
+  <text class="exam_type" wx:if="{{exam.timer == 1}}">注意：本试卷为超时判错模式。超过限时自动判错，不得分。在限时内答对得分，且用时越短得分越高。</text>
+  <text class="exam_type" wx:if="{{exam.timer == 2}}">注意：本试卷为超时减分模式。超过限时得分会减少，超时越多分数越低。在限时内答对得分，且用时越短得分越高。</text>
+</view>
+
+
+
+

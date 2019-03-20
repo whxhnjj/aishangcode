@@ -1,0 +1,103 @@
+<import src='../../components/star/star.wxml' />
+<import src='../../components/comment/comment.wxml'/>
+
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" circular="true" duration="300" indicator-active-color="#13D4C8" >
+  <block wx:for="{{movies}}" wx:for-index="index">    
+    <swiper-item>    
+      <image src="{{item.url}}" class="slide-image"    mode="aspectFill"></image>
+    </swiper-item>    
+  </block>    
+</swiper>
+  <view class="detail">
+    <text class="title">倾约茶会：一盏清茗待知己！</text>
+    <text class="price">￥500</text>
+  </view>
+  <!--地址-->
+  <view class='location' bindtap="chooseLocation">
+    <image src="../../pages/images/position.png" mode="aspectFill" class='icon'></image>
+    <view class='info' type="primary" formType="submit">西安市雁塔区南三环I都会2号楼2单元</view>
+    <image src="../../pages/images/arrow_left.png" class='arrow_left'></image>
+  </view>
+
+
+   <text class='text' bindtap="toggleDialog">推荐套餐</text>
+   
+<view class='goods'>
+    <block wx:for="{{store.goods}}" wx:for-item="good" wx:key="good.id">
+      <view class="good {{index>0? 'border' : ''}}" wx:if="{{seeAllGoods || index < 2}}" bindtap='goodDtail'>
+        <image src="{{good.photo}}" mode="aspectFill" class='photo'></image>
+        <view class='info'>
+          <view class='goodsname'>{{good.name}}</view>
+          <view class='price'>￥{{good.price}}
+            <text>￥{{good.oldprice}}</text>
+          </view>
+        </view>
+        <view class='arrow'>已售{{good.selled}}
+          <image src="../../pages/images/arrow_left.png"></image>
+        </view>
+      </view>
+    </block>
+    <view class='laa' bindtap='goodsmore'>
+      {{btnMsg}}
+      <image src="{{seeAllGoods ? '../../pages/images/arrow_up.png' : '../../pages/images/arrow_down.png'}}" mode="aspectFill"></image>
+    </view>
+  </view>
+  <scroll-view scroll-y="true">
+      <!--购买人数-->
+      <view class='purchase'>
+        <view class='conuts'>已报名(56)</view>
+          <block wx:for-items="{{purchaseImg}}" wx:key="name">
+            <image class="purchase_detail" mode="aspectFit" src="{{item}}" bindtap="image_detail" />
+          </block>
+        </view>
+<!--评论-->
+<template is='comment' data='{{comments:store.comments,count:store.comments.length}}'/>
+
+  <view class="separate"></view>
+  <view  class='xiangqing'>
+    商品详情
+  </view>
+  <video src='http://47.95.208.179:3000/void/qianxun/video2.mp4' ></video>
+
+  <block wx:for-items="{{detailImg}}" wx:key="name">
+    <image class="image_detail" mode="aspectFit" src="{{item}}" bindtap="image_detail" />
+  </block>
+
+      <text class='text_most'>倾约茶会：一盏清茗待知己！
+
+香叶，嫩芽
+碾雕白玉，罗织红纱
+洗尽古今，人不倦，伴清茶
+
+绣娘，锦缎
+围炉漫坐，笑语盈盈
+俗事稍歇，爱旗袍，名士自风流
+
+活动地点：宽肚茶肴
+“宽肚”能容，半室明月，半室茶香，一室佳人，尽览风雅。
+
+茶会内容：化妆造型，茶艺师邓晓绒女士讲解茶文化，品鉴“玲珑茶”，倾友谈茶，摄影拍照，倾友晚宴，现场抽奖及有奖问答（有精致小礼品哦~）；
+化妆师、茶艺师、摄影师齐聚，旗袍遇上香茶佳肴；
+参与即有宽肚茶肴提供的价值168元品茗代金券；
+亲爱的你，赶紧来吧
+
+茶人或茶痴，可带上您的私藏香茶，一起分享交流。穿上旗袍，或者带上穿旗袍的心境——现场也准备了旗袍给你，带上朋友一起来约吧~
+
+也欢迎有兴致的男士，穿着得体就好。
+
+活动规则
+招募人数：20人
+活动地点：西安市高新区科创路与融鑫路十字向北100米路西宽肚茶肴
+活动时间：2016年1月16日 下午2:00
+
+莫辜负了好时光。
+倾约茶会，只为你！
+</text>
+    <view class="temp"></view>
+</scroll-view>
+
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <view class="phone" bindtap="calling"></view>
+   <button class="submit"  bindtap='fucClick' formType="submit">立即报名</button>
+</view>

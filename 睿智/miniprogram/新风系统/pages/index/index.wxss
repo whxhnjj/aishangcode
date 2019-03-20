@@ -1,0 +1,139 @@
+
+page{
+  padding-top: 230rpx;
+}  
+.shop_header{
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 1rpx solid #dadada;
+  background: #fff;
+}
+.shop_logo{
+  height: 70rpx;
+  width: 70rpx;
+  margin:0 auto;
+}
+.shop_logo image{
+  height: 70rpx;
+  width: 70rpx; 
+}
+/*导航*/
+
+.header_nav{
+  position: fixed;
+  top:90rpx;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  border-bottom: 1rpx solid #dadada;
+  background: #fff;
+}
+.header_nav>view{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+.header_nav_kuang{
+  display: block;
+  width: 130rpx;
+  margin: 0 auto;
+}
+.header_nav_img{
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  margin: 15rpx auto 8rpx;
+}
+.header_nav_text{
+  display: block;
+  margin: 10rpx auto 5rpx;
+  line-height: 50rpx;
+  font-weight: 600;
+  font-size: 32rpx;
+}
+.header_nav_title{
+  display: block;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+}
+.nav_line{
+  display: block;
+  width: 60rpx;
+  height: 4rpx;
+  margin: 0 auto;
+  background: #fff;
+}
+.selected .header_nav_title{
+  color: #e4393c;
+}
+.selected .header_nav_text{
+  color: #e4393c;
+}
+.selected .nav_line{
+  background: #e4393c;
+}
+
+/*banner*/
+.shop_banner{
+  width: 100%;
+  height: 400rpx;
+  margin: 0 0 20rpx;
+  padding: 25rpx 0;
+  background: #fff;
+}
+.shop_banner .container{
+  overflow: hidden;
+  height: 350rpx; 
+}
+.shop_banner image{
+  width: 100%;
+  min-height: 350rpx; 
+}
+
+/*列表商品  */
+.shop_pro{
+  width: 100%;
+  margin: 0 0 25rpx;
+  padding: 25rpx 0;
+  background: #fff;
+}
+.shop_height{
+  min-height: 850rpx;
+}
+.shop_pro_title{
+  display: block;
+}
+
+
+/*图片商品*/
+.shop_image{
+  width: 100%;
+  height: auto;
+  margin: 20rpx 0;
+  padding: 25rpx 0;
+  background: #fff;
+}
+.shop_image image{
+  width: 100%;
+}
+.shop_image_tap{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 110rpx solid #ef6c02;
+  border-right: 110rpx solid transparent;
+}
+.shop_image_tap_text{
+  position: absolute;
+  top:27rpx;
+  left:0rpx;
+  font-size: 20rpx;
+  color: #fff; 
+  transform:rotate(-45deg); 
+}

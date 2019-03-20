@@ -1,0 +1,15 @@
+
+<view class="container">
+<!--  -->
+<form class="sub" bindsubmit="formSubmit">
+  <text class="user_title">请如实填写您的个人信息，确保活动顺利进行。</text>
+  <view class="kuang">
+    <span class="num_name">姓　名：</span><input name="real_name" class="ber" type="text" placeholder="此处填写姓名" maxlength='12' placeholder-style="color:#97bbf9;"></input>
+  </view>
+  <view class="kuang">
+    <span class="num_name">手机号：</span><input name="mobile" class="ber" type="number" placeholder="此处填写手机号" maxlength='11' placeholder-style="color:#97bbf9;"></input>
+  </view>
+  
+  <button class="button" form-type="submit" >提交</button>
+</form>
+</view>

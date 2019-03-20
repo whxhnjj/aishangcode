@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteBase /
+
+
+#品牌
+RewriteRule ^list.html$ list.php?tag=&auth=0&allow=0&page=1
+RewriteRule ^list-([^/]+)-([0-9]+)-([0-9]+)-([0-9]+).html$ list.php?tag=$1&auth=$2&allow=$3&page=$4
+RewriteRule ^([0-9a-zA-z]+)/$ detail.php?domain=$1
+RewriteRule ^m/([0-9a-zA-z]+)/$ m/detail.php?domain=$1

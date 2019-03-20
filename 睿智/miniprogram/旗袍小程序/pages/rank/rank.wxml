@@ -1,0 +1,30 @@
+<view class='rank_header' wx:if="{{records_own}}">
+  <image src="/images/rank_headerbg.png" class="rank_bg"></image>
+  <view class="rank_header_box">
+
+      <view class="rank_header_avatar">
+        <image src="{{records_own.avatarurl}}"></image>
+      </view>
+
+      <view class="rank_header_name">
+        <view>{{records_own.nickname}}</view>
+        <text>第{{records_own.rank+1}}名</text>
+      </view>
+
+      <text class="rank_header_score">{{records_own.score}}<text>.{{records_own.small_score}}</text></text>
+  </view>
+</view>
+
+<view class="rank_lists">
+
+  <view class="rank_list"  wx:for="{{records}}" wx:key="key" data-index="{{index}}">
+    <text class="rank_num">{{index+1}}</text>
+    <view  class="rank_header_avatar">
+      <image src="{{item.avatarurl}}"></image>
+    </view>
+    <text class="rank_name">{{item.nickname}}</text>
+    <text class="rank_score">{{item.score}}<text>.{{item.small_score}}</text></text>
+    <image src="/images/rank_icon.png" class="rank_icon"></image>
+  </view>
+
+</view>

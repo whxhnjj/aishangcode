@@ -1,0 +1,30 @@
+<image class="share_img" src="/images/1.jpg"></image>
+
+<!-- 名片 -->
+<view class="share_card">
+
+  <image src="/images/businesscardsharing_bg.png" class="share_card_bg"></image>
+
+  <view class="share_card_box">
+    <text class="card_name">赵丽颖</text>
+    <text class="card_job">CEO</text>
+    <view class="card_tel">
+      <image src="/images/hime_icon_phone.png"></image>
+      13548756875
+    </view>
+    <view class="card_address">
+      <image src="/images/hime_icon_address.png"></image>
+      少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所
+    </view>
+  </view>
+
+  <view class="card_log_box">
+    <image class="card_logo" src="/images/1.jpg"></image>
+    <text class="card_logo_name">网易公司</text>
+  </view>
+
+</view>
+
+<!-- 二维吗 -->
+<image class="erweima" src="/images/1.jpg"></image>
+<text class="share_firend">分享给你的朋友吧</text>

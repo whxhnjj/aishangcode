@@ -1,0 +1,156 @@
+<!-- 店铺头部 -->
+<view class="shop_header">
+  <view class="container">
+    <view class="shop_logo">
+      <image src="{{hostName}}{{shop_logo}}"></image>
+    </view>
+    <view class="clearfix"></view>
+  </view>
+</view>
+<!-- 店铺导航 -->
+<view class="header_nav">
+  <view class="header_nav_jx">
+    <view id='tableft' class='header_nav_kuang {{currentTab == 0 ? "selected" : ""}}' data-current="0" bindtap="switchTab">
+      <image src='{{currentTab == 0 ? "../images/shop2.png" : "../images/shop.png"}}' class="header_nav_img"></image>
+      <text class="header_nav_title">店铺精选</text>
+      <text class="nav_line"></text>
+    </view>
+  </view>
+  <view class="header_nav_pro">
+    <view id='tabright' class='header_nav_kuang {{currentTab == 1 ? "selected" : ""}}' data-current="0" bindtap="switchTab">
+      <text class="header_nav_text">{{good_counts}}</text>
+      <text class="header_nav_title">全部商品</text>
+      <text class="nav_line"></text>
+    </view>
+  </view>
+</view>
+
+<!--  -->
+<block wx:if='{{currentTab == 0}}'>
+  <!--轮播图  -->
+  <block wx:if="{{swiper[0].pic_url}}">
+  <swiper class="shop_banner" indicator-dots="true" autoplay="true" interval="5000" duration="300">
+    <block wx:for="{{swiper}}" wx:for-index="index" wx:key="key">
+      <swiper-item class="container">
+         <navigator wx:if="{{item.type ==2}}" url="../group/group?group_id={{item.group_id}}">
+          <image src="{{hostName}}{{item.pic_url}}" mode="widthFix" data-id="{{item.goods_id}}"></image>
+        </navigator>
+
+        <navigator wx:else url="../pro/pro?goods_id={{item.goods_id}}">
+          <image src="{{hostName}}{{item.pic_url}}" mode="widthFix" data-id="{{item.goods_id}}"></image>
+        </navigator>
+        
+      </swiper-item>
+    </block>
+  </swiper>
+  </block>
+
+  <!--推荐商品-->
+  <view class="shop_pro" wx:if="{{recommend.length>0}}">
+    <text class="shop_pro_title container">掌柜推荐</text>
+    <!--  -->
+    <view class="pro_list_kuang" >
+      <!--  -->
+      <block wx:for="{{recommend}}" wx:item="item" wx:key="id">
+      <navigator class="public_pro_list" url="../pro/pro?goods_id={{item.id}}">
+        <image src="{{hostName}}{{item.goods_pic}}" lazy-load></image>
+        <text class="pro_list_price"><text>¥</text>{{item.min_price/100}}</text>
+        <text class="pro_list_title">{{item.name}}</text> 
+      </navigator>
+      </block>
+      <!--  -->
+    </view>
+  </view>
+
+  <!--图片商品  -->
+  <view class="shop_image" wx:if="{{banner[0].pic_url}}">
+    <view class="container">
+      <image src="{{hostName}}{{banner[0].pic_url}}" mode="widthFix" data-id="{{banner[0].goods_id}}" bindtap="imageGoToPro"></image>
+    </view>
+  </view>
+  
+
+  <!--促销商品-->
+  <view class="shop_pro" wx:if="{{promotion.length>0}}">
+    <text class="shop_pro_title container">促销商品</text>
+
+    <view class="pro_list_kuang" >
+      <!--  -->
+      <block wx:for="{{promotion}}" wx:item="item" wx:key="id">
+      <navigator class="public_pro_list" url="../pro/pro?goods_id={{item.id}}">
+        <image src="{{hostName}}{{item.goods_pic}}" lazy-load></image>
+        <text class="pro_list_price"><text>¥</text>{{item.min_price/100}}</text>
+        <text class="pro_list_title">{{item.name}}</text>
+      </navigator>
+      </block>
+      <!--  -->
+    </view>
+  </view>
+
+  <!--图片商品  -->
+  <view class="shop_image" wx:if="{{banner[0].pic_url}}">
+    <view class="container">
+      <image src="{{hostName}}{{banner[1].pic_url}}" mode="widthFix" data-id="{{banner[1].goods_id}}" bindtap="imageGoToPro"></image>
+    </view>
+  </view>
+
+  <!--热门商品-->
+  <view class="shop_pro" wx:if="{{hot.length>0}}">
+    <text class="shop_pro_title container">热门商品</text>
+
+    <view class="pro_list_kuang" >
+      <!--  -->
+      <block wx:for="{{hot}}" wx:item="item" wx:key="id">
+      <navigator class="public_pro_list" url="../pro/pro?goods_id={{item.id}}">
+        <image src="{{hostName}}{{item.goods_pic}}" lazy-load></image>
+        <text class="pro_list_price"><text>¥</text>{{item.min_price/100}}</text>
+        <text class="pro_list_title">{{item.name}}</text>
+      </navigator>
+      </block>
+      <!--  -->
+    </view>
+  </view>
+
+  <!--新上商品-->
+  <view class="shop_pro" wx:if="{{new.length>0}}">
+    <text class="shop_pro_title container">新上商品</text>
+
+    <view class="pro_list_kuang" >
+      <!--  -->
+      <block wx:for="{{new}}" wx:item="item" wx:key="id">
+      <navigator class="public_pro_list" url="../pro/pro?goods_id={{item.id}}">
+        <image src="{{hostName}}{{item.goods_pic}}" lazy-load></image>
+        <text class="pro_list_price"><text>¥</text>{{item.min_price/100}}</text>
+        <text class="pro_list_title">{{item.name}}</text>
+      </navigator>
+      </block>
+      <!--  -->
+    </view>
+  </view>
+
+  <include src="../include/include"/>
+</block>
+
+<block wx:if='{{currentTab == 1}}'>
+  <view class="shop_pro shop_height">
+    <!--  -->
+    <view class="pro_list_kuang">
+      <block wx:for="{{goods}}" wx:item="item" wx:key="id">
+        <view class="public_pro_list">
+          <navigator url="/pages/pro/pro?goods_id={{item.id}}">
+            <image src="{{hostName}}{{item.goods_pic}}" lazy-load></image>
+            <block wx:if="{{item.max_price == item.min_price}}">
+              <text class="pro_list_price"><text>¥</text>{{item.min_price/100}}</text>
+            </block>
+            <block wx:else>
+              <text class="pro_list_price"><text>¥</text>{{item.min_price/100}} - <text>¥</text>{{item.max_price/100}}</text>
+            </block>
+            <text class="pro_list_title">{{item.name}}</text>
+          </navigator>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class='load_more'>{{load_more}}</view>
+</block>

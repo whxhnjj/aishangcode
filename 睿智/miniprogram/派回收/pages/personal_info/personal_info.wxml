@@ -1,0 +1,74 @@
+<view class="{{member.rule == 0?'':'employee'}}">
+  <view wx:if="{{member.rule == 0}}" class="nav"></view>
+
+  <view class="submenu_box">
+    <form bindsubmit="updataMemeberInfo" report-submit="{{true}}">
+      <view class="submenu_msg">
+
+        <view class="sub_list">
+          <text wx:if="{{member.type ==1}}">公司全称</text>
+          <text wx:else>姓名</text>
+          <input class="right_box" value="{{member.realname}}" name="realname" />
+        </view>
+
+        <view class="sub_list" wx:if="{{member.rule == 0 && member.type == 0 }}">
+          <text>单位名称</text>
+          <input class="right_box" value="{{member.unitname}}" name="unitname" />
+        </view>
+
+        <view class="sub_list">
+          <text>电话</text>
+          <input class="right_box" value="{{member.contacts}}" name="contacts" />
+        </view>
+
+        <view class="sub_list">
+          <text>区域</text>
+          <input class="right_box" value="{{area}}" disabled bindtap="chooseLocation" name="area" />
+        </view>
+
+        <view class="sub_list hide">
+          <text>坐标</text>
+          <input class="right_box" value="{{latlng}}" disabled bindtap="chooseLocation" name="latlng" />
+        </view>
+
+        <view class="sub_list">
+          <text>详细地址</text>
+          <input class="right_box" value="{{address?address:member.address}}" name="address" />
+        </view>
+
+        <block wx:if="{{member.type ==1 && member.rule == 0}}">
+          <view class="sub_list">
+            <text>营业执照编号</text>
+            <input class="right_box" value="{{member.charter_number}}" name="charter_number" />
+          </view>
+
+          <view class="sub_list">
+            <text>营业执照</text>
+            <view class="upload">
+              <view class="upload_btn btn_hide" bindtap="uploadLicence"></view>
+              <image src="{{hostName}}{{member.charter_picurl}}"></image>
+            </view>
+          </view>
+
+          <view class="sub_list">
+            <text>开户银行</text>
+            <input class="right_box" value="{{member.bank_name}}" name="bank_name" />
+          </view>
+
+          <view class="sub_list">
+            <text>开户名称</text>
+            <input class="right_box" value="{{member.bank_account}}" name="bank_account" />
+          </view>
+
+          <view class="sub_list">
+            <text>银行账号</text>
+            <input class="right_box" value="{{member.bank_card}}" name="bank_card" />
+          </view>
+        </block>
+
+      </view>
+
+      <button class="base_btn" hover-class="none" formType="submit">保存</button>
+    </form>
+  </view>
+</view>

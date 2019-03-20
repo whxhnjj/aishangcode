@@ -1,0 +1,220 @@
+@import '../../style/weui.wxss';
+
+page{
+  padding-top: 120rpx;
+}
+/* 头部 */
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 40rpx 30rpx 0;
+  background: #fff;
+  font-size: 32rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.navbar>view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar>view text{
+  margin-bottom: 35rpx;
+}
+.navbar>view view{
+  width: 50rpx;
+  height: 6rpx;
+  background: #fff;
+}
+
+.navbar .selected text{
+  color: #ff5000;
+  font-weight: 600;
+}
+.navbar .selected view{
+  background: #ff5000;
+}
+
+
+/* *************创建团队 ********/
+.new_agent{
+  padding-top: 200rpx;
+  text-align: center;
+}
+.new_agent>text{
+  color:  #999;
+  font-size: 26rpx;
+}
+.new_agent_btn{
+  width: 400rpx;
+  height: 400rpx;
+  margin: 0 auto 30rpx;
+  border-radius: 50%;
+  background-color: rgba(253,139,0,0.2);
+  overflow: hidden;
+}
+.new_agent_btn>view{
+  width: 260rpx;
+  height: 260rpx;
+  margin: 70rpx auto;
+  border-radius: 50%;
+  background-color: rgb(253,139,0);
+  box-shadow:0 0 0 30rpx rgba(253,139,0,0.5);
+  overflow: hidden;
+  font-size: 48rpx;
+  color: #fff;
+  line-height: 260rpx;
+  font-weight: 800;
+}
+
+/* **********组团 ***********/
+.agent_msg{
+  margin-top: 50rpx;
+  padding: 50rpx;
+  background: #fff;
+}
+.agent_msg>text:first-child{
+  display: block;
+  margin-bottom: 10rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+}
+.agent_msg>text:last-child{
+  display: block;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 1.5;
+}
+
+.agent_box{
+  margin-top: 50rpx;
+  background: #fff;
+}
+.agent_box .title{
+  display: block;
+  padding: 0 30rpx 20rpx;
+  font-size: 26rpx;
+  background: #f4f4f4;
+  color: #999;
+}
+.agent_box .content{
+  padding: 50rpx 30rpx;
+
+}
+.agent_box .left_box{
+  display: flex;
+}
+.agent_box .left_box>image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 20rpx;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+.user_msg{
+  display: block;
+  margin-bottom: 8rpx;
+  font-size: 34rpx;
+}
+
+.agent_box .agent_btn{
+  height: 60rpx;
+  margin-top: 16rpx;
+  padding: 0 20rpx;
+  border-radius: 30rpx;
+  border: 2rpx solid #ff5000;
+  color: #ff5000;
+  line-height: 59rpx;
+  font-size: 30rpx;
+  background: #fff;
+}
+/* 组员 */
+.agent_member>view{
+  display: flex;
+  align-items: center;
+  padding: 30rpx;
+  background: #fff;
+  border-top: 1rpx solid #e6e6e6;
+}
+.agent_member>view image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 20rpx;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+.agent_member>view text{
+  font-size: 30rpx;
+}
+
+/************我的*************/
+.content_box{
+  margin-top: 50rpx;
+}
+.content_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40rpx 30rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e6e6e6;
+  font-size: 30rpx;
+}
+.content_box .content_list:last-child{
+  border-bottom: none;
+}
+.left_box{
+  display: flex;
+  align-items: center;
+}
+.left_box image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.right_box{
+  display: flex;
+  align-items: center;
+  color: #999;
+}
+.right_box image{
+  width: 16rpx;
+  height: 27rpx;
+  margin-left: 20rpx;
+}
+
+
+.page_text{
+  padding-bottom: 70rpx;
+}
+
+.back_index{
+  position:fixed;
+  top:200rpx;
+  right:0;
+  z-index:990;
+  width: 150rpx;
+  height: 60rpx;
+  padding: 0;
+  border-radius: 30rpx 0 0 30rpx;
+  background-color: rgba(61, 175, 9,1);
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.btn{
+  width:690rpx;
+  height:100rpx;
+  margin-top: 30rpx;
+  background:#fc8b00;
+  color:#fff;
+  font-weight:600;
+  line-height:100rpx;
+}

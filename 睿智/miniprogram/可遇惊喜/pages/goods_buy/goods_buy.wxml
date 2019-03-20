@@ -1,0 +1,133 @@
+<!--地址  -->
+<view wx:if="{{goods.goods_type == 1}}" class="buy_address" bindtap="selectedAddress">
+  <block wx:if="{{!address}}">
+    <view class="left_box">
+      <image class="address_image" src="/images/add_address.png"></image>
+      <text class="adderss_title">请选择收货地址</text>
+    </view>
+    <image src="/images/right.png" class="address_add"></image>
+  </block>
+  <block wx:else>
+    <!-- <image class="address_on" src="/images/check.png"></image> -->
+    <view class="address_msg">
+      <view class="address_msg_box1">
+        <!-- <text class="name fl">{{address.user_name}}</text>
+            <text class="phone fr">{{address.tel_number}}</text> -->
+        <text class="name fl">{{address.userName}}</text>
+        <text class="phone fr">{{address.telNumber}}</text>
+        <text class="clearfix"></text>
+      </view>
+      <view class='address'>
+        <!-- <text>默认</text>{{address.province_name}}{{address.city_name}}{{address.county_name}}{{address.detail_info}}</view> -->
+        <!-- <text>默认</text> -->
+        {{address.provinceName}}{{address.cityName}}{{address.cityName}}{{address.detailInfo}}</view>
+    </view>
+    <view class="address_line"></view>
+    <image class="address_edit" src="/images/edit.png"></image>
+  </block>
+
+</view>
+
+<view class="header">
+  <image src="{{hostName}}{{goods.goods_pic[0]}}" mode="aspectFill"></image>
+  <view class="goods_des">
+    <text>{{goods.name}}</text>
+    <text>{{goods.sale_desc}}</text>
+    <view class="goods_import">
+      <text wx:if="{{goods.goods_type == 1}}">包邮</text>
+      <text wx:if="{{goods.is_limit == 1 }}" class="color_ff5070">每人限{{goods.limit_count}}份</text>
+      <text wx:else class="color_ff5070">不限购</text>
+    </view>
+  </view>
+  <view class="goods_msg">
+    <view>
+      <text>¥</text>
+      <text>{{goods.price}}</text>
+    </view>
+    <view>
+      <text>×</text>
+      <text>{{goods_count}}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 列表 -->
+<form bindsubmit="placeOrder">
+  <view class="content_box">
+    <view class="content_list">
+      <text>数量</text>
+      <view class="num_box">
+        <text class="color_999" bindtap="subtractNum">-</text>
+        <text>{{goods_count}}</text>
+        <text class="color_ff5070" bindtap="addNum">+</text>
+      </view>
+    </view>
+
+    <view class="content_list">
+      <text>小计</text>
+      <input class="right_box color_ff5070" disabled value='¥{{total_price}}' />
+    </view>
+
+    <view class="content_list">
+      <text>使用积分</text>
+      <view wx:if="{{pre_int == 0}}" class="right_box color_999">暂无可用积分</view>
+      <view wx:else class="picker" bindtap="showPop">
+        <input value="{{integral_text}}" disabled placeholder='请选择' />
+        <image src="/images/icon_more.png" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 列表 -->
+  <view class="content_box">
+
+    <view wx:if="{{goods.goods_type != 1}}" class="content_list">
+      <text>姓名</text>
+      <input class="right_box" name="realname" value="{{realname}}" placeholder='请输入姓名' />
+    </view>
+
+    <view wx:if="{{goods.goods_type != 1}}" class="content_list">
+      <text>联系电话</text>
+      <input class="right_box" type="number" name="contacts" value="{{mobile}}" maxlength='11' placeholder='请输入联系电话' />
+    </view>
+
+    <view class="content_list">
+      <text>备注</text>
+      <input class="right_box" name="remark" placeholder='请输入备注信息' />
+    </view>
+  </view>
+
+  <!-- 底部 -->
+  <view wx:if="{{isIphone}}" class="iphone_kuang"></view>
+  <view class="bottom {{isIphone?'iphone':''}}">
+    <view class="left_box">
+      <text>实付</text>
+      <text class="color_ff5070">¥</text>
+      <text wx:if="{{use_int == ''}}" class="color_ff5070">{{total_price}}</text>
+      <text wx:else class="color_ff5070">{{real_price}}</text>
+    </view>
+    <button class="btn" formType="submit">立即支付</button>
+  </view>
+  <view wx:if="{{isIphone}}" class="iphone_bottom"></view>
+</form>
+
+
+<!-- 弹出层 -->
+<view wx:if="{{mengShow}}" class="pop_bg" bindtap="outbtn">
+  <view class="pop_box {{aniStyle?'slideup':'slidedown'}}" catchtap="inbtn" style="padding-bottom:{{isIphone?'60':'0'}}rpx;">
+
+    <checkbox-group bindtap="integralChange">
+      <label class="pop_row {{item.checked?'selected':''}}" wx:for="{{integral_choose}}" wx:key="key" id="{{index}}">
+        <view class="left_box" id="{{index}}">
+          <text wx:if="{{item.name == 1}}" id="{{index}}">使用积分{{pre_int}}分付款</text>
+          <text wx:if="{{item.name == 1}}" id="{{index}}">可当{{pre_cash}}元抵用</text>
+          <text wx:if="{{item.name == 0}}" id="{{index}}">不使用</text>
+        </view>
+        <checkbox checked="{{item.checked}}" color="#ff5070" id="{{index}}" />
+      </label>
+    </checkbox-group>
+
+    <view class="btn" bindtap="outbtn">关闭</view>
+
+  </view>
+</view>

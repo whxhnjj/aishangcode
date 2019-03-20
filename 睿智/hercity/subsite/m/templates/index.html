@@ -1,0 +1,36 @@
+{include file="inc_header.html" current="index" title="旗袍文化传媒_旗袍品牌热榜_旗袍行业平台 - 倾城网"}
+
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+		{foreach from=$slides key=key item=item}
+		<div class="swiper-slide"><a href="{'www.hercity.com'|str_replace:'m.hercity.com':$item.linkto}"><img src="{$item.thumb2}" alt="{$item.title}" /></a></div>
+		{/foreach}
+	</div>
+	<!-- Add Pagination -->
+	<div class="swiper-pagination"></div>
+</div>
+<!--Swiper end-->
+
+
+<div class="nav">
+	<a href="/s/list/1/1.html">产业前沿<br /><span>NEWS</span></a>
+	<a href="/s/list/2/1.html">穿搭品鉴<br /><span>APPRECIATE</span></a>
+	<a href="/s/list/3/1.html">资料馆<br /><span>LIBRARY</span></a>
+	<a href="/s/brand/1.html">华服品牌<br /><span>BRAND</span></a>
+	<a href="/s/list/4/1.html">旗袍店铺<br /><span>SHOP</span></a>
+	<a href="/s/list/6/1.html">发布会<br /><span>SHOW</span></a>
+</div>
+
+
+<div class="banner">
+<a href="/s/list/7/1.html"><img src="/assets/images/banner_01.jpg" alt="旗袍影像" /></a>
+<a href="/s/list/8/1.html"><img src="/assets/images/banner_02.jpg" alt="旗袍人物" /></a>
+<a href="https://wap.koudaitong.com/v2/showcase/homepage?alias=92tdwln3"><img src="/assets/images/banner_03.jpg" alt="倾店铺" /></a>
+<a href="http://buluo.qq.com/p/barindex.html?bid=336368"><img src="/assets/images/banner_04.jpg" alt="旗袍爱好者部落" /></a>
+<a href="http://uc.hercity.com/wx?wx/join"><img src="/assets/images/banner_05.jpg" alt="加入微信群" /></a>
+
+</div>
+
+<img src="/assets/images/logo.png" class="logo4home"/>
+
+{include file="inc_footer.html" current="index"}

@@ -1,0 +1,71 @@
+<swiper class="notices_swiper" wx:if="{{notices.length >= 1}}" autoplay="true" interval="3000" circular="true" vertical="true">
+  <block wx:for="{{notices}}" wx:key="key">
+    <swiper-item bindtap="noticeOpen" data-index="{{index}}">
+      <span class="title">{{item.title}}</span>
+      <span class="dateline">{{item.dateline}}</span>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="notice_bg" hidden="{{noticehide}}">
+  <view class="notice">
+      <span class="title">{{notice.title}}</span>
+      <span class="date">{{notice.dateline}}</span>
+      <text class="content">{{notice.content}}</text>
+      <button bindtap="noticeClose">我知道了</button>
+  </view>
+</view>
+
+<view class="banner" wx:if="{{theme.photo}}">   
+      <image src="{{domain}}/{{theme.photo}}" class="slide-image" mode="aspectFill"/>
+</view>
+
+<view class="box1">
+  <view class="box1_left">
+      <b></b>
+      <span class="sp_tp">已报名</span>
+      <span class="sp_bt">{{theme.enrollment}}</span>
+  </view>
+  <view class="box1_center">
+      <b></b>
+      <span class="sp_tp">总票数</span>
+      <span class="sp_bt">{{theme.votes}}</span>
+  </view>
+  <view class="box1_right">
+      <b></b>
+      <span class="sp_tp">访问量</span>
+      <span class="sp_bt">{{theme.visitors}}</span>
+  </view>
+</view>
+<view class="box2" wx:if="{{totalSecond > 0}}" >
+  <view class="left">
+    <span>活动结束倒计时</span>
+    <span class="time">
+      {{countDownDay}}<i>天</i>{{countDownHour}}<i>时</i>{{countDownMinute}}<i>分</i>{{countDownSecond}}<i>秒</i>
+    </span>
+  </view>
+  <navigator wx:if="{{theme.status == 0}}" class="right" url="../signup/signup?theme_id={{theme.id}}">
+      我要报名
+  </navigator>
+</view>
+<view class="boxelse" wx:else>活动已结束</view>
+
+<view class="box3">
+  <form bindsubmit="formSubmit">
+  <input class='keyword' type='text' placeholder='请输入搜索的名字或者编号' name="name" placeholder-style='font-size:32rpx;e'></input>
+  <button class="search" form-type="submit"></button>
+  </form>
+</view>
+<view class="box4" >
+      <navigator wx:for="{{actors}}" wx:key="key" class="box_view" url="../detail/detail?actor_id={{item.id}}">
+          <image src="{{domain}}/{{item.thumb}}" mode="aspectFill"></image>
+          <span class="intit">{{item.votes}}票</span>
+          <span class="font"></span>
+          <span class="name">NO.{{item.order_number}} {{item.name}}</span>
+      </navigator>         
+</view>
+
+
+<view class="footer">
+{{footer}}
+</view>

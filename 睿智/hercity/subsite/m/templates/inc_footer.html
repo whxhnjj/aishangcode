@@ -1,0 +1,324 @@
+{if $current != 'index' && $current != 'comment'}
+<footer>
+<a href="/" class="home" ></a>
+<a href="javascript:location.reload();" class="logo" ></a>
+<a href="javascript:window.history.back(1);" class="back" ></a>
+<a href="javascript:void(0);" class="menu"></a>
+</footer>
+<div class="submenu">
+<a href="/s/list/24/1.html">旗袍摄影</a>
+<a href="/s/list/25/1.html">华服剧照</a>
+<a href="/s/list/26/1.html">影像中国风</a>
+<a href="/s/list/27/1.html">老照片</a>
+<a href="/s/list/8/1.html">旗袍人物</a>
+<a href="/s/list/1/1.html">产业前沿</a>
+<a href="/s/list/2/1.html">穿搭品鉴</a>
+<a href="/s/brand/1.html">华服品牌</a>
+<a href="/s/list/4/1.html">社团机构</a>
+<a href="/s/list/3/1.html">资料馆</a>
+<a href="/s/list/6/1.html">发布会</a>
+</div>
+{/if}
+
+<div class="alert"></div>
+
+<script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+
+{if $current == 'index'}
+<script type="text/javascript" src="/assets/js/swiper.jquery.min.js"></script>
+{literal}
+<script type="text/javascript">
+var swiper = new Swiper('.swiper-container', {
+	pagination: '.swiper-pagination',
+	paginationClickable: false,
+	autoplay: 2500,
+	loop: true
+});
+</script>
+{/literal}
+{/if}
+
+{if $current != 'index' && !$isMicroMessenger}
+<script type="text/javascript" src="https://www.hercity.com/assets/js/base64decode.js"></script>
+<script type="text/javascript" src="/assets/js/tbkjhs.js"></script>
+{/if}
+
+
+
+{if $current == 'list_goods' && !$isMicroMessenger}
+{literal}
+
+<script src="https://g.alicdn.com/mm/wakeup/wakeup-min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://www.hercity.com/assets/js/base64decode.js"></script>
+<script type="text/javascript">
+$(".goods li").click(function(){
+	var bd = new base64Decode();
+	var pol = "dGFvYmFvOi8v";
+	var sol = "aHR0cDovLw==";
+	var href = $(this).attr('rel');
+	var app_href = href.replace('https://',bd.decode(pol)).replace('http://',bd.decode(pol));
+	window.wakeup(app_href);
+	
+	setTimeout(function(){
+		window.location.href = href; //如果超时就跳转
+	},4000);
+	return false;	
+});
+</script>
+{/literal}
+{/if}
+
+
+
+
+{if $current == 'detail_media'}
+{literal}
+<script type="text/javascript">
+$(function(){
+	var myaudio=document.getElementById("myaudio");
+	$(".aplay").click(function(){
+		myaudio.play(); 
+		$(".aplay").hide();
+		$(".apause").show();
+		
+		var ii = setInterval(slider,100);
+		if (myaudio.currentTime*100/myaudio.duration == 100)
+		{
+			clearInterval(ii);
+			$(".apause").hide();
+			$(".aplay").show();
+		}
+	});
+	
+	$(".apause").click(function(){
+		myaudio.pause(); 
+		$(".apause").hide();
+		$(".aplay").show();
+	});
+	
+
+	
+});
+
+function slider()
+{
+	$('.slider').css('width',myaudio.currentTime*100/myaudio.duration+'%')
+}
+</script>
+{/literal}
+{/if}
+
+
+
+{if $current == 'index'}
+<script type="text/javascript">
+//微信分享设置
+var imgUrl = 'https://m.hercity.com/assets/images/share_logo.png';
+var lineLink = window.location.href;
+var descContent = '致力于旗袍文化的传承与产业深度整合。与爱旗袍的你在一起。';
+var shareTitle = '倾城网';
+</script>
+{/if}
+
+{if $current == 'detail' || $current == 'detail_photo' || $current == 'detail_media'}
+<script type="text/javascript">
+//微信分享设置
+var imgUrl = 'https://m.hercity.com/assets/images/share_logo.png';
+//var imgUrl = 'https://www.hercity.com/engine/mini/tothumb.php?photo={$post.thumb1|base64_encode}&w=140&h=140';
+var lineLink = window.location.href;
+var descContent = '{$post.brief}';
+var shareTitle = '{$post.title}';
+</script>
+{/if}
+
+
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+wx.config({
+	debug: false,
+	appId: '{$signPackage.appId}',
+	timestamp: '{$signPackage.timestamp}',
+	nonceStr: '{$signPackage.nonceStr}',
+	signature: '{$signPackage.signature}',
+	jsApiList: ['onMenuShareTimeline','onMenuShareAppMessage']
+});
+wx.ready(function () {
+    // 在这里调用 API
+	
+	if (typeof(imgUrl)!='undefined')
+	{
+		wx.onMenuShareTimeline({
+			title: shareTitle, // 分享标题
+			link: lineLink, // 分享链接
+			imgUrl: imgUrl, // 分享图标
+			success: function () { 
+				// 用户确认分享后执行的回调函数
+			},
+			cancel: function () { 
+				// 用户取消分享后执行的回调函数
+			}
+		});	
+
+		
+		wx.onMenuShareAppMessage({
+			title: shareTitle, // 分享标题
+			desc: descContent, // 分享描述
+			link: lineLink, // 分享链接
+			imgUrl: imgUrl, // 分享图标
+			type: '', // 分享类型,music、video或link，不填默认为link
+			dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+			success: function () { 
+				// 用户确认分享后执行的回调函数
+			},
+			cancel: function () { 
+				// 用户取消分享后执行的回调函数
+			}
+		});
+	}
+});
+</script>
+
+
+{if $current == 'comment_list'}
+<script type="text/javascript">
+var wechat_nickname = "{'GBK'|iconv:'UTF-8':$session.wechat_userinfo.nickname}";
+var wechat_headimgurl = "{$session.wechat_userinfo.headimgurl}";
+var datetime = "{$smarty.now|date_format:'%Y-%m-%d'}";
+</script>
+{/if}
+
+
+{literal}
+<script type="text/javascript">
+$(function(){
+	//子菜单
+	$(".menu").click(function(){
+		if($(".submenu").css("right") == '-100px')
+		{
+			$(".submenu").animate({right:'0px'},100);
+			
+		}
+		else
+		{
+			$(".submenu").animate({right:'-100px'},100);
+		}
+	});
+	
+	
+	//point
+	$(".point").click(function(){
+		$.ajax({
+		type: "POST",
+		url: "/ajax_point.php",
+		data: {id: $("#c_post_id").val()},
+		timeout: 10000,
+		dataType:'text',
+		cache:false,
+		success: function(data){
+		//alert(data);
+		if (data!='')
+			{
+				$(".point").text(parseInt($(".point").text())+1);
+				$(".point").addClass('pointed');
+			}
+			else
+			{
+				alertX('喜欢表达一次就好，你这样人家受不了哦~','#990000');
+			}
+		},
+		error: function(data){
+			alertX('抱歉，出错了。','#990000');
+		}
+		});
+	});
+	
+	//评论
+	$('.comment .submit').click(function(){
+	
+		var content = $("#content").val();
+		var post_id = $("#post_id").val();
+		//表单验证
+		if (content.trim() == ''){
+			alertX('亲，评论内容必须填写哦~','#990000');
+			return false;
+		}
+
+		$.ajax({
+		type: "POST",
+		url: "/ajax_comment.php",
+		data: {content:content, post_id:post_id},
+		timeout: 10000,
+		dataType:'text',
+		cache:false,
+		success: function(data){
+		//alert(data);
+		if (data > 0)
+			{
+				alertX('评论发表成功。','#009955');
+				$(".commentslist ul").prepend('<li><div class="headimg"><img src="'+wechat_headimgurl+'" /></div><div class="text"><div class="nickname">'+wechat_nickname+'</div><div class="content">'+content+'</div><div class="dateline">'+datetime+'</div></div></li>');
+				$("#content").val('');
+			}
+			else
+			{
+				if (data == '-1'){alertX('微信身份验证失效，请刷新重试~','#990000');}
+				if (data == '-2'){alertX('评论内容不可以空着哦~','#990000');}
+			}
+		},
+		error: function(data){
+			alertX('抱歉，出错了。','#990000');
+		}
+		});
+	});
+	
+});
+
+function alertX(txt,bgcolor)
+{
+	$('.alert').text(txt);
+	$('.alert').css('background-color',bgcolor);
+	$('.alert').fadeIn(200);
+	setTimeout("$('.alert').fadeOut(200)",3000);
+}
+</script>
+
+
+
+
+
+<script type="text/javascript">	
+    (function(win,doc){
+        var s = doc.createElement("script"), h = doc.getElementsByTagName("head")[0];
+        if (!win.alimamatk_show) {
+            s.charset = "gbk";
+            s.async = true;
+            s.src = "https://alimama.alicdn.com/tkapi.js";
+            h.insertBefore(s, h.firstChild);
+        };
+        var o = {
+            pid: "mm_30229822_5624491_22030520",/*推广单元ID，用于区分不同的推广渠道*/
+            appkey: "",/*通过TOP平台申请的appkey，设置后引导成交会关联appkey*/
+            unid: "",/*自定义统计字段*/
+            type: "click" /* click 组件的入口标志 （使用click组件必设）*/
+        };
+        win.alimamatk_onload = win.alimamatk_onload || [];
+        win.alimamatk_onload.push(o);
+    })(window,document);
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fa6fac6aa0103541558d72b7f1d1fb7a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+{/literal}
+
+
+
+</body>
+</html>

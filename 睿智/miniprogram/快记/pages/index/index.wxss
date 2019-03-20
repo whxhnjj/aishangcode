@@ -1,0 +1,154 @@
+/**index.wxss**/
+.header{
+  width: 700rpx;
+  padding:35rpx 25rpx;
+  height:360rpx;
+  background: #FF533E;
+}
+
+.userinfo-avatar {
+  width:120rpx;
+  height:120rpx;
+  border-radius: 50%;
+  position: absolute;
+  right:25rpx;
+  top:25rpx;
+}
+
+.profit{
+  height: 300rpx;
+}
+
+.profit .h3{
+  color: #FFF;
+  height:30rpx;
+  line-height:30rpx;
+  font-size: 28rpx;
+}
+.profit .num{
+   color: #FFF;
+   font-size:100rpx;
+   font-weight: bold;
+   line-height: 110rpx;
+   margin-bottom:100rpx;
+}
+.profit .num i{
+   font-size:60rpx;
+}
+.payments{
+  width:300rpx;
+  height:100rpx;
+  font-weight: 800;
+  float: left;
+}
+.balance{
+  width:300rpx;
+  height:50rpx;
+  float: left;
+  color: #FFF;
+  font-size:30rpx;
+}
+.balance p{
+  float: left;
+}
+.balance .number{
+  padding-left: 20rpx;
+  float: left;
+}
+.classification{
+  width:400rpx;
+  height:85rpx;
+   float: left;
+   padding-top: 8rpx;
+}
+.detailed{
+  width: 190rpx;
+  height:85rpx;
+  border-radius: 30rpx;
+  line-height: 85rpx;
+   background: #4C271E;
+  float: right; 
+   color: #FFF;
+   margin-left: 10rpx;
+   text-align: center;
+}
+
+.list{
+  width: 700rpx;
+  height: 500rpx;
+}
+  .list ul{
+    width: 700rpx; 
+    margin-top:30rpx;
+    float: left;
+  }
+   .list ul li{
+      width: 700rpx; 
+      height:80rpx;
+      float: left;
+      border-bottom: 1rpx solid #E5E5E5;
+      color: #000;
+      font-weight: bold;
+      line-height: 80rpx;
+  }
+  .list ul li .day{
+    width:200rpx;
+    height:80rpx;
+    float: left;
+    text-align: left;
+  }
+    .list ul li .plus{
+    width:300rpx;
+    height:80rpx;
+    float: left;
+    text-align: center;
+    color: #FF533E;
+  }
+
+  .list ul li .reduce{
+    width: 200rpx;
+   height:80rpx;
+    float: right;
+    text-align: right;
+  }
+  
+.shouru{
+  width: 700rpx;
+  height:100rpx;
+  background: #FF533E;
+  text-align: center;
+  line-height:100rpx;
+  border-radius: 30rpx;
+  color: #FFF;
+   font-weight: blod;
+   font-size: 48rpx;
+}
+.zhichu{
+  width: 700rpx;
+  height:100rpx;
+  margin-top:20rpx;
+  background:#FF7664;
+   text-align: center;
+  line-height:100rpx;
+   border-radius: 30rpx;
+  color: #FFF;
+  font-weight: blod;
+ font-size: 48rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

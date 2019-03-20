@@ -1,0 +1,23 @@
+{include file="inc_header.html" current="brand_list" title="华服品牌({$page})"}
+
+<div class="content list">
+<h1>华服品牌</h1>
+
+<ul class="photos">
+{foreach from=$list key=key item=item}
+<li{if ($key mod 2) eq 1} class="float_r"{/if}><a href="/s/brand/detail-{$item.id}.html"><img src="http://www.hercity.com{$item.logo}" alt="{$item.name}" /></a></li>
+{/foreach}
+</ul>
+
+<div class="pages">
+{if $page > 1}
+<a href="/s/brand/{$page-1}.html" class="prev">&lt;PREV</a>
+{/if}
+{if $list != ''}
+<a href="/s/brand/{$page+1}.html" class="next">NEXT&gt;</a>
+{/if}
+</div>
+
+</div>
+
+{include file="inc_footer.html" current="brand_list"}

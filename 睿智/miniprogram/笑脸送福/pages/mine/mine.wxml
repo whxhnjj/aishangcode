@@ -1,0 +1,31 @@
+<!--pages/facescore/facescore.wxml-->
+<!--index.wxml-->
+<view class="gray"></view>
+  <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+      <span class="point">余额{{user.balance}}</span> 
+  </view>
+<view class="gray"></view>
+<view class='wrap'>
+  <navigator class='list list1' url='../../pages/mysend/mysend'>
+      <span></span>
+      <p>我发出的</p>
+  </navigator>
+  <navigator class='list list2' url='../../pages/myget/myget'>
+      <span></span>
+      <p>我收到的</p>
+  </navigator>
+  <navigator class='list list3' url='../../pages/withdraw/withdraw'>
+    <span></span>
+    <p>提现</p>
+  </navigator>
+</view>
+<view class="gray"></view>
+<view class='wrap'>
+      <navigator class='list list4' url='../../pages/help/help'>
+        <span></span>
+        <p>帮助</p>
+      </navigator>
+</view>
+<navigator class='feedback' hover-class="none"  url='../../pages/feedback/feedback'>举报</navigator>

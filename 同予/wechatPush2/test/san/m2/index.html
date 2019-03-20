@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=1080,minimum-scale=0.1,maximum-scale=2,user-scalable=yes" />
+    <title>米来到</title>
+    <link rel="stylesheet" href="../../../static/css/reset.css" />
+    <style>
+        *{padding: 0;margin: 0;}
+        html{
+            color:#000;
+            background: #ffffff;
+            font-size:12px;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+            width: 100%;
+        }
+        body{
+            width: 1080px;
+            background: #FFFFFF;
+            margin: 0 auto;
+        }
+        .body{
+            width: 1080px;
+        }
+        .heg{
+            width: 1080px;
+            height: 1150px;
+            background: url("../../../static/image/banner2.png") no-repeat center center;
+            background-size: 1080px  100%;
+        }
+        .body-code{
+            width:400px;
+            height: 400px;
+            border: 1px solid #DDDDDD;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 100px 50px 0 100px;
+            float: left;
+        }
+        .text{
+            float: left;
+            font-size:70px;
+            color: #f73a12;
+            margin-top: 230px;
+            line-height:100px;
+            font-weight: bold;
+        }
+        .totast{
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: rgba(0,0,0,0.3);
+            z-index: 9;
+        }
+        .cord-totast{
+            width: 800px;
+            height: 1020px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            margin-top: -510px;
+            background: url("../../../static/image/toatst2.png") no-repeat center center;
+            background-size: 100%;
+            z-index: 999;
+            border-radius: 25px;
+        }
+        .cord-img{
+            width: 495px;
+            height: 495px;
+            margin: 450px auto 0;
+        }
+        .cord-img img{
+            width: 100%;
+            height: 100%;
+        }
+        .cler{
+            width:90px;
+            height: 90px;
+            color: #000000;
+            text-align: center;
+            background: url("../../../static/image/X.png") no-repeat center center;
+            background-size: 100%;
+            z-index: 999;
+            position: absolute;
+            bottom: -150px;
+            left: 50%;
+            margin-left: -45px;
+        }
+    </style>
+</head>
+<body>
+<div class="body">
+    <div class="heg"></div>
+    <div class="body-code">
+    </div>
+    <div class="text">关注公众号<br />立享秒速借贷!</div>
+</div>
+<div class="totast">
+    <div class="cord-totast">
+        <div class="cler"></div>
+        <div class="cord-img">
+        </div>
+    </div>
+</div>
+
+<script src="../../../static/js/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var strurl = window.location.href
+        var index = strurl.lastIndexOf("\=");
+        var channel = strurl.substring(index + 1, strurl.length);
+
+        var strlast = strurl.indexOf("\=");
+        var indexofurl = strurl.substring(strlast + 1, strlast.length);
+        var appkey = indexofurl.split("&")[0];
+        $.ajax({
+            url: 'http://test.daichao.tongyufintech.com/api/v1/wechat/qrcode',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                channel: channel,
+                appkey: appkey
+            },
+            success: function (data) {
+                var res = data.data
+                console.log(res)
+                if (data.code == 200) {
+                    var str = '<img class="img" src="'+res+'" />'
+                    $('.body-code').css('background','url('+res+') no-repeat 100% 100%');
+                    $(".cord-img").append(str)
+                } else {
+                    window.location.href = "404.html"
+                }
+            }
+        })
+        $(".body").click(function () {
+            $(".totast").show()
+        })
+        $(".cler").click(function () {
+            $(".totast").hide()
+        })
+    })
+</script>
+</body>
+</html>

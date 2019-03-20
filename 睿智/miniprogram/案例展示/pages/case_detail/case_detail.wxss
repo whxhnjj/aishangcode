@@ -1,0 +1,135 @@
+.case_img{
+  width: 750rpx;
+}
+/* 内容 */
+.content_box{
+  padding: 90rpx 30rpx;
+  font-size: 28rpx;
+  color: #898989;
+  text-align: justify;
+}
+
+.wxParse-inline{
+  display: inline;
+}
+.wxParse-strong{
+  font-weight: 600;
+}
+.wxParse-p .WxEmojiView{
+  margin-bottom: 10rpx;
+  word-break: break-all;
+  line-height: 1.8;
+}
+.wxParse-p {
+  margin-bottom: 20rpx;
+}
+.wxParse-p image{
+  width: 690rpx!important;
+}
+
+.wxParse .wxParse-p:last-child image,
+.wxParse .wxParse-p:last-child view{
+  margin-bottom: 0;
+}
+
+
+/* 底部文字 */
+.bottom_text{
+  text-align: center;
+  color: #898989;
+}
+
+.bottom_text>text{
+  display: block;
+  line-height: 1.8;
+}
+.bottom_text .end{
+  position: relative;
+  width: 165rpx;
+  margin: 0 auto 20rpx;
+}
+.bottom_text .end:before,.bottom_text .end:after{
+  content: '';
+  position: absolute;
+  top: 26rpx;
+  right: 0;
+  width: 40rpx;
+  height: 2rpx;
+  background: #898989;
+}
+.bottom_text .end:before{
+  right: auto; left: 0rpx;
+}
+
+/* 分页 */
+.pages{
+  display: flex;
+  justify-content: space-between;
+  width: 570rpx;
+  margin: 110rpx auto 80rpx;
+}
+.pages>image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.pages .left_box,.pages .right_box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 230rpx;
+}
+.pages .left_box>image:first-child,
+.pages .right_box>image:last-child{
+  width: 30rpx;
+  height: 30rpx;
+}
+.pages .left_box>image:last-child,
+.pages .right_box>image:first-child{
+  width: 40rpx;
+  height: 74rpx;
+}
+.pages .left_box>text,.pages .right_box>text{
+  font-size: 30rpx;
+  font-weight: 500;
+}
+
+/* 首页 */
+.back_index{
+  display: block;
+  width: 150rpx;
+  margin: 0 auto 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #898989;
+}
+
+/* icon_图标 */
+.call_phone{
+  display: block;
+  width: 65rpx;
+  height: 65rpx;
+  margin: 0 auto 40rpx;
+}
+
+/* 底部栏 */
+.bottom{
+  padding: 60rpx 0 65rpx;
+  background-color: #e6e6e6;
+  text-align: center;
+  color: #888888;
+}
+.bottom>text:first-child{
+  display: block;
+  margin-bottom: 5rpx;
+  letter-spacing: 5rpx;
+}
+
+/*  */
+.fail_text{
+  display: block;
+  text-align: center;
+  line-height: 800rpx;
+  color: #898989;
+}

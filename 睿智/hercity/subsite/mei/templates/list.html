@@ -1,0 +1,23 @@
+{include file="inc_header.html" current="list"}
+
+<div class="new_top list main">
+<h2 class="tit"><span>{$pagetitle}</span><em>共找到{$recordcount}个匹配的美女</em><a href="/" class="more">返回美人榜首页>></a></h2>
+<ul>
+{foreach from=$persons key=key item=item}
+<li><a href="/{$item.ename}/"><img src="https://www.hercity.com{$item.thumb1}" alt="{$item.name}图片" /></a>
+<div class="info">
+<strong class="name"><a href="/{$item.ename}/">{$item.name}</a></strong><span class="hot">{$item.baidu_index+$item.fans}</span><em>{foreach from=$item.tags key=key1 item=item1}{if $key1<3}<a href="/tags-{$item1|urlencode}-1.html" target="_blank">{$item1}</a> {/if}{/foreach}</em>
+</div>
+</li>
+{/foreach}
+</ul>
+</div>
+<!--pages-->
+{$pages}
+<!--pages end-->
+
+<div class="adbox main">
+<script type="text/javascript">/*美人榜960*90，创建于2011-10-30*/ var cpro_id = 'u660428';</script><script src="https://cpro.baidu.com/cpro/ui/c.js" type="text/javascript"></script>
+</div>
+
+{include file="inc_footer.html" current="list"}

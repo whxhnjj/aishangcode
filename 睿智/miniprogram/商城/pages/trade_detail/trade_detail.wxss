@@ -1,0 +1,294 @@
+
+/* 物流 */
+.logistics{
+  padding: 30rpx 0;
+  margin-bottom: 20rpx;
+  background: #f8944a;
+  color: #fff;
+}
+.logistics view{
+  display: block;
+  line-height: 2;
+  font-size: 30rpx;
+  word-break:break-all;
+}
+.logistics .copy_btn{
+  display: inline-block;
+  padding:0 10rpx;
+  font-size:24rpx;
+  line-height:40rpx;
+  background:#fff;
+  border-radius:2rpx;
+  color: #333;
+  text-align: center;
+  border:1rpx solid #dadada;
+}
+
+.copy_box{
+  margin-bottom: 20rpx;
+  padding: 30rpx 30rpx 30rpx;
+  background: #fff;
+}
+.copy_box .copy_cont{
+  margin: 15rpx 0 30rpx;
+  padding: 20rpx;
+  background: #fafafa;
+  border-radius: 20rpx;
+  word-break: break-all;
+  text-align: justify;
+}
+.copy_box .copy_btn{
+  display: inline-block;
+  padding: 8rpx 35rpx;
+  color: #fff;
+  background:#ffaa33;
+  font-size:30rpx;
+}
+/*地址*/
+.buy_address{
+  padding: 30rpx 0;
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+.adderss_title{
+  line-height: 60rpx;
+}
+.address_image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+.address_add{
+  width: 40rpx;
+  height: 30rpx;
+  margin-top: 15rpx;
+}
+
+.address_on{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 25rpx;
+  margin-top: 50rpx;
+}
+
+.address_msg{
+  width: 610rpx;
+}
+.address_msg .address_msg_box1{
+  margin-bottom: 15rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+.address_msg .address{
+  font-size: 24rpx;
+  line-height: 1.5;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.address_msg .address text{
+  display: inline-block;
+  padding: 5rpx 20rpx;
+  margin-right: 10rpx;
+  background: #e31122;
+  color: #fff;
+  font-size: 24rpx;
+}
+
+.address_line{
+  width: 1rpx;
+  height: 70rpx;
+  margin: 40rpx 35rpx 0;
+  background: #dadada;
+}
+
+.address_edit{
+  width: 45rpx;
+  height: 45rpx;
+  margin-top: 50rpx;
+}
+
+/*商品信息*/
+.pro_msg{
+  padding-top: 10rpx;
+  background: #fff;
+  margin-bottom:20rpx;
+}
+
+.shop_name{
+  height: 55rpx;
+  margin-bottom: 10rpx;
+  padding-left: 25rpx;
+  line-height: 55rpx;
+}
+.shop_name image{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: -20%;
+}
+.trade_sn{
+  display: block;
+  margin-bottom: 25rpx;
+  color: #5d5d5d;
+  font-size: 26rpx;
+}
+
+.pro_list{
+  padding: 12rpx 25rpx;
+  background: #fafafa;
+  border-bottom: 10rpx solid #fff;
+}
+.pro_list image{
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 15rpx;
+}
+.pro_list_box1{
+  width: 330rpx;
+}
+.pro_list_box1 .pro_title{
+  margin-bottom: 15rpx;
+  height: 70rpx;
+  line-height: 35rpx;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;  
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #000;
+}
+.pro_list_box1 .pro_sku{
+  color:#5d5d5d;
+}
+.pro_list_box2{
+  text-align: right;
+}
+.pro_list_box2 .pro_price{
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 57rpx;
+  color: #000;
+}
+.pro_list_box2 .pro_count{
+  color:#5d5d5d;
+}
+.pro_list_btn{
+  display: block;
+  height: 45rpx;
+  margin: 10rpx 0;
+  padding: 0 10rpx;
+  border-radius: 10%;
+  line-height: 40rpx;
+  text-align: center;
+  background: #fff;
+  border: 1rpx solid #dadada;
+}
+
+.pro_tab{
+  min-height: 90rpx;
+  margin-left: 25rpx;
+  padding-right: 25rpx;
+  border-bottom: 1rpx solid #dadada;
+  line-height: 90rpx;
+  color: #5d5d5d;
+}
+.pro_tab text:first-child{
+  color: #333;
+}
+.pro_msg .pro_tab:last-child{
+  border-bottom: none;
+}
+.pro_tab_price{
+  color: #e31122;
+}
+.pro_tab .coupon{
+  width:40rpx;
+  height:30rpx;
+  margin: 30rpx -5rpx 0 5rpx;
+}
+.pro_tab_input{
+  margin: 25rpx 0;
+  line-height: 1.5;
+  width: 550rpx;
+}
+
+/* 订单信息 */
+.order_msg{
+  width: 100%;
+  padding: 0 25rpx;
+  background: #fff;
+}
+.order_msg text{
+  display: block;
+  line-height: 2;
+  color: #5d5d5d;
+}
+.order_msg text:first-child{
+  padding-top: 20rpx;
+}
+.order_msg text:last-child{
+  padding-bottom: 20rpx;
+}
+
+/* 底部*/
+.buy_bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fbfbfb;
+  border-top: 1rpx solid #dadada;
+  z-index:100;
+}
+.buy_bottom button{
+  width: 200rpx;
+  height: 100rpx; 
+  border-radius: 0;
+  line-height: 100rpx;
+  color: #fff;
+  background-color: #e31122;
+  font-size: 30rpx;
+} 
+.buy_bottom text{
+  color: #e31122;
+  font-size: 30rpx;
+}
+.buy_bottom text:before{
+  content: '实付：';
+  margin-left: 25rpx;
+  color: #676767;
+}
+.buy_bottom .selected{
+  background: #e5e5e5;
+  color: #9a9a9a;
+}
+.buy_bottom .orange{
+  background-color:#f4c046;
+  color: #fff;
+}
+.abort_time{
+  margin-right: 25rpx;
+  color: #e31122;
+}
+
+.kefu{
+  padding: 30rpx 0 160rpx;
+}
+.kefu text{
+  display: inline-block;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #5d5d5d;
+}
+.kefu button{
+  display: inline-block;
+  background: #f8f8f8;
+  height: 50rpx;
+  padding: 0;
+  line-height: 50rpx;
+  font-size: 28rpx;
+}
+
+.type_1{margin: 50rpx 0 0; }

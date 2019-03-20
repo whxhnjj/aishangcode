@@ -1,0 +1,143 @@
+{include file="inc_header.html" current="index"}
+
+
+<div class="box navbox clear">   
+	<div class="swiper-container">
+	<div class="swiper-wrapper">
+	{foreach from=$swiper key=key item=item}
+		<div class="swiper-slide"><a href="{$item.linkto}" isconvert="1" target="_blank"><img src="https://www.hercity.com{$item.thumb2}" alt="{$item.title}" /></a></div>
+	{/foreach}
+	</div>
+	<!-- Add Pagination -->
+	<div class="swiper-pagination"></div>
+	</div> 
+	
+	<a href="https://www.hercity.com/s/201604/28945.html" class="join"><img src="/statics/images/join.png" /></a>
+</div>
+
+
+
+<div class="box top10 clear">
+
+<div class="pai clear">
+    <p>今日排行TOP10</p>
+    <a href="/list.html">查看全部排行>></a>
+</div>
+
+<ul>  
+{foreach from=$top10 key=key item=item}
+    <li>
+      
+        <a class="blogo" href="/{$item.domain}/"><img src="https://www.hercity.com{$item.logo}" alt="{$item.firstname}{$item.lastname}" /></a>
+     
+        <span class="ming">
+          <span class="yuan">{$key+1}</span>
+          <a href="/{$item.domain}/">{$item.firstname}{$item.lastname}</a>
+          {if ($item.is_auth)}<a class="v" title="品牌已认证" href="https://www.hercity.com/s/static/brand.html">&nbsp;</a>{/if}
+        </span>
+        <span class="biaoqian">
+			{foreach from=$item.tags key=key item=tag}{if $key <2}<a href="/list-{$tag|urlencode}-0-0-1.html">{$tag}</a>{/if}{/foreach}
+          <p>{$item.hits+$item.hots}</p>
+        </span>
+    </li>
+{/foreach}
+</ul>
+</div>
+  
+  
+<div class="box">
+<div class="ph clear">
+
+
+<div class="phbox clear">
+<div class="phbiaoti">旗袍成衣品牌排行</div>
+<div class="phnr">	  
+{foreach from=$brand1 key=key item=item}
+<li class="tiao clear{if $key<3} top3{/if}">  
+<div>{$key+1}</div>
+<a href="/{$item.domain}/">{$item.firstname}{$item.lastname}</a>
+<p>{$item.hits+$item.hots}</p>
+</li>
+{/foreach}
+<a href="/list-%B3%C9%D2%C2-0-0-1.html" style="float:right; color:#378abb; margin-right:10px;">查看完整排行>></a>
+</div>
+</div>
+
+	
+	
+<div class="phbox clear">
+<div class="phbiaoti">旗袍定制品牌排行</div>
+<div class="phnr">
+{foreach from=$brand2 key=key item=item}
+<li class="tiao clear{if $key<3} top3{/if}">  
+<div>{$key+1}</div>
+<a href="/{$item.domain}/">{$item.firstname}{$item.lastname}</a>
+<p>{$item.hits+$item.hots}</p>
+</li>
+{/foreach}
+<a href="/list-%B8%DF%BC%B6%B6%A8%D6%C6-0-0-1.html" style="float:right; color:#378abb; margin-right:10px;">查看完整排行>></a>
+</div>
+</div>
+
+
+<div class="phbox clear">
+<div class="phbiaoti">中式嫁衣品牌排行</div>
+<div class="phnr">
+{foreach from=$brand3 key=key item=item}
+<li class="tiao clear{if $key<3} top3{/if}">  
+<div>{$key+1}</div>
+<a href="/{$item.domain}/">{$item.firstname}{$item.lastname}</a>
+<p>{$item.hits+$item.hots}</p>
+</li>
+{/foreach}
+<a href="" style="float:right; color:#378abb; margin-right:10px;">查看完整排行>></a>
+</div>
+</div>
+	
+	
+
+<div class="phbox clear">
+<div class="phbiaoti">网络旗袍品牌排行</div>
+<div class="phnr">
+{foreach from=$brand4 key=key item=item}
+<li class="tiao clear{if $key<3} top3{/if}">  
+<div>{$key+1}</div>
+<a href="/{$item.domain}/">{$item.firstname}{$item.lastname}</a>
+<p>{$item.hits+$item.hots}</p>
+</li>
+{/foreach}
+<a href="/list-%CC%D4%C6%B7%C5%C6-0-0-1.html" style="float:right; color:#378abb; margin-right:10px;">查看完整排行>></a>
+</div>
+</div>
+	
+</div>
+</div>
+
+  
+  
+  
+
+  
+
+<div class="box zx clear">
+
+<div class="box pai clear">
+<p>最新上榜品牌</p>
+</div>
+
+<ul>
+{foreach from=$new key=key item=item}
+    <li>
+      <div class="zximg">
+        <a href="/{$item.domain}/"><img src="https://www.hercity.com{$item.logo}" alt="{$item.firstname}{$item.lastname}" /></a>
+      </div>
+      <div class="zxbiao">
+        <a href="/{$item.domain}/">{$item.firstname}{$item.lastname}</a>
+      </div>
+    </li>
+{/foreach}
+</ul> 
+</div>
+
+
+{include file="inc_footer.html" current="index"}

@@ -1,0 +1,60 @@
+.content{
+  margin-top: 50rpx;
+  padding: 50rpx 30rpx;
+  background: #fff;
+}
+.content_title{
+  position: relative;
+  width: 260rpx;
+  margin: 0 auto 50rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  text-align: center;
+}
+.content_title:before,.content_title:after{
+  content: '';
+  position: absolute; 
+  top: 20rpx; 
+  right: 0;
+  width: 40rpx;
+  border-bottom: 1rpx dashed #333;  
+}
+.content_title:before { right: auto; left: 0rpx;}
+
+.content_cont{
+  padding-bottom: 20rpx;
+}
+.wxParse-p{
+  width: 100%;
+  margin-bottom: 40rpx;
+  text-align: justify;
+  color: #666;
+  line-height: 1.8;
+  
+}
+
+.content_msg{
+  font-size: 26rpx;
+  color: #fd7500;
+}
+
+/*  */
+page{
+  padding-bottom: 100rpx;
+}
+button{
+  width: 690rpx;
+  height: 100rpx;
+  margin-top: 70rpx;
+  background: #fc8b00;
+  color: #fff;
+  font-weight: 600;
+  line-height: 100rpx;
+}
+
+.btn2{
+  margin-top: 30rpx;
+  background: #fff;
+  color: #666;
+  border: 1rpx solid #f4f4f4;
+}

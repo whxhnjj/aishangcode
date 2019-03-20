@@ -1,0 +1,110 @@
+{include file="inc_header.html" current="list" title="{$title} - 倾城网"}
+
+<!--update-->
+<div class="wrap list">
+	<div class="left">
+		<div class="breadcrumb">{$location}</div>
+		
+		<div class="menu">
+			<a href="/s/shop/"{if $kind_folder == 'shop'} class="current"{/if}>全部</a>
+			<a href="/s/shop/beijing/"{if $kind_folder == 'shop/beijing'} class="current"{/if} class="hot">北京</a>
+			<a href="/s/shop/tianjin/"{if $kind_folder == 'shop/tianjin'} class="current"{/if}>天津</a>
+			<a href="/s/shop/chongqing/"{if $kind_folder == 'shop/chongqing'} class="current"{/if}>重庆</a>
+			<a href="/s/shop/hebei/"{if $kind_folder == 'shop/hebei'} class="current"{/if}>河北</a>
+			<a href="/s/shop/shanxi/"{if $kind_folder == 'shop/shanxi'} class="current"{/if}>山西</a>
+			<a href="/s/shop/neimenggu/"{if $kind_folder == 'shop/neimenggu'} class="current"{/if}>内蒙古</a>
+			<a href="/s/shop/liaoning/"{if $kind_folder == 'shop/liaoning'} class="current"{/if}>辽宁</a>
+			<a href="/s/shop/jilin/"{if $kind_folder == 'shop/jilin'} class="current"{/if}>吉林</a>
+			<a href="/s/shop/heilongjiang/"{if $kind_folder == 'shop/heilongjiang'} class="current"{/if}>黑龙江</a>
+			<a href="/s/shop/shanghai/"{if $kind_folder == 'shop/shanghai'} class="current"{/if} class="hot">上海</a>
+			<a href="/s/shop/jiangsu/"{if $kind_folder == 'shop/jiangsu'} class="current"{/if} class="hot">江苏</a>
+			<a href="/s/shop/zhejiang/"{if $kind_folder == 'shop/zhejiang'} class="current"{/if} class="hot">浙江</a>
+			<a href="/s/shop/anhui/"{if $kind_folder == 'shop/anhui'} class="current"{/if}>安徽</a>
+			<a href="/s/shop/fujian/"{if $kind_folder == 'shop/fujian'} class="current"{/if}>福建</a>
+			<a href="/s/shop/jiangxi/"{if $kind_folder == 'shop/jiangxi'} class="current"{/if}>江西</a>
+			<a href="/s/shop/shandong/"{if $kind_folder == 'shop/shandong'} class="current"{/if}>山东</a>
+			<a href="/s/shop/henan/"{if $kind_folder == 'shop/henan'} class="current"{/if}>河南</a>
+			<a href="/s/shop/hubei/"{if $kind_folder == 'shop/hubei'} class="current"{/if}>湖北</a>
+			<a href="/s/shop/hunan/"{if $kind_folder == 'shop/hunan'} class="current"{/if}>湖南</a>
+			<a href="/s/shop/guangdong/"{if $kind_folder == 'shop/guangdong'} class="current"{/if} class="hot">广东</a>
+			<a href="/s/shop/guangxi/"{if $kind_folder == 'shop/guangxi'} class="current"{/if}>广西</a>
+			<a href="/s/shop/hainan/"{if $kind_folder == 'shop/hainan'} class="current"{/if}>海南</a>
+			<a href="/s/shop/sichuan/"{if $kind_folder == 'shop/sichuan'} class="current"{/if}>四川</a>
+			<a href="/s/shop/guizhou/"{if $kind_folder == 'shop/guizhou'} class="current"{/if}>贵州</a>
+			<a href="/s/shop/yunnan/"{if $kind_folder == 'shop/yunnan'} class="current"{/if}>云南</a>
+			<a href="/s/shop/xizang/"{if $kind_folder == 'shop/xizang'} class="current"{/if}>西藏</a>
+			<a href="/s/shop/shaanxi/"{if $kind_folder == 'shop/shaanxi'} class="current"{/if} class="hot">陕西</a>
+			<a href="/s/shop/gansu/"{if $kind_folder == 'shop/gansu'} class="current"{/if}>甘肃</a>
+			<a href="/s/shop/qinghai/"{if $kind_folder == 'shop/qinghai'} class="current"{/if}>青海</a>
+			<a href="/s/shop/ningxia/"{if $kind_folder == 'shop/ningxia'} class="current"{/if}>宁夏</a>
+			<a href="/s/shop/xinjiang/"{if $kind_folder == 'shop/xinjiang'} class="current"{/if}>新疆</a>
+			<a href="/s/shop/taiwan/"{if $kind_folder == 'shop/taiwan'} class="current"{/if}>台湾</a>
+			<a href="/s/shop/xianggang/"{if $kind_folder == 'shop/xianggang'} class="current"{/if}>香港</a>
+			<a href="/s/shop/aomen/"{if $kind_folder == 'shop/aomen'} class="current"{/if}>澳门</a>
+			<a href="/s/shop/haiwai/"{if $kind_folder == 'shop/haiwai'} class="current"{/if}>海外</a>
+			<a href="/s/shop/wangdian/"{if $kind_folder == 'shop/wangdian'} class="current"{/if}>网店</a>
+			<a href="http://www.hercity.com/s/201604/28945.html" target="_blank" class="shoulu">我的店铺如何加入？</a>
+		</div>
+		
+		{if $list|is_null}
+			<div class="nolist">臣妾找不到啊！该城市暂无旗袍店铺被收录，<a href="/s/201604/28945.html">点击这里推荐</a>。</div>
+		{else}
+			<ul>
+				{foreach from=$list item=post}
+				<li>
+				{if $post.thumb1!="/data/upfiles/thumb/"}
+				<a class="pic" href="{$post.href}"><img src="{$post.thumb1}" alt="{$post.title}" /></a>
+				{/if}
+				<a class="cat" href="{$loftcms.config.basePath}{$loftcms.config.htmlListPath}{$post.kind.folder}">[{$post.kind.name}]</a>
+				<a class="tit" href="{$post.href}">{$post.title}{if $post.order_id>100}<span class="v">(已认证)</span>{/if}</a>
+				<p>{$post.brief}…</p>
+				<span>{$post.dateline|date_format:"%Y-%m-%d"}</span>
+				</li>
+				{/foreach}
+			</ul>
+		{/if}
+		<!--pages-->
+		{$pages}
+
+
+	</div>
+	<div class="right_a">
+		<div id="abox_c01" class="abox_box" ></div>
+		<div class="hc_box">
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-4842793887790356";
+			/* 300x250, 创建于 07-11-6 */
+			google_ad_slot = "1847728237";
+			google_ad_width = 300;
+			google_ad_height = 250;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		</div>
+		<div class="right_box">
+		<h5><a href="">热门推荐</a><span>HOT</span></h5>
+			<ul class="imagetext">
+			{foreach from=$list_hot item=post}
+			<li><div><a class="pic" href="{$post.href}"><img src="{$post.thumb1}" alt="{$post.title}" /></a></div><a class="tit" href="{$post.href}">{$post.subhead1}</a>
+			<p>{$post.brief}…</p>
+			</li>
+			{/foreach}
+			</ul>
+		</div>
+		<div id="abox_c02" class="abox_box" ></div>
+		<div class="ads">
+			<script type="text/javascript">
+			panshi_a ="2477572096_176111616_4";
+			panshi_b ="300_250_1";
+			</script>
+			<script type="text/javascript"	src="//t.adyun.com/show_ps3.js"></script>
+		</div>
+
+
+	</div>
+</div>
+
+
+{include file="inc_footer.html" current="list" template="list"}

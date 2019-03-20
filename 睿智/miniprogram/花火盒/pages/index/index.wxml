@@ -1,0 +1,13 @@
+<image class="logo" src="/pages/images/logo.png" mode="widthFix" ></image>
+<view class="title">热门活动</view>
+<view class="box">
+  <navigator class="actior"  wx:for="{{themes}}" wx:key="key" url="../route/route?url=theme&theme_id={{item.id}}">
+      <image class="activity" src="{{domain}}/{{item.photo}}" mode="aspectFill"></image>
+      <span class="name">{{item.title}}</span>
+      <view class="alive" wx:if="{{item.deadline > now}}"></view>
+      <view class="dead" wx:else></view>
+      <view class="status" wx:if="{{item.deadline > now}}">进行中</view>
+      <view class="status" wx:else>已结束</view>
+  </navigator>
+</view>
+<view class="mg"></view>

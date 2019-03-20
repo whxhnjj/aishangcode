@@ -1,0 +1,26 @@
+page{
+  background: #000;
+}
+.poster{
+width: 600rpx;
+padding-bottom: 50rpx;
+margin:50rpx auto;
+}
+.poster image{
+  width:600rpx;
+}
+button{
+  width: 600rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  margin-top: 50rpx;
+  background: #414141;
+  border-radius:50rpx;
+  color: #FFF;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}

@@ -1,0 +1,56 @@
+<!--pages/detail/detail.wxml-->
+<view class="taber">
+  <view bindtap="calphone">在线客服</view>
+  <view bindtap="depict">预约到店</view>
+  <view>立即购买</view>
+</view>
+
+<view class='bao' hidden="{{nullHouse}}" bindtap="cancel"></view>
+<view class="inputphone"  hidden="{{nullHouse}}">
+  <span>请输入你的手机号</span>
+  <form bindsubmit="submit">
+  <input type="number"  placeholder="请输入手机号！" name="phone"></input>
+  <button form-type="submit">预约</button>
+  </form>
+</view>
+
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">    
+    <swiper-item  wx:for="{{movies}}" wx:for-index="index">    
+      <image src="{{item.url}}" class="slide-image" mode="aspectFill"></image>   
+    </swiper-item>     
+</swiper>
+<view class="wrap">
+  <view class="title">
+    <span>NASA摄影韩国工艺</span>
+    <span>韩国NASA摄影工艺</span>
+    <span>8899.00</span>
+  </view>
+  <view class="main">
+    <view class="sge">套餐内容</view>
+    <view class="list">
+      <span>造型</span>
+      <span>预售场景</span>
+    </view>
+    <view class="list">
+      <span>内景</span>
+      <span>预售场景</span>
+    </view>
+        <view class="list">
+      <span>外景</span>
+      <span>预售场景</span>
+    </view>
+    <view class="list">
+      <span>拍摄</span>
+      <span>预售场景</span>
+    </view>
+    <view class="list">
+      <span>精装</span>
+      <span>预售场景</span>
+    </view>
+  </view>
+
+</view>
+
+
+
+

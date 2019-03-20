@@ -1,0 +1,188 @@
+<!-- 物流 -->
+<view class="logistics" wx:if="{{(order.goods_type == 1) && ( order.status >= 5)}}">
+ <view class="container">
+  <view>快递名称：{{order.post_name}}</view>
+  <view wx:if="{{order.post_no}}">快递编号：{{order.post_no}}</view>
+ </view>
+</view>
+
+<view class="header_box">
+  <text wx:if="{{end_time != ''}}">{{end_time}}</text>
+  <navigator class="header" hover-class="none" url="../goods_detail/goods_detail?id={{order.goods_info.id}}">
+    <image src="{{hostName}}{{order.goods_info.goods_pic[0]}}" mode="aspectFill"></image>
+    <view class="right_box">
+      <text class="header_title">{{order.goods_info.name}}</text>
+      <text class="header_des">{{order.goods_info.sale_desc}}</text>
+      <view class="price">
+        <text>¥</text>
+        <text>{{order.goods_info.price}}</text>
+        <text>门市价：¥{{order.goods_info.market_price}}</text>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+<view wx:if="{{order.goods_info.goods_type == 0 && order.verify_qrcode}}" class="content_box qrcode">
+  <image src="{{hostName}}{{order.verify_qrcode}}" />
+  <text>使用时请出示左侧二维码</text>
+</view>
+
+<view wx:if="{{order.verify_code.length > 0 && order.goods_info.goods_type == 0}}" class="content_box">
+  <text class="content_header">电子码</text>
+  <view class="code">
+    <view class="{{code_state?'':'code_box'}} fl">
+      <block wx:for="{{order.verify_code}}" wx:key="id">
+        <text class="{{item.state == 1 ? 'code_success' : ''}}">{{item.code}}</text>
+      </block>
+    </view>
+    <text wx:if="{{!code_state}}" class="code_num fl">（{{order.verify_code.length}}张）</text>
+    <image wx:if="{{order.verify_code[1]}}" class="fl" src="{{code_state?'/images/code_up.png':'/images/code_down.png'}}" bindtap="codeState"/>
+    <view class="clearfix"></view>
+  </view>
+</view>
+
+<view class="address_box">
+  <view class="left_box">
+    <text>{{order.merchant_info.name}}</text>
+    <view class="address">
+      <image src="/images/orderdetail_address.png"></image>
+      <text data-latlng="{{order.merchant_info.latlng}}" data-name="{{order.merchant_info.name}}" data-address="{{order.merchant_info.address}}" bindtap="openMap">{{order.merchant_info.address}}</text>
+    </view>
+  </view>
+  <image src="/images/orderdetail_phone.png" data-contacts="{{order.merchant_info.contacts}}" bindtap="callPhone"></image>
+</view>
+
+<view class="content_box">
+  <text class="content_header">温馨提示</text>
+  <view wx:if="{{order.goods_info.validity}}" class="content_list">
+    <text>有 效 期</text>
+    <text>{{order.goods_info.validity}}</text>
+  </view>
+
+  <view wx:if="{{order.merchant_info.opening}}" class="content_list">
+    <text>使用时间</text>
+    <text>{{order.merchant_info.opening}}</text>
+  </view>
+
+  <!-- <view wx:if="{{order.goods_info.usage_rule}}" class="content_list">
+    <text>使用规则</text>
+    <import src="../../extend/wxParse/wxParse.wxml"/>
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:usage_rule.nodes}}"/>
+    </view>
+  </view>
+
+  <view wx:if="{{order.goods_info.statements}}" class="content_list">
+    <text>特别声明</text>
+    <import src="../../extend/wxParse/wxParse.wxml"/>
+    <view class="wxParse">
+      <template is="wxParse" data="{{wxParseData:statements.nodes}}"/>
+    </view>
+  </view> -->
+
+</view>
+
+
+<view class="content_box">
+  <text class="content_header">订单信息</text>
+  <view class="content_list">
+    <text>订 单 号</text>
+    <text>{{order.order_sn}}</text>
+  </view>
+
+  <view class="content_list">
+    <text>姓　　名</text>
+    <text>{{order.realname}}</text>
+  </view>
+
+  <view class="content_list">
+    <text>手 机 号</text>
+    <text>{{order.contacts}}</text>
+  </view>
+
+  <view wx:if="{{order.goods_type == 1}}" class="content_list">
+    <text>地　　址</text>
+    <text>{{order.address}}</text>
+  </view>
+
+  <view class="content_list">
+    <text>下单时间</text>
+    <text>{{order.order_time}}</text>
+  </view>
+
+  <view wx:if="{{order.status == 1}}" class="content_list">
+    <text>关闭时间</text>
+    <text>{{order.close_time}}</text>
+  </view>
+
+  <view wx:if="{{order.status > 1 && pay_type == 2}}" class="content_list">
+    <text>积分支付</text>
+    <text>{{order.int_part_pay_time}}</text>
+  </view>
+
+  <view wx:if="{{order.status > 2}}" class="content_list">
+    <text>付款时间</text>
+    <text>{{order.pay_time}}</text>
+  </view>
+
+  <view wx:if="{{order.status == 4}}" class="content_list">
+    <text>退款时间</text>
+    <text>{{order.cancel_time}}</text>
+  </view>
+
+  <view wx:if="{{order.status > 4 && order.goods_type == 1}}" class="content_list">
+    <text>发货时间</text>
+    <text>{{order.send_time}}</text>
+  </view>
+
+  <view wx:if="{{order.status > 5}}" class="content_list">
+    <text>{{order.goods_type == 1? '收货时间':'消费时间'}}</text>
+    <text>{{order.verify_time}}</text>
+  </view>
+
+  <view wx:if="{{order.status == 8}}" class="content_list">
+    <text>评论时间</text>
+    <text>{{order.comment_time}}</text>
+  </view>
+
+  <view wx:if="{{order.status == 9}}" class="content_list">
+    <text>退货时间</text>
+    <text>{{order.refund_time}}</text>
+  </view>
+
+  <view class="content_list">
+    <text>数　　量</text>
+    <text>{{order.buy_count}}</text>
+  </view>
+
+  <view class="content_list">
+    <text>总　　价</text>
+    <text>¥{{order.goods_price}}</text>
+  </view>
+
+  <view class="content_list">
+    <text>实际支付</text>
+    <text>¥{{order.cash_amount}}</text>
+  </view>
+
+  <view wx:if="{{order.remark != ''}}" class="content_list">
+    <text>备　　注</text>
+    <text>{{order.remark}}</text>
+  </view>
+</view>
+
+<!-- 底部 -->
+<view wx:if="{{isIphone}}" class="iphone_kuang"></view>
+<view class="bottom {{isIphone?'iphone':''}}">
+  <view class="left_box">
+    <button wx:if="{{order.status == 0 || order.status == 2}}" class="btn bg_fff" hover-class="none" bindtap="cancelOrder">取消订单</button>
+    <button wx:if="{{order.status == 1 || order.status == 4 || order.status == 6 || order.status == 7 || order.status == 8}}" class="btn bg_fff" hover-class="none" bindtap="deleteOrder">删除订单</button>
+    <navigator wx:if="{{order.status == 3|| order.status == 5}}" hover-class="none" url="../complain/complain">投诉</navigator>
+  </view>
+
+  <button wx:if="{{order.status == 0 || order.status == 2}}" class="btn" hover-class="none" bindtap="payOrder">立即支付</button>
+  <button wx:if="{{order.status == 1 || order.status == 3 || order.status == 4 || order.status == 6 || order.status == 7 ||order.status == 8}}" class="btn" hover-class="none" open-type="contact">联系客服</button>
+  <button wx:if="{{order.status == 5 && order.goods_type == 1}}" class="btn" hover-class="none" bindtap="receiveOrder">确认收货</button>
+
+</view>
+<view wx:if="{{isIphone}}" class="iphone_bottom"></view>

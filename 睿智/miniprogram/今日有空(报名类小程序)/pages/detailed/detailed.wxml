@@ -1,0 +1,75 @@
+<view class="point_tit">
+        <span>当前积分</span>
+        <p>1250</p>
+</view>
+<view class="gray_h">
+    <span>积分记录</span>
+    <navigator url='../../pages/rule/rule'>
+    </navigator>
+</view>
+<view class='wrap'>
+    <view class='list'>
+         <view class='tit'>
+              <span>每日签到</span>
+              <p>+10</p>
+         </view>
+         <view class='date'>2017.11.21 16:23:56</view>
+    </view>
+    <view class='list'>
+         <view class='tit'>
+              <span>每日分享</span>
+              <p>+10</p>
+         </view>
+         <view class='date'>2017.11.21 16:23:56</view>
+    </view>
+    <view class='list'>
+         <view class='tit'>
+              <span>首次转发</span>
+              <p>+100</p>
+         </view>
+         <view class='date'>2017.11.21 16:23:56</view>
+    </view>
+    <view class='list'>
+         <view class='tit'>
+              <span>每日分享</span>
+              <p>+10</p>
+         </view>
+         <view class='date'>2017.11.21 16:23:56</view>
+    </view>
+    <view class='list'>
+         <view class='tit'>
+              <span>每日签到</span>
+              <p>+10</p>
+         </view>
+         <view class='date'>2017.11.21 16:23:56</view>
+    </view>
+    <view class='list'>
+         <view class='tit'>
+              <span>每日分享</span>
+              <p>+10</p>
+         </view>
+         <view class='date'>2017.11.21 16:23:56</view>
+    </view>
+    <view class='list'>
+         <view class='tit'>
+              <span>首次转发</span>
+              <p>+100</p>
+         </view>
+         <view class='date'>2017.11.21 16:23:56</view>
+    </view>
+    <view class='list'>
+         <view class='tit'>
+              <span>每日分享</span>
+              <p>+10</p>
+         </view>
+         <view class='date'>2017.11.21 16:23:56</view>
+    </view>
+    <view class='list'>
+         <view class='tit'>
+              <span>首次转发</span>
+              <p>+100</p>
+         </view>
+         <view class='date'>2017.11.21 16:23:56</view>
+    </view>
+</view>
+    <view class="temp"></view>

@@ -1,0 +1,114 @@
+<block wx:if="{{member.is_proxy && member.team_rule != 2}}">
+  <view class="navbar">
+    <view class="{{state == 0 ? 'selected' : ''}}" data-state='0' bindtap="changeState">
+      <text data-state='0'>团队</text>
+      <view data-state='0'></view>
+    </view>
+    <view class="{{state == 1 ? 'selected' : ''}}" data-state='1' bindtap="changeState">
+      <text data-state='1'>我的</text>
+      <view data-state='1'></view>
+    </view>
+  </view>
+
+  <block wx:if="{{state == 0}}">
+    <!-- 创建团队 -->
+    <view wx:if="{{member.is_proxy == 1 && member.has_team == 0}}" class="new_agent">
+      <navigator class="new_agent_btn" url="../new_agent/new_agent">
+        <view>创建团队</view>
+      </navigator>
+      <text>创建团队，团队成员分享可获得收益</text>
+    </view>
+
+    <!-- 组团 -->
+    <view wx:if="{{ ( member.is_proxy == 1 && member.has_team == 1 )|| member.is_proxy == 2}}">
+      <view class="agent_msg">
+        <text>{{leader.team_name}}</text>
+        <text>{{leader.team_desc}}</text>
+      </view>
+
+      <view class="agent_box">
+        <text class="title">创建者</text>
+        <view class="content">
+          <view class="left_box fl">
+            <image wx:if="{{member.avatarurl}}" src="{{leader.avatarurl}}"></image>
+            <image wx:else src="{{hostName}}static/images/member.png"></image>
+            <view class="user_msg">{{leader.realname}}</view>
+          </view>
+          <button wx:if="{{leader.id == me.id}}" class="agent_btn fr" hover-class="none" open-type="share">+ 邀请</button>
+          <view class="clearfix"></view>
+        </view>
+      </view>
+
+
+      <view class="agent_box">
+        <text class="title">团队成员</text>
+        <view class="agent_member">
+          <view wx:for="{{team_member}}" wx:key="id">
+            <image wx:if="{{item.avatarurl}}" src="{{item.avatarurl}}"></image>
+            <image wx:else src="{{hostName}}static/images/member.png"></image>
+            <text>{{item.nickname}}</text>
+          </view>
+        </view>
+        <view class="page_text">{{page_text}}</view>
+      </view>
+    </view>
+
+    <view class="back_index" bindtap="backIndex">首页</view>
+  </block>
+
+
+  <!-- 我的 -->
+  <block wx:if="{{state == 1}}">
+
+    <view class="content_box">
+
+      <navigator wx:if="{{member.is_proxy != 0}}" class="content_list" hover-class="none" url="../agent_income/agent_income">
+        <view class='left_box'>
+          <image src="/images/agent_icon_income.png"></image>
+          <text>收益</text>
+        </view>
+
+        <view class="right_box">
+          <text class="color_ff5070">¥{{member.cash}}</text>
+          <image src="/images/icon_more.png"></image>
+        </view>
+      </navigator>
+
+    </view>
+
+    <!--  -->
+    <view wx:if="{{member.realname && member.mobile}}" class="content_box">
+      <view wx:if="{{member.realname}}" class="content_list">
+        <view class='left_box'>
+          <image src="/images/agent_icon_name.png"></image>
+          <text>{{member.realname}}</text>
+        </view>
+      </view>
+      <view class="content_list">
+        <view wx:if="{{member.mobile}}" class='left_box'>
+          <image src="/images/agent_icon_phone.png"></image>
+          <text>{{member.mobile}}</text>
+        </view>
+      </view>
+    </view>
+
+  </block>
+</block>
+
+<block wx:else>
+  <view class="page">
+    <view class="weui-msg">
+        <view class="weui-msg__icon-area">
+            <icon type="warn" size="93"></icon>
+        </view>
+        <view class="weui-msg__text-area">
+            <view class="weui-msg__title">您无权访问本页面</view>
+        </view>
+        <view class="weui-msg__opr-area">
+            <view class="weui-btn-area">
+                <button class="btn" bindtap="backIndex">返回首页</button>
+            </view>
+        </view>
+    </view>
+</view>
+</block>

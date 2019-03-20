@@ -1,0 +1,46 @@
+<!--商品列表  -->
+<block wx:if="{{carts.length == 0}}">
+  <text class="car_blank" url="../index/index" bindtap="goIndex">购物车是空的，现在去购买~</text>
+</block>
+<block wx:else>
+
+  <view wx:for="{{carts}}" wx:key="key" class="pro_list">
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+      <view class="content">
+        <block wx:if="{{item.is_sale == 1}}">
+          <image src="{{item.isSelect ? '../images/proright.png' : '../images/car_nochose.png'}}" class="chose_img fl" bindtap="switchSelect" data-index="{{index}}" data-id="{{index}}"></image>
+        </block>
+        <block wx:else>
+          <text class="pro_list_xj fl">已下架</text>
+        </block>
+        <navigator url="../pro/pro?goods_id={{item.goods_id}}"><image src="{{hostName}}{{item.main_pic}}" class='fl pro_list_img' mode="aspectFill"/></navigator>
+        <view class="pro_msg fl">
+          <text class="pro_msg_title">{{item.goods_name}}</text>
+          <text class="pro_msg_sku">{{item.spec_value}}</text>
+          <text class="pro_msg_price">{{item.goods_price/100}}</text>
+          <!--  -->
+          <view class="pro_msg_count">
+            <text class="{{carts[index].buy_count == 1 ? 'selected' : ''}} {{carts[index].is_sale == 0 ? 'selected' : ''}}" data-index="{{index}}" bindtap="bindMinus" data-id="{{item.id}}">-</text>
+            <text class="{{carts[index].is_sale == 0 ? 'selected' : ''}}" data-index="{{index}}">{{item.buy_count}}</text>
+            <text class="{{carts[index].buy_count == 100 ? 'selected' : ''}}{{carts[index].is_sale == 0 ? 'selected' : ''}}" data-index="{{index}}" bindtap="bindPlus" data-id="{{item.id}}">+</text>
+          </view>
+        </view>
+      </view>
+      <!--  -->
+      <view class="del" catchtap="del" data-index="{{index}}" data-id="{{item.id}}">删除</view>
+    </view>
+  
+  </view>
+
+  <view class="bottom"></view>
+  <!--底部  -->
+  <view class="car_nav">
+    <image src="{{isAllSelect ? '../images/proright.png' : '../images/car_nochose.png'}}" class="chose_img fl" bindtap="allSelect"></image>
+    <text class="fl car_nav_all">全选</text>
+    <button class="fr" bindtap="toBuy" formType="submit">结算</button>
+    <view class="car_nav_msg fr">
+      <text>合计：¥{{totalMoney/100}}</text>
+      <text>不含运费</text>
+    </view>
+  </view>
+</block>

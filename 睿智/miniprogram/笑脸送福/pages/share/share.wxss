@@ -1,0 +1,38 @@
+/* pages/share/share.wxss */
+page{
+  background: #cd533c;
+}
+.box{
+  width: 750rpx;
+  height:1200rpx;
+}
+.box image{
+  width: 750rpx;
+}
+.box2{
+  width:650rpx;
+  background: #FFF;
+  position: absolute;
+  padding: 25rpx;
+  left: 25rpx;
+  top:620rpx;
+}
+.btn1{
+  color: #FFF;
+  font-size:38rpx;
+  background: #1aac19;
+  margin-bottom: 25rpx;
+}
+.btn2{
+  font-size:38rpx;
+  margin-bottom: 25rpx;
+}
+.fh{
+  text-align: center;
+  width: 650rpx;
+  display: block;
+  font-size: 30rpx;
+  color: #878787;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/img/fh.png') no-repeat 250rpx center;
+  background-size:42rpx;
+}

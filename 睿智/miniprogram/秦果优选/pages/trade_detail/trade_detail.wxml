@@ -1,0 +1,141 @@
+<!-- 物流 -->
+<view class="logistics" wx:if="{{(list.post_type == 1) && (list.status >= 5)}}">
+ <view class="container">
+  <view>快递名称：{{list.post_name}}</view>
+  <view wx:if="{{list.post_no}}">快递编号：{{list.post_no}}</view>
+  <view wx:if="{{list.sale_remark}}">卖家留言：{{list.sale_remark}} <text class="copy_btn" bindtap="copyMessage" data-msg="{{list.sale_remark}}">复制</text></view>
+ </view>
+</view>
+
+<!--地址  -->
+<view class="buy_address">
+  <view class="container">
+    <image class="address_on fl" src="../images/check.png"></image>
+    <view class="address_msg fl">
+      <view class="address_msg_box1">
+        <text class="name fl">{{list.addr_info.user_name}}</text>
+        <text class="phone fr">{{list.addr_info.tel_number}}</text>
+        <text class="clearfix"></text>
+      </view>
+      <view class='address'>{{list.addr_info.province_name}}{{list.addr_info.city_name}}{{list.addr_info.county_name}}{{list.addr_info.detail_info}}</view>
+    </view>
+    <text class="clearfix"></text>
+  </view>
+</view>
+<!--商品信息-->
+<view class="pro_msg">
+  <!--  -->
+  <view class="shop_name">
+    <image src="../images/shop.png"></image>
+    {{list.shop_name}}
+    <text wx:if="{{list.status == 0}}" class="fr" class="abort_time fr">{{end_time}}</text>
+    <text wx:if="{{list.status == 1}}" class="fr" class="abort_time fr">订单已关闭</text>
+    <text wx:if="{{list.status == 2}}" class="fr" class="abort_time fr">待发货</text>
+    <text wx:if="{{list.status == 3}}" class="fr" class="abort_time fr">已取消（待退款）</text>
+    <text wx:if="{{list.status == 4}}" class="fr" class="abort_time fr">已取消（已退款）</text>
+    <text wx:if="{{list.status == 5}}" class="fr" class="abort_time fr">已发货（待收货）</text>
+    <text wx:if="{{list.status == 6}}" class="fr" class="abort_time fr">已收货（订单完成）</text>
+    <text wx:if="{{list.status == 7}}" class="fr" class="abort_time fr">已评价</text>
+    <text wx:if="{{list.status == 8}}" class="fr" class="abort_time fr">部分退货（待退款）</text>
+    <text wx:if="{{list.status == 9}}" class="fr" class="abort_time fr">部分退货（已退款）</text>
+    <text wx:if="{{list.status == 10}}" class="fr" class="abort_time fr">全部退货（待退款）</text>
+    <text wx:if="{{list.status == 11}}" class="fr" class="abort_time fr">全部退货（已退款）</text>
+  </view>
+  <text class="trade_sn container">订单编号：{{list.trade_sn}}</text>
+  <!--  -->
+  <block wx:for="{{list.order}}" wx:key="key">
+    <view class="pro_list">
+
+      <view class="pro_list1">
+      <image src="{{hostName}}{{item.main_pic}}" class="fl" mode="aspectFill"></image>
+      <view class="pro_list_box1 fl">
+        <text class="pro_title">{{item.goods_name}}</text>
+        <text class="pro_sku">{{item.spec_value}}</text>
+      </view>
+      <view class="pro_list_box2 fr">
+        <text class="pro_price">￥{{item.goods_price/100}}</text>
+        <text class="pro_count">x{{item.buy_count}}</text>
+      </view>
+      <text class="clearfix"></text>
+      </view>
+
+      <view class="pro_list2" wx:if="{{(list.status == 6 || list.status == 7) && list.can_refund ==1}}">
+        <text class="pro_list_btn fr" bindtap="someReturnGoods"  data-orderid="{{item.id}}">退货</text>
+        <text class="clearfix"></text>
+      </view>
+     
+      <view class="pro_list2" wx:if="{{item.refund_status ==1}}">
+        <text class="fr" wx:if="{{item.refund_pay_time >0}}">已退货</text>
+        <text class="fr" wx:else>退货中</text>
+        <text class="clearfix"></text>
+      </view>
+
+    </view>
+  </block>
+
+
+
+  <!--  -->
+  <view class="pro_tab">
+    <text class="fl">运费：</text>
+    <block wx:if="{{list.post_amount > 0}}">
+      <text class="fr">{{list.post_amount/100}}元</text>
+    </block>
+    <block wx:else>
+      <text class="fr">包邮</text>
+    </block>
+    <text class="clearfix"></text>
+  </view>
+  <!-- <view class="pro_tab">
+    <text class="fl">优惠：</text>
+    <image src="../images/right.png" class="coupon fr"></image>
+    <text class="fr">暂无可用</text>
+    <text class="clearfix"></text>
+  </view> -->
+  <view class="pro_tab">
+    <text class="fl">商品总价：</text>
+    <text class="fr pro_tab_price">￥{{(list.order_amount-list.post_amount)/100}}</text>
+    <text class="clearfix"></text>
+  </view>
+   <view class="pro_tab">
+    <text class="fl">实付：</text>
+    <text class="fr pro_tab_price">￥{{list.order_amount/100}}</text>
+    <text class="clearfix"></text>
+  </view>
+  <view class="pro_tab" wx:if="{{list.buy_remark}}">
+    <text class="fl">买家留言：</text>
+    <text type="text" class="fr pro_tab_input">{{list.buy_remark}}</text>
+    <text class="clearfix"></text>
+  </view>
+</view>
+
+<!-- 订单信息 -->
+<view class="order_msg" wx:if="{{list.status!=0}}">
+  <text wx:if="{{list.status == 1}}">关闭时间：{{list.close_time}}</text>
+  <text wx:if="{{list.status >= 2}}">付款时间：{{list.pay_time}}</text>
+  <text wx:if="{{list.status == 3 || list.status == 4}}">申请退款时间：{{list.cancel_time}}</text>
+  <text wx:if="{{list.status == 4}}">退款到账时间：{{list.cancel_pay_time}}</text>
+  <text wx:if="{{list.status >= 5}}">发货时间：{{list.send_time}}</text>
+  <text wx:if="{{list.status >= 6}}">收货时间：{{list.receive_time}}</text>
+  <text wx:if="{{list.status == 8 || list.status == 9}}">部分退货时间：{{list.some_refund_time}}</text>
+  <text wx:if="{{list.status == 9}}">部分退货时的退款时间：{{list.some_refund_pay_time}}</text>
+  <text wx:if="{{list.status == 10 || list.status == 11}}">全部退货时间：{{list.all_refund_time}}</text>
+  <text wx:if="{{list.status == 11}}">全部退货时的退款时间：{{list.all_refund_pay_time}}</text>
+</view>
+
+<view class="container kefu"><text class="fl">您有任何问题，可以点击此处</text><button class="fl" open-type="contact">联系客服</button><view class="clearfix"></view></view>
+
+<!--底部  -->
+<text wx:if="{{isIphoneX}}" class="iponex_kuang"></text>
+<view class="buy_bottom {{isIphoneX?'iponex':''}}">
+  <button wx:if="{{list.status == 0}}" class="fr" bindtap="submitOrder">去支付</button>
+  <button wx:if="{{list.status == 0}}" class="fr selected" bindtap="cancelOrder">取消订单</button>
+  <button wx:if="{{list.status == 1 || list.status == 4 || list.status == 6 || list.status == 7 || list.status == 9 ||list.status == 11}}" class="fr" bindtap="deleteOrder">删除订单</button>
+  <button wx:if="{{list.status == 2}}" class="fr" bindtap="refundApply">申请退款</button>
+  <button wx:if="{{list.status == 5}}" class="fr" bindtap="takeDelivery">确认收货</button>
+  <button wx:if="{{(list.status == 6 || list.status == 7) && list.can_refund ==1}}" class="fr orange" bindtap="returnGoods">申请退货</button>
+  <!-- <button wx:if="{{list.status == 6}}" class="fr">去评价</button>
+  <button wx:if="{{list.status == 5}}" class="fr orange">查看物流</button> -->
+  <!-- <text class="fl">￥{{list.order_amount/100}}</text> -->
+</view>
+<text wx:if="{{isIphoneX}}" class="iponex_bottom"></text>

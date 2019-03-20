@@ -1,0 +1,39 @@
+<view class="header">
+  <image wx:if="{{avatarurl == ''}}" src="{{hostName}}static/images/member.png"></image>
+  <image wx:else src="{{avatarurl}}"></image>
+  <text class="name">{{realname}}</text>
+  <view>以下请您对本次服务的收纸员进行评价，您的评价会帮助我们更好的改进</view>
+</view>
+
+<view class="star_box">
+  <view class="star_line">
+    <text>服务态度</text>
+    <view class="star_choose" bindtap="chooseStar" style="background-position-x:{{service_position}}rpx">
+      <view data-num="1" data-name="service"></view>
+      <view data-num="2" data-name="service"></view>
+      <view data-num="3" data-name="service"></view>
+      <view data-num="4" data-name="service"></view>
+      <view data-num="5" data-name="service"></view>
+    </view>
+    <text>{{service_text}}</text>
+  </view>
+
+  <view class="star_line">
+    <text>时效性</text>
+    <view class="star_choose" bindtap="chooseStar" style="background-position-x:{{timelimit_position}}rpx">
+      <view data-num="1" data-name="timelimit"></view>
+      <view data-num="2" data-name="timelimit"></view>
+      <view data-num="3" data-name="timelimit"></view>
+      <view data-num="4" data-name="timelimit"></view>
+      <view data-num="5" data-name="timelimit"></view>
+    </view>
+    <text>{{timelimit_text}}</text>
+  </view>
+</view>
+
+
+<form bindsubmit="commentSubmit" report-submit="{{true}}">
+<textarea placeholder='亲，您对这次服务还满意吗？请留下您的宝贵意见，我们会越来越好。' name="comment"></textarea>
+<button class="base_btn" hover-class="none" formType="submit">提交评价</button>
+<text class="btn_text">您的意见是我们变得更好的法宝。</text>
+</form>

@@ -1,0 +1,34 @@
+page{
+  background: #F1F1F1;
+}
+.help_list{
+  width:650rpx;
+  margin:30rpx 25rpx 0 25rpx;
+  padding:25rpx;
+  background: #FFF;
+
+}
+.tit{
+  font-size: 34rpx;
+  color: #313131;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/img/zhangkai1.png') no-repeat right center;
+  background-size:34rpx;
+}
+
+.content{
+  margin-top: 30rpx;
+  padding-top: 25rpx;
+  font-size: 30rpx;
+  border-top: 1rpx solid #CCC;
+  color: #999;
+  display:none;
+}
+
+.open>.tit{
+  background: url('http://t.nongjia365.com.cn/guanli/assets/img/zhangkai2.png') no-repeat right center;
+    background-size:34rpx;
+}
+.open>.content{
+  display:block;
+}
+

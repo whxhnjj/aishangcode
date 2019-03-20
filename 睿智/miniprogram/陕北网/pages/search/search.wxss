@@ -1,0 +1,70 @@
+.wrap{
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+}
+.list{
+  width: 700rpx;
+  height:100%;
+  overflow: hidden;
+  border-bottom:3rpx solid #EBEBEB;
+  padding:25rpx;
+}
+.list .userinfo_avatar{
+  width:98rpx;
+  height:98rpx;
+  border:1rpx solid #EBEBEB;
+  border-radius: 50%;
+  float: left;
+}
+.ownbao{
+  width: 225rpx;
+  float: left;
+  margin-left: 25rpx;
+  height:100rpx;
+}
+.list span.own_num{
+  width: 225rpx;
+  height:50rpx;
+  font-size:25rpx;
+  color: #858585;
+  line-height: 70rpx;
+  display: block;
+  overflow: hidden;
+}
+.list span.own_name{
+  width: 225rpx;
+  height:50rpx;
+  font-size:28rpx;
+  color: #353535;
+  display: block;
+  overflow: hidden;
+}
+.list span.own_number{
+  width:230rpx;
+  float: left;
+  height: 100rpx;
+  line-height: 100rpx;
+  color:#F7941D;
+  display: block;
+  font-size:50rpx;
+  font-weight:600;
+    overflow: hidden;
+}
+.list .giving{
+    width: 120rpx;
+    height: 100rpx;
+    float: right;
+    background:url(https://huahuohe.com/static/xcx/jiantouright.png) no-repeat right center;
+    background-size: 48rpx;
+}
+i{
+  font-size: 24rpx;
+  color: #858585;
+}
+.nomore{
+text-align: center;
+margin-top: 350rpx;
+font-size: 32rpx;
+color: #858585;
+}

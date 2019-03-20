@@ -1,0 +1,33 @@
+<!--pages/list/list.wxml-->
+<view class="wrap">
+
+  <view class="list" bindtap="listUrl">
+    <view class="number">1</view>
+    <image class="userinfo_avatar" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+    <view class="userinfo">
+      <span class="userinfo_name">{{userInfo.nickName}}</span>
+      <span class="gife">6235</span>
+    </view>
+    <view class="giving">投票</view>
+  </view>
+  <view class="list" bindtap="listUrl">
+    <view class="number">2</view>
+    <image class="userinfo_avatar" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+    <view class="userinfo">
+      <span class="userinfo_name">{{userInfo.nickName}}</span>
+      <span class="gife">6235</span>
+    </view>
+    <view class="giving">投票</view>
+  </view>
+  <view class="list" bindtap="listUrl">
+    <view class="number">3</view>
+    <image class="userinfo_avatar" src="/pages/images/touxiang.jpg" background-size="cover"></image>
+    <view class="userinfo">
+      <span class="userinfo_name">{{userInfo.nickName}}</span>
+      <span class="gife">6235</span>
+    </view>
+    <view class="giving">投票</view>
+  </view>
+
+</view>
+<view class="mg"></view>

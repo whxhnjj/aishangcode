@@ -1,0 +1,8 @@
+<!--pages/about/about.wxml-->
+<view class="banner">
+  <image src="/pages/images/banner1.jpg" mode="aspectFill"></image>
+</view>
+<view class='wrap'>
+<text>活动介绍：西安市阎良区关山镇“惠通饭庄”成立于2010年10月30日，历经7年风雨，以“惠民以信客源广、处事以和财路通”为理念，以“全心全意让顾客满意为宗旨”，以“打造阎良关山知名餐饮企业为目标”，以此服务于大众曾获得了社会各界朋友的一致赞许和好评，惠通全体员工热诚欢迎您的光临！</text>
+</view>
+<view class="mg"></view>

@@ -1,0 +1,84 @@
+/* pages/withdrawals/withdrawals.wxss */
+.alert{
+  width:750rpx;
+  background:#FFF800;
+  color: #000;
+  font-size: 30rpx;
+  padding: 10rpx 0;
+  text-align: center;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
+.num1{
+  display: none;
+}
+page{
+  background-color:#F1F1F1;
+}
+.contact{
+  text-align: right;
+  font-size: 28rpx;
+  margin:25rpx 0;
+  color: #5a5d86;
+}
+.drawals{
+  width:600rpx;
+  padding:25rpx 50rpx;
+  background: #FFF;
+}
+.balance{
+  width: 600rpx;
+  height:80rpx;
+}
+.balance span.left{
+  width:140rpx;
+  height:80rpx;
+  float: left;
+  line-height:80rpx;
+  font-size: 28rpx;
+}
+.balance span.right{
+  width:460rpx;
+  height:80rpx;
+  float: right;
+  line-height:80rpx;
+  font-size:50rpx;
+  color: #999999;
+}
+.tit{
+  margin: 20rpx 0;
+  display: inline-block;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+.money{
+  width:530rpx;
+  height:100rpx;
+  padding-left:70rpx;
+  border-bottom: 1rpx solid #D6D6D6;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/img/rmb.png') no-repeat left center;
+  background-size:48rpx;
+}
+.money .num{
+  width:530rpx;
+  height:100rpx;
+  line-height: 100rpx;
+  font-size: 54rpx;
+}
+span.guize{
+  padding: 20rpx 0;
+  display: block;
+  font-size: 24rpx;
+  color: #AAA;
+}
+.time{
+  padding:20rpx 0;
+  font-size: 24rpx;
+  text-align: center;
+  display: block;
+  color: #AAA;
+}

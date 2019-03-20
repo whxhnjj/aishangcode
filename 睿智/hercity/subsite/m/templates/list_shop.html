@@ -1,0 +1,39 @@
+{include file="inc_header.html" current="list" title="{$list.kind.name}{if $list.kind.id>4}旗袍店{/if}({$page})"}
+	
+<div class="content list">
+<h1>{$list.kind.name}{if $list.kind.id>4}旗袍店{/if}</h1>
+
+
+{if $list.posts|is_null}
+<div class="nolist">臣妾找不到啊！该城市暂无旗袍店铺被收录，<a href="/s/201604/28945.html">点击这里推荐</a>。</div>
+{else}
+<ul class="news">
+{foreach from=$list.posts key=key item=item}
+<li>
+{if $item.thumb1|substr:'-15'!="/upfiles/thumb/"}
+<a class="pic" href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a>
+{/if}
+
+<a class="shop_city" href="/s/list/{$item.kind_id}/1.html">{$item.kind_id|kindsGetInfo:'name'|gbkToUtf8}</a>
+<a class="shop_tit" href="{$item.href}">{$item.subhead1}</a>
+<span class="shop_txt">{$item.subhead2}</span>
+</li>
+{/foreach}
+</ul>
+{/if}
+
+
+
+<div class="pages">
+{if $page > 1}
+<a href="/s/list/{$kind_id}/{$page-1}.html" class="prev">&lt;上一页</a>
+{/if}
+
+{if $page < $list.pagecount}
+<a href="/s/list/{$kind_id}/{$page+1}.html" class="next">下一页&gt;</a>
+{/if}
+</div>
+
+</div>
+
+{include file="inc_footer.html" current="list"}

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta charset="gbk" />
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="apple-touch-icon" href="/statics/images/mobile/ati.png"/>
+<title>{$person.title}</title>
+<style type="text/css">
+@import url("/statics/css/style_mobile.css");
+</style>
+</head>
+<body>
+
+<div class="content">
+<h1>{$person.name}</h1>
+<h5>{foreach from=$person.tags key=key item=item}<span>{$item}</span> {/foreach}</h5>
+
+
+<div class="ad">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 倾城微网站 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:50px"
+     data-ad-client="ca-pub-4842793887790356"
+     data-ad-slot="9715149371"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+
+<div class="thumb"><img src="https://www.hercity.com{$person.thumb2}" alt="{$person.name}" /></div>
+
+<div class="profile">
+{$person.profile}
+</div>
+
+<script type="text/javascript">
+    /*美人榜移动端20:12 创建于 2017/6/23*/
+    var cpro_id = "u3017059";
+</script>
+<script type="text/javascript" src="https://cpro.baidustatic.com/cpro/ui/cm.js"></script>
+
+
+<div class="archives">
+{foreach from=$person.archives key=key item=item}
+<div class="dt">{$item.0}</div>
+<div class="dd">{$item.1}</div>
+{/foreach}
+</div>
+
+</div>
+
+<input type="hidden" id="person_id" value="{$person.id}" />
+
+
+<footer>
+<a href="/" class="home" ></a>
+<a href="javascript:location.reload();" class="logo" ></a>
+<a href="javascript:window.history.back(1);" class="back" ></a>
+<a href="javascript:void(0);" class="menu"></a>
+</footer>
+
+<script type="text/javascript" src="/statics/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://www.hercity.com/assets/js/base64decode.js"></script>
+<script type="text/javascript" src="/statics/js/tbkjhs_mobi.js"></script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fa6fac6aa0103541558d72b7f1d1fb7a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script type="text/javascript">
+    /*美人榜移动端20:3 创建于 2017/6/23*/
+    var cpro_id = "u3017058";
+</script>
+<script type="text/javascript" src="https://cpro.baidustatic.com/cpro/ui/cm.js"></script>
+
+
+
+</body>
+</html>

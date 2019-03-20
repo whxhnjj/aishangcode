@@ -1,0 +1,62 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/category/category",
+    "pages/user/user",
+    "pages/information/information",
+    "pages/order_list/order_list",
+    "pages/order_detail/order_detail",
+    "pages/integral/integral",
+    "pages/aboutUs/aboutUs",
+    "pages/illustration/illustration",
+    "pages/goods_detail/goods_detail",
+    "pages/goods_buy/goods_buy",
+    "pages/qrcode/qrcode",
+    "pages/agent_index/agent_index",
+    "pages/new_agent/new_agent",
+    "pages/agent_income/agent_income",
+    "pages/agent_present/agent_present",
+    "pages/agent_present_record/agent_present_record",
+    "pages/agent_present_detail/agent_present_detail",
+    "pages/complain/complain",
+    "pages/notice_detail/notice_detail",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "周边优选",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#333",
+    "borderStyle": "#dadada",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "/images/tabbar/index_sel.png",
+        "iconPath": "/images/tabbar/index.png",
+        "pagePath": "pages/index/index",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/cate_sel.png",
+        "iconPath": "/images/tabbar/cate.png",
+        "pagePath": "pages/category/category",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/user_sel.png",
+        "iconPath": "/images/tabbar/user.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "uploadFile": 10000
+  },
+  "debug": false
+}

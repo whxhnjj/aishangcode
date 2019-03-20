@@ -1,0 +1,39 @@
+
+<!--banner-->
+<swiper class="pro_banner" indicator-dots interval="5000" duration="500" circular >
+  <block wx:for="{{pic}}" wx:item="item" wx:key="index">
+    <swiper-item class="pro_list">
+      <image src="{{item}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 产品名称 -->
+<view class="pro_header">
+  <text class="pro_name">月白嫁衣</text>
+  <text class="pro_name_des">用更为现代的简约风格，诠释最传统的中式嫁衣。打破人们对传统中式繁复陈旧的思维定势，让月白品牌的散发出全新的中式风尚。</text>
+  <!-- <text class="pro_price">¥32.00</text> -->
+</view>
+<view class="all_bottom"></view>
+
+<!-- 详情 -->
+<view class="pro_detail">
+
+  <view class="card_title">
+    <text>详情</text>
+    <text class="card_title_line"></text>
+  </view>
+
+  <image src="/images/1.jpg" mode="widthFix"></image>
+  <image src="/images/1.jpg" mode="widthFix"></image>
+  <image src="/images/1.jpg" mode="widthFix"></image>
+  <image src="/images/1.jpg" mode="widthFix"></image>
+  <image src="/images/1.jpg" mode="widthFix"></image>
+  <image src="/images/1.jpg" mode="widthFix"></image>
+
+</view>
+
+<!-- 底部按钮 -->
+<text class="{{isIphoneX?'iponex_kuang':''}}"></text>
+<button class="buy {{isIphoneX?'iponex':''}}">立即购买</button>
+<text class="{{isIphoneX?'iponex_bottom':''}}"></text>

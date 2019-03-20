@@ -1,0 +1,209 @@
+
+page {
+  box-sizing: border-box;
+  background: #f0f0f0;
+  font-size: 28rpx;
+  color: rgb(51, 51, 51);
+  font-family: PingFangSC-Regular, sans-serif, "微软雅黑";
+}
+
+.container {
+  position: relative;
+  width: 690rpx;
+  margin: 0 auto;
+}
+
+.clearfix {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+view, images, text, navigator,textarea {
+  box-sizing: border-box;
+}
+
+button::after {
+  border: none;
+}
+.hide{
+  display: none !important;
+}
+
+/************通用样式**************/
+
+/* 头部背景 */
+.nav{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:center;
+  height: 400rpx;
+  width: 100%;
+  padding-top: 30rpx;
+  background: #00b453;
+}
+
+/* 列表框 */
+.submenu_box{
+  position: absolute;
+  top: 180rpx;
+  left: 50%;
+  z-index: 10;
+  margin-left: -345rpx;
+  padding-bottom: 90rpx;
+  font-size: 30rpx;
+}
+
+.submenu_msg{
+  width: 690rpx;
+  min-height: 700rpx;
+  margin-bottom: 60rpx;
+  border-radius: 15rpx;
+  background: #fff;
+}
+.submenu_box .submenu_msg:last-child{
+  margin-bottom: 0;
+}
+.submenu_msg .sub_list:last-child{
+  border-bottom: none;
+}
+.submenu_msg .sub_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+  align-items:center;
+  padding: 50rpx 0;
+  margin: 0 auto;
+  width: 590rpx;
+  border-bottom: 1rpx solid rgb(230,230,230);
+}
+
+.base_btn{
+  width: 670rpx;
+  height: 100rpx;
+  border-radius:50rpx;
+  text-align:center;
+  line-height:100rpx;
+  font-size:36rpx;
+  font-weight:600;
+  background: #00b453;
+  color:#fff;
+}
+.btn_text{
+  display:block;
+  margin-top:20rpx;
+  text-align:center;
+  color:#999;
+  font-size: 24rpx;
+}
+
+/* 选项 */
+.nav .nav_item{
+  width: 40%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #fff;
+}
+.nav .selected{
+  background: url(https://paihuishou.site.webimage.cn/static/xcx//underline.png) no-repeat center 60rpx;
+  background-size: 60rpx 21rpx;
+  font-weight: 600;
+}
+
+/* color */
+.color_02cc7a{
+  color: #02cc7a;
+}
+.color_ff9800{
+  color: #ff9800;
+}
+.color_33a7ff{
+  color: #33a7ff;
+}
+.color_999{
+  color: #999;
+}
+
+/*********上传按钮************/
+.upload_btn{
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  background: #e6e6e6;
+}
+
+.upload_btn:before{
+    content: '';
+    position: absolute;
+    width: 60rpx;
+    height: 4rpx;
+    left: 50%;
+    top: 50%;
+    margin-left: -30rpx;
+    margin-top: -2rpx;
+    background-color: #fff;
+}
+.upload_btn:after{
+    content: '';
+    position: absolute;
+    width: 4rpx;
+    height: 60rpx;
+    left: 50%;
+    top: 50%;
+    margin-left: -2rpx;
+    margin-top: -30rpx;
+    background-color: #fff;
+}
+/* no-order */
+.no_order{
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 850rpx;
+  color: #999;
+}
+.page_text{
+  display: block;
+  padding-top: 50rpx;
+  text-align: center;
+}
+
+/* formid */
+.base_form{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-color:transparent;
+  border:none;
+  background-color:transparent;
+  /* background: red; */
+}
+
+.form_btn{
+  width: 1rpx;
+  height: 1rpx;
+  margin: 0;
+  border-color:transparent;
+  border:none;
+  background-color:transparent;
+}
+.form_btn>view{
+  position: fixed;
+  top: 170rpx;
+  width: 260rpx;
+  height: 260rpx;
+  border-radius: 50%;
+  /* background: red; */
+}

@@ -1,0 +1,233 @@
+<view wx:if="{{member_rule == 0}}" class="user">
+  <view class="logo">
+    <image src="/images/logo.png"/>
+  </view>
+
+  <view class="banner">
+
+    <swiper autoplay interval="5000" duration="200">
+      <swiper-item wx:for="{{swiper}}" wx:key="key">
+        <image src="{{hostName}}{{item.pic_url}}" class="slide-image" mode="aspectFill" data-url="{{item.relation}}" bindtap="linkWebView"/>
+      </swiper-item>
+    </swiper>
+
+    <!-- <text class="logo_msg">回收一吨纸 再造一片林</text> -->
+  </view>
+
+
+  <view class="bottom">
+    <view class="btn" hover-class="none" bindtap="newFree">
+      公益捐赠
+      <!-- formid -->
+      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+        <button class="form_btn" hover-class="none" formType="submit">
+          <view>
+            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+              <button class="form_btn" hover-class="none" formType="submit">
+                <view>
+                  <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                    <button class="form_btn" hover-class="none" formType="submit">
+                      <view>
+                        <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                          <button class="form_btn" hover-class="none" formType="submit">
+                            <view>
+                              <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                                <button class="form_btn" hover-class="none" formType="submit">
+                                  <view></view>
+                                </button>
+                              </form>
+                            </view>
+                          </button>
+                        </form>
+                      </view>
+                    </button>
+                  </form>
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+      <!-- formid -->
+    </view>
+    <view class="btn" hover-class="none" bindtap="newOrder" style="background:#6ac335">
+      用户发单
+      <!-- formid -->
+      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+        <button class="form_btn" hover-class="none" formType="submit">
+          <view class="index">
+            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+              <button class="form_btn" hover-class="none" formType="submit">
+                <view>
+                  <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                    <button class="form_btn" hover-class="none" formType="submit">
+                      <view>
+                        <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                          <button class="form_btn" hover-class="none" formType="submit">
+                            <view>
+                              <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                                <button class="form_btn" hover-class="none" formType="submit">
+                                  <view></view>
+                                </button>
+                              </form>
+                            </view>
+                          </button>
+                        </form>
+                      </view>
+                    </button>
+                  </form>
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+      <!-- formid -->
+    </view>
+    <navigator class="text" hover-class="none" url="../use_explain/use_explain">使用说明</navigator>
+  </view>
+</view>
+
+<view wx:if="{{member_rule != 0}}" class="employee">
+  <view class="nav">
+    <view class="nav_item {{state == 1?'selected':''}}" data-state="1" bindtap="changeState">
+      新任务{{new_order}}
+      <!-- formid -->
+      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+        <button class="form_btn" hover-class="none" formType="submit">
+          <view class="nav1" data-state="1">
+            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+              <button class="form_btn" hover-class="none" formType="submit">
+                <view data-state="1">
+                  <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                    <button class="form_btn" hover-class="none" formType="submit">
+                      <view data-state="1">
+                        <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                          <button class="form_btn" hover-class="none" formType="submit">
+                            <view data-state="1">
+                              <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                                <button class="form_btn" hover-class="none" formType="submit">
+                                  <view data-state="1"></view>
+                                </button>
+                              </form>
+                            </view>
+                          </button>
+                        </form>
+                      </view>
+                    </button>
+                  </form>
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+      <!-- formid -->
+    </view>
+    <view class="nav_item {{state == 2?'selected':''}}" data-state="2" bindtap="changeState">
+      待上门{{wait_order}}
+      <!-- formid -->
+      <form bindsubmit="formidSubmit" report-submit="{{true}}">
+        <button class="form_btn" hover-class="none" formType="submit">
+          <view class="nav2" data-state="2">
+            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+              <button class="form_btn" hover-class="none" formType="submit">
+                <view data-state="2">
+                  <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                    <button class="form_btn" hover-class="none" formType="submit">
+                      <view data-state="2">
+                        <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                          <button class="form_btn" hover-class="none" formType="submit">
+                            <view data-state="2">
+                              <form bindsubmit="formidSubmit" report-submit="{{true}}">
+                                <button class="form_btn" hover-class="none" formType="submit">
+                                  <view data-state="2"></view>
+                                </button>
+                              </form>
+                            </view>
+                          </button>
+                        </form>
+                      </view>
+                    </button>
+                  </form>
+                </view>
+              </button>
+            </form>
+          </view>
+        </button>
+      </form>
+      <!-- formid -->
+    </view>
+  </view>
+
+  <!--  -->
+  <view class="order_box">
+    <block wx:for="{{order}}" wx:key="id">
+      <view class="task_list">
+        <view class="task_header" data-latlng="{{item.latlng}}" data-area="{{item.area}}" data-address="{{item.address}}" bindtap="openMap">
+          <image src="/images/icon_task.png" data-latlng="{{item.latlng}}" data-area="{{item.area}}" data-address="{{item.address}}"></image>
+          <text data-latlng="{{item.latlng}}" data-area="{{item.area}}" data-address="{{item.address}}">派单距离</text>
+          <text data-latlng="{{item.latlng}}" data-area="{{item.area}}" data-address="{{item.address}}">{{(item.distance)}}</text>
+          <block wx:if="{{item.is_free == 1}}">
+            <text catchtap="inMap">公益捐赠</text>
+            <image src="/images/integral_icon.png" catchtap="inMap"></image>
+          </block>
+        </view>
+
+        <navigator class="task_cont" hover-class="none" url="../employee_order_detail/employee_order_detail?id={{item.id}}">
+          <view class="task_msg">
+            <view class="task_msg_box">
+              <text>{{item.suitable_time}}</text>
+              <text>上门时间</text>
+            </view>
+
+            <view class="task_msg_box">
+              <text>{{item.area}}{{item.address}}</text>
+              <text>上门地址</text>
+            </view>
+
+          </view>
+          <image src="/images/icon_arrow.png"></image>
+        </navigator>
+
+        <view class="task_btn">
+          <button wx:if="{{item.status == 2}}" hover-class="none" class="middle_btn" data-id="{{item.id}}" bindtap="orderTaking">接单</button>
+          <button wx:if="{{item.status == 2}}" hover-class="none" class="middle_btn btn_normal" data-id="{{item.id}}" bindtap="refuseOrder">拒收</button>
+          <button wx:if="{{item.status == 3}}" hover-class="none" class="middle_btn" data-contact="{{item.contacts}}" bindtap="contactsCustomer">联系顾客</button>
+          <button wx:if="{{item.status == 3}}" hover-class="none" class="middle_btn btn_normal" data-id="{{item.id}}" bindtap="removeOrder">取消</button>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <text class="page_text">{{order_text}}</text>
+
+</view>
+
+
+<view wx:if="{{refuse_state}}" class="pop_bg">
+  <view class="pop_box">
+    <form bindsubmit="refuseSubmit" bindreset="refuseReset" report-submit="{{true}}">
+      <textarea placeholder="请填入拒绝原因" name="reason" auto-focus></textarea>
+      <input class="hide" name="id" value="{{pop_id}}"></input>
+      <view class="btn_box">
+        <button hover-class="none" class="btn_normal" formType="reset">取消</button>
+        <button hover-class="none" formType="submit">确认</button>
+      </view>
+    </form>
+  </view>
+</view>
+
+<!-- 取消弹出 -->
+<view wx:if="{{remove_state}}" class="pop_bg">
+  <view class="pop_box">
+    <form bindsubmit="removeSubmit" bindreset="removeReset" report-submit="{{true}}">
+      <textarea placeholder="请填入取消原因" name="abort_reason" auto-focus></textarea>
+      <input class="hide" name="id" value="{{pop_id}}"></input>
+      <view class="btn_box">
+        <button hover-class="none" class="btn_normal" formType="reset">取消</button>
+        <button hover-class="none" formType="submit">确认</button>
+      </view>
+    </form>
+  </view>
+</view>

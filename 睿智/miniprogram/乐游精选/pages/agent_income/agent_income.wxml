@@ -1,0 +1,35 @@
+<view class="header">
+  <view class="header_income">
+    <view>
+      <text>今日收益</text>
+      <text>{{day_income}}</text>
+    </view>
+    <view>
+      <text>累计收益</text>
+      <text>{{total_income}}</text>
+    </view>
+  </view>
+
+  <navigator wx:if="{{team_rule == 0}}" class="header_btn" hover-class="none" url="../agent_present/agent_present">提现</navigator>
+  <navigator class="income_record" hover-class="none" url="../agent_present_record/agent_present_record">提现记录</navigator>
+
+</view> 
+<view class="line"></view>
+
+
+<!-- 列表 -->
+<view class="income_box">
+
+  <view class="income_list" wx:for="{{income}}" wx:key="id">
+    <view class="left_box">
+      <text>{{item.order_info.goods_name}}</text>
+      <view>
+        <text class="color_fc8b00">[{{item.order_info.realname}}]购买</text>
+        <text>{{item.update_time}}</text>
+      </view>
+    </view>
+    <text class="right_box">{{item.amount}}</text>
+  </view>
+
+  <view class="page_text">{{page_text}}</view>
+</view>

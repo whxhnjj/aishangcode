@@ -1,0 +1,32 @@
+{include file="inc_header.html" current="list" title="{$list.kind.name}({$page})"}
+	
+<div class="content list">
+<h1>{$list.kind.name}</h1>
+
+<ul class="news">
+{foreach from=$list.posts key=key item=item}
+
+<li>
+{if $item.thumb1|substr:'-15'!="/upfiles/thumb/"}
+<a class="pic" href="{$item.href}"><img src="{$item.thumb1}" alt="{$item.title}" /></a>
+{/if}
+<a class="tit" href="{$item.href}">{$item.title}</a>
+<span>{$item.dateline|date_format:"%Y-%m-%d"}</span>
+</li>
+{/foreach}
+</ul>
+
+
+<div class="pages">
+{if $page > 1}
+<a href="/s/list/{$kind_id}/{$page-1}.html" class="prev">&lt;上一页</a>
+{/if}
+
+{if $page < $list.pagecount}
+<a href="/s/list/{$kind_id}/{$page+1}.html" class="next">下一页&gt;</a>
+{/if}
+</div>
+
+</div>
+
+{include file="inc_footer.html" current="list"}

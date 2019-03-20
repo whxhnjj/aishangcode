@@ -1,0 +1,137 @@
+.title_wrap{
+  width: 750rpx;
+  height: 100%;
+  padding-bottom: 25rpx;
+  overflow: hidden;
+  background: #EBEBEB;
+}
+.title_name{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+  padding:25rpx;
+  background-color: #FFFFFF;
+  background-image:url(https://huahuohe.com/static/xcx/you.png);
+  background-size: 64rpx;
+  background-repeat: no-repeat;
+  background-position:center right;
+}
+.userinfo_avatar{
+  width: 120rpx;
+  height: 120rpx;
+  float: left;
+  margin-right: 25rpx;
+}
+.gift{
+  width: 500rpx;
+  height: 60rpx;
+  float: left;
+  display: block;
+  line-height: 80rpx;
+  color: #353535;
+  font-size: 36rpx;
+}
+.song{
+  width: 500rpx;
+  height: 60rpx;
+  float: left;
+  font-size: 30rpx;
+  color: #999999;
+  display: block;
+}
+
+.box{
+    width: 725rpx;
+    height: 100%;
+    overflow: hidden;
+    margin: 25rpx 0 25rpx 25rpx;
+}
+.box_view{
+    width: 218rpx;
+    height:222rpx;
+    float: left;
+    margin-right: 17rpx;
+    margin-bottom:17rpx;
+    border: 2rpx solid #999999;
+}
+.box_view.active{
+  border:2rpx solid #f00;
+  position: relative;
+}
+.active .nest{
+    width: 0;
+    height: 0;
+    border-bottom:15px solid red;
+    border-left:15px solid transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.box_view image{
+  width:110rpx;
+  height:110rpx;
+  display: block;
+  margin:20rpx auto 5rpx;
+}
+.box_view span.name{
+  width: 218rpx;
+  height:45rpx;
+  font-size:32rpx;
+  color: #353535;
+  text-align: center;
+  display: block;
+  line-height: 45rpx;
+}
+.box_view span.num{
+  width: 218rpx;
+  height:35rpx;
+  font-size:28rpx;
+  color: #999999;
+  display: block;
+  text-align: center;
+}
+
+.tabs{
+  width: 750rpx;
+  height: 120rpx;
+  z-index: 9999999;
+  background: #F7F7FA;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  border-top:1px solid #ceced1;
+}
+
+.tabs_left{
+  width:400rpx;
+  height: 120rpx;
+  float: left;
+  display: block;
+  text-align: left;
+  font-size:38rpx;
+  line-height: 120rpx;
+  padding:0 25rpx;
+  color: #353535;
+}
+.tabs_right{
+  width:300rpx;
+  height: 120rpx;
+  float: left;
+  line-height: 120rpx;
+  display: block;
+  text-align: center;
+  font-size: 34rpx;
+  color: #FFFFFF;
+  background:#11D4C6;
+}
+
+/* 去掉button自带样式 */
+.contact_btn::after {
+  border: 0;
+}
+.contact_btn {
+  border-radius: 0;
+}

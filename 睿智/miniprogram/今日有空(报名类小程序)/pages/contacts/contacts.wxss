@@ -1,0 +1,48 @@
+/* pages/contacts/contacts.wxss */
+.list{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  border-bottom: 3rpx solid #F2F2F2;
+  padding: 25rpx 0;
+}
+.list .img{
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+}
+.list .img image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.list .name{
+  width:300rpx;
+  height:100rpx;
+  padding: 0 20rpx;
+  float: left;
+  color:#000;
+  font-size: 30rpx;
+}
+.list .name span{
+  width:300rpx;
+  height:50rpx;
+  float: left;
+  display: block;
+  line-height:50rpx;
+  color:#000;
+  font-size: 30rpx;
+}
+.list .name span.address{
+  color: #999;
+  font-size: 26rpx;
+}
+.list .date{
+  width:260rpx;
+  height:100rpx;
+  float: left;
+  line-height: 100rpx;
+  color:#B0B0B0;
+  font-size: 26rpx;
+  text-align: right;
+}

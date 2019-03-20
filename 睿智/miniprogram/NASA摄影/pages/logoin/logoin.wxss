@@ -1,0 +1,9 @@
+/* pages/logoin/logoin.wxss */
+.userinfo{
+  width:98rpx;
+  height:98rpx;
+  border-radius: 50%;
+  margin: 25rpx auto;
+  display: block;
+  border: 1rpx solid #CCC;
+}

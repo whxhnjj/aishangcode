@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteBase /
+
+RewriteRule ^list-new-([0-9]+).html$ list.php?sign=new&page=$1
+RewriteRule ^list-hot-([0-9]+).html$ list.php?sign=hot&page=$1
+RewriteRule ^([a-z]+)-(.+)-([0-9]+).html$ list.php?$1=$2&page=$3
+RewriteRule ^([0-9a-zA-z]+)$ $1/ [L,R=301]
+RewriteRule ^([0-9a-zA-z]+)/$ show.php?ename=$1
+RewriteRule ^m/([0-9a-zA-z]+)/$ m/show.php?ename=$1

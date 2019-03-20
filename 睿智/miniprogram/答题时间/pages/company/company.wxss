@@ -1,0 +1,105 @@
+/* pages/company/company.wxss */
+.com_header{
+  width: 100%;
+  margin-top: 30rpx;
+  padding-bottom: 60rpx;
+  text-align: center;
+}
+.header_bg{
+  position: relative; 
+  width:100rpx;
+  height:100rpx;
+  padding: 10rpx;
+  margin: 0 auto;
+  background-color:#3366cc;
+  border-radius:50%;
+  z-index:998;
+}
+.com_img{
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  width: 100rpx;
+  border-radius:50%;
+  overflow: hidden;
+  z-index: 999;
+}
+.com_name{
+  display: block;
+  padding-top: 20rpx;
+  font-size: 36rpx;
+}
+.com_detil{
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  color: rgb(203, 220, 252);
+}
+.com_join{
+  width: 300rpx;
+  height: 80rpx;
+  margin-top: 30rpx;
+  border-radius: 40rpx;
+  background: rgb(15, 206, 195);
+  font-size: 30rpx;
+  color: #fff;
+}
+/*  */
+.com_line{
+  width: 750rpx;
+  height: 20rpx;
+  background: rgba(56, 108, 209, 0.6);
+}
+/*  */
+.com_exam{
+  width: 690rpx;
+  padding: 40rpx 30rpx;
+  border-bottom: 1rpx solid #5393ff;
+}
+.exam_main{
+  float: left;
+  text-align: left;
+  width: 450rpx;
+}
+
+.exam_notimg{
+  width: 690rpx;
+} /* 没有图片时的文本样式 */
+
+
+.exam_title{
+  display: block;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  line-height: 39rpx;
+  text-align: justify;
+}
+.exam_num{
+  display: block;
+  font-size: 24rpx;
+  color: rgb(203, 220, 252);
+}
+.exam_img{
+  float: right;
+  width: 180rpx;
+  height: 120rpx;
+}
+.clear{
+  display: table;
+  clear: both;
+}
+
+.bottom{
+  text-align: center;
+  font-size: 26rpx;
+  padding: 60rpx 0 40rpx;
+}
+
+.exam_state{
+  font-size: 28rpx;
+  margin-right: 15rpx;
+  vertical-align:8%;
+  color: rgb(1,253,210);
+}
+.exam_end{
+  color: rgb(203, 220, 252);
+}

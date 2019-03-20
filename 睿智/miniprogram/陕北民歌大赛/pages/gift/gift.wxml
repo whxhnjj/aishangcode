@@ -1,0 +1,31 @@
+<view class="title_wrap">
+  <navigator class="title_name" url="../detail/detail?theme_id={{theme_id}}&actor_id={{actor_id}}">
+    <image wx:if="{{actor.thumb}}" class="userinfo_avatar" src="{{domain}}/{{actor.thumb}}" background-size="cover"></image>
+    <span class="gift">NO.{{actor.order_number}} {{actor.name}}</span>
+    <span class="song">给TA一份支持吧！</span>
+  </navigator>
+</view>
+<view class="box">
+  <block wx:for="{{gifts}}" wx:key="id" wx:for-index="index" wx:for-item="item">
+    <view data-index="{{index}}" data-price="{{item.price}}" class="{{index == selected ? 'active':''}} box_view" bindtap="chooseGift">
+      <image src="{{domain}}/{{item.photo}}" mode="scaleToFill"></image>
+      <span class="name">{{item.name}}</span>
+      <span class="num">{{item.vote}}票
+        <b wx:if="{{item.price == 0}}">(免费)</b>
+      </span>
+      <view class="nest"></view>
+    </view>
+  </block>
+</view>
+<view class="tabs">
+  <span class="tabs_left">
+    <span wx:if="{{price > 0}}">￥{{price/100}}</span>
+  </span>
+  <block wx:if="{{subscribeCofig == 1 && subscribe != 1 && !(price > 0)}}">
+    <button hover-class="none" class="contact_btn tabs_right" open-type="contact" session-from="wxapp">{{submitText}}</button>
+  </block>
+  <block wx:else>
+    <span class="tabs_right" bindtap="wxsubmit">{{submitText}}</span>
+  </block>
+</view>
+<view class="mg"></view>

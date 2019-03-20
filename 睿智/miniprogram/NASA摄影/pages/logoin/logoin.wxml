@@ -1,0 +1,4 @@
+<!--pages/logoin/logoin.wxml-->
+<view class="wrap">
+    <image class="userinfo" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+</view>

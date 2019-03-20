@@ -1,0 +1,23 @@
+<!--pages/withdrawals/withdrawals.wxml-->
+<view class='alert {{alertclass}}'>{{alert}}</view>
+<view class="wrap">
+
+<view class="contact">联系客服</view>
+    <view class="drawals">
+        <view class='balance'>
+              <span class="left">账户余额</span>
+              <span class="right">{{user.balance}}元</span>
+        </view>
+        <text class='tit'>提现金额</text>
+        <form  bindsubmit="formSubmit">
+        <view class='money'>
+          <input class="num" type='digit' value='' bindinput='input' id='cash' name='cash' placeholder='0.00'></input>
+          <input class="num1"  value='{{user.balance}}' id='bal' ></input>
+        </view>
+        <span class="guize">提现到微信钱包</span>
+        <button form-type='submit' type="primary">提现</button>
+      </form>
+      <text class='time'>1-5个工作日到账</text>
+    </view>
+<navigator class='feedback' hover-class="none"  url='../../pages/feedback/feedback'>举报</navigator>
+</view>

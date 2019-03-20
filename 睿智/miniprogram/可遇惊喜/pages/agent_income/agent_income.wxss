@@ -1,0 +1,103 @@
+page{
+  background: #fff;
+}
+/* 头部 */
+.header{
+  width: 750rpx;
+  padding: 60rpx 0;
+  color: #fff;
+  background-color: #ff5070;
+  text-align: center;
+}
+
+.header_income{
+  display: flex;
+  margin-bottom: 80rpx;
+}
+.header_income>view{
+  width: 50%;
+  text-align: center;
+}
+.header_income>view:last-child{
+  border-left: 1rpx solid #fff;
+}
+.header_income>view>text:first-child{
+  display: block;
+  margin-bottom: 5rpx;
+  font-size: 24rpx;
+}
+.header_income>view>text:last-child{
+  display: block;
+  font-size: 72rpx;
+  font-weight: 600;
+}
+.header_income>view>text:last-child:before{
+  content: '¥';
+  font-size: 34rpx;
+  margin-right: 5rpx;
+}
+
+.header_btn{
+  width: 400rpx;
+  height: 80rpx;
+  margin: 0 auto 15rpx;
+  border-radius: 6rpx;
+  border: 2rpx solid #fff;
+  font-size: 32rpx;
+  font-weight: 600;
+  line-height: 80rpx;
+}
+
+.income_record{
+  display: block;
+  margin: 0 auto;
+  font-size: 24rpx;
+  width: 200rpx;
+}
+
+.line{
+  width: 100%;
+  height: 50rpx;
+  background: #f5f5f5;
+}
+
+/* 列表 */
+.income_box{
+  padding-bottom: 70rpx;
+  background: #fff;
+}
+.income_list{
+  padding: 50rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1rpx solid #e6e6e6;
+}
+.income_box .income_list:first-child{
+  border-top: none;
+}
+.income_list .left_box>text:first-child{
+  display: block;
+  margin-bottom: 10rpx;
+  font-size: 30rpx;
+}
+.left_box>view{
+  font-size: 24rpx;
+}
+.left_box>view>text:last-child{
+  margin-left: 20rpx;
+  color: #999;
+}
+
+.income_list .right_box{
+  /* width: 90rpx; */
+  font-size: 42rpx;
+  font-weight: 600;
+  color: #ff5070;
+}
+.income_list .right_box:before{
+  content: '¥';
+  font-size: 24rpx;
+  margin-right: 8rpx;
+}
+

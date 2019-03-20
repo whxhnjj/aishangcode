@@ -1,0 +1,72 @@
+@charset "gbk";
+
+body {background:#fff;text-align:center; margin:0px; font-size:100%;color:#000;font-family:arial;margin-bottom:45px;}
+ul, ol, li, dd, dt, dl, h1, h2, h3, h4, h5, h6 {margin:0;padding:0;list-style:none;}
+
+p{text-align:left;}
+img{max-width:100%;border:0px;}
+
+footer{width:100%;height:45px;background:#000 url(../images/mobile/tools.png) no-repeat center top;background-size:75px;position:fixed;bottom:0px;}
+footer a{display:block;width:45px;height:45px;background:#000 url(../images/mobile/tools.png) no-repeat center top;background-size:75px;}
+.red{color:#ff0000;}
+
+.logo4home{width:72px;}
+
+.alert{color:#ff00aa;text-align:left;margin-top:20px;}
+.home{display:block;width:45px;height:45px;float:left;background-position:0px -45px;}
+.logo{display:none;width:45px;height:45px;background-position:0px 0px;width:75px;}
+.back{display:none;width:45px;height:45px;float:right;background-position:0px -90px;}
+.menu{display:block;width:45px;height:45px;float:right;background-position:0px -135px;}
+.submenu{display:block;width:80px;height:320px;padding:10px;background:#111;position:fixed;bottom:45px;right:-100px;}
+.submenu a{display:block;text-align:left;width:100%;height:14px;padding:5px 0 10px 0;color:#fff;text-decoration:none;border-bottom:1px solid #333;}
+
+.nav{width:300px;padding:10px;height:215px;background:url(../images/mobile/nav.png) no-repeat 0 0;background-size:320px;margin:auto;}
+.nav a{display:block;float:left;width:100px;height:100px;}
+.club{margin:0 auto -45px auto;width:310px;}
+.club img{width:310px;}
+
+.pics{display:block; width:320px; height:100%; overflow:hidden; margin:5px auto 0px auto;line-height:0;}
+.pics li{float:left;margin-left:5px;margin-bottom:5px;padding:0px;width:100px;height:100%;overflow:hidden;line-height:0;}
+.pics li img{width:100%;}
+.pics li.big{width:205px;}
+
+.content{margin:10px 10px 10px 10px;height:100%;overflow:hidden;padding-bottom:20px;line-height:150%;text-align:left;}
+.content h1{font-size:125%;margin:0;padding:0px;text-align:left;}
+.list h1{font-size:125%;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #666;text-align:left;}
+.content h5{font-size:80%;line-height:80%;font-weight:normal;margin-bottom:10px;margin-top:5px;padding-bottom:5px;color:#666;text-align:left;border-bottom:1px solid #ccc;}
+.content h5 span{color:#999999;}
+.content div,.content p{line-height:150%;font-size:120%;margin:0px auto 10px auto;padding:0px;}
+.content img{margin-top:5px;}
+.content a.point{display:block;text-align:center;text-decoration:none;width:100px;height:75px;padding-top:25px;background:url(../images/mobile/like.png) no-repeat 0 -100px;background-size:100px;margin:20px auto 0px auto;color:#333;font-family:arial;}
+.content a.point:hover{text-decoration:none;color:#333;}
+.content a.pointed{background:url(../images/mobile/like.png) no-repeat 0 0!important;background-size:100px!important;}
+.brand_auth{color:#aa0000;font-size:80%!important;}
+
+
+/*news*/
+.news{width:100%;height:110%;overflow:hidden;margin:5px auto 10px auto;}
+.news li{height:100%;overflow:hidden;margin-bottom:10px;border-bottom:1px solid #ccc;}
+.news li a{color:#000;text-decoration:none;}
+.news li a.pic{display:block;float:left;width:110px;height:80px;}
+.news li a.tit{display:block;font-size:100%;text-align:left;margin:0 0;height:52px;overflow:hidden;}
+.news img{width:100px;height:70px;}
+.news span{color:#777;}
+
+/*pages*/
+.pages {margin:15px 3px; height:20px; padding:7px; text-align: center;color:#000;}
+.pages a{border: 1px solid #000; color: #000;font-family: arial; font-weight: bold; font-size: 14px; margin:2px; padding: 10px 14px; text-decoration: none; width: 60%;display:none;}
+.pages a:hover {background-color: #000; color: #fff;}
+.pages a:active { background-color: #000; color: #fff;}
+.pages a.current { background-color: #000;color: #fff;font-weight: bold;margin: 2px;}
+.pages a.disabled { border: 1px solid #fff;color: #ddd; margin: 2px;}
+.pages a.prev,.pages a.next{display:inline!important;}
+
+
+.weixinbox{border-top:1px solid #ccc;margin:20px 10px 70px;padding-top:20px;text-align:center;}
+.weixinbox img{max-width:80%;}
+
+.content div.thumb{text-align:center;margin-bottom:10px;}
+.content div.archives {margin-top:20px;}
+.content div.archives .dt{font-size:100%;font-weight:bold;margin-top:8px;margin-bottom:0px;}
+.content div.archives .dd{font-size:100%;margin:0px!important;}
+.content div.ad{text-align:center;}

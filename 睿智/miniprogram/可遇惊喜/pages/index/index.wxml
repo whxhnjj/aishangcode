@@ -1,0 +1,72 @@
+<!-- <view class="header">
+
+  <view class="logo_box">
+    <image src="{{hostName}}{{info.logo}}"></image>
+    <text>{{info.title}}</text>
+  </view>
+
+  <view class="city_choose hide">西安</view>
+
+</view> -->
+
+<view class="banner">
+  <swiper indicator-dots autoplay circular interval="5000" duration="200">
+    <swiper-item wx:for="{{swiper}}" wx:key="key">
+      <image src="{{hostName}}{{item.pic_url}}" bindtap="swiperLink" id="{{index}}"/>
+    </swiper-item>
+  </swiper>
+
+  <swiper wx:if="{{notice.length>0}}" class="banner_msg" autoplay interval="2000" duration="500" vertical circular>
+    <swiper-item wx:for="{{notice}}" wx:key="key">
+      <navigator url="../notice_detail/notice_detail?id={{item.id}}" hover-class="none">{{item.title}}</navigator>
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="content">
+  <text class="content_header">全部推荐</text>
+  <view class="content_box">
+
+    <block wx:for="{{goods}}" wx:key="id">
+      <navigator class="content_list {{item.store_count<=0?'selected':''}} {{item.class_state == 0?'selected':''}} {{item.class_state == 3?'selected':''}}" url="../goods_detail/goods_detail?id={{item.id}}">
+        <view wx:if="{{item.store_count <= 0 || item.class_state == 3}}" class="no"></view>
+        <image src="{{hostName}}{{item.main_pic}}" mode="aspectFill" lazy-load></image>
+        <view class="content_title">{{item.name}}</view>
+        <text class="content_des">{{item.sale_desc}}</text>
+        <view class="content_msg">
+          <view class="left_box">
+            <text>¥</text>
+            <text>{{item.price}}</text>
+            <!-- <text wx:if="{{item.back_cash > 0}}">返¥{{item.back_cash}}</text> -->
+            <text class="line_through">门市价¥{{item.market_price}}</text>
+          </view>
+          <view class="right_box">
+            <text>{{item.goods_type == 1?'已售':'已报'}}{{item.sale_count + item.sale_ext_count}}</text>            
+            <view>{{item.goods_type == 1?'抢购':'报名'}}</view>
+          </view>
+        </view>
+
+        <!--  -->
+        <!-- <view wx:if="{{item.class_state != 2 && item.store_count > 0 && item.new_state == 1}}" class="newpro">新品</view>
+        <view wx:if="{{item.store_count<=0}}" class="soldout">已售馨</view>
+        <view wx:if="{{item.class_state == 2}}" class="soldout">已结束</view> -->
+        <view wx:if="{{item.class_state == 0}}" class="soldout">即将上线</view>
+        <view wx:if="{{item.class_state == 1}}" class="newpro">新品</view>
+        <view wx:if="{{item.class_state != 0 && item.class_state != 1 && item.class_state != 3 && item.store_count > 0}}" class="soldout">进行中</view>
+        <view wx:if="{{item.class_state == 3 || item.store_count <= 0}}" class="soldout">已售罄</view>
+        <view wx:if="{{item.down_state == 1 && item.time_state == 1}}" class="time">
+          <text>{{item.time_title}} {{item.time_day}} 天</text>
+          <view>
+            <view>{{item.time_h}}</view>
+            <text>:</text>
+            <view>{{item.time_m}}</view>
+            <text>:</text>
+            <view>{{item.time_s}}</view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+
+  </view>
+  <view class="page_text">{{page_text}}</view>
+</view>

@@ -1,0 +1,20 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/date/date",
+    "pages/logs/logs",
+    "pages/income/income",
+    "pages/summary/summary",
+    "pages/expenditure/expenditure",
+    "pages/details/details"
+ 
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "快记",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  }
+}

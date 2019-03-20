@@ -1,0 +1,15 @@
+<view class="header">
+  <image class="titimg" mode="scaleToFill" src="{{userInfo.avatarUrl}}"></image>
+  <span class="titname">{{userInfo.nickName}}</span>
+</view>
+<view class="centent">
+    <view class="cash">
+      <span class="name">兑奖码：</span>
+      <span class="btn" bindtap="copyCheckcode" wx:if="{{checkcode != 'none' && checkcode != ''}}">一键复制</span>
+     <text selectable="true" class="checkcode">{{checkcode == 'none' ? '暂无兑奖码' : checkcode}}</text>
+    </view>
+    <navigator url="/pages/about/about">关于花火盒</navigator>
+    <button class="contact" type="primary" open-type="contact">联系客服</button>
+    <navigator url="/pages/feedback/feedback">投诉/举报</navigator>
+    <navigator open-type="reLaunch" url="/pages/index/index">投票大厅</navigator>
+</view>

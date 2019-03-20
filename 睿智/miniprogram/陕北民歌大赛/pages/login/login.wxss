@@ -1,0 +1,13 @@
+/* pages/login/login.wxss */
+text{
+  display: block;
+  padding: 320rpx 80rpx 40rpx;
+  font-size: 29rpx;
+  line-height: 50rpx;
+}
+button {
+  width: 590rpx;
+  margin: 0 auto;
+  background-color: #11D4C6;
+  color: #fff;
+}

@@ -1,0 +1,172 @@
+<!--头部-->
+<view class="home_header">
+  <image src="/images/logo_wi.png" class="home_logo"></image>
+  <text>微智创想</text>
+</view>
+
+<!--banner-->
+<swiper class="home_banner" indicator-dots interval="5000" duration="400" circular >
+  <block wx:for="{{pic}}" wx:item="item" wx:key="index">
+    <swiper-item class="home_banner_list">
+      <image src="{{item}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!--公司简介-->
+<view class="company container">
+
+  <view class="card_title">
+    <text>公司简介</text>
+    <text class="card_title_line"></text>
+  </view>
+
+  <view class="com_cont">
+    <text>身处互联网浪潮的前端，我们都在有意或无意地追逐。微智创想却偏偏选择坚守匠心，锲而不舍地致力于WEB技术服务。公司立足于极深历史文化底蕴且高校林立的大西安，拥有一支专业的技术团队。服务方向定位于高端网站与微信小程序的定制开发。多年来为长庆油田、康师傅、太白酒、兵马俑景区、旌旗电子、中国海关、陕西师范大学、西北工业大学、西安高新区管委会、陕西省交通厅、西安世园会等百余家单位提供相关服务，并建立长期稳定的合作。</text>
+  </view>
+
+</view>
+<view class="all_bottom"></view>
+
+<!--产品-->
+<view class="product container">
+
+  <view class="card_title">
+    <text>作品</text>
+    <text class="card_title_line"></text>
+  </view>
+
+  <view class="pro_lists">
+    <navigator class="pro_list" url="../webview/webview?pro_id=28">
+      <image src="http://webimage.cn/data/upfiles/thumb/2018/07/20180718105747322387.jpg"></image>
+      <text class="pro_name">月白嫁衣官网</text>
+      <text class="pro_name2">用更为现代的简约风格，诠释最传统的中式嫁衣。打破人们对传统中式繁复陈旧的思维定势，让月白品牌的散发出全新的中式风尚。</text>
+      <!-- <text class="pro_price">¥32.00</text> -->
+    </navigator>
+
+    <navigator class="pro_list" url="../webview/webview?pro_id=127">
+      <image src="http://webimage.cn/data/upfiles/thumb/2018/07/20180718160558186334.jpg"></image>
+      <text class="pro_name">旗袍段位测试小程序</text>
+      <text class="pro_name2">主色使用的是偏女性化一些的粉色，中间插入了扁平的插画，使画面更加生动饱满，增加趣味性。</text>
+      <!-- <text class="pro_price">¥32.00</text> -->
+    </navigator>
+
+    <navigator class="pro_list" url="../webview/webview?pro_id=123">
+      <image src="http://webimage.cn/data/upfiles/thumb/2018/07/20180718145224163647.jpg"></image>
+      <text class="pro_name">清芸主力官网</text>
+      <text class="pro_name2">扁平化的设计，减少浏览负担，让用户能一目了然的了解公司的业务。</text>
+      <!-- <text class="pro_price">¥32.00</text> -->
+    </navigator>
+
+    <navigator class="pro_list" url="../webview/webview?pro_id=126">
+      <image src="http://webimage.cn/data/upfiles/thumb/2018/07/20180718151008598930.jpg"></image>
+      <text class="pro_name">答题时间小程序</text>
+      <text class="pro_name2">沉静的蓝色作为背景，使答题的伙伴能够在玩的同时冷静思考，整个界面不管是按扭还是字体，都选择比较大的尺寸比例，并且留白较多，可以让用户在答题中保持轻松。</text>
+      <!-- <text class="pro_price">¥32.00</text> -->
+    </navigator>
+  
+  </view>
+
+  <!-- <button class="home_btn">更多</button> -->
+
+</view>
+<view class="all_bottom"></view>
+
+<!--服务-->
+<view class="service container">
+
+  <view class="card_title">
+    <text>服务</text>
+    <text class="card_title_line"></text>
+  </view>
+
+  <view class="ser_lists">
+    <view class="ser_list">
+      <text>微信小程序开发</text>
+      <text>更出色的使用体验、将微信十亿用户揽入怀抱。</text>
+      <!-- <text class="ser_kuang"></text> -->
+    </view>
+
+    <view class="ser_list" style="background:#00cc66;">
+      <text>网站定制开发</text>
+      <text>更完美的兼容，让网站在不同终端用户面前趋于完美。</text>
+      <!-- <text class="ser_kuang"></text> -->
+    </view>
+
+    <view class="ser_list" style="background:#00cccc;">
+      <text>应用软件开发</text>
+      <text>定制开发，满足你的每一个苛刻需求。</text>
+      <!-- <text class="ser_kuang"></text> -->
+    </view>
+
+    <view class="ser_list" style="background:00b6cc;">
+      <text>UI设计</text>
+      <text>把精雕细琢的丰盈内在，装入极简是视觉外壳。</text>
+      <!-- <text class="ser_kuang"></text> -->
+    </view>
+  </view>
+
+</view>
+<view class="all_bottom"></view>
+
+<!--动态-->
+<view class="trend container">
+
+  <view class="card_title">
+    <text>动态</text>
+    <text class="card_title_line"></text>
+  </view>
+
+  <view class="trend_lists">
+    <navigator class="trend_list" url="../webview/webview?pro_id=122">
+      <image src="http://webimage.cn/data/upfiles/thumb/2018/07/20180718155733935580.jpg" class="fl"></image>
+      <view class="trend_list_box fl">
+        <text>向军魂致敬-军事特训营凯旋归来</text>
+        <text>2018-07-10</text>
+      </view>
+      <text class="clearfix"></text>
+    </navigator>
+
+    <navigator class="trend_list" url="../webview/webview?pro_id=39">
+      <image src="http://webimage.cn/data/upfiles/thumb/2018/07/20180720105012855503.jpg" class="fl"></image>
+      <view class="trend_list_box fl">
+        <text>睿智为长庆宁靖综合服务处搭建网站并培训</text>
+        <text>2015-05-10</text>
+      </view>
+      <text class="clearfix"></text>
+    </navigator>
+
+    <navigator class="trend_list" url="../webview/webview?pro_id=119">
+      <image src="http://webimage.cn/data/upfiles/thumb/2018/07/20180720104940541564.jpg" class="fl"></image>
+      <view class="trend_list_box fl">
+        <text>我公司应邀参加K-Global China2017中韩ICT企业上海洽谈会</text>
+        <text>2017-12-13</text>
+      </view>
+      <text class="clearfix"></text>
+    </navigator>
+  </view>
+
+  <!-- <button class="home_btn">更多</button> -->
+
+</view>
+<view class="all_bottom"></view>
+
+<!-- 地址 -->
+<view class="contact">
+  <view class="card_title">
+    <text>联系</text>
+    <text class="card_title_line"></text>
+  </view>
+
+  <view class="contact_list">
+    <text class="list_text1">联系方式</text>
+    <view class="list_view" bindtap="callNum" data-msg="029-88262866"><image src="/images/officialwebsite_icon_phone.png"></image>029-88262866</view>
+  </view>
+  <view class="contact_list">
+    <text class="list_text1">地址</text>
+    <view class="list_view" bindtap="openMap" data-latlng="34.23597,108.90423"><image src="/images/officialwebsite_icon_address.png"></image>西安市雁塔区高新一路创业大厦10层</view>
+  </view>
+
+</view>
+
+<text wx:if="{{isIphoneX}}" class="iponex_kuang"></text>

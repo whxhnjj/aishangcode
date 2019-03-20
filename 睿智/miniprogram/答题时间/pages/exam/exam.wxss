@@ -1,0 +1,69 @@
+.exam_header{
+  margin-top: 30rpx;
+  height: 172rpx;
+  border-bottom: 1rpx solid #5793ff;
+}
+
+.exam_title{
+  display: block;
+  width: 740rpx;
+  line-height: 75rpx;
+  height: 75rpx;
+  text-align: center;
+  font-size: 48rpx;
+  overflow: hidden;
+ }
+ .exam_msg{
+   text-align: center;
+   height: 60rpx;
+   line-height: 60rpx;
+   font-size: 24rpx;
+ }
+ .exam_source{
+   display: inline-block;
+   margin-right: 20rpx;
+ }
+
+ /*  */
+ .exam_detil{
+  margin-bottom: 50rpx;
+ }
+ .exam_detil text{
+   display: inline-block;
+   width: 100%;
+   line-height: 45rpx;
+   text-indent: 2rem;
+   text-align: justify;
+   word-break:break-all;
+   font-size: 28rpx;
+ }
+ .exam_detil image{
+   margin-top: 30rpx;
+   width: 100%;
+ }
+ .answer_sub,#answer_sub{
+   width: 690rpx;
+   height: 100rpx;
+   margin: 0 auto;
+   line-height: 100rpx;
+   border-radius: 50rpx;
+   background: rgba(56,108,209,0.6);
+   text-align: center;
+   font-size:18px;
+   color:#fff;
+ }
+.container navigator{
+  display: block;
+  margin-top: 30rpx;
+}
+ /*试卷类型  */
+ .exam_type{
+   display: block;
+   width: 600rpx;
+   padding: 20rpx 30rpx;
+   line-height: 35rpx;
+   text-align: justify;
+   word-break:break-all;
+   font-size: 20rpx;
+   color: rgb(167,193,240);
+ }

@@ -1,0 +1,41 @@
+/* pages/userinfo/userinfo.wxss */
+.sub {
+  display:block;
+  width:100%;
+  padding-top: 230rpx;
+  font-size:30rpx;
+}
+.user_title{
+  display: block;
+  /* text-indent: 2em; */
+  text-align: justify;
+  word-break:break-all;
+  line-height: 45rpx;
+  margin-bottom: 50rpx;
+}
+.kuang{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 50rpx;
+  margin-bottom: 30rpx;
+  background: rgba(56,108,209,0.6);
+}
+.num{
+  float: left;
+}
+.ber{
+  float: right;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 500rpx;
+}
+.button{
+  width:690rpx;
+  height:100rpx;
+  margin:100rpx auto 0;
+  line-height:100rpx;
+  border-radius:50rpx;
+  background:rgba(56,108,209,0.6);
+  text-align:center;
+  color:#fff;
+}

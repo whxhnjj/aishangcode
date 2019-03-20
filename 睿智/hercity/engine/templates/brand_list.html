@@ -1,0 +1,33 @@
+{include file="inc_header.html" current="list" title="{if $tag != 'tag'}{$tag} {/if}旗袍品牌 华服品牌 中式服装品牌 旗袍定制店 - 倾城网"}
+
+
+<!--update-->
+<div class="wrap list_brand">
+
+<div class="breadcrumb"><a href="/">首页</a> &gt; 品牌排行榜<a href="/s/static/brand.html" class="brand_help">如何让我的品牌出现在这里？</a></div>
+
+<div class="menu">
+<a href="/s/brand/list-{$tag|urlencode}-0-{$allow}-1.html"{if $auth == '0'} class="current"{/if}>全部</a><a href="/s/brand/list-{$tag|urlencode}-1-{$allow}-1.html"{if $auth == '1'} class="current"{/if}>已认证</a><a href="/s/brand/list-{$tag|urlencode}-2-{$allow}-1.html"{if $auth == '2'} class="current"{/if}>未认证</a><br />
+<a href="/s/brand/list-{$tag|urlencode}-{$auth}-0-1.html"{if $allow == '0'} class="current"{/if}>全部</a><a href="/s/brand/list-{$tag|urlencode}-{$auth}-1-1.html"{if $allow == '1'} class="current"{/if}>招募线下加盟代理</a><a href="/s/brand/list-{$tag|urlencode}-{$auth}-2-1.html"{if $allow == '2'} class="current"{/if}>招募网上加盟代理</a><br />
+<a href="/s/brand/list-tag-{$auth}-{$allow}-1.html"{if $tag == 'tag'} class="current"{/if}>全部</a>
+{foreach from=$loftcms.config.brandTags item=tags}
+{foreach from=$tags item=t}
+<a href="/s/brand/list-{$t|urlencode}-{$auth}-{$allow}-1.html"{if $tag == $t} class="current"{/if}>{$t}</a>
+{/foreach}
+{/foreach}
+</div>
+
+<ul>
+{foreach from=$list item=brand}
+<li><a href="/s/brand/detail-{$brand.id}.html"><img src="{$brand.logo}" alt="{$brand.name}" /></a><strong><a href="/s/brand/detail-{$brand.id}.html">{$brand.name}</a>{if ($brand.is_auth)}<a class="v" title="品牌已认证" href="/s/static/brand.html">&nbsp;</a>{/if}</strong><span class="brandtags">{foreach from=$brand.tags key=key item=tag}{if $key <3}<a href="/s/brand/list-{$tag|urlencode}-0-0-1.html">{$tag}</a>{/if}{/foreach}</span><br /><span class="hits">关注人次：{$brand.hits}</span></li>
+{/foreach}
+</ul>
+
+<!--pages-->
+{$pages}
+
+
+</div>
+
+
+{include file="inc_footer.html" current="list" template="list_brand"}

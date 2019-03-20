@@ -1,0 +1,35 @@
+/**app.wxss**/
+ 
+page{
+   box-sizing: border-box;
+   background: #fff;
+   font-size: 28rpx;
+   color: #fff;
+   font-family: PingFangSC-Regular, sans-serif,"微软雅黑";
+}
+.clearfix{
+  display: table;
+  content: '';
+  clear: both;
+}
+.container{
+  position: relative;
+  z-index: 2;
+  width: 690rpx;
+  margin: 0 auto;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+view,text,navigator{
+  box-sizing: border-box;
+}
+
+button::after {
+  border: none;
+}
+
+

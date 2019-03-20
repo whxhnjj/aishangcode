@@ -1,0 +1,73 @@
+{config_load file="site.config"}
+{if ! isset($title)}{assign var="title" value="{$smarty.config.title}"}{/if}
+{if ! isset($keywords)}{assign var="keywords" value="{$smarty.config.keywords}"}{/if}
+{if ! isset($description)}{assign var="description" value="{$smarty.config.description}"}{/if}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="gbk" />
+<title>{$title}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="keywords" content="{$keywords}" />
+<meta name="description" content="{$description}"/>
+<meta name="viewport" content="width=1120,minimum-scale=0.1,maximum-scale=2,user-scalable=yes" />
+
+{if $current == 'index' || $current == 'detail'}
+<script type="text/javascript">
+{literal} 
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = ["Android", "iPhone",
+                "SymbianOS", "Windows Phone",
+                "iPad", "iPod"];
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+
+
+var url_pc = location.href;
+var url_mobile = url_pc.replace('www.','m.');
+if (! IsPC()){window.location.href=url_mobile;}
+{/literal} 
+</script>
+{/if}
+
+<link rel="stylesheet" type="text/css" href="/assets/css/hercity.css"/>
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png"/>
+{if $current == 'index'}
+<base target="_blank" />
+{/if}
+
+</head>
+<body>
+
+
+
+<!--toolbar-->
+<div class="wrap toolbar">
+<div class="hercity"></div>
+<div class="tools">投稿邮箱 info@hercity.com</div>
+
+<form method="get" action="/tag/" id="search_form"><input type="text" name="q" maxlength="10" id="search_key" placeholder="输入关键词" /><input type="submit" value="搜索" id="search_btn" /></form>
+</div>
+
+
+
+<!--header-->
+<div class="header">
+	<div class="wrap">
+		<a class="logo" href="/" target="_self"><img src="/assets/images/logo.png" alt="倾城网" /></a>
+		<div class="nav01"><a href="/s/news/">产业前沿</a><a href="/s/appr/">穿搭品鉴</a><a href="/s/lib/">资料馆</a><a href="http://brand.hercity.com/" class="hot">品牌排行</a><a href="/s/shop/" class="hot">旗袍店铺</a><a href="/s/show/">发布会</a></div>
+		<div class="nav02"><a href="/s/photo/" class="nav_da">影像</a><a href="/s/photo/qipao/">旗袍摄影</a><a href="/s/photo/chinesestyle/">中国风</a><a href="/s/photo/stills/">旗袍剧照</a><a href="/s/photo/oldphoto/">老照片</a></div>
+		<div class="nav03"><a href="/s/people/" class="nav_da">人物</a><a href="/s/people/lady/">名媛</a><a href="/s/people/professional/">业内</a><a href="/s/people/master/">达人</a><a href="/s/people/tell/">进述</a></div>
+		<div class="nav04"><a class="nav04_1" href="http://www.hercity.com/s/nostalgic/">品味</a><a class="nav04_2" href="https://wap.koudaitong.com/v2/showcase/homepage?alias=92tdwln3" rel="external nofollow">购物</a><a class="nav04_3" href="/s/topic/">专题</a><a class="nav04_4" href="http://buluo.qq.com/p/barindex.html?bid=336368" target="_blank" rel="external nofollow">部落</a></div>
+	</div>
+</div>
+

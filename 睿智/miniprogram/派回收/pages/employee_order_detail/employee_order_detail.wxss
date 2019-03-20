@@ -1,0 +1,284 @@
+page{
+  padding-bottom: 90rpx;
+}
+/* 订单详情 */
+.order_box{
+  width: 100%;
+  margin-bottom: 40rpx;
+  padding: 50rpx 30rpx;
+  background: #fff;
+  font-size: 30rpx;
+}
+.order_header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.order_header text:last-child{
+  color: #999;
+}
+.order_list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-bottom: 60rpx;
+}
+.order_box .order_list:last-child{
+  margin-bottom: 0;
+}
+.order_list text:last-child{
+  color: #999;
+}
+.order_list image{
+  width: 32rpx;
+  height: 32rpx;
+}
+
+/*订单照片*/
+.order_title{
+  display: block;
+  margin: 30rpx 0;
+}
+.order_img_box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content:flex-start;
+}
+
+.order_img_box image{
+  margin-bottom: 10rpx;
+  width: 223rpx;
+  height: 223rpx;
+}
+.itemempty {
+  height: 0px;
+  width: 223rpx;
+}
+
+/*订单规则、金额*/
+
+.order_spec{
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.no_bottom{
+  padding-bottom: 0;
+  border-bottom:none;
+}
+.order_spec .spec_row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25rpx;
+}
+.order_price{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 45rpx;
+}
+.spec_box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.order_spec input,.order_price input{
+  width: 200rpx;
+  color: #02cc7a;
+  text-align: right;
+}
+.order_price input{
+  color: rgb(255,152,0);
+}
+.spec_row .spec_box text:nth-of-type(1),.order_price text:last-child{
+  margin-left: 10rpx;
+  /* width: 60rpx; */
+  color: #02cc7a;
+}
+.spec_box>view,.spec_btn{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  border: 1rpx solid #e6e6e6;
+  border-radius: 50%;
+  line-height: 35rpx;
+  text-align: center;
+}
+.order_price text:last-child{
+  color: rgb(255,152,0);
+}
+
+/* 按钮 */
+.base_btn{
+  margin-top: 60rpx;
+}
+.btn_normal{
+  color: #999;
+  background:#e6e6e6;
+}
+
+/* 评价 */
+.evaluate_box{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* justify-content: space-between; */
+  margin: 40rpx 0 25rpx;
+}
+.evaluate_no{
+  margin: 40rpx 0 0;
+}
+.evaluate_box>image{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 10rpx;
+  border-radius: 50%;
+}
+.evaluate_box .user_msg{
+  width: 260rpx;
+  margin-right: 50rpx;
+}
+.user_msg text{
+  display: block;
+}
+.user_msg text:last-child{
+  margin-top: 7rpx;
+  color: #999;
+  font-size: 26rpx;
+}
+.star{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-left: 40rpx;
+  width:250rpx;
+  height:28rpx;
+}
+.star view{
+  width: 30rpx;
+  height: 28rpx;
+  background:url(https://paihuishou.site.webimage.cn/static/xcx/icon_star_normal.png) no-repeat center center;
+  background-size:30rpx 28rpx;
+}
+.star .selected{
+  background-image: url(https://paihuishou.site.webimage.cn/static/xcx/icon_star_sel.png);
+}
+.star .middle{
+  background-image: url(https://paihuishou.site.webimage.cn/static/xcx/icon_star_middle.png);
+}
+/* .star_1{ background-position-x: -260rpx;}
+.star_2{ background-position-x: -195rpx;}
+.star_3{ background-position-x: -130rpx;}
+.star_4{ background-position-x: -65rpx;}
+.star_5{ background-position-x: 0;} */
+.evaluate_cont{
+  color: #666;
+  line-height: 1.6;
+  font-size: 26rpx;
+}
+
+
+
+
+
+/*弹出层*/
+.pop_bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.pop_box{
+  position: absolute;
+  top:30%;
+  left: 50%;
+  z-index: 110;
+  width: 600rpx;
+  padding: 50rpx 70rpx;
+  margin-left: -300rpx;
+  border-radius: 6rpx;
+  background: #f8f8f8;
+}
+
+.pop_titile{
+  display: block;
+  margin-bottom: 35rpx;
+  font-size: 32rpx;
+}
+
+.pop_btn{
+  width:100%;
+  height:70rpx;
+  margin-top: 25rpx;
+  border-radius:50rpx;
+  text-align:center;
+  line-height:70rpx;
+  font-size:30rpx;
+  font-weight:600;
+  background:#02cc7a;
+  color:#fff;
+}
+
+.pop_close{
+  position: absolute;
+  top:10rpx;
+  right: 10rpx;
+  z-index: 110;
+  width: 45rpx;
+  height: 45rpx;
+}
+
+checkbox-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items: center;
+  color:#999;
+}
+
+.checkbox{
+  width: 180rpx;
+  margin: 10rpx 0;
+}
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+   width: 40rpx; 
+   height: 40rpx;
+   border: none;
+   background: #e6e6e6;
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border-color: none;
+   background: #02cc7a;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;
+   width: 40rpx;
+   height: 40rpx;
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx;
+   color:#fff; 
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}

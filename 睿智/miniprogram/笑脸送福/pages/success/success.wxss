@@ -1,0 +1,23 @@
+/* pages/success/success.wxss */
+.icon{
+  width:220rpx;
+  height:220rpx;
+  display: block;
+  margin:50rpx auto;
+}
+.tit{
+  display: block;
+  width: 700rpx;
+  padding: 25rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.tex{
+  font-size: 28rpx;
+  color: #999;
+  line-height: 30rpx;
+}
+button{
+  margin-top: 50rpx;
+}

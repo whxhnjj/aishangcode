@@ -1,0 +1,83 @@
+<view class="nav"></view>
+<view class="submenu_box">
+  <form bindsubmit="formSubmit" report-submit="{{true}}">
+    <view class="submenu_msg">
+      <view class="sub_list">
+        <text>预约时间</text>
+        <picker mode="multiSelector" class="right_box" bindchange="dateChange" bindcolumnchange="dateColumnChange" value="{{date_index}}" range="{{date}}">
+          <block wx:if="{{date_index[0] == 0}}">{{suitable_time == ''? '请选择预约上门时间' : date[0][0]}}</block>
+          <block wx:else>{{date[0][date_index[0]]}} {{date[1][date_index[1]]}} - {{date[2][date_index[2]]}}</block>
+        </picker>
+      </view>
+
+      <view class="sub_list">
+        <text wx:if="{{member.type == 1}}">公司名称</text>
+        <text wx:else>姓名</text>
+        <input class="right_box" name="name" value="{{member.realname}}" />
+      </view>
+
+      <view class="sub_list">
+        <text>电话</text>
+        <input class="right_box" name="contact" value="{{member.contacts}}" />
+      </view>
+
+      <view class="sub_list">
+        <text>区域</text>
+        <input class="right_box" name="area" value="{{area?area:member.area}}" disabled bindtap="chooseLocation" placeholder="点击选择区域" />
+      </view>
+
+      <view class="sub_list hide">
+        <text>坐标</text>
+        <input class="right_box" name="latlng" value="{{latlng?latlng:member.latlng}}" disabled bindtap="chooseLocation" placeholder="点击选择坐标" />
+      </view>
+
+      <view class="sub_list">
+        <text>详细地址</text>
+        <input class="right_box" name="address" value="{{address?address:member.address}}" />
+      </view>
+
+      <view class="sub_list check">
+        <text>废品类型</text>
+        <checkbox-group bindchange="checkboxChange">
+          <label class="checkbox" wx:for="{{waste_type}}" wx:key="id" wx:for-index="index" wx:for-item="item">
+            <checkbox value="{{item.id}}" checked="{{item.checked}}" />{{item.name}}
+          </label>
+        </checkbox-group>
+      </view>
+
+      <view class="sub_list {{picurls.length != 0 ? 'upload_box' : '' }}">
+        <text>上传照片</text>
+        <view class="upload">
+          <view class="upload_btn" bindtap='uploadPic'>
+            <!-- formid -->
+            <form bindsubmit="formidSubmit" report-submit="{{true}}">
+              <button class="base_form" hover-class="none" formType="submit">
+              </button>
+            </form>
+            <!-- formid -->
+          </view>
+          <text>最多可上传9张图片</text>
+        </view>
+      </view>
+
+      <view class="pic_box" wx:if="{{picurls.length!= 0}}">
+        <view class="" wx:for="{{picurls}}" wx:key="key">
+          <image src="{{hostName}}{{item}}"></image>
+          <icon class="delete_btn" type="clear" size="15" color="#02cc7a" data-index="{{index}}" catchtap="deletePic" />
+
+        </view>
+        <view class="itemempty"></view>
+      </view>
+
+      <view class="sub_list">
+        <text>公益捐赠</text>
+        <switch color="#02cc7a" checked="{{switch_state}}" bindchange="switchChange" />
+      </view>
+
+    </view>
+
+    <!--  -->
+    <button class="base_btn" hover-class="none" formType="submit">立即提交</button>
+    <text class="btn_text">需满10公斤才能上门取货哦。</text>
+  </form>
+</view>

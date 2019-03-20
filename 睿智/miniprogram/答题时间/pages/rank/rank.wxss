@@ -1,0 +1,142 @@
+.user_msg{
+  position: relative;
+  z-index: 1;
+  height: 140rpx;
+  width: 100%;
+  background-color: rgba(56,108,209,0.8);
+  border-radius: 15rpx 15rpx 0 0;
+}
+.user_bg {
+  position:absolute;
+  top:20rpx;
+  left:65rpx;
+  padding: 10rpx;
+  width:80rpx;
+  height:80rpx;
+  background-color:#3366cc;
+  border-radius:50%;
+  z-index:998;
+}
+.user_img{
+  position:absolute;
+  top:10rpx;
+  left:10rpx;
+  width:80rpx;
+  height:80rpx;
+  z-index:999;
+  border-radius:50%;
+  overflow: hidden;
+}
+.user_name{
+  position: absolute;
+  left: 175rpx;
+  top:37rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.user_rank{
+  position: absolute;
+  left: 175rpx;
+  top:79rpx;
+  font-size: 23rpx;
+  color:rgb(204,204,204);
+}
+.user_score{
+  position: absolute;
+  left: 505rpx;
+  top:0;
+  font-size: 60rpx;
+  font-weight: bold;
+  line-height: 140rpx;
+  color:rgb(1,253,210);
+}
+.user_score text{
+  font-size: 35rpx;
+}
+
+.user_icon{
+  position: absolute;
+  right: 45rpx;
+  top:50rpx;
+  width: 26rpx;
+  height: 40rpx;
+}
+/*用户信息排行榜  */
+.rank{
+  width: 100%; 
+  margin-top: 15rpx;
+  background-color: rgba(56,108,209,0.4);
+  border-radius: 0 0 15rpx 15rpx;
+}
+.rank_list{
+  position: relative;
+  height: 160rpx;
+  padding-left: 26rpx;
+  line-height: 160rpx;
+  border-bottom: 1px solid #5393ff;
+}
+.rank_list:last-child{
+  border-bottom:none;
+}
+.rank_num{
+  float: left;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.rank_name{
+  float: left;
+  width: 300rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.rank_user_photo{
+  float: left;
+  position: relative;
+  margin: 0 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.rank_bg{
+  position:absolute;
+  top:30rpx; 
+  left: 0;
+  padding: 10rpx;
+  width:80rpx;
+  height:80rpx;
+  background-color:#3366cc;
+  border-radius:50%;
+  z-index:998;
+}
+.rank_score{
+  /* width:400rpx; */
+  line-height: 160rpx;
+  color:rgb(240,170,84);
+}
+.rank_icon{
+  top:60rpx;
+}
+
+.bottom{
+  text-align: center;
+  font-size: 26rpx;
+  padding: 75rpx 0 10rpx;
+}
+
+.back{
+  position: fixed;
+  bottom: 190rpx;
+  right: 0;
+  width: 120rpx;
+  height: 65rpx;
+  border-radius: 10rpx 0 0 10rpx;
+  line-height: 65rpx;
+  text-align: center;
+  font-weight: 500;
+  font-size: 30rpx;
+  color:#fff;
+  background: rgb(1,253,210);
+}

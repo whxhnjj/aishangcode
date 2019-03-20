@@ -1,0 +1,29 @@
+<form bindsubmit="formSubmit">
+<view class="content_box">
+  <view class="content_list">
+    <text>姓名</text>
+    <input class="right_box" value="{{realname}}" name="realname" placeholder="请输入姓名"/>
+  </view>
+
+  <view class="content_list">
+    <text>手机号</text>
+    <input class="right_box" maxlength='11' value="{{mobile}}" name="mobile" placeholder="请输入手机号"/>
+  </view>
+
+  <!-- <navigator class="content_list" hover-class="none" url="../qrcode/qrcode">
+    <text>专属二维码</text>
+    <image class="qrcode" src="/images/icon_qrcode.png"></image>
+  </navigator> -->
+
+</view>
+
+<button hover-class="none" formType="submit">保存</button>
+</form>
+
+<!--  -->
+<!-- <navigator wx:if="{{member.is_proxy == 1 || member.is_team_member == 1}}" class="content_box" hover-class="none" url="../agent_index/agent_index">
+  <view class="content_list">
+    <text>代理商入口</text>
+    <image class="agent" src="/images/icon_more.png"></image>
+  </view>
+</navigator> -->

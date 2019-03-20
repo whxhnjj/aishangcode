@@ -1,0 +1,84 @@
+.taber{
+  width: 750rpx;
+  height: 100rpx;
+  background: #fcfcfc;
+  position: fixed;
+  border-top: 3rpx solid #d5d5d6;
+  padding: 10rpx 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.tab{
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  font-size:28rpx;
+}
+.tab .view{
+  width: 187rpx;
+  text-align: center;
+  color: #303030;
+ line-height: 150rpx;
+}
+.tab .icon1{
+  background: url(http://www.hsbggb.com/NASA/icon1.png) no-repeat center top;
+  background-size:48rpx;
+}
+.tab .icon2{
+  background: url(http://www.hsbggb.com/NASA/icon2.png) no-repeat center top;
+  background-size:58rpx;
+}
+.tab .icon3{
+  background: url(http://www.hsbggb.com/NASA/icon3.png) no-repeat center top;
+  background-size:58rpx;
+}
+.tab .icon4{
+  background: url(http://www.hsbggb.com/NASA/icon4.png) no-repeat center top;
+  background-size:58rpx;
+}
+.banner{
+  width: 100%;
+  height:100%;
+  overflow: hidden;
+}
+.banner image{
+  width: 100%;
+}
+.main01{
+  width: 750rpx;
+  height:50rpx;
+  overflow: hidden;
+  text-align: center;
+  margin: 40px 0;
+  line-height: 50rpx;
+}
+.face{
+  height:120rpx;
+}
+.face image{
+  width:100%;
+  height:120rpx;
+}
+page{
+  margin-bottom: 180rpx;
+}
+.scroll{
+  width: 700rpx;
+  margin:25rpx;
+  height:225rpx;
+  overflow:hidden;
+  white-space:nowrap;
+
+  }
+.scroll navigator{
+  width: 225rpx;
+  height:225rpx;
+  display: inline-block;
+  margin-right: 25rpx;
+}
+.scroll navigator image{
+  width: 100%;
+}

@@ -1,0 +1,122 @@
+page{
+  position: relative;
+}
+.nav{
+  display:block;
+  height: 700rpx;
+  background: #00b453 url(https://paihuishou.site.webimage.cn/static/xcx/integral_bg.png) no-repeat center 180rpx;
+  background-size: 506rpx 189rpx;
+}
+
+.submenu_box{
+  top:440rpx;
+}
+
+.submenu_msg{
+  min-height: 500rpx;
+  padding-bottom: 50rpx;
+}
+
+/* 头部 */
+.integral_box{
+  position: relative;
+  width: 260rpx;
+  height: 260rpx;
+  margin: 25rpx auto;
+}
+
+.dashed_circle{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 260rpx;
+  height: 260rpx;
+  border: 1rpx dashed #fff;
+  border-radius: 50%;
+}
+
+.integral_msg{
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  z-index: 10;
+  width: 240rpx;
+  height: 240rpx;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.integral_msg text{
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+.integral_msg text:first-child{
+  margin-top: 36rpx;
+  font-size: 28rpx;
+}
+.integral_msg text:nth-of-type(2){
+  margin-top: -3rpx;
+  font-weight: 600;
+  font-size: 60rpx;
+}
+.integral_msg .more_score{
+  display: block;
+  width: 125rpx;
+  margin: 12rpx auto 0;
+  padding: 2rpx 0;
+  border: 1rpx solid #fff;
+  border-radius: 50rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 25rpx;
+}
+
+.nav>text{
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+/* 列表 */
+.submenu_msg  .sub_list{
+  position: relative;
+  justify-content: space-between;
+  border-bottom: none;
+  border-top: 1rpx solid rgb(230,230,230);
+}
+.submenu_msg  .sub_list:first-child{
+  border-top: none;
+}
+
+.sub_l view{
+  font-size: 30rpx;
+}
+.sub_l view image{
+  display: none;
+  width:19rpx;
+  height: 28rpx; 
+  margin-right: 10rpx;
+  vertical-align: -5%;
+}
+.sub_l text:last-child{
+  display: block;
+  margin-top: 15rpx;
+  font-size: 26rpx;
+  color: #999;
+}
+.sub_r{
+  height: 88rpx;
+  line-height: 88rpx;
+  font-weight: 600;
+  font-size: 38rpx;
+  color: #33a7ff;
+}
+
+/* 状态 */
+.state_donation .sub_l view{color: #02cc7a;}
+.state_donation .sub_l view image{display: inline-block;}
+.state_donation .sub_r {color: #02cc7a;}
+
+.state_remove .sub_r {color: #ff9800;}

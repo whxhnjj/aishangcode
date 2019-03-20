@@ -1,0 +1,22 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/exam/exam",
+    "pages/subject/subject",
+    "pages/rank/rank",
+    "pages/totalrank/totalrank",
+    "pages/userinfo/userinfo",
+    "pages/company/company",
+    "pages/poster/poster",
+    "pages/feedback/feedback",
+    "pages/report/report",
+    "pages/success/success",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#4d83e3",
+    "navigationBarTitleText": "答题时间",
+    "navigationBarTextStyle":"white"
+  }
+}

@@ -1,0 +1,67 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.97",
+	"appid": "wxae7dc8a94e34ffc1",
+	"projectname": "%E6%B4%BE%E5%9B%9E%E6%94%B6",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "register",
+					"pathName": "pages/register/register",
+					"query": "",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "evaluate",
+					"pathName": "pages/evaluate/evaluate",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "task",
+					"pathName": "pages/order_list/order_list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "qrcode",
+					"pathName": "pages/register/register",
+					"query": "scene=qrcode",
+					"scene": "1011"
+				}
+			]
+		}
+	}
+}

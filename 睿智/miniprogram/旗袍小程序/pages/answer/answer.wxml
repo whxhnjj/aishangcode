@@ -1,0 +1,138 @@
+<block wx:if="{{answer_display}}">
+  <view class="container">
+    <view class="answer_header">
+      <!--  -->
+      <view class="user_bg fl">
+        <image class="user_img" src="{{user.avatarUrl}}"></image>
+      </view>
+      <!--  -->
+      <view class="header_msg fl">
+        <!--  -->
+        <view class="user_msg">
+          <text class="fl">{{user.nickName}}</text>
+          <view class="exam_num fr">
+            <text>{{pagenum}}</text>
+            <text>{{pagecount}}</text>
+          </view>
+          <text class="clearfix"></text>
+        </view>
+        <!--  -->
+        <view class="exam_line">
+          <view style="width:{{pagenum/pagecount*100}}%"></view>
+          <image src="/images/exam_line_left.png" class="exam_line_left"></image>
+          <image src="/images/exam_line_right.png" class="exam_line_right"></image>
+        </view>
+      </view>
+      <!--  -->
+      <view class="header_time fr">
+        <image src="/images/time.png"></image>
+        <text>{{time}}</text>
+      </view>
+      <text class="clearfix"></text>
+
+    </view>
+
+    <!-- 题目 -->
+    <view class="answertitle">
+      <view class="answer_title">{{subject_title}}
+        <text class="images_see" wx:if="{{subject_photo!=''}}" bindtap="showImage">查看图片</text>
+      </view>
+    </view>
+
+    <!-- 选项 -->
+    <view class="answer_menu">
+
+      <view class="progress fl">
+        <text class="progress_score">{{score}}</text>
+        <view class="progress_box">
+          <image src="/images/answersheet_fraction.png"></image>
+          <text style="height:{{score>100?100:score}}%"></text>
+        </view>
+      </view>
+
+      <view class="answer_lists fl">
+      <block wx:for="{{options}}"  wx:key="key" >
+        <view class="answer_list {{(_state == 1 && item.is_right == 1 ) ?'answer_correct': ''}} {{(_state==1 && (_index == index && item.is_right==0 || _index == -1) ) ? 'answer_error':''}}"  bindtap="onSelected" data-isright="{{item.is_right}}" data-index="{{index}}"  data-id="{{item.id}}">        
+          <text class="{{item.viewstyle}}">{{item.answer}}</text>
+        </view>
+      </block>
+      </view>
+
+    </view>
+
+  </view>
+  <!--  -->
+  <image class="answer_bg" src="/images/bg.jpg"></image>
+</block>
+
+
+<block wx:if="{{load_display}}">
+  <view class="container">
+    <image class="waiting_girl" src="/images/waiting_girl.png"></image>
+
+    <view class="waiting_user">
+      <image src="/images/waiting_wreath.png"></image>
+      <view>
+        <image src="{{user.avatarUrl}}"></image>
+      </view>
+    </view>
+
+    <view class="waiting_msg">
+      <text>{{user.nickName}}</text>
+      <text>衣服是一种语言，随身带着一种袖珍戏剧。</text>
+    </view>
+  </view>
+  <view class="countdown {{font_state}}">{{font_num}}</view>
+  <image class="answer_bg" src="/images/bg.jpg"></image>
+</block>
+
+
+<block wx:if="{{result_display}}">
+  <view class="result_avatarbox">
+    <image src="/images/result_avatarbg.png" class="result_avatarbg" mode="widthFix"></image>
+    <image src="{{user.avatarUrl}}" class="result_avatar"></image>
+  </view>
+
+  <view class="result_lists">
+    <view class="result_list">
+      <image src="/images/result_icon1.png"></image>
+      <text class="name">分数</text>
+      <text class="msg">{{score}}</text>
+    </view>
+    <view class="result_list">
+      <image src="/images/result_icon2.png"></image>
+      <text class="name">正确率</text>
+      <text class="msg">{{accuracy}}<text>%</text></text>
+    </view>
+    <view class="result_list">
+      <image src="/images/result_icon3.png"></image>
+      <text class="name">用时</text>
+      <text class="msg">{{total_time}}<text>s</text></text>
+    </view>
+    <view class="result_list">
+      <image src="/images/result_icon4.png"></image>
+      <text class="name">段位</text>
+      <text class="msg">9<text>段</text></text>
+    </view>
+  </view>
+
+  <view class="result_btns">
+    <button class="result_btn">
+      <image src="/images/result_btn1.png"></image>
+      <text>生成段位证书</text>
+    </button>
+    <view class="result_btn" bindtap="restart">
+      <image src="/images/result_btn2.png"></image>
+      <text>再答一次</text>
+    </view>
+    <navigator class="result_btn" url="../rank/rank?exam_id={{exam_id}}">
+      <image src="/images/result_btn3.png"></image>
+      <text>查看排行榜</text>
+    </navigator>
+  </view>
+</block>
+
+
+<block wx:if="{{error_display}}">
+  <view class="error">暂无试卷信息</view>
+</block>

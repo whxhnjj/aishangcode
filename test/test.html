@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="jquery-3.2.1.min.js"></script>
+<script>
+    $.ajax({
+        url: 'http://10.11.71.207:8000/api/auth/login',
+        type: 'POST',
+        dataType: 'json',
+        contentType: "application/json",
+        data:{
+            username: 'admin',
+            password: 'e10adc3949ba59abbe56e057f20f883e'
+        },
+        success:function (data) {
+            console.log(data)
+        },
+        error:function (data) {
+            console.log(11)
+        }
+    })
+</script>
+</body>
+</html>

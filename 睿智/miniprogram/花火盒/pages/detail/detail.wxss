@@ -1,0 +1,364 @@
+.report{
+  font-size: 28rpx;
+  color: #f76260;
+  text-align: center;
+  width:80rpx;
+  float: right;
+  display: block;
+  margin-right: 25rpx;
+}
+.tabs{
+    width: 720rpx;
+    height: 100rpx;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0 15rpx;
+    border-top: 1rpx solid #AAA;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #F7F7FA;
+    z-index: 999999;
+}
+.tabs navigator{
+  width: 240rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 150rpx;
+  font-size:26rpx;
+  color:#11D4C6;
+  display: block;
+}
+.tabs view{
+  width: 240rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 150rpx;
+  font-size:26rpx;
+  color:#11D4C6;
+  display: block;
+}
+.tabs .tabs_left{
+  background-image:url(https://huahuohe.com/static/xcx/tab_fanhui.png);
+  background-repeat: no-repeat;
+  background-position:center 10rpx;
+  background-size:46rpx;
+}
+.tabs .tabs_right{
+  background-image:url(https://huahuohe.com/static/xcx/tab_baoming.png);
+  background-repeat: no-repeat;
+  background-position:center 10rpx;
+  background-size:46rpx;
+}
+.tabs .tabs_center{
+  position: relative;
+  width: 150rpx;
+  height:150rpx;
+  top: -60rpx;
+  left:0;
+  border-radius: 50%;
+  color: #FFF;
+  line-height:225rpx;
+  background-color:#FF6600;
+  background-image:url(https://huahuohe.com/static/xcx/tab_zhichi.png);
+  background-size:81rpx;
+  background-repeat: no-repeat;
+  background-position:center 10rpx;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -webkit-transition:ease all;
+  -moz-transition:ease all;
+  transition:ease all;
+  -webkit-transition-duration:700ms;
+  -moz-transition-duration:700ms;
+  transition-duration:700ms;
+
+}
+.showmost{
+  width: 750rpx;
+  padding: 15rpx 0;
+  font-size: 30rpx;
+  background-color: #f76260;
+  color: #FFF;
+  text-align: center;
+  background-image:url(https://huahuohe.com/static/xcx/tanhao.png);
+  background-size:42rpx;
+  background-repeat: no-repeat;
+  background-position:220rpx center;
+}
+.title_content{
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+  padding-bottom: 25rpx;
+  background: #EBEBEB;
+}
+.title_content .title_name{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  background: #FFF;
+  padding:25rpx;
+}
+.title_content .title_name .userinfo_avatar{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  border: 1rpx solid #888;
+  float: left;
+  margin-right: 20rpx;
+  overflow: hidden;
+}
+.title_content .title_name .title_xi{
+  width: 405rpx;
+  height: 130rpx;
+  float: left;
+}
+.title_content .title_name .userinfo_name{
+   width: 405rpx;
+  height: 65rpx;
+  display: block;
+  font-size: 32rpx;
+  line-height: 65rpx;
+  color: #353535;
+  overflow: hidden;
+}
+.title_content .title_name .serial{
+  width: 405rpx;
+  height: 65rpx;
+  display: block;
+  color: #888888;
+  overflow: hidden;
+  font-size: 36rpx;
+}
+.title_content .title_name .show_View{
+  width:65rpx;
+  height:65rpx;
+  float: right;
+  display: block;
+  overflow: hidden;
+  margin:32rpx  0;
+}
+.box1{
+    width: 700rpx;
+    height: 100%;
+    overflow: hidden;
+    margin: 25rpx;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box1 view.piaoshu{
+  background-image:url(https://huahuohe.com/static/xcx/actor_piaoshu.png);
+}
+.box1 view.liwu{
+  background-image:url(https://huahuohe.com/static/xcx/actor_liwu.png);
+}
+.box1 view.renqi{
+  background-image:url(https://huahuohe.com/static/xcx/actor_renqi.png);
+  border-right:0;
+}
+.box1 view{
+  width:140rpx;
+  height:80rpx;
+  padding:15rpx 0 15rpx 80rpx;
+  border-right:1rpx solid #888888; 
+  text-align: left;
+  background-size:46rpx;
+  background-repeat: no-repeat;
+  background-position:15rpx center; 
+}
+.box1 view span.sp_tp{
+  width:140rpx;
+  height:40rpx;
+  float: left;
+  display: block;
+  font-size:30rpx;
+  color: #353535;
+  line-height: 40rpx;
+}
+.box1 view span.sp_bt{
+    width:140rpx;
+    height: 40rpx;
+    float: left;
+    display: block;
+    font-size: 28rpx;
+    color: #888888;
+    line-height: 40rpx;
+}
+.photo{
+  width: 725rpx;
+  height: 100%;
+  margin: 25rpx 0 25rpx 25rpx;
+  overflow: hidden;
+}
+.photo1 image{
+  width:700rpx;
+  height:700rpx;
+  float: left;
+  margin-bottom:14rpx;
+}
+.photo2 image{
+  width:343rpx;
+  height: 343rpx;
+  float: left;
+  margin-right:14rpx;
+  margin-bottom:14rpx;
+}
+.photo3 image{
+  width: 227rpx;
+  height: 227rpx;
+  float: left;
+  margin-right: 9.5rpx;
+  margin-bottom:9.5rpx;
+}
+.font{
+  width: 700rpx;
+  height: 100%;
+  margin: 0 25rpx;
+  font-size:28rpx;
+  overflow: hidden;
+  color: #333333;
+  padding-bottom: 25rpx;
+}
+.hideshow{
+  height:80rpx;
+  line-height: 40rpx;
+  overflow: hidden;
+}
+.hide{
+  height: 100%;
+  line-height: 40rpx;
+  overflow: hidden;
+}
+
+.hideshow1{
+  width: 700rpx;
+  height: 50rpx;
+  background-image:url(https://huahuohe.com/static/xcx/xia.png);
+  background-size:48rpx;
+   background-repeat: no-repeat;
+  background-position:center center; 
+}
+.hideshow2{
+  width: 700rpx;
+  height: 50rpx;
+  background-image:url(https://huahuohe.com/static/xcx/shang.png);
+  background-size:48rpx;
+  background-repeat: no-repeat;
+  background-position:center center; 
+}
+
+.box2{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  margin:25rpx;
+}
+.box2 .giftname{
+  color: #888888;
+  font-size: 30rpx;
+  border-bottom:3rpx solid #888888;
+  display: inline-block;
+  line-height: 40rpx;
+  padding: 5rpx 0;
+}
+.box2 .giftlist{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  margin-top: 25rpx;
+  padding:25rpx 0;
+  border-bottom: 1rpx dashed #888888;
+}
+.box2 .giftlist .giftlist_avatar{
+  width: 78rpx;
+  height: 78rpx;
+  border-radius:50%;
+  border:1rpx solid #888888;
+  float: left;
+  margin-right: 25rpx;
+}
+.box2 .giftlist .nickName{
+  width:275rpx;
+  height: 40rpx;
+  font-size:30rpx;
+  line-height: 40rpx;
+  display: block;
+  color: #444;
+  float: left;
+  text-align: left;
+  overflow: hidden;
+}
+.box2 .giftlist .date{
+  width:300rpx;
+  height: 40rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  display: block;
+  color: #999999;
+  float: right;
+}
+.box2 .giftlist .nickgift{
+  width:575rpx;
+  height: 40rpx;
+  font-size:26rpx;
+  line-height: 40rpx;
+  display: block;
+  color: #999999;
+  float: left;
+}
+.nickgift b{color: #f00;}
+.box2 .more{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 25rpx;
+  color: #888888;
+}
+/*广告位*/
+.banner_box{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  margin:30rpx 25rpx;
+}
+.banner_box image{
+  width: 700rpx;
+}
+
+/*弹出选项卡*/
+.codeshow{
+  width: 750rpx;
+  height:340rpx;
+  overflow: hidden;
+  background: #FFF;
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999;
+  animation:myfirst 0.3s linear;
+}
+.codeshow button,.codeshow navigator{
+  width: 750rpx;
+  height:107rpx;
+  line-height:100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  border-bottom: 3rpx solid #AAA;
+  background: #FFF;
+  border-radius: 0rpx;
+}
+.codeshow button::after{border:none!important;}
+.codeshow button:nth-last-child(1){
+  border-top:10rpx solid #AAA;
+  border-bottom: 0;
+}
+
+ @keyframes myfirst{
+    0%{height: 0;}
+    100%{height:340rpx;}
+}

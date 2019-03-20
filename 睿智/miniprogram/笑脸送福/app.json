@@ -1,0 +1,22 @@
+{
+"pages":[
+      "pages/index/index",
+      "pages/withdraw/withdraw",
+      "pages/mine/mine",
+      "pages/success/success",
+      "pages/feedback/feedback",
+      "pages/share/share",
+      "pages/myget/myget",
+      "pages/help/help",
+    "pages/theme/theme",
+      "pages/mysend/mysend",
+      "pages/logs/logs"
+],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#D85940",
+    "navigationBarTitleText": "笑脸送福",
+    "navigationBarTextStyle":"#FFF",
+    "onReachBottomDistance":"50"
+  }
+}

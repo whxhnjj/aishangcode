@@ -1,0 +1,79 @@
+image.logo{
+  width: 750rpx;
+}
+.title{
+  height: 100%;
+  overflow: hidden;
+  margin:10rpx 25rpx 20rpx 25rpx;
+  padding:5rpx 0;
+  line-height:40rpx;
+  display: inline-block;
+  border-bottom:5rpx solid #E5E5E5;
+  font-size: 32rpx;
+  color: #A0A0A0;
+}
+.box{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 25rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.actior{
+  width: 340rpx;
+  height:100%;
+  background: #EBEBEB;
+  display: block;
+  overflow: hidden;
+  margin-bottom:25rpx;
+  position: relative;
+}
+.activity{
+  width: 340rpx;
+  height: 170rpx;
+  overflow: hidden;
+  display: block;
+}
+.box .name{
+  width: 340rpx;
+  font-size:25rpx;
+  color: #353535;
+  line-height:40rpx;
+  padding:5rpx 0;
+  text-align: center;
+  display: block;
+}
+.alive{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0; 
+    height: 0; 
+    border-top:70rpx solid #f00; 
+    border-left:70rpx solid transparent; 
+ 
+}
+.dead{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0; 
+    height: 0; 
+    border-top:70rpx solid #000; 
+    border-left:70rpx solid transparent; 
+ 
+}
+.status{
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size:18rpx;
+  width: 70rpx;
+  height: 70rpx;
+  line-height:40rpx;
+  color: #FFF;
+  transform:rotate(45deg);
+  text-align: center;
+}

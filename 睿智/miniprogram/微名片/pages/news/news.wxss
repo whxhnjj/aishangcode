@@ -1,0 +1,40 @@
+
+/* 标题 */
+.news_title{
+  margin: 65rpx 60rpx 40rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.news_box{
+  margin: 0 60rpx 60rpx;
+  font-size: 30rpx;
+}
+.news_box .news_com{
+  margin-right: 40rpx;
+  color: rgb(36,193,169);
+}
+.news_box .news_time{
+  margin-right: 40rpx;
+  color: rgb(153,153,153);
+}
+
+/* 图文 */
+.news_img{
+  display: block;
+  margin-bottom: 60rpx;
+  width: 750rpx;
+}
+.news_text{
+  display: block;
+  margin :0 60rpx 60rpx;
+  word-break:break-all;
+  font-size: 30rpx;
+  line-height: 2;
+}
+
+/* 底部 */
+.bottom{
+  width:750rpx;
+  height: 20rpx;
+}

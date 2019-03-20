@@ -1,0 +1,35 @@
+/* pages/prize/prize.wxss */
+.wrap{
+  width: 700rpx;
+  margin: 25rpx;
+  height: 100%;
+  overflow: hidden;
+}
+.box_view{
+  width: 700rpx;
+  height: 100%;
+  overflow: hidden;
+}
+text{
+  font-size: 32rpx;
+  color: #353535;
+}
+span.tit{
+  color: #f00;
+  display: block;
+  margin:25rpx 0;
+}
+span{
+  color: #f00;
+}
+.footer{
+  color: #888888;
+}
+.banner{
+  width: 750rpx;
+  height: 100%;
+  overflow: hidden;
+}
+.banner image{
+  width: 750rpx;
+}

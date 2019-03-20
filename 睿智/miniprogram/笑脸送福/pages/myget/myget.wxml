@@ -1,0 +1,29 @@
+<!--pages/received/received.wxml-->
+<view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <span class="userinfo-nickname"><em>{{userInfo.nickName}}</em>收到的</span>
+</view>
+<view class="wrap jilu">
+    <view class='left'>
+        <span class="top">金额(元)</span>
+        <span class="bottom">{{sumreward}}</span>
+    </view>
+     <view class='right'>
+        <span class="top">数量(个)</span>
+        <span class="bottom">{{sumnum}}</span>
+    </view>
+</view>
+<block wx:for="{{received}}" >
+<view class="list">
+      <navigator class='array' url='../../pages/theme/theme?id={{item.id}}'>
+       <image class="img_array" src="{{item.headimgurl}}" background-size="cover"></image>
+        <view class='infomation'>
+            <span class="name_array">{{item.nickname}}</span>
+            <span class="money">{{item.reward}}元</span>
+            <text class="date">{{item.dateline}}</text>
+        </view>    
+      </navigator>
+</view>
+</block>
+<navigator class='feedback' hover-class="none"  url='../../pages/feedback/feedback'>举报</navigator>
+

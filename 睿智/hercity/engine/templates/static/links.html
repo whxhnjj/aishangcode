@@ -1,0 +1,38 @@
+{include file="inc_header.html" current="static" title="友情链接 - 倾城网"}
+
+
+<!--update-->
+<div class="wrap static">
+
+	{include file="static/inc_menu.html"}
+	<div class="breadcrumb"><a href="/">首页</a>  &gt; 友情链接</div>
+
+	<div class="content">
+		<p class="links">
+		{foreach from=$links item=link}
+		<a href="{$link.href}" title="{$link.title}" target="_blank">{$link.title}</a>
+		{/foreach}
+		</p>
+		<hr />
+		 
+		<h5>倾城首页链接要求：</h5>
+		1、google PR值>=6。<br />
+		2、Alexa排名在10万以内。<br />
+		3、网站内容与女性、服饰、中国传统文化、时尚等相关。<br />
+		4、无违禁内容。<br />
+		5、网站页面设计整洁美观。<br />
+		6、顶级域名(知名网站除外)。<br />
+		7、服务器稳定，不出现频繁的无法访问。<br />
+		8、业内有影响力的网站优先。<br />
+		9、为确保链接内容不会误导用户，本站所登载的链接关键词必须为真实的网站名称。<br />
+		10、本站每月对友情链接进行检查，检查时发现不符以上要求的链接将做出移至内页或删除链接的处理，恕不另行通知。<br /><br />
+		<hr />
+		 
+		<h5>链接合作联系方式：</h5>
+		E-mail：link@hercity.com<br />
+		QQ：64256534<br />
+
+	</div>
+</div>
+
+{include file="inc_footer.html" current="static" template="about"}

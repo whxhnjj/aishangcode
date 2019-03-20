@@ -1,0 +1,17 @@
+<form bindsubmit="formSubmit">
+  <view class="content_box">
+    <view class="content_list">
+      <text>团队名称</text>
+      <input name="team_name" placeholder=''/>
+      <text class="msg">请输入2-8字团队名称</text>
+    </view>
+
+    <view class="content_list">
+      <text>团队描述</text>
+      <textarea name="team_desc" placeholder='介绍一下自己的团队'></textarea>
+    </view>
+  </view>
+
+  <button hover-class="none" formType="submit">创建团队</button>
+  <text class="btn_text">一个人只能创建一个团队，组员身份不能创建团队</text>
+</form>

@@ -1,0 +1,49 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.95",
+	"appid": "wx701eeff82105b0d6",
+	"projectname": "%E5%BF%83%E6%84%8F%E4%B8%A5%E9%80%89",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				{
+					"id": 0,
+					"name": "pro",
+					"pathName": "pages/buy_success/buy_success",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "group",
+					"pathName": "pages/group/group",
+					"query": "group_id=1&group_name=防晒"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,20 @@
+<div class="commentslist">
+{if $comments.recordcount > 0}
+<h4>最新评论</h4>
+{/if}
+
+
+{if $isMicroMessenger}
+<a href="/s/comment/{$post.id}-1.html" class="writecomment">写评论</a>
+{/if}
+
+<ul>
+{foreach from=$comments.comments item=item}
+<li><div class="headimg"><img src="{if $item.wechat_headimgurl != ''}{$item.wechat_headimgurl}{else}{$item.avater}{/if}" /></div><div class="text"><div class="nickname">{$item.name}</div><div class="content">{$item.content}</div><div class="dateline">{$item.dateline|date_format:'%Y-%m-%d'}</div></div></li>
+{/foreach}
+</ul>
+
+{if $isMicroMessenger && $comments.recordcount > 10}
+<a href="/s/comment/{$post.id}-1.html" class="more">查看全部({$comments.recordcount}条)评论…</a>
+{/if}
+</div>

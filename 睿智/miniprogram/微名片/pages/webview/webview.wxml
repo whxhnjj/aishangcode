@@ -1,0 +1,1 @@
+<web-view src="https://webimage.cn/detail-{{pro_id}}.html"></web-view>

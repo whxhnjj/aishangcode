@@ -1,0 +1,24 @@
+{if $title==""}{assign var="title" value="中国旗袍品牌排行榜_{$smarty.now|date_format:'Y'}十大旗袍品牌_旗袍品牌有哪些_旗袍哪个牌子好"}{/if}
+{if $description==""}{assign var="description" value="权威旗袍行业网站倾城网推出的旗袍品牌排行榜，基于大数据的旗袍品牌综合排行，真实客观可信赖。"}{/if}
+<!DOCTYPE HTML>
+<html>
+<head>
+<link href="/statics/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://www.hercity.com/assets/css/hercity.css" rel="stylesheet" type="text/css"/>
+<link href="/statics/css/swiper.min.css" rel="stylesheet" type="text/css">
+<meta charset="gbk">
+<meta name="description" content="{$description}"/>
+<meta name="viewport" content="width=1120,minimum-scale=0.1,maximum-scale=2,user-scalable=yes" />
+<title>{$title}</title>
+</head>
+
+<body>
+  <div class="topbox">
+    <div class="top10bg"></div>
+    <a href="/" class="logo_top10">十大旗袍品牌排行</a>
+  </div>
+  <a href="/" class="logo">中国旗袍品牌排行榜</a>
+  <div class="sou clear">
+    <input type="text" placeholder="输入品牌名称或关键词" maxlength="20" /> 
+    <a>搜索</a>
+  </div>

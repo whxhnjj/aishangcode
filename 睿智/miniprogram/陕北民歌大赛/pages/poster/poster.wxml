@@ -1,0 +1,4 @@
+<view class="poster {{poster==''?'hide':'show'}}">
+  <image mode='widthFix' src="{{poster}}"></image>
+  <button bindtap="save">保存图片</button>
+</view>

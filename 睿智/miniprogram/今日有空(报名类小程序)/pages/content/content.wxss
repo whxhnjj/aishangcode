@@ -1,0 +1,134 @@
+/* pages/content/content.wxss */
+.blak{
+  width: 700rpx;
+  margin:0 25rpx;
+  padding: 25rpx 0;
+  height: 100%;
+  overflow: hidden;
+}
+.blak .sp1{
+  width: 550rpx;
+  font-size: 40rpx;
+  display: block;
+  line-height:50rpx;
+  height: 100%;
+  float: left;
+}
+.blak .sp2{
+  width: 550rpx;
+  font-size: 32rpx;
+  display: block;
+  line-height: 50rpx;
+  padding-top: 10rpx;
+  height: 100%;
+  color: #F00;
+  float: left;
+}
+.blak .img{
+  width: 130rpx;
+  height: 130rpx;
+  float: right;
+}
+.blak image{
+  width: 130rpx;
+  height: 130rpx;
+}
+.blak2{
+  width: 700rpx;
+  padding: 25rpx;
+  height: 100%;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+.blak2 p{
+  display: block;
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color:#909090;
+  border-bottom: 1rpx solid #eee;
+  margin-bottom: 15rpx;
+  padding-bottom: 15rpx;
+}
+.blak2 span{
+  display: block;
+  float: left;
+  color: #909090;
+}
+.blak2 b{
+  display: block;
+  float: left;
+  color: #333;
+  font-weight: normal;
+}
+.blak2 em{
+  display: block;
+  float: right;
+   color: #909090;
+}
+.blak3{
+  width: 700rpx;
+  padding: 25rpx;
+  height: 100%;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+.blak3 p{
+  display: block;
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color:#909090;
+  border-bottom: 1rpx solid #eee;
+  margin-bottom: 15rpx;
+  padding-bottom: 15rpx;
+}
+.blak3 span{
+  display: block;
+  width: 650rpx;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  color:#909090;
+  padding-left:50rpx;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/image/img/position.png') no-repeat left center;
+  background-size: 32rpx;
+}
+.blak4{
+  width: 700rpx;
+  padding: 25rpx;
+  height: 100%;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+.blak4 p{
+  display: block;
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color:#909090;
+  border-bottom: 1rpx solid #aaa;
+  margin-bottom: 15rpx;
+  padding-bottom: 15rpx;
+}
+.blak4 span{
+  display: block;
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-bottom: 1rpx solid #ccc;
+  padding: 10rpx 0;
+  float: left;
+  color: #444444;
+}
+.blak5{
+  width: 700rpx;
+  margin: 0 25rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  font-size: 34rpx;
+  padding: 15rpx 0;
+  color:#8F92A6;
+  background: url('http://t.nongjia365.com.cn/guanli/assets/image/img/arrow_left.png') no-repeat
+  right center;
+
+}

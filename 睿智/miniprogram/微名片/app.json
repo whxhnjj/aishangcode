@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/home/home",
+    "pages/pro/pro",
+    "pages/news/news",
+    "pages/share/share",
+    "pages/webview/webview",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微智创想",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#242424",
+    "selectedColor": "#24c1a9",
+    "borderStyle": "#dadada",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "/images/tabbar/card_selected.png",
+        "iconPath": "/images/tabbar/card.png",
+        "pagePath": "pages/index/index",
+        "text": "名片"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/home_selected.png",
+        "iconPath": "/images/tabbar/home.png",
+        "pagePath": "pages/home/home",
+        "text": "官网"
+      }
+    ]
+  },
+  "debug": false
+}

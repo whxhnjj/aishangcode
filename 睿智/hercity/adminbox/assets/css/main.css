@@ -1,0 +1,582 @@
+body,input,textarea,select,option,td,div
+{
+font-size:12px;
+font-family:verdana;
+}
+
+body
+{
+line-height:20px;
+margin:10px;
+}
+
+form
+{
+margin:0px;
+padding:0px;
+}
+
+input,textarea
+{
+margin-left:0px;
+}
+
+/*
+input
+{
+vertical-align:middle;
+}
+*/
+
+span
+{
+line-height:16px;
+}
+
+a
+{
+color:#333333;
+}
+
+a:hover
+{
+color:#ff3300;
+}
+
+label
+{
+padding:0px 10px 0px 2px;
+vertical-align:top;
+}
+
+ul,ol,li
+{
+margin:0;
+padding:0;
+list-style:none;
+}
+
+h2
+{
+font-size:16px;
+font-family:"微软雅黑";
+font-weight:bold;
+color:#aa0000;
+}
+
+h4
+{
+font-size:12px;
+font-weight:bold;
+color:#aa0000;
+margin:10px 0 0 0;
+padding:0px;
+}
+
+.red
+{
+color:#f00;
+}
+
+.orange
+{
+color:#f60;
+}
+
+.green
+{
+color:#090;
+}
+
+.bold
+{
+font-weight:bold;
+}
+
+.button
+{
+height:35px;
+padding:0px 20px;
+text-align:center;
+font-size:14px;
+font-weight:bold;
+}
+
+
+/*提示信息*/
+.msg_warn
+{
+color:#f00;
+}
+
+.msg_ok
+{
+color:#090;
+}
+.msg_normal
+{
+color:#333;
+}
+
+
+
+/*登录*/
+.login_message
+{
+background:#ddd;
+color:#333;
+padding:8px 8px 5px 8px;
+}
+
+.login_message a
+{
+color:#333;
+text-decoration:none;
+}
+
+.login
+{
+text-align:center;
+margin-top:100px;
+}
+
+.login form
+{
+text-align:left;
+padding:40px;
+background:#eee;
+width:240px;
+height:180px;
+margin:10px auto;
+}
+
+.login .textbox
+{
+width:230px;
+height:30px;
+padding:5px;
+border:1px solid #ccc;
+background:#ffffff;
+margin-bottom:15px;
+font-size:26px;
+}
+
+.login .focus
+{
+border:1px solid #ffaa00;
+background:#ffffee;
+}
+
+.login .button
+{
+width:60px;
+height:30px;
+float:right;
+}
+
+
+#formsearch
+{
+}
+
+.searchTable
+{
+width:100%;
+border:0px;
+border:1px solid #b2b2b2;
+border-bottom:0px;
+padding:10px;
+
+}
+
+.searchBox
+{
+border:0px;
+border:1px solid #b2b2b2;
+border-bottom:0px;
+padding:10px;
+}
+
+.dataTable
+{
+width:100%;
+border:0px;
+background-color:#b2b2b2;
+}
+
+.dataTable th
+{
+background:url(../images/bg_th.gif) #ddd;
+padding:6px 5px;
+text-align:center;
+}
+
+.dataTable tr
+{
+background-color:#fff;
+}
+
+
+.dataTable td
+{
+padding:6px 5px;
+text-align:center;
+}
+
+.dataTable tr.alt
+{
+background-color:#eee;
+}
+
+.hover
+{
+background-color:#ffd !important;
+}
+
+.checked
+{
+background-color:#eee !important;
+}
+
+.checked td,.checked td a
+{
+color:#060;
+}
+
+.yes
+{
+color:#060;
+font-weight:bold;
+}
+
+.no
+{
+color:#900;
+font-weight:blod;
+}
+
+.icon_link
+{
+display:block;
+float:right;
+width:18px;
+height:18px;
+overflow:hidden;
+text-indent:-5000px;
+background:url(../images/icons.png) no-repeat;
+}
+
+.icon_edit
+{
+display:block;
+width:18px;
+height:18px;
+overflow:hidden;
+text-indent:-5000px;
+background:url(../images/icons.png) no-repeat 0px -19px ;
+margin:auto;
+}
+
+/**formSearch**/
+.form_search
+{
+border:1px solid #b2b2b2;
+padding:20px;
+}
+
+
+/**formTable**/
+.formTable
+{
+width:100%;
+border:1px solid #b2b2b2;
+}
+
+.formTable th
+{
+width:80px;
+text-align:right;
+border-bottom:1px solid #ddd;
+border-right:1px solid #ddd;
+padding:8px 5px 5px 5px;
+}
+
+.formTable td
+{
+border-bottom:1px solid #ddd;
+padding:6px 5px 6px 5px;
+}
+
+.formTable .tableLine
+{
+background-color:#e6e6e6;
+text-align:right;
+}
+.formTable .tableLine a
+{
+font-size:10px;
+text-decoration:none;
+color:#333;
+}
+
+.formTable .buttonbox
+{
+background-color:#eee;
+text-align:center;
+height:50px;
+border-bottom:0px;
+}
+
+.formTable .buttonbox input
+{
+margin:10px;
+width:80px;
+height:30px;
+}
+
+
+.fixed_buttonbox
+{
+display:inline-block;
+display:-moz-inline-stack;
+*display:inline;
+height:60px;
+position: fixed;
+bottom:0px;
+left:10px;
+right:10px;
+height:35px; 
+border-top:1px solid #b2b2b2; 
+border-left:1px solid #b2b2b2; 
+border-right:1px solid #b2b2b2;
+padding:10px 0px; 
+background: #ddd;
+text-align:center;
+_position: relative;
+_left: 0px;
+_right: 0px;
+_width:100%;
+_border:0px;
+}
+
+.fixed_buttonbox input
+{
+margin:0px 10px;
+width:130px;
+height:35px;
+text-align:center;
+font-size:14px;
+font-weight:bold;
+}
+
+.td_blank
+{
+height:50px;
+}
+
+/*批量上传相关*/
+.uploadifive-button{width:200px;height:80px;}
+
+
+/*小图上传相关*/
+.loading
+{
+display:none;
+}
+
+.img_browse
+{
+width:62px;
+height:22px;
+vertical-align:bottom;
+}
+
+
+/**当前位置样式**/
+
+#path
+{
+background-color:#ddd;
+border:1px solid #b2b2b2;
+border-bottom:0px;
+padding:6px;
+height:24px;
+line-height:24px;
+font-weight:bold;
+}
+
+/**工具条样式**/
+#tools
+{
+text-align:right;
+float:right;
+height:24px;
+}
+#tools li
+{
+float:left;
+position: relative;
+height:24px;
+margin:0 5px;
+}
+#tools li a
+{
+display:block;
+height:14px;
+padding:4px 8px;
+line-height:14px;
+font-weight:normal;
+color:#fff;
+background:url(../images/bg_tool.gif) #ffd center center;
+border:1px solid #000;
+text-decoration:none;
+cursor:pointer;
+_display:inline;
+_line-height:22px;
+
+}
+
+#tools ol
+{
+position:absolute;
+left:0px;
+top:24px;
+text-align:left;
+background:#eee;
+border:1px solid #999;
+display:none;
+}
+#tools ol  li
+{
+margin:0;
+height:auto;
+}
+#tools ol li a
+{
+display:block;
+width:100px;
+font-weight:normal;
+color:#000;
+padding:6px 8px 6px 8px;
+
+margin:0;
+background:none;
+border:0;
+text-decoration:none;
+cursor:hand;
+}
+#tools ol li a:hover
+{
+background:#ccc;
+}
+
+
+
+
+/**分页样式**/
+.pages {
+	padding-right: 7px; 
+	padding-left: 7px; 
+	padding-bottom: 7px; 
+	margin: 3px; 
+	padding-top: 7px; 
+	text-align: right;
+}
+.pages a,.pages span{
+	font-size: 12px;
+	font-family: verdana, arial, helvetica, sans-serif;
+	width: 60%; 
+	padding-left: 25px;
+	border: #000000 1px solid;
+	padding: 2px 5px; 
+	margin: 2px; 
+	color: #000000; 
+	text-decoration: none;
+}
+.pages a:hover {
+	color: #fff; 
+	background-color: #000;
+}
+.pages a:active {
+	color: #fff;
+	background-color: #000;
+}
+.pages a.current {
+	padding-right: 2px 5px; 
+	font-weight: bold; 
+	margin: 2px; 
+	color: #fff; 
+	background-color: #000000;
+}
+.pages a.disabled {
+	border:1px solid #ffffff;
+	padding-right: 2px 5px;
+	margin: 2px;
+	color: #ddd;
+}
+
+
+
+/**散集**/
+option
+{
+color:#008800;
+}
+
+option.selected
+{
+color:#000;
+}
+
+option.inactive
+{
+color:#666;
+}
+
+#linkto,#brief,#description,#remark
+{
+width:876px;
+height:45px;
+padding:5px;
+}
+
+#profile,#archives
+{
+width:876px;
+height:200px;
+padding:5px;
+}
+
+/*提示窗口*/
+.messagebox
+{
+text-align:center;
+color:#333333;
+padding:50px;
+margin:100px auto;
+width:400px;
+height:60px;
+background-color:#ffffcc;
+border:1px solid #cccccc;
+}
+
+.messagebox strong
+{
+color:#ff0000;
+}
+
+
+
+/*任务页*/
+.cron_box
+{
+text-align:center;
+padding:200px;
+}
+
+.cron_box a
+{
+font-size:14px;
+font-weight:bold;
+margin:20px;
+}

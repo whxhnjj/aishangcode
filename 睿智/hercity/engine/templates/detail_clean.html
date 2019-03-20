@@ -1,0 +1,99 @@
+{include file="inc_header.html" current="detail" title="{$post.title} - 倾城网"}
+
+
+<!--update-->
+<div class="wrap detail">
+	<div class="left">
+		<div class="breadcrumb">{$location}</div>
+		
+		<h1>{$post.title}{if $post.is_show == 0}<span class="orange">(未发布)</span>{/if}</h1><span class="erweima" title="点击扫描二维码 手机上阅读本内容"></span>
+		<h6><span>{$post.dateline|date_format:'Y/m/d'}</span>{if $post.author != ''}<span>作者/{$post.author}</span>{/if}{if $post.source != ''}<span>来源/{$post.source}</span>{/if}<span>阅读人次/<em class="hits">{$post.hits}</em></span><span><a href="/comments/{$post.id}-1.html">我要评论</a>(<em class="comments">{$post.comments}</em>)</span></h6>
+		<div class="erweimabox"><img src="" /><br />扫描二维码<br />将本内容分享给手机朋友<br /><a class="close" href="javascript:void(0);">关闭</a></div>
+
+		<div class="page_content">
+		
+		
+			{if $post.brief != ''}
+			<div class="page_brief">
+			导读：{$post.brief}…
+			</div>
+			{/if}
+			{$post.content}
+
+			{if $post.mediafile != ""}
+			<div>
+			<script type="text/javascript" src="/engine/includes/mediafile.php?m={$post.mediafile}"></script>
+			</div>
+			{/if}
+			
+
+			<a href="javascript:void(0);" class="point">{$post.point}</a>
+			
+			
+			
+			
+		</div>
+
+		<div class="tags">
+		{foreach from=$post_keyword item=key}
+		<a href="/tag/?q={$key}">{$key}</a>
+		{/foreach}
+		</div>
+
+
+		<div class="pageredirect">
+		<span class="prev_letter">{if $prev!=""}上一篇：<a href="{$prev.0.href}">{$prev.0.title}</a>{else}已到达第一篇{/if}</span>
+		<span class="next_letter">{if $next!=""}下一篇：<a href="{$next.0.href}">{$next.0.title}</a>{else}已到达最后一篇{/if}</span>
+		</div>
+
+
+		<div class="more_read">
+		<h5>相关阅读</h5>
+		<ul>
+		{foreach from=$list_same item=item}
+		<li><a href="{$item.href}" target="_self">{$item.title}</a></li>
+		{/foreach}
+		</ul>
+		</div>
+		
+
+	{include file="detail_inc_comments.html" current="detail" template="detail"}
+	</div>
+
+	<div class="right_a">
+
+		<div class="hc_box" style="margin-bottom:20px;">
+			<script type="text/javascript"><!--
+			google_ad_client = "ca-pub-4842793887790356";
+			/* 300x250, 创建于 07-11-6 */
+			google_ad_slot = "1847728237";
+			google_ad_width = 300;
+			google_ad_height = 250;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		</div>
+
+		<div id="abox_b04" class="abox_box" ></div>
+
+
+
+		<div class="right_box">
+		<h5><a href="">热门推荐</a><span>HOT</span></h5>
+			<ul class="imagetext">
+			{foreach from=$list_hot item=post}
+			<li><div><a class="pic" href="{$post.href}"><img src="{$post.thumb1}" alt="{$post.title}" /></a></div><a class="tit" href="{$post.href}">{$post.subhead1}</a>
+			<p>{$post.brief}…</p>
+			</li>
+			{/foreach}
+			</ul>
+		</div>
+
+		<div id="abox_b03" class="abox_box" ></div>
+			
+	</div>
+</div>
+
+{include file="inc_footer.html" current="detail" template="detail"}

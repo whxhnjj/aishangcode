@@ -1,0 +1,81 @@
+/* income.wxss */
+.box{
+  width: 750rpx;
+  margin:50rpx 0;
+}
+.box .section{
+  width: 750rpx;
+  padding:5rpx 0;
+  float: left;
+  border-bottom: 1px solid #D8D8D8;
+}
+.box .section  i{
+  width:200rpx;
+  height: 100rpx;
+  padding-left:25rpx;
+  text-align: left;
+  line-height: 100rpx;
+  float: left;
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 38rpx;
+}
+.box .section  b{
+  width:500rpx;
+  height: 100rpx;
+  text-align: left;
+  line-height: 100rpx;
+  float: left;
+  color: #868686;
+   font-size: 38rpx;
+}
+.box .section input{
+  width:500rpx;
+  height: 100rpx;
+  text-align: left;
+  line-height: 100rpx;
+  float: left;
+  color: #868686;
+   font-size: 38rpx;
+}
+.box .section textarea{
+  width:750rpx;
+  text-align: left;
+  float: left;
+  color: #868686;
+   font-size: 38rpx;
+   height:200rpx;
+   padding-left:25rpx;
+}
+
+.shouru{
+float: left;
+  width: 700rpx;
+  height:100rpx;
+  background: #FF533E;
+  text-align: center;
+  line-height:100rpx;
+  border-radius: 30rpx;
+  color: #FFF;
+   font-weight: blod;
+   font-size: 48rpx;
+   margin: 50rpx 25rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+{include file="inc_header.html" current="brand_detail" title="{$brand.name}"}
+
+<div class="content brand_content">
+<h1>{$brand.name}</h1>
+<h5><span>{$brand.str_tags}</span></h5>
+
+{if $brand.is_auth}
+<div class="brand_auth">品牌认证：{$brand.auth_info}</div>
+{/if}
+
+{$brand.profile}
+
+{if $brand.location != ''}<br /><strong>总部：</strong>{$brand.location}<br />{/if}
+{if $brand.email != ''}<strong>电邮：</strong>{$brand.email}<br />{/if}
+{if $brand.tel != ''}<strong>电话：</strong>{foreach from=$brand.tel item=item}<a href="tel:{' '|str_replace:'':$item}">{$item}</a>&nbsp;{/foreach}<br />{/if}
+{if $brand.address != ''}<strong>地址：</strong>{$brand.address}<br />{/if}
+{if $brand.website != ''}<strong>官网：</strong><a href="{$brand.website}">{$brand.website}</a><br />{/if}
+</div>
+
+{include file="inc_contact.html"}
+{include file="inc_footer.html" current="brand_detail"}

@@ -1,0 +1,130 @@
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25rpx 0;
+ overflow: hidden;
+  height: 100%;
+}
+.userinfo_avatar{
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  border: 1rpx solid #DDD;
+}
+.userinfo_nickname{
+  font-size: 30rpx;
+  color: #999;
+  margin: 10rpx 0;
+}
+.query{
+  width: 700rpx;
+  margin:0 25rpx;
+  padding: 25rpx 0;
+  font-size: 34rpx;
+  overflow: hidden;
+  height: 100%;
+}
+.number{
+  width:523rpx;
+  height:80rpx;
+  border: 1rpx solid #DDD;
+  float: left;
+  padding-left: 25rpx;
+}
+.btn{
+  width:128rpx;
+  height:84rpx;
+  float: right;
+  font-size: 34rpx;
+  line-height: 84rpx;
+  background: #13D4C8;
+  color: #fff;
+}
+
+.order{
+  width: 700rpx;
+  margin:25rpx;
+  overflow: hidden;
+  height: 100%;
+}
+.title{
+  font-size: 30rpx;
+  color: #999;
+  margin-bottom: 15rpx;
+}
+.list{
+  width: 700rpx;
+  font-size: 33rpx;
+  border-bottom:1rpx solid #DDD;
+  padding: 10rpx 0;
+  overflow: hidden;
+  height: 100%;
+  margin: 15rpx 0; 
+}
+.list span.left{
+  width:200rpx;
+  display: block;
+  float: left;
+}
+.list span.right{
+  width:500rpx;
+  float: right;
+}
+
+.table {
+  width: 700rpx;
+  margin:25rpx;
+  height: 100%;
+  overflow: hidden;
+  border:1px solid #EEEEEE;
+}
+.tr {
+  display: flex;
+  width:700rpx;
+  justify-content: center;
+  height:70rpx;
+  font-size: 32rpx;
+  align-items: center;
+  color: #666;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: EEEEEE;
+}
+.bg-g{
+  background: #EEEEEE;
+}
+.th {
+  width:750rpx;
+  justify-content: center;
+  color: #999;
+  border-top: 1rpx solid #AAA;
+  display: flex;
+  height:80rpx;
+  align-items: center;
+}
+.submit{
+  width: 700rpx;
+  height:100rpx;
+  line-height:100rpx;
+  margin: 25rpx;
+  color: #FFF;
+  background:#13D4C8;
+    font-size:42rpx;
+}
+.saoyisao{
+  display: block;
+  width:698rpx;
+  height:98rpx;
+  line-height:100rpx;
+  margin: 25rpx;
+  border: 1rpx solid #DDD;
+  border-radius:15rpx;
+  font-size:42rpx;
+  text-align: center;
+}
